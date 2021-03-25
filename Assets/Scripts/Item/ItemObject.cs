@@ -5,5 +5,8 @@ using UnityEngine;
 public class ItemObject : MonoBehaviour
 {
     public Item item;
-    
+    private void OnEnable()
+    {
+        
+    }
 }
