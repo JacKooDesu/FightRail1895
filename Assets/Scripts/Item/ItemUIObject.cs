@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class ItemUIObject : MonoBehaviour
 {
@@ -14,8 +15,9 @@ public class ItemUIObject : MonoBehaviour
     public Text descriptionText;   // 說明物件
     public Text valueText;      // 價值
 
+    public bool isHovering = false;     // 懸停
 
-    public bool isHovering = false;
+    public UnityAction onClickAction;   // 按下動作
 
     private void OnEnable()
     {
