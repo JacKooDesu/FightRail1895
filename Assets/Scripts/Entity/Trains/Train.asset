@@ -9,16 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95e18c4360347e74ab642f3dbe01ec47, type: 3}
-  m_Name: Dummy
+  m_Script: {fileID: 11500000, guid: d5914695b4d6b4948b50f0d2c02e47b4, type: 3}
+  m_Name: Train
   m_EditorClassIdentifier: 
-  enemyName: Dummy
-  level: 1
-  type: 0
+  trainName: None
   model: {fileID: 0}
   icon: {fileID: 0}
-  movementSpeed: 2.48
+  movementSpeed: 5
   health: 20
-  damage: 5
-  attactSpeed: 1
-  dropList: []

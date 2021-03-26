@@ -39,6 +39,8 @@ namespace JacDev.Entity
         [SerializeField]
         List<Drop> dropList = new List<Drop>();  // 掉落表
 
+    
+
         void DamageCal()
         {
 
