@@ -15,5 +15,5 @@ MonoBehaviour:
   trainName: None
   model: {fileID: 0}
   icon: {fileID: 0}
-  movementSpeed: 5
+  movementSpeed: 0.6
   health: 20

@@ -21,9 +21,20 @@ namespace JacDev.Entity
             {
                 Collider taretCol = target.GetComponent<Collider>();
 
-                transform.Translate(enemy.movementSpeed * Vector3.forward * Time.deltaTime);
+                if ((taretCol.ClosestPoint(transform.position) - GetComponent<Collider>().ClosestPoint(target.transform.position)).magnitude >= 1f)
+                    transform.Translate(enemy.movementSpeed * Vector3.forward * Time.deltaTime);
+
 
                 transform.LookAt(taretCol.ClosestPoint(transform.position));
+
+                Ray r = new Ray(transform.position, transform.forward);
+                RaycastHit hit;
+
+                if (Physics.Raycast(r, out hit, 5f, 1 << 8))
+                {
+                    print(this.name);
+                    transform.Rotate(Vector3.up * 90);
+                }
             }
 
 
