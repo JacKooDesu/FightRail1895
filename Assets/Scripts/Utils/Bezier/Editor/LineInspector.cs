@@ -32,7 +32,7 @@ namespace JacDev.Utils
                 EditorUtility.SetDirty(line);
                 line.p0 = handleTransform.InverseTransformPoint(p0);
             }
-
+            EditorGUI.BeginChangeCheck();
             p1 = Handles.DoPositionHandle(p1, handleRotation);
             if (EditorGUI.EndChangeCheck())
             {
