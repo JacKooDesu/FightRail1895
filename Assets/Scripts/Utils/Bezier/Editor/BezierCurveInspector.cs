@@ -12,6 +12,7 @@ namespace JacDev.Utils
 
         // 曲線平滑度
         const int lineSteps = 10;
+        const float directionScale = .5f;
 
         private void OnSceneGUI()
         {
@@ -24,22 +25,16 @@ namespace JacDev.Utils
             Vector3 p0 = ShowPoint(0);
             Vector3 p1 = ShowPoint(1);
             Vector3 p2 = ShowPoint(2);
+            Vector3 p3 = ShowPoint(3);
 
             // 渲染直線
             Handles.color = Color.gray;
             Handles.DrawLine(p0, p1);
-            Handles.DrawLine(p1, p2);
+            Handles.DrawLine(p2, p3);
 
-            // 渲染曲線
-            Handles.color = Color.cyan;
-            Vector3 lineStart = curve.GetPoint(0f);
-            for (int i = 1; i <= lineSteps; ++i)
-            {
-                Vector3 lineEnd = curve.GetPoint(i / (float)lineSteps);
-                Handles.DrawLine(lineStart, lineEnd);
-                lineStart = lineEnd;
-            }
+            ShowDirections();
 
+            Handles.DrawBezier(p0, p3, p1, p2, Color.cyan, null, 2f);
         }
 
         // 顯示點
@@ -56,6 +51,21 @@ namespace JacDev.Utils
             }
 
             return point;
+        }
+
+        void ShowDirections()
+        {
+            Handles.color = Color.yellow;
+            Vector3 point = curve.GetPoint(0f);
+
+            Handles.DrawLine(point, point + curve.GetDirection(0f) * directionScale);
+            for (int i = 1; i <= lineSteps; ++i)
+            {
+                point = curve.GetPoint(i / (float)lineSteps);
+                Handles.DrawLine(
+                    point, 
+                    point + curve.GetDirection(i / (float)lineSteps) * directionScale);
+            }
         }
     }
 }
