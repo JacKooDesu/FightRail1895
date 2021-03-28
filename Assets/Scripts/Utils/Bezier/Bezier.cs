@@ -42,6 +42,7 @@ namespace JacDev.Utils
                 t * t * t * p3;
         }
 
+        // 求導數
         public static Vector3 GetFirstDerivative(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float t)
         {
             t = Mathf.Clamp01(t);
