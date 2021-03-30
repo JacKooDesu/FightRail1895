@@ -18,6 +18,12 @@ namespace JacDev.Utils
 
         int selectIndex = -1;
 
+        static Color[] modeColors = {
+            Color.white,
+            Color.magenta,
+            Color.blue
+        };
+
         private void OnSceneGUI()
         {
             spline = target as BezierSpline;
@@ -28,7 +34,7 @@ namespace JacDev.Utils
             // 顯示三個點
             Vector3 p0 = ShowPoint(0);
 
-            for (int i = 1; i < spline.points.Length; i += 3)
+            for (int i = 1; i < spline.ControlPointCount; i += 3)
             {
                 Vector3 p1 = ShowPoint(i);
                 Vector3 p2 = ShowPoint(i + 1);
@@ -49,8 +55,25 @@ namespace JacDev.Utils
 
         public override void OnInspectorGUI()
         {
-            DrawDefaultInspector();
             spline = target as BezierSpline;
+            EditorGUI.BeginChangeCheck();
+
+            // 設定是否環形
+            bool loop = EditorGUILayout.Toggle("Loop", spline.Loop);
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(spline, "Toggle Loop");
+                EditorUtility.SetDirty(spline);
+                spline.Loop = loop;
+            }
+
+            // 僅顯示當前選擇的點
+            if (selectIndex >= 0 && selectIndex < spline.ControlPointCount)
+            {
+                DrawSelectedPointInspector();
+            }
+
+            // Add Curve 按鈕
             if (GUILayout.Button("Add Curve"))
             {
                 Undo.RecordObject(spline, "Add Curve");
@@ -62,14 +85,20 @@ namespace JacDev.Utils
         // 顯示點
         Vector3 ShowPoint(int index)
         {
-            Vector3 point = handleTransform.TransformPoint(spline.points[index]);
+            Vector3 point = handleTransform.TransformPoint(spline.GetControlPoint(index));
 
             // 渲染所有操作把
             float size = HandleUtility.GetHandleSize(point);
-            Handles.color = Color.white;
+            if (index == 0)
+            {
+                size *= 2f;
+            }
+            
+            Handles.color = modeColors[(int)spline.GetControlPointMode(index)];
             if (Handles.Button(point, handleRotation, size * handleSize, size * pickSize, Handles.SphereHandleCap))
             {
                 selectIndex = index;
+                Repaint();
             }
 
             // 正在操作的曲線顯示移動工具
@@ -81,7 +110,7 @@ namespace JacDev.Utils
                 {
                     Undo.RecordObject(spline, "Move Point");
                     EditorUtility.SetDirty(spline);
-                    spline.points[index] = handleTransform.InverseTransformPoint(point);
+                    spline.SetControlPoint(index, handleTransform.InverseTransformPoint(point));
                 }
             }
 
@@ -102,6 +131,31 @@ namespace JacDev.Utils
                 Handles.DrawLine(
                     point,
                     point + spline.GetDirection(i / (float)steps) * directionScale);
+            }
+        }
+
+        void DrawSelectedPointInspector()
+        {
+            GUILayout.Label("Selected Point");
+            EditorGUI.BeginChangeCheck();
+
+            Vector3 point = EditorGUILayout.Vector3Field("Position", spline.GetControlPoint(selectIndex));
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(spline, "Move Point");
+                EditorUtility.SetDirty(spline);
+                spline.SetControlPoint(selectIndex, point);
+            }
+
+            EditorGUI.BeginChangeCheck();
+            BezierControlPointMode mode =
+                (BezierControlPointMode)EditorGUILayout.EnumPopup("Mode", spline.GetControlPointMode(selectIndex));
+
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(spline, "Change Point Mode");
+                spline.SetControlPointMode(selectIndex, mode);
+                EditorUtility.SetDirty(spline);
             }
         }
     }
