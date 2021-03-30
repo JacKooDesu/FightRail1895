@@ -1,0 +1,299 @@
+fileFormatVersion: 2
+guid: 6b5aa1e6a9a7b1449ba1c1056560f37e
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: 4848603991674495556
+    second: wheel 1|wheel 1|wheel 1|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: 4943701377382026446
+    second: wheel 1|wheel 1|wheel 1|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: 4019577893916480428
+    second: wheel 1|wheel 1|wheel 1|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: -8788592783500108969
+    second: wheel 1|wheel 1|wheel 1|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: -834370780059396925
+    second: wheel 1|wheel 2|wheel 2|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: 7590616787029022183
+    second: wheel 1|wheel 2|wheel 2|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: -4568895274324105240
+    second: wheel 1|wheel 2|wheel 2|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: -2846130123527333535
+    second: wheel 1|wheel 2|wheel 2|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: 222696724492106829
+    second: wheel 1|wheel 3|wheel 3|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: 8653518706224637729
+    second: wheel 1|wheel 3|wheel 3|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: -486157929647563893
+    second: wheel 1|wheel 3|wheel 3|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: 8480703459481872057
+    second: wheel 1|wheel 3|wheel 3|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: -3373648221024037666
+    second: wheel 1|wheel 4|wheel 4|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: -3196228955212371320
+    second: wheel 1|wheel 4|wheel 4|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: -7507123743840008159
+    second: wheel 1|wheel 4|wheel 4|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: 3809830622718912232
+    second: wheel 1|wheel 4|wheel 4|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: -8598151169301743073
+    second: wheel 2|wheel 1|wheel 1|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: -257942385013476431
+    second: wheel 2|wheel 1|wheel 1|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: -3998254054468769257
+    second: wheel 2|wheel 1|wheel 1|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: 7951963013389601825
+    second: wheel 2|wheel 1|wheel 1|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: 2152781444222097753
+    second: wheel 2|wheel 2|wheel 2|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: -2099557789240418545
+    second: wheel 2|wheel 2|wheel 2|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: 8597589739146606991
+    second: wheel 2|wheel 2|wheel 2|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: -8688623044171933766
+    second: wheel 2|wheel 2|wheel 2|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: 8654274672452483646
+    second: wheel 2|wheel 3|wheel 3|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: -7804440351044526086
+    second: wheel 2|wheel 3|wheel 3|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: -1825901961733499020
+    second: wheel 2|wheel 3|wheel 3|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: 5689635682310328888
+    second: wheel 2|wheel 3|wheel 3|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: 6772345782049897074
+    second: wheel 2|wheel 4|wheel 4|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: 6360541648920020756
+    second: wheel 2|wheel 4|wheel 4|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: -1273532936459865320
+    second: wheel 2|wheel 4|wheel 4|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: 7839129371066824471
+    second: wheel 2|wheel 4|wheel 4|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: -1328030515525375507
+    second: wheel 3|wheel 1|wheel 1|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: 1619082027882939319
+    second: wheel 3|wheel 1|wheel 1|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: -3620258299753720941
+    second: wheel 3|wheel 1|wheel 1|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: -4576650058722345595
+    second: wheel 3|wheel 1|wheel 1|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: -5008348553822478322
+    second: wheel 3|wheel 2|wheel 2|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: 6660600888535825392
+    second: wheel 3|wheel 2|wheel 2|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: 4142695253475901132
+    second: wheel 3|wheel 2|wheel 2|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: 8338263141058854880
+    second: wheel 3|wheel 2|wheel 2|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: 1720919015537108483
+    second: wheel 3|wheel 3|wheel 3|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: -6059394061575734849
+    second: wheel 3|wheel 3|wheel 3|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: -4667301248699374510
+    second: wheel 3|wheel 3|wheel 3|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: -193234222773617591
+    second: wheel 3|wheel 3|wheel 3|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: -5334975304515546984
+    second: wheel 3|wheel 4|wheel 4|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: -7981013375031898143
+    second: wheel 3|wheel 4|wheel 4|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: -296165030193762173
+    second: wheel 3|wheel 4|wheel 4|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: 7961585070924087955
+    second: wheel 3|wheel 4|wheel 4|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: 2400713233120812662
+    second: wheel 4|wheel 1|wheel 1|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: 5875987390021005629
+    second: wheel 4|wheel 1|wheel 1|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: 1679145140644655175
+    second: wheel 4|wheel 1|wheel 1|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: 2856082549061275616
+    second: wheel 4|wheel 1|wheel 1|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: 4423329756101796841
+    second: wheel 4|wheel 2|wheel 2|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: 8019066376693578769
+    second: wheel 4|wheel 2|wheel 2|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: 6148413360211467302
+    second: wheel 4|wheel 2|wheel 2|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: -277742374811952486
+    second: wheel 4|wheel 2|wheel 2|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: -2940259236493683548
+    second: wheel 4|wheel 3|wheel 3|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: 3673370453099333130
+    second: wheel 4|wheel 3|wheel 3|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: -4118882336158789130
+    second: wheel 4|wheel 3|wheel 3|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: 6729866855508586856
+    second: wheel 4|wheel 3|wheel 3|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  - first:
+      74: 1133185906322581093
+    second: wheel 4|wheel 4|wheel 4|wheel 1|wheel 1|Shader NodetreeAction.001|wheel
+  - first:
+      74: -8207517781589570632
+    second: wheel 4|wheel 4|wheel 4|wheel 2|wheel 2|Shader NodetreeAction.001|wheel
+  - first:
+      74: 3234180003328476088
+    second: wheel 4|wheel 4|wheel 4|wheel 3|wheel 3|Shader NodetreeAction.001|wheel
+  - first:
+      74: 3795421919384278325
+    second: wheel 4|wheel 4|wheel 4|wheel 4|wheel 4|Shader NodetreeAction.001|wheel
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 1fedf1553e9acbf4fb436f1d036c383a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.007
+    second: {fileID: 2100000, guid: c5f66616551ae2742aeefeb39f4acac8, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
