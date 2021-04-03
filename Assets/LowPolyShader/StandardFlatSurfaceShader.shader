@@ -2,6 +2,7 @@
 {
 	Properties
 	{
+		_Color("Color", Color) = (1,1,1,1)
 	}
 	SubShader
 	{
@@ -142,6 +143,8 @@
 			#include "UnityCG.cginc"
 			#include "UnityLightingCommon.cginc"			
 
+			uniform float4 _Color;
+
 			struct Vertex
 			{
 				float4 position : POSITION;
@@ -169,7 +172,7 @@
 				output.worldPosition = mul(unity_ObjectToWorld, vertex.position);
 
 				// ToDo: Pre-calculate sRGB color conversion in mesh vertices.
-				output.color = pow((vertex.color + 0.055f) / 1.055f, 2.4f);
+				output.color = pow((vertex.color + 0.055f) / 1.055f, 2.4f) * _Color;
 				return output;
 			}
 
