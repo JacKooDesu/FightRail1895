@@ -50,7 +50,6 @@ namespace JacDev.TimeUtil
                 this.hour++;
                 this.min -= 60;
             }
-
         }
     }
 }

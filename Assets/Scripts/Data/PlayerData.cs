@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerData : MonoBehaviour
 {
     public string playerName = "None";          // 玩家名
-    public JacDev.TimeUtil.Time playingTime;    // 遊玩時間
+    public JacDev.TimeUtil.Time playingTime = default;    // 遊玩時間
 
     public float money = 0f;        // 金錢
 
