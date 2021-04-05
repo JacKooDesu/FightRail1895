@@ -32,7 +32,7 @@ namespace JacDev.Entity
 
                 if (Physics.Raycast(r, out hit, 5f, 1 << 8))
                 {
-                    print(this.name);
+                    // print(this.name);
                     transform.Rotate(Vector3.up * 90);
                 }
             }
