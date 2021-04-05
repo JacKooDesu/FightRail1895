@@ -1,7 +1,10 @@
-﻿
-public enum BezierControlPointMode
+﻿namespace JacDev.Utils
 {
-    Free,
-    Aligned,
-    Mirrored
+    public enum BezierControlPointMode
+    {
+        Free,
+        Aligned,
+        Mirrored
+    }
+
 }
