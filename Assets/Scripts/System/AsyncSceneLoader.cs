@@ -14,6 +14,7 @@ public class AsyncSceneLoader : MonoBehaviour
     private void OnEnable()
     {
         ani = GetComponent<Animator>();
+        ani.SetTrigger("FadeIn");
     }
 
     static AsyncSceneLoader singleton = null;
