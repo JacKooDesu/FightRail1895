@@ -5,7 +5,8 @@ namespace JacDev.Utils
     public class SplineWalker : MonoBehaviour
     {
         public BezierSpline spline;
-        public float duration;  // 時長
+        public float speed;  // 速度
+        [SerializeField]
         float progress;
 
         public bool lookForward = true;
@@ -24,7 +25,7 @@ namespace JacDev.Utils
         {
             if (goingForward)
             {
-                progress += Time.deltaTime / duration;
+                progress += Time.deltaTime * speed;
                 if (progress > 1f)
                 {
                     switch (mode)
@@ -46,7 +47,7 @@ namespace JacDev.Utils
             }
             else
             {
-                progress -= Time.deltaTime / duration;
+                progress -= Time.deltaTime * speed;
                 if (progress < 0f)
                 {
                     progress = -progress;   // 回彈
@@ -61,6 +62,11 @@ namespace JacDev.Utils
             {
                 transform.LookAt(pos + spline.GetDirection(progress));
             }
+        }
+
+        public void CalProgress(float length)
+        {
+            progress = length / spline.GetLength();
         }
     }
 

@@ -264,6 +264,21 @@ namespace JacDev.Utils
                 EnforceMode(0);
             }
         }
+
+        public float GetLength()
+        {
+            float length = 0f;
+            for (int i = 0; i < points.Length-1; i += 3)
+            {
+                length += Bezier.GetLength(
+                    points[i],
+                    points[i + 1],
+                    points[i + 2],
+                    points[i + 3]);
+            }
+
+            return length;
+        }
     }
 }
 

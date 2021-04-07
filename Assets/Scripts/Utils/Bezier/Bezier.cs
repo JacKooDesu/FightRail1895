@@ -52,6 +52,17 @@ namespace JacDev.Utils
                 6f * oneMinusT * t * (p2 - p1) +
                 3f * t * t * (p3 - p2);
         }
+
+        public static float GetLength(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3)
+        {
+            float chord = Vector3.Distance(p3, p0);
+            float chordNet =
+                Vector3.Distance(p0, p1) +
+                Vector3.Distance(p1, p2) +
+                Vector3.Distance(p2, p3);
+
+            return (chord + chordNet) / 2;
+        }
     }
 
 }
