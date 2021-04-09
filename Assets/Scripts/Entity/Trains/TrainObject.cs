@@ -18,7 +18,7 @@ namespace JacDev.Entity
             get
             {
                 return
-                Vector3.Distance(head.transform.localPosition, last.transform.localPosition);
+                Vector3.Distance(head.transform.position, last.transform.position);
             }
         }
 
@@ -29,7 +29,9 @@ namespace JacDev.Entity
 
         void TestMove()
         {
-            // transform.Translate(Vector3.forward * Time.deltaTime * train.movementSpeed);
+            //transform.Translate(Vector3.forward * Time.deltaTime * train.movementSpeed);
+            Quaternion q = Quaternion.Euler((head.transform.eulerAngles + last.transform.eulerAngles)/2);
+            transform.SetPositionAndRotation((head.transform.position + last.transform.position) / 2,q);
         }
 
         public void SetTrain(TrainLine line, int index, float currentLength)

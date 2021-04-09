@@ -14,7 +14,7 @@ namespace JacDev.Entity
         private void Start()
         {
             float totalLength = 0f;
-            for (int i = 0; i < trains.Length; ++i)
+            for (int i = trains.Length - 1; i >= 0; --i)
             {
                 trains[i].SetTrain(this, i, totalLength);
                 print(totalLength += trains[i].Length);

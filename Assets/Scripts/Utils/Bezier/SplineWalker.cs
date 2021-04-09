@@ -25,7 +25,7 @@ namespace JacDev.Utils
         {
             if (goingForward)
             {
-                progress += Time.deltaTime * speed;
+                progress += Time.deltaTime * speed / spline.GetCurrentCurveLength(progress);
                 if (progress > 1f)
                 {
                     switch (mode)
@@ -56,7 +56,7 @@ namespace JacDev.Utils
             }
 
             Vector3 pos = spline.GetPoint(progress);
-            transform.localPosition = pos;
+            transform.position = pos;
 
             if (lookForward)
             {

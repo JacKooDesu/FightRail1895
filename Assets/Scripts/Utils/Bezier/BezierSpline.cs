@@ -268,7 +268,7 @@ namespace JacDev.Utils
         public float GetLength()
         {
             float length = 0f;
-            for (int i = 0; i < points.Length-1; i += 3)
+            for (int i = 0; i < points.Length - 1; i += 3)
             {
                 length += Bezier.GetLength(
                     points[i],
@@ -278,6 +278,28 @@ namespace JacDev.Utils
             }
 
             return length;
+        }
+
+        public float GetCurrentCurveLength(float t)
+        {
+            int i;
+            if (t >= 1f)
+            {
+                t = 1f;
+                i = points.Length - 4;
+            }
+            else
+            {
+                t = Mathf.Clamp01(t) * CurveCount;
+                i = (int)t;
+                t -= i;
+                i *= 3;
+            }
+            return Bezier.GetLength(
+                    points[i],
+                    points[i + 1],
+                    points[i + 2],
+                    points[i + 3]);
         }
     }
 }
