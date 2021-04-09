@@ -30,8 +30,8 @@ namespace JacDev.Entity
         void TestMove()
         {
             //transform.Translate(Vector3.forward * Time.deltaTime * train.movementSpeed);
-            Quaternion q = Quaternion.Euler((head.transform.eulerAngles + last.transform.eulerAngles)/2);
-            transform.SetPositionAndRotation((head.transform.position + last.transform.position) / 2,q);
+            Quaternion q = Quaternion.Euler((head.transform.eulerAngles + last.transform.eulerAngles) / 2);
+            transform.SetPositionAndRotation((head.transform.position + last.transform.position) / 2, q);
         }
 
         public void SetTrain(TrainLine line, int index, float currentLength)
@@ -42,8 +42,8 @@ namespace JacDev.Entity
             head.spline = trainLine.spline;
             last.spline = trainLine.spline;
 
-            head.CalProgress(currentLength);
-            last.CalProgress(currentLength + Length);
+            head.CalProgress(currentLength + Length);
+            last.CalProgress(currentLength);
         }
     }
 

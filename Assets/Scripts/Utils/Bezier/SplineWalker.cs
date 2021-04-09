@@ -25,7 +25,7 @@ namespace JacDev.Utils
         {
             if (goingForward)
             {
-                progress += Time.deltaTime * speed / spline.GetCurrentCurveLength(progress);
+                progress += Time.deltaTime * speed / spline.GetVelocity(progress).magnitude;
                 if (progress > 1f)
                 {
                     switch (mode)
