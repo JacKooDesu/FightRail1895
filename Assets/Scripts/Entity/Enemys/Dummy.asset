@@ -17,7 +17,7 @@ MonoBehaviour:
   type: 0
   model: {fileID: 0}
   icon: {fileID: 0}
-  movementSpeed: 2.48
+  movementSpeed: 5.8
   health: 20
   damage: 5
   attactSpeed: 1

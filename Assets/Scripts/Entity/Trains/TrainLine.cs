@@ -7,8 +7,7 @@ namespace JacDev.Entity
 {
     public class TrainLine : MonoBehaviour
     {
-        [SerializeField]
-        TrainObject[] trains;
+        public TrainObject[] trains;
         public BezierSpline spline; // 路線
 
         private void Start()
