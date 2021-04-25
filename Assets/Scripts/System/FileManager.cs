@@ -36,6 +36,27 @@ public static class FileManager
         return JsonUtility.FromJson<PlayerData>(deserializeData);
     }
 
+    public static T Load<T>(string path, string name)
+    {
+        var filePath = Application.dataPath + path + name + ".sav";
+        var deserializeData = (string)(null);
+
+        try
+        {
+            deserializeData = File.ReadAllText(filePath);
+        }
+        catch (System.IO.FileNotFoundException)
+        {
+            return default(T);
+        }
+        catch (System.IO.DirectoryNotFoundException)
+        {
+            return default(T);
+        }
+
+        return JsonUtility.FromJson<T>(deserializeData);
+    }
+
     public static List<string> LoadDirFiles(string dir, string type)
     {
         DirectoryInfo di = new DirectoryInfo(Application.dataPath + dir);

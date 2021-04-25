@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using JacDev.Entity;
 
 public class GameHandler : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class GameHandler : MonoBehaviour
     PlayerData playerData;
     // WIP 音訊控制類別
     // public AudioHandler audioHandler;
+    
+    GameData gameData;
+
+    List<EntityObject> entities = default;
 
     private void Awake()
     {
