@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95e18c4360347e74ab642f3dbe01ec47, type: 3}
   m_Name: Dummy
   m_EditorClassIdentifier: 
+  entityName: "\u8001\u4E8C"
+  entityType: 0
+  icon: {fileID: 0}
   enemyName: Dummy
   level: 1
-  type: 0
+  bloodType: 0
+  enemyType: 0
   model: {fileID: 0}
-  icon: {fileID: 0}
-  movementSpeed: 5.8
+  movementSpeed: 3.49
   health: 20
   damage: 5
   attactSpeed: 1

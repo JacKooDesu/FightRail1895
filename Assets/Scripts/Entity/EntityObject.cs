@@ -4,11 +4,14 @@ namespace JacDev.Entity
 {
     public abstract class EntityObject : MonoBehaviour
     {
-        EntitySetting entitySetting;
+        [SerializeField]
+        protected EntitySetting entitySetting;
 
-        public void GameUpdate()
+        public virtual bool GameUpdate() => true;
+
+        public virtual void Init(EntitySetting setting)
         {
-
+            entitySetting = setting;
         }
     }
 }

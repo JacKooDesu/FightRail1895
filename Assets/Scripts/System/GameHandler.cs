@@ -27,10 +27,10 @@ public class GameHandler : MonoBehaviour
     PlayerData playerData;
     // WIP 音訊控制類別
     // public AudioHandler audioHandler;
-    
+
     GameData gameData;
 
-    List<EntityObject> entities = default;
+    public List<EntityObject> entities = default;
 
     private void Awake()
     {
@@ -46,10 +46,10 @@ public class GameHandler : MonoBehaviour
         switch (scene.name)
         {
             case "AsyncLoadingScene":
-            //     Pause();
-            //     break;
+                //     Pause();
+                //     break;
 
-            // case "LoadGameScene":
+                // case "LoadGameScene":
                 if (FileManager.Load("/PlayerData", "/PlayerData"))
                 {
                     playerData = FileManager.Load("/PlayerData", "/PlayerData");
@@ -68,4 +68,11 @@ public class GameHandler : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    private void Update()
+    {
+        for (int i = 0; i < entities.Count; ++i)
+        {
+            entities[i].GameUpdate();
+        }
+    }
 }

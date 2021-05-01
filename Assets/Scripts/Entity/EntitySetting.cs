@@ -1,15 +1,38 @@
 using UnityEngine;
+using System;
 
 namespace JacDev.Entity
 {
     public abstract class EntitySetting : ScriptableObject
     {
-        public string entityName;
+        [SerializeField, Header("名稱")]
+        protected string entityName;
 
-        [Header("物件種類")]
-        EntityType type = default;
+        [SerializeField, Header("物件種類")]
+        protected EntityType entityType = default;
 
-        [Header("圖示")]
-        Sprite icon;
+        [SerializeField, Header("圖示")]
+        protected Sprite icon;
+
+        public abstract Type EntityObjectType();
+
+        public abstract EntityObject BuildEntityObject();
+        // public EntityObject GetEntityObject()
+        // {
+        //     switch (entityType)
+        //     {
+        //         case EntityType.Enemy:
+        //             return new EnemyObject();
+
+        //         case EntityType.Tower:
+        //             return new TowerObject();
+
+        //         // case EntityType.Train:
+        //         //     return new TrainObject();
+
+        //         default:
+        //             return null;
+        //     }
+        // }
     }
 }

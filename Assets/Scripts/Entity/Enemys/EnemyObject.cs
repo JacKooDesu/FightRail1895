@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace JacDev.Entity
 {
-    public class EnemyObject : MonoBehaviour
+    public class EnemyObject : EntityObject
     {
-        public Enemy enemy;
+        // public Enemy enemy;
         public TrainLine target;
         Animator ani;
         Collider taretCol;
@@ -33,7 +33,7 @@ namespace JacDev.Entity
                 {
                     if (!ani.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                     {
-                        transform.Translate(enemy.movementSpeed * Vector3.forward * Time.deltaTime);
+                        transform.Translate(((Enemy)entitySetting).movementSpeed * Vector3.forward * Time.deltaTime);
                         transform.LookAt(taretCol.ClosestPoint(transform.position));
                     }
 
@@ -60,11 +60,6 @@ namespace JacDev.Entity
             }
         }
 
-        public void SetEnemy(Enemy e)
-        {
-            enemy = e;
-        }
-
         public void ChangeAttackTarget()
         {
             // Near Train
@@ -77,6 +72,11 @@ namespace JacDev.Entity
             // }
 
             taretCol = target.trains[Random.Range(0, target.trains.Length)].GetComponent<Collider>();
+        }
+
+        public override bool GameUpdate()
+        {
+            return true;
         }
     }
 
