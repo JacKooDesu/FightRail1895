@@ -78,6 +78,11 @@ namespace JacDev.Entity
         {
             return true;
         }
+
+        public override void Init(EntitySetting setting)
+        {
+            base.Init(setting);
+        }
     }
 
 }

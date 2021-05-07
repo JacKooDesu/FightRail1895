@@ -10,7 +10,7 @@ namespace JacDev.Testing
         public Enemy enemy;
         void Start()
         {
-            enemy.BuildEntityObject();
+            GameHandler.Singleton.entities.Add(enemy.BuildEntityObject());
         }
 
     }

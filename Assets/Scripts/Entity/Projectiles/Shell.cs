@@ -11,9 +11,10 @@ namespace JacDev.Entity
 
         public override EntityObject BuildEntityObject()
         {
-            GameObject g = new GameObject(entityName, EntityObjectType());
+            GameObject g = Instantiate(prefab);
+            g.name = entityName;
             ShellObject so = g.GetComponent<ShellObject>();
-            so.Init(this);
+            // so.Init(this);
             return so;
         }
     }

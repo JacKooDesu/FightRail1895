@@ -15,7 +15,7 @@ MonoBehaviour:
   entityName: "\u8001\u4E8C"
   entityType: 0
   icon: {fileID: 0}
-  enemyName: Dummy
+  prefab: {fileID: 6240597353200192325, guid: 8b1ad1e97591db94fa7b6971b4a0fbf1, type: 3}
   level: 1
   bloodType: 0
   enemyType: 0

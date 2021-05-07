@@ -13,13 +13,12 @@ namespace JacDev.Entity
 
         public override EntityObject BuildEntityObject()
         {
-            GameObject g = new GameObject(entityName, EntityObjectType());
+            GameObject g = Instantiate(prefab);
+            g.name = entityName;
             EnemyObject eo = g.GetComponent<EnemyObject>();
-            eo.Init(this);
+            // eo.Init(this);
             return eo;
         }
-
-        public string enemyName = "None";
 
         public int level = 1;
 

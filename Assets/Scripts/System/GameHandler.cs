@@ -30,7 +30,7 @@ public class GameHandler : MonoBehaviour
 
     GameData gameData;
 
-    public List<EntityObject> entities = default;
+    public List<EntityObject> entities = new List<EntityObject>();
 
     private void Awake()
     {

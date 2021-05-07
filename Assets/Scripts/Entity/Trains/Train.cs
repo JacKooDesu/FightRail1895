@@ -13,7 +13,11 @@ namespace JacDev.Entity
         public Sprite icon; // 圖示
 
         public float movementSpeed = 5.0f;  // 移動速度
-        public float health = 20.0f;    // 血量
+        float health = 20.0f;    // 血量
+        public float Health
+        {
+            set { health = value; }
+        }
 
     }
 

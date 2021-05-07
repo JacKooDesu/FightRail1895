@@ -14,6 +14,9 @@ namespace JacDev.Entity
         [SerializeField, Header("圖示")]
         protected Sprite icon;
 
+        [SerializeField, Header("預製物")]
+        protected GameObject prefab;
+
         public abstract Type EntityObjectType();
 
         public abstract EntityObject BuildEntityObject();
