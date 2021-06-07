@@ -5,15 +5,16 @@ using System;
 
 namespace JacDev.Entity
 {
-    public class Shell : EntitySetting
+    [System.Serializable, CreateAssetMenu(fileName = "Projectile", menuName = "JacDev/Create Projectile", order = 1)]
+    public class Projectile : EntitySetting
     {
-        public override Type EntityObjectType() => typeof(ShellObject);
+        public override Type EntityObjectType() => typeof(ProjectileObject);
 
         public override EntityObject BuildEntityObject()
         {
             GameObject g = Instantiate(prefab);
             g.name = entityName;
-            ShellObject so = g.GetComponent<ShellObject>();
+            ProjectileObject so = g.GetComponent<ProjectileObject>();
             // so.Init(this);
             return so;
         }
