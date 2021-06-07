@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using JacDev.Entity;
 
 namespace JacDev.Testing
 {
@@ -25,8 +26,9 @@ namespace JacDev.Testing
         [Header("Map Setting")]
         public float size = 10f;
         public float railWidth = 5f;
+        public float spawnpointAvoidSize = 5f;
 
-        List<Rect> objects;
+        List<Rect> objectMapping;
 
         void Start()
         {
@@ -35,8 +37,24 @@ namespace JacDev.Testing
 
         public void ButtonGenerate()
         {
-            objects = new List<Rect>();
-            objects.Add(new Rect(-size / 2,-railWidth / 2, size,railWidth));
+            objectMapping = new List<Rect>();
+            objectMapping.Add(new Rect(-size / 2, -railWidth / 2, size, railWidth));
+
+            foreach (Transform t in transform)
+            {
+
+                if (t.GetComponent<EntitySpawner>())
+                {
+                    Rect r =
+                        new Rect(
+                            t.localPosition.x - spawnpointAvoidSize/2,
+                            t.localPosition.z - spawnpointAvoidSize/2,
+                            spawnpointAvoidSize,
+                            spawnpointAvoidSize / 2 + Mathf.Abs(t.localPosition.z));
+                     objectMapping.Add(r);
+                     print(r.width + "  " + r.height);
+                }
+            }
             Generate(treeSetting);
             Generate(stoneSetting);
         }
@@ -66,10 +84,11 @@ namespace JacDev.Testing
                 float z = Random.Range(-(size / 2) + mo.size, (size / 2) - mo.size);
                 Rect rect = new Rect(x + mo.size / 2, z + mo.size / 2, mo.size, mo.size);
                 bool overlap = false;
-                for (int j = 0; j < objects.Count; ++j)
+                for (int j = 0; j < objectMapping.Count; ++j)
                 {
-                    if (rect.Overlaps(objects[j]))
+                    if (rect.Overlaps(objectMapping[j]))
                     {
+                        print("overlap");
                         overlap = true;
                         break;
                     }
@@ -81,7 +100,7 @@ namespace JacDev.Testing
                 }
                 else
                 {
-                    objects.Add(rect);
+                    objectMapping.Add(rect);
                     GameObject g = Instantiate(mo.origins[Random.Range(0, mo.origins.Length)]);
                     g.transform.position = new Vector3(x, 0, z);
                     g.transform.eulerAngles = new Vector3(0, Random.Range(0, 360f));

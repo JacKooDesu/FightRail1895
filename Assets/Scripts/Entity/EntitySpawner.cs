@@ -4,38 +4,44 @@ using UnityEngine;
 
 namespace JacDev.Entity
 {
-    public abstract class EntitySpawner : MonoBehaviour
+    public class EntitySpawner : MonoBehaviour
     {
-        [SerializeField, Header("目標生成物")]
-        protected EntitySetting entity = default;
-
         [SerializeField, Header("生成點")]
         protected Transform spawnpoint = default;
-
-        public enum SpawnType
+        [System.Serializable]
+        public class SpawnSetting
         {
-            Once,
-            OneByOne
-        }
-        [SerializeField, Header("模式")]
-        protected SpawnType spawnType = default;
+            [SerializeField, Header("目標生成物")]
+            public EntitySetting entity = default;
 
-        [SerializeField, Header("數量")]
-        protected int amount = 1;
-
-        [SerializeField, Header("生成間格")]
-        protected float interval;
-        protected float Interval
-        {
-            get
+            public enum SpawnType
             {
-                if (spawnType == SpawnType.Once)
-                    return 0;
-                else
-                    return interval;
+                Once,
+                OneByOne
+            }
+            [SerializeField, Header("模式")]
+            public SpawnType spawnType = default;
+
+            [SerializeField, Header("數量")]
+            public int amount = 1;
+
+            [SerializeField, Header("生成間格")]
+            public float interval;
+            public float Interval
+            {
+                get
+                {
+                    if (spawnType == SpawnType.Once)
+                        return 0;
+                    else
+                        return interval;
+                }
             }
         }
 
+        [SerializeField]
+        SpawnSetting[] spawnSettings;
+        
         // protected IEnumerator Spawn()
         // {
         //     int hasSpawn = 0;
