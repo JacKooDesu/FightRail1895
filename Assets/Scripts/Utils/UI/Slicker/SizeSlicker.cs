@@ -3,6 +3,7 @@ using System.Collections;
 
 namespace JacDev.Utils.UISlicker
 {
+    [AddComponentMenu("JacDev/UI Slicker/Size Slicker")]
     public class SizeSlicker : SlickerBase
     {
         public Vector2 origin;
@@ -37,7 +38,6 @@ namespace JacDev.Utils.UISlicker
                 yield return null;
             }
             rect.sizeDelta = target;
-
         }
     }
 }
