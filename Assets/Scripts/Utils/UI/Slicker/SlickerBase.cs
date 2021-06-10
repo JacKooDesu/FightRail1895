@@ -28,21 +28,20 @@ namespace JacDev.Utils.UISlicker
                     "from", from,
                     "to", s.set,
                     "time", s.time,
-                    "easetype", iTween.EaseType.linear,
+                    "easetype", s.easeType,
                     "onupdate", "TweenCallback"
                     ));
             }
         }
-
-        //protected virtual void TweenCallback<T>(T value) { }
     }
 
     [System.Serializable]
     public class Setting<T>
     {
         public string name;
-        [SerializeField]public T set;
-        public float time;
+        [SerializeField] public T set;
+        public float time = .2f;
+        public iTween.EaseType easeType = iTween.EaseType.easeInQuad;
 
         public void Init(string name, T set, float time)
         {

@@ -6,35 +6,37 @@ namespace JacDev.Utils.UISlicker
 {
     public class PositionSlick : SlickerBase
     {
-        // public List<Setting> settings = new List<Setting>();
+        [System.Serializable]
+        public class PositionSetting : Setting<Vector2> { }
+        public List<PositionSetting> settings = new List<PositionSetting>();
 
-        // public Setting origin = new Setting();
+        public PositionSetting origin = new PositionSetting();
 
-        // private void OnEnable()
-        // {
-        //     origin.Init("origin", rect.anchoredPosition, origin.time);
-        // }
+        private void OnEnable()
+        {
+            origin.Init("origin", rect.anchoredPosition, origin.time);
+        }
 
-        // public override void Slick(string name)
-        // {
-        //     foreach (Setting v in settings)
-        //     {
-        //         if (v.name == name)
-        //         {
-        //             Move(v);
-        //         }
-        //     }
-        // }
+        public override void Slick(string name)
+        {
+            foreach (PositionSetting v in settings)
+            {
+                if (v.name == name)
+                {
+                    Tween<Vector2>(v, rect.anchoredPosition);
+                }
+            }
+        }
 
-        // public override void SlickBack()
-        // {
-        //     Move(origin);
-        // }
+        public override void SlickBack()
+        {
+            Tween<Vector2>(origin, rect.anchoredPosition);
+        }
 
-        // void Move(Setting v)
-        // {
-        //     //iTween.MoveTo(gameObject,v.set)
-        // }
+        protected void TweenCallback(Vector2 value)
+        {
+            rect.anchoredPosition = value;
+        }
     }
 
 }
