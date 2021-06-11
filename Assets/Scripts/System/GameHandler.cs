@@ -72,7 +72,10 @@ public class GameHandler : MonoBehaviour
     {
         for (int i = 0; i < entities.Count; ++i)
         {
-            entities[i].GameUpdate();
+            if (!entities[i].GameUpdate())
+            {
+                entities.RemoveAt(i);
+            }
         }
     }
 }

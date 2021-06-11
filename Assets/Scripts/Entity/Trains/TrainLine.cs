@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using JacDev.Utils;
+using JacDev.Level;
 
 namespace JacDev.Entity
 {
@@ -10,6 +10,8 @@ namespace JacDev.Entity
         public TrainObject[] trains;
 
         public float speed; // should be static?
+        public static float hasMove = 0;
+        bool finished = false;
 
         KeyCode[] switchKey = {
             KeyCode.Alpha1,
@@ -48,6 +50,14 @@ namespace JacDev.Entity
         void TestMove()
         {
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            hasMove += Time.deltaTime * speed;
+
+            if (hasMove >= LevelGenerator.Singleton.totalLength && !finished)
+            {
+                Camera.main.GetComponent<OrbitCamera>().SetFocus(LevelGenerator.Singleton.dest);
+                AsyncSceneLoader.Singleton.LoadScene("ShopScene", 2f);
+                finished = true;
+            }
         }
 
         void SwitchFocusTrain()
@@ -56,7 +66,8 @@ namespace JacDev.Entity
             {
                 if (Input.GetKeyDown(switchKey[i]))
                 {
-                    Camera.main.GetComponent<OrbitCamera>().SetFocus(trains[i].transform);
+                    if (Camera.main.GetComponent<OrbitCamera>())
+                        Camera.main.GetComponent<OrbitCamera>().SetFocus(trains[i].transform);
                 }
             }
         }

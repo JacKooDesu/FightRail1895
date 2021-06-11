@@ -24,5 +24,6 @@ MonoBehaviour:
   health: 20
   maxDet: 20
   damage: 5
+  attackRange: 1
   attactSpeed: 1
   dropList: []

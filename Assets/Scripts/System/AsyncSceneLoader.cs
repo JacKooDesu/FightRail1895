@@ -40,10 +40,13 @@ public class AsyncSceneLoader : MonoBehaviour
     {
         hasFadeOut = true;
     }
-
     public void LoadScene(string name)
     {
-        StartCoroutine(LoadAsync(name));
+        StartCoroutine(LoadAsync(name, 0f));
+    }
+    public void LoadScene(string name, float delay = 0f)
+    {
+        StartCoroutine(LoadAsync(name, delay));
     }
 
     // public void LoadScene(int index)
@@ -51,7 +54,7 @@ public class AsyncSceneLoader : MonoBehaviour
     //     StartCoroutine(LoadAsync(SceneManager.GetSceneByBuildIndex(index).name));
     // }
 
-    IEnumerator LoadAsync(string name)
+    IEnumerator LoadAsync(string name, float delay)
     {
         ani.SetTrigger("FadeOut");
 

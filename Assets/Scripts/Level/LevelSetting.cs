@@ -24,6 +24,12 @@ namespace JacDev.Level
         public float spawnpointWidth = 10f;
 
         public GameObject rail;
+
+        public Vector2 stationOffset;
+        [Header("起站")]
+        public MapObject from;
+        [Header("終點")]
+        public MapObject dest;
     }
 
     [System.Serializable]

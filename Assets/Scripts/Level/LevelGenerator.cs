@@ -7,13 +7,50 @@ namespace JacDev.Level
 {
     public class LevelGenerator : MonoBehaviour
     {
+        static LevelGenerator singleton = null;
+
+        public static LevelGenerator Singleton
+        {
+            get
+            {
+                singleton = FindObjectOfType(typeof(LevelGenerator)) as LevelGenerator;
+
+                if (singleton == null)
+                {
+                    GameObject g = new GameObject("LevelGenerator");
+                    singleton = g.AddComponent<LevelGenerator>();
+                }
+
+                return singleton;
+            }
+        }
+
+        public enum GenerateType
+        {
+            General,
+            Constant
+        }
+
+        public GenerateType generateType;
+
         public LevelSetting levelSetting;
         List<Rect> objectMapping;
+        List<GameObject> blocks = new List<GameObject>();
 
         public Transform ground = default;
         public Transform rail = default;
 
+        public float totalLength;
+
+        [HideInInspector]
+        public Transform dest;  // 目的地
+
         private void OnEnable()
+        {
+            BuildMap();
+        }
+
+        void BuildMap()
         {
             for (int j = 0; j < levelSetting.blockCount; ++j)
             {
@@ -21,8 +58,43 @@ namespace JacDev.Level
                 Setup();
                 GameObject parent = transform.Find("Block " + j) ? transform.Find("Block " + j).gameObject : new GameObject("Block " + j);
                 parent.transform.SetParent(transform);
-                // Generate spawnpoint
-                Generate(levelSetting.spawnpoint, parent.transform, levelSetting.spawnpointWidth);
+
+                // easy to manage the block
+                blocks.Add(parent);
+
+                // Generate spawnpoint,except first and last
+                if (generateType == GenerateType.General)
+                {
+                    if (j == 0)
+                    {
+                        Rect rect = new Rect(levelSetting.stationOffset.x + levelSetting.from.size / 2, levelSetting.stationOffset.y + levelSetting.from.size / 2, levelSetting.from.size, levelSetting.from.size);
+                        objectMapping.Add(rect);
+                        GameObject g = Instantiate(levelSetting.from.origins[0]);
+                        g.transform.SetParent(parent.transform);
+                        g.transform.localPosition = new Vector3(levelSetting.stationOffset.x, 0, levelSetting.stationOffset.y);
+                    }
+                    else if (j == levelSetting.blockCount - 1)
+                    {
+                        Rect rect = new Rect(levelSetting.stationOffset.x + levelSetting.dest.size / 2, levelSetting.stationOffset.y + levelSetting.dest.size / 2, levelSetting.dest.size, levelSetting.dest.size);
+                        objectMapping.Add(rect);
+                        GameObject g = Instantiate(levelSetting.dest.origins[0]);
+                        g.transform.SetParent(parent.transform);
+                        g.transform.localPosition = new Vector3(levelSetting.stationOffset.x, 0, levelSetting.stationOffset.y);
+                        // need assign dest for map
+                        dest = g.transform;
+                    }
+                    else
+                    {
+
+                        Generate(levelSetting.spawnpoint, parent.transform, levelSetting.spawnpointWidth);
+                    }
+                }
+                else
+                {
+                    if (levelSetting.spawnpoint.origins.Length != 0)
+                        Generate(levelSetting.spawnpoint, parent.transform, levelSetting.spawnpointWidth);
+                }
+
                 for (int i = 0; i < levelSetting.mapObjects.Count; ++i)
                 {
                     // Generate map object
@@ -47,6 +119,8 @@ namespace JacDev.Level
                 ground.localPosition.x,
                 ground.localPosition.y,
                 ((float)levelSetting.blockCount / 2 - .5f) * levelSetting.size);
+
+            totalLength = (float)(levelSetting.blockCount - 1) * levelSetting.size;
         }
 
         void Setup()
@@ -68,6 +142,22 @@ namespace JacDev.Level
             //         print(r.width + "  " + r.height);
             //     }
             // }
+        }
+
+        private void Update()
+        {
+            // need be modify in future
+            if (generateType == GenerateType.Constant)
+            {
+                if (TrainLine.hasMove / levelSetting.size > (float)levelSetting.blockCount / 2)
+                {
+                    blocks[0].transform.localPosition = blocks[blocks.Count - 1].transform.localPosition + levelSetting.size * Vector3.forward;
+                    blocks.Add(blocks[0]);
+                    blocks.RemoveAt(0);
+                    ground.localPosition += levelSetting.size * Vector3.forward;
+                    TrainLine.hasMove -= levelSetting.size;
+                }
+            }
         }
 
         public void Generate(MapObject mo, Transform block, float genAreaX = 0, float genAreaZ = 0)
@@ -131,7 +221,7 @@ namespace JacDev.Level
 
         public void DebugButton()
         {
-            OnEnable();
+            BuildMap();
         }
     }
 }

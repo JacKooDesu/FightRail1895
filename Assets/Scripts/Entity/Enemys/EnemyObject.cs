@@ -87,6 +87,7 @@ namespace JacDev.Entity
 
             if (targetDistance > ((Enemy)entitySetting).maxDet && hasAttack)
             {
+                GameHandler.Singleton.entities.Remove(this);
                 Destroy(gameObject);
             }
             // taretCol = target.trains[Random.Range(0, target.trains.Length)].GetComponent<Collider>();

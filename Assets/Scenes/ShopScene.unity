@@ -718,7 +718,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 16639357}
-  - component: {fileID: 16639358}
   m_Layer: 0
   m_Name: Building02
   m_TagString: Untagged
@@ -741,20 +740,6 @@ Transform:
   m_Father: {fileID: 2075499051}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &16639358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16639356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &16849603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,7 +1645,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 36167918}
-  - component: {fileID: 36167919}
   m_Layer: 0
   m_Name: Building01
   m_TagString: Untagged
@@ -1683,20 +1667,6 @@ Transform:
   m_Father: {fileID: 2018994706}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &36167919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36167917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &37514116
 GameObject:
   m_ObjectHideFlags: 0
@@ -6279,7 +6249,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 120769469}
-  - component: {fileID: 120769470}
   m_Layer: 0
   m_Name: Building01
   m_TagString: Untagged
@@ -6302,20 +6271,6 @@ Transform:
   m_Father: {fileID: 581705591}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &120769470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120769468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &122832747
 GameObject:
   m_ObjectHideFlags: 0
@@ -9577,7 +9532,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 178573512}
-  - component: {fileID: 178573513}
   m_Layer: 0
   m_Name: Building01
   m_TagString: Untagged
@@ -9600,20 +9554,6 @@ Transform:
   m_Father: {fileID: 976504665}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &178573513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178573511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &178986843
 GameObject:
   m_ObjectHideFlags: 0
@@ -10611,7 +10551,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 199686531}
-  - component: {fileID: 199686532}
   m_Layer: 0
   m_Name: Building02
   m_TagString: Untagged
@@ -10634,20 +10573,6 @@ Transform:
   m_Father: {fileID: 581705591}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &199686532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199686530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &200810395
 GameObject:
   m_ObjectHideFlags: 0
@@ -15098,7 +15023,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 280407960}
-  - component: {fileID: 280407961}
   m_Layer: 0
   m_Name: Building03
   m_TagString: Untagged
@@ -15121,20 +15045,6 @@ Transform:
   m_Father: {fileID: 1605704420}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &280407961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280407959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &282817143
 GameObject:
   m_ObjectHideFlags: 0
@@ -19061,7 +18971,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 391568795}
-  - component: {fileID: 391568796}
   m_Layer: 0
   m_Name: Building01
   m_TagString: Untagged
@@ -19084,20 +18993,6 @@ Transform:
   m_Father: {fileID: 2075499051}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &391568796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391568794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &392112053
 GameObject:
   m_ObjectHideFlags: 0
@@ -27789,7 +27684,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 581754135}
-  - component: {fileID: 581754136}
   m_Layer: 0
   m_Name: Building03
   m_TagString: Untagged
@@ -27812,20 +27706,6 @@ Transform:
   m_Father: {fileID: 1646673270}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &581754136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581754134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &584473100
 GameObject:
   m_ObjectHideFlags: 0
@@ -36098,7 +35978,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 746453801}
-  - component: {fileID: 746453802}
   m_Layer: 0
   m_Name: Building03
   m_TagString: Untagged
@@ -36121,20 +36000,6 @@ Transform:
   m_Father: {fileID: 2028758687}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &746453802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746453800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &747952941
 GameObject:
   m_ObjectHideFlags: 0
@@ -41350,7 +41215,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 859005359}
-  - component: {fileID: 859005360}
   m_Layer: 0
   m_Name: Building02
   m_TagString: Untagged
@@ -41373,20 +41237,6 @@ Transform:
   m_Father: {fileID: 976504665}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &859005360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859005358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &859246901
 GameObject:
   m_ObjectHideFlags: 0
@@ -42683,7 +42533,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 876750275}
-  - component: {fileID: 876750276}
   m_Layer: 0
   m_Name: Building02
   m_TagString: Untagged
@@ -42706,20 +42555,6 @@ Transform:
   m_Father: {fileID: 2028758687}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &876750276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876750274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &877778163
 GameObject:
   m_ObjectHideFlags: 0
@@ -44613,7 +44448,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 926115230}
-  - component: {fileID: 926115231}
   m_Layer: 0
   m_Name: Building02
   m_TagString: Untagged
@@ -44636,20 +44470,6 @@ Transform:
   m_Father: {fileID: 1174600036}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &926115231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926115229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &927042782
 GameObject:
   m_ObjectHideFlags: 0
@@ -48835,7 +48655,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1000751695}
-  - component: {fileID: 1000751696}
   m_Layer: 0
   m_Name: Building03
   m_TagString: Untagged
@@ -48858,20 +48677,6 @@ Transform:
   m_Father: {fileID: 1121879511}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &1000751696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000751694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &1002722066
 GameObject:
   m_ObjectHideFlags: 0
@@ -52190,7 +51995,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1064860075}
-  - component: {fileID: 1064860076}
   m_Layer: 0
   m_Name: Building03
   m_TagString: Untagged
@@ -52213,20 +52017,6 @@ Transform:
   m_Father: {fileID: 581705591}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &1064860076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064860074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &1065279803
 GameObject:
   m_ObjectHideFlags: 0
@@ -54999,7 +54789,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1133145234}
-  - component: {fileID: 1133145235}
   m_Layer: 0
   m_Name: Building03
   m_TagString: Untagged
@@ -55022,20 +54811,6 @@ Transform:
   m_Father: {fileID: 2018994706}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &1133145235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133145233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &1135093667
 GameObject:
   m_ObjectHideFlags: 0
@@ -59369,7 +59144,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1205620032}
-  - component: {fileID: 1205620033}
   m_Layer: 0
   m_Name: Building02
   m_TagString: Untagged
@@ -59392,20 +59166,6 @@ Transform:
   m_Father: {fileID: 2018994706}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &1205620033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205620031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &1205868636
 GameObject:
   m_ObjectHideFlags: 0
@@ -62748,7 +62508,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1272495989}
-  - component: {fileID: 1272495990}
   m_Layer: 0
   m_Name: Building03
   m_TagString: Untagged
@@ -62771,20 +62530,6 @@ Transform:
   m_Father: {fileID: 976504665}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &1272495990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272495988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &1273712533
 GameObject:
   m_ObjectHideFlags: 0
@@ -64212,7 +63957,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1299724868}
-  - component: {fileID: 1299724869}
   m_Layer: 0
   m_Name: Building01
   m_TagString: Untagged
@@ -64235,20 +63979,6 @@ Transform:
   m_Father: {fileID: 2028758687}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1299724869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299724867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &1300982235
 GameObject:
   m_ObjectHideFlags: 0
@@ -64783,7 +64513,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1310038280}
-  - component: {fileID: 1310038281}
   m_Layer: 0
   m_Name: Building01
   m_TagString: Untagged
@@ -64806,20 +64535,6 @@ Transform:
   m_Father: {fileID: 1174600036}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1310038281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310038279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &1310131829
 GameObject:
   m_ObjectHideFlags: 0
@@ -68740,7 +68455,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1379164059}
-  - component: {fileID: 1379164060}
   m_Layer: 0
   m_Name: Building01
   m_TagString: Untagged
@@ -68763,20 +68477,6 @@ Transform:
   m_Father: {fileID: 1646673270}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1379164060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379164058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &1379992798
 GameObject:
   m_ObjectHideFlags: 0
@@ -70328,7 +70028,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1412808294}
-  - component: {fileID: 1412808295}
   m_Layer: 0
   m_Name: Building03
   m_TagString: Untagged
@@ -70351,20 +70050,6 @@ Transform:
   m_Father: {fileID: 1174600036}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &1412808295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412808293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &1413400735
 GameObject:
   m_ObjectHideFlags: 0
@@ -71136,7 +70821,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1427481875}
-  - component: {fileID: 1427481876}
   m_Layer: 0
   m_Name: Building03
   m_TagString: Untagged
@@ -71159,20 +70843,6 @@ Transform:
   m_Father: {fileID: 2075499051}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &1427481876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427481874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &1429335400
 GameObject:
   m_ObjectHideFlags: 0
@@ -71182,7 +70852,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1429335401}
-  - component: {fileID: 1429335402}
   m_Layer: 0
   m_Name: Building02
   m_TagString: Untagged
@@ -71205,20 +70874,6 @@ Transform:
   m_Father: {fileID: 1605704420}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &1429335402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429335400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &1430354560
 GameObject:
   m_ObjectHideFlags: 0
@@ -78854,7 +78509,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1581854823}
-  - component: {fileID: 1581854824}
   m_Layer: 0
   m_Name: Building01
   m_TagString: Untagged
@@ -78877,20 +78531,6 @@ Transform:
   m_Father: {fileID: 1121879511}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1581854824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581854822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &1584126729
 GameObject:
   m_ObjectHideFlags: 0
@@ -97653,7 +97293,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1970529995}
-  - component: {fileID: 1970529996}
   m_Layer: 0
   m_Name: Building01
   m_TagString: Untagged
@@ -97676,20 +97315,6 @@ Transform:
   m_Father: {fileID: 1605704420}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1970529996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970529994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &1971151326
 GameObject:
   m_ObjectHideFlags: 0
@@ -99778,7 +99403,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2017263674}
-  - component: {fileID: 2017263675}
   m_Layer: 0
   m_Name: Building02
   m_TagString: Untagged
@@ -99801,20 +99425,6 @@ Transform:
   m_Father: {fileID: 1121879511}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &2017263675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017263673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &2017530978
 GameObject:
   m_ObjectHideFlags: 0
@@ -100200,7 +99810,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2029862656}
-  - component: {fileID: 2029862657}
   m_Layer: 0
   m_Name: Building02
   m_TagString: Untagged
@@ -100223,20 +99832,6 @@ Transform:
   m_Father: {fileID: 1646673270}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!114 &2029862657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029862655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d716f41a0d44964aa9e60235c795286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
-  spawnSettings: []
 --- !u!1 &2031825766
 GameObject:
   m_ObjectHideFlags: 0
