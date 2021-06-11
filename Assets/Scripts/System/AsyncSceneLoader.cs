@@ -46,10 +46,10 @@ public class AsyncSceneLoader : MonoBehaviour
         StartCoroutine(LoadAsync(name));
     }
 
-    public void LoadScene(int index)
-    {
-
-    }
+    // public void LoadScene(int index)
+    // {
+    //     StartCoroutine(LoadAsync(SceneManager.GetSceneByBuildIndex(index).name));
+    // }
 
     IEnumerator LoadAsync(string name)
     {

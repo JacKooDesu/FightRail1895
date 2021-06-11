@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AsyncLoadingScene.unity
     guid: fbe11a84789c6af47aa6c91c903fe363
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: a98e65710f1cd3343a2aea83c3ac8504
+  - enabled: 1
+    path: Assets/Scenes/ShopScene.unity
+    guid: 475c0ce9c056d6144a308a239ae94860
   m_configObjects: {}

@@ -1,0 +1,547 @@
+fileFormatVersion: 2
+guid: 708bde5bfd964144bb30ebe85368fafe
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Circle.001_Circle.080_Material.007Mat
+    second: {fileID: 2100000, guid: b4971ef396e2cae458292dafadbed56a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Circle.002_Circle.081_Material.007Mat
+    second: {fileID: 2100000, guid: c93ab848b44b89a4f9518a95b5c1e1c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Circle.003_Circle.082_Material.007Mat
+    second: {fileID: 2100000, guid: 2a56250b4e301524b86d4d1e897e219e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Circle_Circle.079_Material.007Mat
+    second: {fileID: 2100000, guid: 20d416971ca3cd04482658ccea5efe97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabin_Cube.021_Material.005Mat
+    second: {fileID: 2100000, guid: ce9faeae9867f784faf22cd8717582a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabin_set1_Cube.013_Material.007Mat
+    second: {fileID: 2100000, guid: f94d7f9b072fcae41926911619ab307d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabin_set2_Cube.016_Material.007Mat
+    second: {fileID: 2100000, guid: 68b8be924e850414387174abb93b760b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabin_set3_Cube.017_Material.007Mat
+    second: {fileID: 2100000, guid: b24a207bf0f3dae4ba085442faff54ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabin_set4_Cube.018_Material.007Mat
+    second: {fileID: 2100000, guid: d9639abea61f60f4c846c0ecdfbbbd28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabin_set5_Cube.019_Material.007Mat
+    second: {fileID: 2100000, guid: 1af5b46362561e4458debd49f24177ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabin_set6_Cube.020_Material.007Mat
+    second: {fileID: 2100000, guid: 0426c5a5ad9160f4786e4e04aad1b216, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabin_set_Cube.009_Material.007Mat
+    second: {fileID: 2100000, guid: 25cc276b340513d488d8da42e406bdd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.003_Circle.076_Material.002Mat
+    second: {fileID: 2100000, guid: a642fb85cf67a2f458f5791bd014c733, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.003_Circle.076_Material.003Mat
+    second: {fileID: 2100000, guid: 47639999db7503f489b13a39df5618ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.004_Circle.077_Material.002Mat
+    second: {fileID: 2100000, guid: 8534b237faad7b84fb2185754df20134, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.004_Circle.077_Material.003Mat
+    second: {fileID: 2100000, guid: 6e511c0199b02544589e49c105a89d3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.005_Circle.078_Material.002Mat
+    second: {fileID: 2100000, guid: 3878348889bcb5e419f6034f5c5e43fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.005_Circle.078_Material.003Mat
+    second: {fileID: 2100000, guid: 412ee4fd0a27a474789bd44eb0e4a2c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.006_Circle.038_Material.002Mat
+    second: {fileID: 2100000, guid: 2716b533a5ce7e34f9943e687a639c41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.006_Circle.038_Material.003Mat
+    second: {fileID: 2100000, guid: f7f3181ffd5137d48be10cee65889e86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.007_Circle.039_Material.002Mat
+    second: {fileID: 2100000, guid: 433381ba03e3e5b47a246d1fb247c52c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.007_Circle.039_Material.003Mat
+    second: {fileID: 2100000, guid: d5aa3678814a3e742bd535b35e0035f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.008_Circle.040_Material.002Mat
+    second: {fileID: 2100000, guid: cc41cc15a8fa0664cb587529187ce540, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.008_Circle.040_Material.003Mat
+    second: {fileID: 2100000, guid: 3a2b0375d1ea9794e86c5113ad82e667, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.009_Circle.041_Material.002Mat
+    second: {fileID: 2100000, guid: 7ba458b8ee58f4e4799c50a7470f779c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.009_Circle.041_Material.003Mat
+    second: {fileID: 2100000, guid: c1ebc466aa96fd34097aaa62f90f7971, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.010_Circle.042_Material.002Mat
+    second: {fileID: 2100000, guid: 1e14feef809b24445bbabeef1e216ea4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.010_Circle.042_Material.003Mat
+    second: {fileID: 2100000, guid: 2dd8b5c83ec48b04f89bbffc8b0417bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.011_Circle.043_Material.002Mat
+    second: {fileID: 2100000, guid: f054b5037aec1b94b8b847dec98bc9a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.011_Circle.043_Material.003Mat
+    second: {fileID: 2100000, guid: f601549c0cb1e85459fb52a9f84f74d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.012_Circle.044_Material.002Mat
+    second: {fileID: 2100000, guid: a5b1090e49a8e6744be645b178c1445c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.012_Circle.044_Material.003Mat
+    second: {fileID: 2100000, guid: 24a2528ecc7df544eb8900495cf827c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.013_Circle.045_Material.002Mat
+    second: {fileID: 2100000, guid: cb086e86031095e47807a286ec0197fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.013_Circle.045_Material.003Mat
+    second: {fileID: 2100000, guid: bb2529e2fccd3cf41ba1e5499e69b6a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.014_Circle.046_Material.002Mat
+    second: {fileID: 2100000, guid: 8e6acabeae41b00439ccfa1dd71e82c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.014_Circle.046_Material.003Mat
+    second: {fileID: 2100000, guid: 5cfa692822757db4d834dcecb218874c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.015_Circle.049_Material.002Mat
+    second: {fileID: 2100000, guid: 23c1782b6d63bdf488129d175bef907c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.015_Circle.049_Material.003Mat
+    second: {fileID: 2100000, guid: 228e5932cc77f7c4590c069cf6ca3af9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.016_Circle.050_Material.002Mat
+    second: {fileID: 2100000, guid: a4a75d5a3f7fcc24687a68888c9cd26c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.016_Circle.050_Material.003Mat
+    second: {fileID: 2100000, guid: b2d2278feab1c1d4e8614581ed9b7d3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.017_Circle.051_Material.002Mat
+    second: {fileID: 2100000, guid: c216f98614764c14fa4f72d475823b1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.017_Circle.051_Material.003Mat
+    second: {fileID: 2100000, guid: 1d67b22b196232b4f9a4cfa79d14d9bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.018_Circle.052_Material.002Mat
+    second: {fileID: 2100000, guid: 1c1ba7c0d71bdd54ea902efcaa399b9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.018_Circle.052_Material.003Mat
+    second: {fileID: 2100000, guid: 589fbac0f0691364fa2778e3a1d2425e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.019_Circle.053_Material.002Mat
+    second: {fileID: 2100000, guid: 336b98e3881ccf644964e704ca47c0a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.019_Circle.053_Material.003Mat
+    second: {fileID: 2100000, guid: 8e3aaed1121bb834587b3a7192dcdb1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.020_Circle.054_Material.002Mat
+    second: {fileID: 2100000, guid: 3bdb5498f9dc17e498907470b83b8082, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.020_Circle.054_Material.003Mat
+    second: {fileID: 2100000, guid: 34c1c1d6ccb8d054da3643e741d3a220, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.021_Circle.055_Material.002Mat
+    second: {fileID: 2100000, guid: 9c49ef1b6d3c3da4e89a2292bacf27bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.021_Circle.055_Material.003Mat
+    second: {fileID: 2100000, guid: 2d0274cf9085de347be0b79e9c3eb70a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.022_Circle.056_Material.002Mat
+    second: {fileID: 2100000, guid: 7512611dc117b2542a44772c4241b2f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.022_Circle.056_Material.003Mat
+    second: {fileID: 2100000, guid: 43cf07f843f63f743aa38fb996f34224, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.023_Circle.057_Material.002Mat
+    second: {fileID: 2100000, guid: 170df9d237ccb5b49abcc662ee5f534c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.023_Circle.057_Material.003Mat
+    second: {fileID: 2100000, guid: aa4b5d3aeab7a4e4d85201cebb707c8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.024_Circle.058_Material.002Mat
+    second: {fileID: 2100000, guid: 41ae183352bcca44b90bcbd3c3b0b9f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.024_Circle.058_Material.003Mat
+    second: {fileID: 2100000, guid: 4a55c0ea55f12df4c8081e5c5d7e22d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.025_Circle.059_Material.002Mat
+    second: {fileID: 2100000, guid: 406f4e5135929894490dba47fa1e5018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.025_Circle.059_Material.003Mat
+    second: {fileID: 2100000, guid: af99b25540bd956448d2c6fa7bbda6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.026_Circle.060_Material.002Mat
+    second: {fileID: 2100000, guid: 3941972afe2f6c14d8c872bda07985f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.026_Circle.060_Material.003Mat
+    second: {fileID: 2100000, guid: cf453343f26f15f4ab66fdfc5c707f5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.027_Circle.061_Material.002Mat
+    second: {fileID: 2100000, guid: 39f4dc4ca764ccc4697d0d70e17c4b76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.027_Circle.061_Material.003Mat
+    second: {fileID: 2100000, guid: 3620d8b805c38b74dadfcfd1976eeb44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.028_Circle.062_Material.002Mat
+    second: {fileID: 2100000, guid: 79607bf5c1cfed14785c1d5d09d6480c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.028_Circle.062_Material.003Mat
+    second: {fileID: 2100000, guid: fc947f45c8e2f73439aa51b8b234494e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.029_Circle.063_Material.002Mat
+    second: {fileID: 2100000, guid: 317888e399ef4434f9d0af4e5f8d3c48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.029_Circle.063_Material.003Mat
+    second: {fileID: 2100000, guid: a88b6f652f675e44baf7f5c5e0176438, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.030_Circle.064_Material.002Mat
+    second: {fileID: 2100000, guid: e0a586de6e3bec04abd76c30c8c58d1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.030_Circle.064_Material.003Mat
+    second: {fileID: 2100000, guid: d59dda35a05f13f41b88fa7a3d9dded4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.031_Circle.065_Material.002Mat
+    second: {fileID: 2100000, guid: b4da3f601440de549842ad63b87496f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.031_Circle.065_Material.003Mat
+    second: {fileID: 2100000, guid: 13a1488f4ebdb6448a017339b789c49c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.032_Circle.066_Material.002Mat
+    second: {fileID: 2100000, guid: 37e647a1998d4b84a9a8333031e6448f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.032_Circle.066_Material.003Mat
+    second: {fileID: 2100000, guid: adcd2a2d25eca4c4789222f156a7fd25, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.033_Circle.067_Material.002Mat
+    second: {fileID: 2100000, guid: 5cab8a7dd1905a248b0ce79c33aa7dc9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.033_Circle.067_Material.003Mat
+    second: {fileID: 2100000, guid: dd22692cb8076284b829f5f4aea94e15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.034_Circle.068_Material.002Mat
+    second: {fileID: 2100000, guid: e765542e844cc5f4081f5c61f0c8b777, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.034_Circle.068_Material.003Mat
+    second: {fileID: 2100000, guid: f497f2e49d072f548a2413a81bb94288, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.035_Circle.069_Material.002Mat
+    second: {fileID: 2100000, guid: 6a2ea69c76dba4f43b58256cb84bce2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.035_Circle.069_Material.003Mat
+    second: {fileID: 2100000, guid: df1e3141846d9bc4b8755ac31c1dd83a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.036_Circle.070_Material.002Mat
+    second: {fileID: 2100000, guid: b7a51835216383b41a5048150825d587, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.036_Circle.070_Material.003Mat
+    second: {fileID: 2100000, guid: de7a3b07e8c97d04db886cd67a06dc77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.037_Circle.071_Material.002Mat
+    second: {fileID: 2100000, guid: afba1865412ee0c49ae73965e4cefb4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.037_Circle.071_Material.003Mat
+    second: {fileID: 2100000, guid: 7e00f93beaf8fb84aad44e9f1858f82a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.038_Circle.072_Material.002Mat
+    second: {fileID: 2100000, guid: e0c7ee6226de17440b1ea9d9efbb1a49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.038_Circle.072_Material.003Mat
+    second: {fileID: 2100000, guid: 31d76677bfcdc584d8ad8729ee6e46d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.039_Circle.073_Material.002Mat
+    second: {fileID: 2100000, guid: dded86147703f8143a47c29afed56123, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.039_Circle.073_Material.003Mat
+    second: {fileID: 2100000, guid: 0f4d5221fda99a14499482427cfd0b87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.040_Circle.074_Material.002Mat
+    second: {fileID: 2100000, guid: 652ef441f2b6f3c42b350b4651dfaaf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.040_Circle.074_Material.003Mat
+    second: {fileID: 2100000, guid: a1ef3672914d9514bba8409a65d9881a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.041_Circle.075_Material.002Mat
+    second: {fileID: 2100000, guid: bc885f370100b3047ac5b80c05218d9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood.041_Circle.075_Material.003Mat
+    second: {fileID: 2100000, guid: 62df3c86477a44842a27924f0fe2f99a, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 2
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
