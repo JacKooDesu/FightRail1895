@@ -39,7 +39,9 @@ namespace JacDev.Entity
 
         public float movementSpeed = 5.0f;  // 移動速度
         public float health = 20.0f;    // 血量
+        public float maxDet = 5f;   //最遠偵測距離
         public float damage = 5.0f;     // 基礎傷害，之後可寫成獨立類別，與種族寫在一起
+        public float attackRange = 1f;
         public float attactSpeed = 1.0f; // 攻擊速度，每秒攻擊次數
 
         [System.Serializable]

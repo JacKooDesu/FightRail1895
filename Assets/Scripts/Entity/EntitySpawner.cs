@@ -4,10 +4,13 @@ using UnityEngine;
 
 namespace JacDev.Entity
 {
+    // will added enemy spawner in future
     public class EntitySpawner : MonoBehaviour
     {
         [SerializeField, Header("生成點")]
         protected Transform spawnpoint = default;
+        [SerializeField]
+        protected float radius = 30f;
         [System.Serializable]
         public class SpawnSetting
         {
@@ -39,28 +42,70 @@ namespace JacDev.Entity
             }
         }
 
+        bool active = true;
+
+        public void DebugSpawn(int index = 0)
+        {
+            StartCoroutine(Spawn(index));
+        }
+
+        private void LateUpdate()
+        {
+            if (active)
+            {
+                foreach (RaycastHit hit in Physics.SphereCastAll(
+                    spawnpoint.position, radius, Vector3.forward, 0f))
+                {
+                    if (hit.transform.GetComponent<TrainObject>())
+                    {
+                        StartCoroutine(Spawn(0));
+                        active = false;
+                    }
+                }
+            }
+
+        }
+
+
         [SerializeField]
         SpawnSetting[] spawnSettings;
-        
-        // protected IEnumerator Spawn()
-        // {
-        //     int hasSpawn = 0;
-        //     float tempInterval = 0f;
 
-        //     while (hasSpawn < amount)
-        //     {
-        //         if (spawnType == SpawnType.Once)
-        //         {
-        //             GameObject go = new GameObject();
-        //             EntityObject eo = go.AddComponent(entity.EntityObject());
-        //             go.transform.position = spawnpoint.position;
-        //             GameHandler.Singleton.entities.Add(entityObject);
-        //             continue;
-        //         }
+        protected IEnumerator Spawn(int index)
+        {
+            int hasSpawn = 0;
+            float tempInterval = 0f;
+            SpawnSetting setting = spawnSettings[index];
 
-        //     }
-        //     yield return null;
-        // }
+            while (hasSpawn < setting.amount)
+            {
+                if (setting.spawnType == SpawnSetting.SpawnType.Once)
+                {
+                    GameObject go = Instantiate(setting.entity.prefab);
+                    EntityObject eo = go.GetComponent<EntityObject>();
+                    go.transform.position = spawnpoint.position;
+                    GameHandler.Singleton.entities.Add(eo);
+                    hasSpawn += 1;
+                }
+                else
+                {
+                    if (tempInterval < setting.interval)
+                    {
+                        tempInterval += Time.deltaTime;
+                        yield return null;
+                    }
+                    else
+                    {
+                        GameObject go = Instantiate(setting.entity.prefab);
+                        EntityObject eo = go.GetComponent<EntityObject>();
+                        go.transform.position = spawnpoint.position;
+                        GameHandler.Singleton.entities.Add(eo);
+                        hasSpawn += 1;
+                        tempInterval=0;
+                    }
+                }
+            }
+            yield return null;
+        }
     }
 }
 

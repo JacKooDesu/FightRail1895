@@ -7,9 +7,13 @@ namespace JacDev.Entity
     public class EnemyObject : EntityObject
     {
         // public Enemy enemy;
-        public TrainLine target;
+        public static TrainLine target;
         Animator ani;
         Collider taretCol;
+
+        bool hasAttack = false;
+        float notAttack = 0;
+        public float changeTargetTime = 3f;
 
         private void Awake()
         {
@@ -23,55 +27,69 @@ namespace JacDev.Entity
 
         public void TestMove()
         {
-            // transform.Translate(enemy.movementSpeed * Vector3.forward * Time.deltaTime);
-            if (target != null)
+
+            if (taretCol == null || notAttack >= changeTargetTime)
             {
-                if (taretCol == null)
-                    ChangeAttackTarget();
+                ChangeAttackTarget();
+                notAttack = 0;
+            }
 
-                if ((taretCol.ClosestPoint(transform.position) - GetComponent<Collider>().ClosestPoint(target.transform.position)).magnitude >= .5f)
+
+            notAttack += Time.deltaTime;
+            // need added attack range in future
+            if ((taretCol.ClosestPoint(transform.position) - GetComponent<Collider>().ClosestPoint(target.transform.position)).magnitude >= 1f)
+            {
+                if (!ani.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
-                    if (!ani.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
-                    {
-                        transform.Translate(((Enemy)entitySetting).movementSpeed * Vector3.forward * Time.deltaTime);
-                        transform.LookAt(taretCol.ClosestPoint(transform.position));
-                    }
-
+                    transform.Translate(((Enemy)entitySetting).movementSpeed * Vector3.forward * Time.deltaTime);
+                    transform.LookAt(taretCol.ClosestPoint(transform.position));
                 }
-                else
+
+            }
+            else
+            {
+                if (!ani.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
-                    if (!ani.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
-                    {
-                        ani.SetTrigger("Attack");
-                        taretCol = null;
-                    }
-
+                    ani.SetTrigger("Attack");
+                    notAttack = 0;
+                    taretCol = null;
+                    hasAttack = true;
                 }
-                print(ani.GetCurrentAnimatorClipInfo(0)[0].clip);
 
-                Ray r = new Ray(transform.position, transform.forward);
-                RaycastHit hit;
+            }
+            // print(ani.GetCurrentAnimatorClipInfo(0)[0].clip);
 
-                if (Physics.Raycast(r, out hit, 5f, 1 << 8))
-                {
-                    // print(this.name);
-                    transform.Rotate(Vector3.up * 90);
-                }
+            Ray r = new Ray(transform.position, transform.forward);
+            RaycastHit hit;
+
+            if (Physics.Raycast(r, out hit, 5f, 1 << 8))
+            {
+                // print(this.name);
+                transform.Rotate(Vector3.up * 90);
             }
         }
 
         public void ChangeAttackTarget()
         {
             // Near Train
-            // float targetDistance = Vector3.Distance(target.trains[0].transform.position, transform.position);
-            // taretCol = target.trains[0].GetComponent<Collider>();
-            // for (int i = 1; i < target.trains.Length; ++i)
-            // {
-            //     if (targetDistance > Vector3.Distance(target.trains[i].transform.position, transform.position))
-            //         taretCol = target.trains[i].GetComponent<Collider>();
-            // }
+            float targetDistance = Vector3.Distance(target.trains[0].transform.position, transform.position);
+            int index = 0;
+            for (int i = 0; i < target.trains.Length; ++i)
+            {
+                if (targetDistance > Vector3.Distance(target.trains[i].transform.position, transform.position))
+                {
+                    targetDistance = Vector3.Distance(target.trains[i].transform.position, transform.position);
+                    index = i;
+                }
+            }
 
-            taretCol = target.trains[Random.Range(0, target.trains.Length)].GetComponent<Collider>();
+            taretCol = target.trains[index].GetComponent<Collider>();
+
+            if (targetDistance > ((Enemy)entitySetting).maxDet && hasAttack)
+            {
+                Destroy(gameObject);
+            }
+            // taretCol = target.trains[Random.Range(0, target.trains.Length)].GetComponent<Collider>();
         }
 
         public override bool GameUpdate()
