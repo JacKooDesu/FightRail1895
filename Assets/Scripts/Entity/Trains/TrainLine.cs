@@ -26,17 +26,35 @@ namespace JacDev.Entity
             KeyCode.Alpha0,
         };
 
+        KeyCode firstPersonViewKey = KeyCode.Minus;
+        public RenderTexture frontViewTexture;
+
+        public Camera firstPersonViewCamera;
+        Camera originCamera;
+
+
         private void Start()
         {
+            originCamera = Camera.main;
+            firstPersonViewCamera.enabled = false;
+
             float lengthTemp = 0;
 
             for (int i = 0; i < trains.Length; ++i)
             {
-                print(lengthTemp);
+                // print(lengthTemp);
                 trains[i].transform.localPosition = new Vector3(0, 0, lengthTemp);
                 lengthTemp -= trains[i].Length;
 
+                // Setting RenderTexture
+                if (i == 0)
+                {
+                    trains[i].GetComponentInChildren<Camera>().targetTexture = frontViewTexture;
+                }
             }
+
+            // reset position
+            transform.position = Vector3.zero;
 
             EnemyObject.target = this;
         }
@@ -45,6 +63,12 @@ namespace JacDev.Entity
         {
             TestMove();
             SwitchFocusTrain();
+
+            if (Input.GetKeyDown(firstPersonViewKey))
+            {
+                originCamera.enabled = !originCamera.enabled;
+                firstPersonViewCamera.enabled = !firstPersonViewCamera.enabled;
+            }
         }
 
         void TestMove()
