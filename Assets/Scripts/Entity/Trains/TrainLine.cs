@@ -36,7 +36,8 @@ namespace JacDev.Entity
         private void Start()
         {
             originCamera = Camera.main;
-            firstPersonViewCamera.enabled = false;
+            if (firstPersonViewCamera)
+                firstPersonViewCamera.enabled = false;
 
             float lengthTemp = 0;
 
@@ -47,7 +48,7 @@ namespace JacDev.Entity
                 lengthTemp -= trains[i].Length;
 
                 // Setting RenderTexture
-                if (i == 0)
+                if (i == 0 && frontViewTexture)
                 {
                     trains[i].GetComponentInChildren<Camera>().targetTexture = frontViewTexture;
                 }
@@ -68,6 +69,7 @@ namespace JacDev.Entity
             {
                 originCamera.enabled = !originCamera.enabled;
                 firstPersonViewCamera.enabled = !firstPersonViewCamera.enabled;
+                firstPersonViewCamera.GetComponentInParent<Animator>().SetTrigger("Change");
             }
         }
 
