@@ -18362,7 +18362,7 @@ MonoBehaviour:
   - {fileID: 339499978}
   - {fileID: 447610562}
   - {fileID: 1652440631}
-  speed: 5
+  speed: 30
   frontViewTexture: {fileID: 8400000, guid: 74cba8779cab0dd42a619a27f42d8f4f, type: 2}
   firstPersonViewCamera: {fileID: 1610962762775688120}
 --- !u!4 &1335524265

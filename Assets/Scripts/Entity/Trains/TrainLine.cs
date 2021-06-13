@@ -67,9 +67,7 @@ namespace JacDev.Entity
 
             if (Input.GetKeyDown(firstPersonViewKey))
             {
-                originCamera.enabled = !originCamera.enabled;
-                firstPersonViewCamera.enabled = !firstPersonViewCamera.enabled;
-                firstPersonViewCamera.GetComponentInParent<Animator>().SetTrigger("Change");
+                SwitchCamera();
             }
         }
 
@@ -80,10 +78,25 @@ namespace JacDev.Entity
 
             if (hasMove >= LevelGenerator.Singleton.totalLength && !finished)
             {
+                SwitchCamera(originCamera);
                 Camera.main.GetComponent<OrbitCamera>().SetFocus(LevelGenerator.Singleton.dest);
                 AsyncSceneLoader.Singleton.LoadScene("ShopScene", 2f);
                 finished = true;
             }
+        }
+
+        void SwitchCamera()
+        {
+            originCamera.enabled = !originCamera.enabled;
+            firstPersonViewCamera.enabled = !firstPersonViewCamera.enabled;
+        }
+
+        void SwitchCamera(Camera cam)
+        {
+            if (Camera.main == cam)
+                return;
+            else
+                SwitchCamera();
         }
 
         void SwitchFocusTrain()
