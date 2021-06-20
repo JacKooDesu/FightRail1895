@@ -20,6 +20,7 @@ namespace JacDev.Utils.UISlicker
 
         public override void Slick(string name)
         {
+            base.Slick(name);
             foreach (Setting<Color> c in settings)
             {
                 if (c.name == name)
@@ -31,6 +32,7 @@ namespace JacDev.Utils.UISlicker
 
         public override void SlickBack()
         {
+            base.SlickBack();
             Tween<Color>(origin, GetComponent<Graphic>().color);
         }
 

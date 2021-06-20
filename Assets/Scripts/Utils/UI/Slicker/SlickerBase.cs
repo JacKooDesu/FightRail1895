@@ -15,10 +15,23 @@ namespace JacDev.Utils.UISlicker
             }
         }
 
-        public virtual void Slick() { }
+        public virtual void Slick()
+        {
+            if (GetComponent<iTween>())
+                iTween.Stop(gameObject);
 
-        public virtual void Slick(string name) { }
-        public virtual void SlickBack() { }
+        }
+
+        public virtual void Slick(string name)
+        {
+            if (GetComponent<iTween>())
+                iTween.Stop(gameObject);
+        }
+        public virtual void SlickBack()
+        {
+            if (GetComponent<iTween>())
+                iTween.Stop(gameObject);
+        }
 
         protected void Tween<T>(Setting<T> s, T from)
         {

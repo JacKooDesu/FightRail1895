@@ -19,6 +19,7 @@ namespace JacDev.Utils.UISlicker
 
         public override void Slick(string name)
         {
+            base.Slick(name);
             foreach (PositionSetting v in settings)
             {
                 if (v.name == name)
@@ -30,6 +31,7 @@ namespace JacDev.Utils.UISlicker
 
         public override void SlickBack()
         {
+            base.SlickBack();
             Tween<Vector2>(origin, rect.anchoredPosition);
         }
 

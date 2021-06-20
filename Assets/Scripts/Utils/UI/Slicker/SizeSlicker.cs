@@ -20,12 +20,14 @@ namespace JacDev.Utils.UISlicker
 
         public override void Slick()
         {
+            base.Slick();
             StopAllCoroutines();
             StartCoroutine(UpdateSize(final));
         }
 
         public override void SlickBack()
         {
+            base.SlickBack();
             StopAllCoroutines();
             StartCoroutine(UpdateSize(origin));
         }
