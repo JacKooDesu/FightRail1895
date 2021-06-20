@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 870b9a8f0f82f4f56800cc427bcd1025
+guid: e975542cbd18bcf43b718d031cb3c06b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - _shader: {fileID: -6465566751694194690, guid: af20866b3d25847438690b7745dd2e77,
-      type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
