@@ -135,7 +135,7 @@ public class OrbitCamera : MonoBehaviour
         );
         const float e = 0.001f;
         if (
-            Input.GetMouseButton(0) &&
+            Input.GetMouseButton(1) &&
             (input.x < -e ||
             input.x > e ||
             input.y < -e ||
