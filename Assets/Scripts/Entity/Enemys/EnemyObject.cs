@@ -9,15 +9,18 @@ namespace JacDev.Entity
         // public Enemy enemy;
         public static TrainLine target;
         Animator ani;
+        EntityObject attackTarget;
         Collider taretCol;
 
         bool hasAttack = false;
         float notAttack = 0;
         public float changeTargetTime = 3f;
 
+
         private void Awake()
         {
             ani = GetComponent<Animator>();
+            health = ((Enemy)entitySetting).health;
         }
 
         private void LateUpdate()
