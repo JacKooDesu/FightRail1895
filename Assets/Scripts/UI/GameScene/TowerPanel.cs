@@ -14,6 +14,7 @@ namespace JacDev.UI.GameScene
         {
             positionSlick = GetComponent<PositionSlick>();
             InputHandler.Singleton.placingTowerEvent.onBegin += () => positionSlick.Slick("hide");
+            InputHandler.Singleton.placingTowerEvent.onEnd += () => positionSlick.SlickBack();
         }
 
     }
