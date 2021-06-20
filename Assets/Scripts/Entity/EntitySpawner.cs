@@ -4,13 +4,11 @@ using UnityEngine;
 
 namespace JacDev.Entity
 {
-    // will added enemy spawner in future
     public class EntitySpawner : MonoBehaviour
     {
         [SerializeField, Header("生成點")]
         protected Transform spawnpoint = default;
-        [SerializeField]
-        protected float radius = 30f;
+
         [System.Serializable]
         public class SpawnSetting
         {
@@ -42,30 +40,10 @@ namespace JacDev.Entity
             }
         }
 
-        bool active = true;
-
         public void DebugSpawn(int index = 0)
         {
             StartCoroutine(Spawn(index));
         }
-
-        private void LateUpdate()
-        {
-            if (active)
-            {
-                foreach (RaycastHit hit in Physics.SphereCastAll(
-                    spawnpoint.position, radius, Vector3.forward, 0f))
-                {
-                    if (hit.transform.GetComponent<TrainObject>())
-                    {
-                        StartCoroutine(Spawn(0));
-                        active = false;
-                    }
-                }
-            }
-
-        }
-
 
         [SerializeField]
         SpawnSetting[] spawnSettings;
@@ -100,7 +78,7 @@ namespace JacDev.Entity
                         go.transform.position = spawnpoint.position;
                         GameHandler.Singleton.entities.Add(eo);
                         hasSpawn += 1;
-                        tempInterval=0;
+                        tempInterval = 0;
                     }
                 }
             }
