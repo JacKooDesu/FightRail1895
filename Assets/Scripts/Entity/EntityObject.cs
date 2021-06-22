@@ -8,6 +8,7 @@ namespace JacDev.Entity
         protected EntitySetting entitySetting;
 
         public virtual bool GameUpdate() => true;
+        public float maxHealth = 10f;
         public float health = 10f;
 
         public virtual void Init(EntitySetting setting)
