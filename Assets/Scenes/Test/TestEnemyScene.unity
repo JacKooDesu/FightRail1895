@@ -2666,6 +2666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entitySetting: {fileID: 11400000, guid: 533ec073d72afa94f85af7221a39fe82, type: 2}
+  maxHealth: 10
   health: 10
 --- !u!136 &533803012
 CapsuleCollider:
@@ -22483,6 +22484,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6102857119379649798, guid: 8b1ad1e97591db94fa7b6971b4a0fbf1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102857119379649798, guid: 8b1ad1e97591db94fa7b6971b4a0fbf1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102857119379649798, guid: 8b1ad1e97591db94fa7b6971b4a0fbf1,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6240597353200192320, guid: 8b1ad1e97591db94fa7b6971b4a0fbf1,
         type: 3}
       propertyPath: m_RootOrder
@@ -22553,6 +22569,26 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1775341436}
+    - target: {fileID: 6240597354820820440, guid: 8b1ad1e97591db94fa7b6971b4a0fbf1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 6802253250029434077, guid: 8b1ad1e97591db94fa7b6971b4a0fbf1,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445450417473214853, guid: 8b1ad1e97591db94fa7b6971b4a0fbf1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445450417473214853, guid: 8b1ad1e97591db94fa7b6971b4a0fbf1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b1ad1e97591db94fa7b6971b4a0fbf1, type: 3}
 --- !u!23 &6254707666935596232
