@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace JacDev.Entity
 {
@@ -16,20 +17,30 @@ namespace JacDev.Entity
         float notAttack = 0;
         public float changeTargetTime = 3f;
 
+        [Header("UI Settings")]
+        public Slider healthBar;
+
 
         private void Awake()
         {
             ani = GetComponent<Animator>();
-            health = ((Enemy)entitySetting).health;
+            maxHealth = ((Enemy)entitySetting).health;
+            health = maxHealth;
         }
 
         private void LateUpdate()
         {
             TestMove();
+            UpdateUI();
+
+            if (health <= 0)
+                Destroy(gameObject);
         }
 
         public void TestMove()
         {
+            if (target == null)
+                return;
 
             if (taretCol == null || notAttack >= changeTargetTime)
             {
@@ -74,6 +85,9 @@ namespace JacDev.Entity
 
         public void ChangeAttackTarget()
         {
+            if (target == null)
+                return;
+
             // Near Train
             float targetDistance = Vector3.Distance(target.trains[0].transform.position, transform.position);
             int index = 0;
@@ -94,6 +108,12 @@ namespace JacDev.Entity
                 Destroy(gameObject);
             }
             // taretCol = target.trains[Random.Range(0, target.trains.Length)].GetComponent<Collider>();
+        }
+
+        public void UpdateUI()
+        {
+            healthBar.transform.parent.LookAt(Camera.main.transform, Vector3.down);
+            healthBar.value = Mathf.Clamp01(health / maxHealth);
         }
 
         public override bool GameUpdate()
