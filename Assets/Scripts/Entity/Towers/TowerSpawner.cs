@@ -15,13 +15,15 @@ namespace JacDev.Entity
         public float zOffset = 15f;
         public float yOffset = 3f;
 
+        Transform spawnPointParent = default;
+
         private void OnEnable()
         {
             InputHandler.Singleton.placingTowerEvent.onBegin += () =>
             {
                 transform.GetChild(0).gameObject.SetActive(true);
             };
-            
+
             InputHandler.Singleton.placingTowerEvent.onUpdate += () =>
             {
                 // print(Camera.main.ScreenToWorldPoint(Input.mousePosition));
@@ -38,9 +40,19 @@ namespace JacDev.Entity
                     Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zOffset)),
                     out hit);
 
-                if (hit.point != null)
+                if (hit.transform != null && hit.transform.tag == "TowerSpawnPoint")
+                {
+                    transform.position = hit.transform.position;
+                    spawnPointParent = hit.transform;
+                }
+                else if (hit.point != null)
                 {
                     transform.position = new Vector3(hit.point.x, hit.point.y + yOffset, hit.point.z);
+                    spawnPointParent = null;
+                }
+                else
+                {
+                    spawnPointParent = null;
                 }
 
                 // should move in InputHandler in future
@@ -50,14 +62,16 @@ namespace JacDev.Entity
 
             InputHandler.Singleton.placingTowerEvent.onEnd += () =>
             {
-                Spawning();
+                if (spawnPointParent != null)
+                    Spawning();
+
                 transform.GetChild(0).gameObject.SetActive(false);
             };
         }
 
         void Spawning()
         {
-            StartCoroutine(Spawn(SelectTower));
+            StartCoroutine(Spawn(SelectTower, spawnPointParent));
         }
     }
 }
