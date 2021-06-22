@@ -48,7 +48,7 @@ namespace JacDev.Entity
         [SerializeField]
         SpawnSetting[] spawnSettings;
 
-        protected IEnumerator Spawn(int index)
+        protected IEnumerator Spawn(int index, Transform parent = default)
         {
             int hasSpawn = 0;
             float tempInterval = 0f;
@@ -61,6 +61,7 @@ namespace JacDev.Entity
                     GameObject go = Instantiate(setting.entity.prefab);
                     EntityObject eo = go.GetComponent<EntityObject>();
                     go.transform.position = spawnpoint.position;
+                    go.transform.SetParent(parent);
                     GameHandler.Singleton.entities.Add(eo);
                     hasSpawn += 1;
                 }
@@ -76,6 +77,7 @@ namespace JacDev.Entity
                         GameObject go = Instantiate(setting.entity.prefab);
                         EntityObject eo = go.GetComponent<EntityObject>();
                         go.transform.position = spawnpoint.position;
+                        go.transform.SetParent(parent);
                         GameHandler.Singleton.entities.Add(eo);
                         hasSpawn += 1;
                         tempInterval = 0;
