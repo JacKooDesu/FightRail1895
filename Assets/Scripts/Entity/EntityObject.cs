@@ -4,8 +4,7 @@ namespace JacDev.Entity
 {
     public abstract class EntityObject : MonoBehaviour
     {
-        [SerializeField]
-        protected EntitySetting entitySetting;
+        public EntitySetting entitySetting;
 
         public virtual bool GameUpdate() => true;
         public float maxHealth = 10f;
