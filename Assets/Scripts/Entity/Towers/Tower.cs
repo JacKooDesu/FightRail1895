@@ -17,7 +17,7 @@ namespace JacDev.Entity
             return g.GetComponent<TowerObject>();
         }
 
-        public float damage = 5.0f;     // 基礎傷害
+        public Projectile projectile;
         public float attackRange = 1f;  // 攻擊距離
         public float attackTime = 1.0f; // 攻擊花費時長(秒)
     }

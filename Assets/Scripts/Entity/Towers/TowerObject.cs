@@ -9,6 +9,7 @@ namespace JacDev.Entity
         TowerTargetingMode targetingMode;
         float cooldownTime = 0f;
         bool canAttack = true;
+        public ProjectileSpawner launcher;
 
         private void Update()
         {
@@ -17,13 +18,19 @@ namespace JacDev.Entity
 
             if (canAttack)
             {
+
                 foreach (RaycastHit hit in Physics.SphereCastAll(
                         transform.position, setting.attackRange, Vector3.forward, 0f))
                 {
                     if (hit.transform.GetComponent<EnemyObject>())
                     {
-                        hit.transform.GetComponent<EnemyObject>().GetDamage(setting.damage);
+                        // 2021.7.9   has move to projectile
+                        // hit.transform.GetComponent<EnemyObject>().GetDamage(setting.damage);
                         // enemyObjects.Add(hit.transform.GetComponent<EnemyObject>());
+
+                        // 2021.7.9   新增，之後須將精確度加入
+                        launcher.Launch(hit.transform.position);
+
                         canAttack = false;
                     }
                 }
