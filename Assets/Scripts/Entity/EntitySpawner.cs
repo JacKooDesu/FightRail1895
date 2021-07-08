@@ -46,9 +46,9 @@ namespace JacDev.Entity
         }
 
         [SerializeField]
-        SpawnSetting[] spawnSettings;
+        protected SpawnSetting[] spawnSettings;
 
-        protected IEnumerator Spawn(int index, Transform parent = default)
+        protected virtual IEnumerator Spawn(int index, Transform parent = default)
         {
             int hasSpawn = 0;
             float tempInterval = 0f;
@@ -84,7 +84,7 @@ namespace JacDev.Entity
                     }
                 }
             }
-            yield return null;
+            yield break;
         }
     }
 }
