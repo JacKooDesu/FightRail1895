@@ -18,6 +18,15 @@ namespace JacDev.Entity
             // so.Init(this);
             return so;
         }
+
+        public EntityType targetEntityType;
+
+        public float damage;
+        public float speed;
+        public float maxFlyTime;
+        public float radius;
+        public float explosiveTime;
+        public Transform explosivePrefab;
     }
 }
 
