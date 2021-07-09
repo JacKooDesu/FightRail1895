@@ -4,7 +4,8 @@ namespace JacDev.Entity
     {
         Enemy,
         Tower,
-        Train
+        Train,
+        Projectile
     }
 }
 
