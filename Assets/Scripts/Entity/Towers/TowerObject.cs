@@ -18,7 +18,8 @@ namespace JacDev.Entity
 
             if (canAttack)
             {
-
+                // 2021.7.9 is now only target one enemy
+                enemyObjects.Clear();
                 foreach (RaycastHit hit in Physics.SphereCastAll(
                         transform.position, setting.attackRange, Vector3.forward, 0f))
                 {
@@ -29,10 +30,15 @@ namespace JacDev.Entity
                         // enemyObjects.Add(hit.transform.GetComponent<EnemyObject>());
 
                         // 2021.7.9   新增，之後須將精確度加入
-                        launcher.Launch(hit.transform.position);
-
-                        canAttack = false;
+                        enemyObjects.Add(hit.transform.GetComponent<EnemyObject>());
                     }
+                }
+
+                if (enemyObjects.Count != 0)
+                {
+                    launcher.Launch(enemyObjects[Random.Range(0, enemyObjects.Count)].transform.position);
+
+                    canAttack = false;
                 }
             }
             else
