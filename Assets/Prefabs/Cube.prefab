@@ -96,6 +96,7 @@ MonoBehaviour:
   entitySetting: {fileID: 11400000, guid: 533ec073d72afa94f85af7221a39fe82, type: 2}
   maxHealth: 10
   health: 10
+  launcher: {fileID: 5300166508821271802}
 --- !u!1 &3211496798462599341
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +108,7 @@ GameObject:
   - component: {fileID: 7532016896917732906}
   - component: {fileID: 4543781895151546699}
   - component: {fileID: 1533225255614006419}
+  - component: {fileID: 5300166508821271802}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -175,3 +177,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5300166508821271802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3211496798462599341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f626c9035cf3a5f41b6d6298775c578a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnpoint: {fileID: 7532016896917732906}
+  spawnSettings:
+  - entity: {fileID: 11400000, guid: 7bccb33411eb23e4ab81ad854da022e6, type: 2}
+    spawnType: 0
+    amount: 1
+    interval: 0

@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: Shell
   m_EditorClassIdentifier: 
   entityName: "\u596A\u547D\u80F8\u5F48"
-  entityType: 0
+  entityType: 3
   icon: {fileID: 0}
   prefab: {fileID: 7721943181098325966, guid: b25a484d6943a21409f22496d3f2b685, type: 3}
+  targetEntityType: 0
+  damage: 3
+  speed: 41.05
+  maxFlyTime: 1
+  radius: 15.86
+  explosiveTime: 0.1
+  explosivePrefab: {fileID: 7114764238811819559, guid: 3a516292f1827cf488fe18e3162a088c,
+    type: 3}
