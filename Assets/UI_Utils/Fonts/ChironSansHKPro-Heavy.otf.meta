@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: c29d7efa6624e9c4896d521d98bf7b24
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Chiron Sans HK Pro
+  fontNames:
+  - Chiron Sans HK Pro
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 498a72a1903aceb489f9f3d09d3aab84, type: 3}
+  - {fileID: 12800000, guid: c8c9aa4b5dc7c8742beeb2944fd158f7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
