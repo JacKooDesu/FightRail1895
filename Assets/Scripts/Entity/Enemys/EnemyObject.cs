@@ -7,6 +7,8 @@ namespace JacDev.Entity
 {
     public class EnemyObject : EntityObject
     {
+        [Header("攻擊設定")]
+        public ProjectileSpawner launcher;
         // public Enemy enemy;
         public static TrainLine target;
         Animator ani;

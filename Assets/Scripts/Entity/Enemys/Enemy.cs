@@ -35,6 +35,8 @@ namespace JacDev.Entity
         public float movementSpeed = 5.0f;  // 移動速度
         public float health = 20.0f;    // 血量
         public float maxDet = 5f;   //最遠偵測距離
+        public AttackType attackType = AttackType.Melee; // 攻擊模式
+        public Projectile projectile;   // 彈藥
         public float damage = 5.0f;     // 基礎傷害，之後可寫成獨立類別，與種族寫在一起
         public float attackRange = 1f;  // 攻擊距離
         public float attackTime = 1.0f; // 攻擊花費時長(秒)
