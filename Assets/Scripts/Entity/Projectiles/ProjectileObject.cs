@@ -28,7 +28,7 @@ namespace JacDev.Entity
             while (!hasHit && time <= setting.maxFlyTime)
             {
                 RaycastHit hit;
-                Physics.Raycast(transform.position, direction, out hit, setting.speed * Time.deltaTime);
+                Physics.Raycast(transform.position, direction, out hit, setting.speed * Time.deltaTime, setting.collideLayer);
 
                 if (hit.transform != null)
                 {
@@ -72,7 +72,7 @@ namespace JacDev.Entity
                 explosive.localScale = t * setting.radius * Vector3.one;
                 if (!hasCalDamage && t >= .5f)
                 {
-                    RaycastHit[] hits = Physics.CapsuleCastAll(transform.position, transform.position, setting.radius, transform.forward);
+                    RaycastHit[] hits = Physics.CapsuleCastAll(transform.position, transform.position, setting.radius, transform.forward, setting.collideLayer);
                     foreach (RaycastHit hit in hits)
                     {
                         if (hit.transform.GetComponent<EntityObject>() != null)

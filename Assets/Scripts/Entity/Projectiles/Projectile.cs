@@ -20,7 +20,7 @@ namespace JacDev.Entity
         }
 
         public EntityType targetEntityType;
-
+        public LayerMask collideLayer;
         public float damage;
         public float speed;
         public float maxFlyTime;
