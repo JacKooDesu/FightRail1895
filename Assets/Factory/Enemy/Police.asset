@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e18c4360347e74ab642f3dbe01ec47, type: 3}
+  m_Name: Police
+  m_EditorClassIdentifier: 
+  entityName: "\u65E5\u672C\u8B66\u5BDF"
+  entityType: 0
+  icon: {fileID: 0}
+  prefab: {fileID: 6874770995342731890, guid: ef3f0b46e54213e48b4674e978f0dc22, type: 3}
+  level: 1
+  bloodType: 1
+  movementSpeed: 5
+  health: 20
+  maxDet: 10
+  attackType: 1
+  projectile: {fileID: 0}
+  damage: 5
+  attackRange: 5
+  attackTime: 3
+  dropList: []
