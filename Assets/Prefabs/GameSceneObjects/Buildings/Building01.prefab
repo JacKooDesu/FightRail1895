@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnpoint: {fileID: 2515874422191478117}
   spawnSettings:
-  - entity: {fileID: 11400000, guid: 8347f917ba9bfb94991d206564913737, type: 2}
+  - entity: {fileID: 11400000, guid: 21a8bb2150820774d9bd3386b6f7db7d, type: 2}
     spawnType: 1
     amount: 10
     interval: 0.5
