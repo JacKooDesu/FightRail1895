@@ -11,12 +11,14 @@ namespace JacDev.Entity
         public ProjectileSpawner launcher;
         // public Enemy enemy;
         public static TrainLine target;
-        Animator ani;
+        [SerializeField] Animator ani;
         EntityObject attackTarget;
         Collider taretCol;
 
         bool hasAttack = false;
         float notAttack = 0;
+        bool attacking = false; // 之後應以狀態寫成寫成Enum
+        float attackTime = 0f;  // 攻擊時間(每次攻擊所花時間)
         public float changeTargetTime = 3f;
 
         [Header("UI Settings")]
@@ -25,7 +27,8 @@ namespace JacDev.Entity
 
         private void Awake()
         {
-            ani = GetComponent<Animator>();
+            if (ani == null)
+                ani = GetComponent<Animator>();
             maxHealth = ((Enemy)entitySetting).health;
             health = maxHealth;
         }
@@ -41,6 +44,7 @@ namespace JacDev.Entity
 
         public void TestMove()
         {
+            Enemy setting = (Enemy)entitySetting;
             if (target == null)
                 return;
 
@@ -50,14 +54,25 @@ namespace JacDev.Entity
                 notAttack = 0;
             }
 
+            if (attacking)
+            {
+                if (attackTime <= setting.attackTime)
+                {
+                    attackTime += Time.deltaTime;
+                    return;
+                }
+                attacking = false;
+                attackTime = 0f;
+            }
+
 
             notAttack += Time.deltaTime;
             // need added attack range in future
-            if ((taretCol.ClosestPoint(transform.position) - GetComponent<Collider>().ClosestPoint(target.transform.position)).magnitude >= 1f)
+            if ((taretCol.ClosestPoint(transform.position) - GetComponent<Collider>().ClosestPoint(target.transform.position)).magnitude >= setting.attackRange)
             {
                 if (!ani.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
-                    transform.Translate(((Enemy)entitySetting).movementSpeed * Vector3.forward * Time.deltaTime);
+                    transform.Translate(setting.movementSpeed * Vector3.forward * Time.deltaTime);
                     transform.LookAt(taretCol.ClosestPoint(transform.position));
                 }
 
@@ -67,6 +82,7 @@ namespace JacDev.Entity
                 if (!ani.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
                     ani.SetTrigger("Attack");
+                    attacking = true;
                     notAttack = 0;
                     taretCol = null;
                     hasAttack = true;
