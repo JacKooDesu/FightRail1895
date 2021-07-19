@@ -17,10 +17,13 @@ MonoBehaviour:
   icon: {fileID: 0}
   prefab: {fileID: 7721943181098325966, guid: b25a484d6943a21409f22496d3f2b685, type: 3}
   targetEntityType: 0
+  collideLayer:
+    serializedVersion: 2
+    m_Bits: 256
   damage: 3
   speed: 41.05
   maxFlyTime: 1
-  radius: 15.86
+  radius: 1
   explosiveTime: 0.1
   explosivePrefab: {fileID: 7114764238811819559, guid: 3a516292f1827cf488fe18e3162a088c,
     type: 3}
