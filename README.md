@@ -1,5 +1,7 @@
 # **激戰鐵支路1895** - FightRail1895
 
+![image](https://github.com/JacKooDesu/FightRail1895/blob/main/Arts/unsorted/Logo.png)
+
 [**更新影片**](https://youtube.com/playlist?list=PLG-7kiz0ACzrQqwFpSssOY36gJRpN9dQJ)
 
 本專題製作的是3D遊戲，以 ***Low Poly*** 的美術風格結合 ***即時塔防、Rogue-lite以及經營*** 等元素，發布於PC平台上(Windows x86/x64)。
