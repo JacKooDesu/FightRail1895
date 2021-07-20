@@ -18,12 +18,12 @@ MonoBehaviour:
   prefab: {fileID: 6874770995342731890, guid: ef3f0b46e54213e48b4674e978f0dc22, type: 3}
   level: 1
   bloodType: 1
-  movementSpeed: 5
+  movementSpeed: 2
   health: 20
-  maxDet: 10
+  maxDet: 20
   attackType: 1
   projectile: {fileID: 0}
   damage: 5
-  attackRange: 5
-  attackTime: 3
+  attackRange: 10
+  attackTime: 2
   dropList: []
