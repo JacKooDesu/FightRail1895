@@ -16,7 +16,7 @@ MonoBehaviour:
   entityType: 3
   icon: {fileID: 0}
   prefab: {fileID: 7721943181098325966, guid: 5879927495a2c5847b0ffdf28692a5e0, type: 3}
-  targetEntityType: 1
+  targetEntityType: 2
   collideLayer:
     serializedVersion: 2
     m_Bits: 768
