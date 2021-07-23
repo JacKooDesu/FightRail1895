@@ -790,6 +790,55 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &3206863878685359124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6168289536350425681}
+  - component: {fileID: 871031238434433243}
+  m_Layer: 0
+  m_Name: Launcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6168289536350425681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206863878685359124}
+  m_LocalRotation: {x: -0, y: -0.18967377, z: 0, w: 0.9818472}
+  m_LocalPosition: {x: -0.71, y: 2.9099486, z: 1.73}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6062908769828843720}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &871031238434433243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206863878685359124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f626c9035cf3a5f41b6d6298775c578a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnpoint: {fileID: 6168289536350425681}
+  spawnSettings:
+  - entity: {fileID: 11400000, guid: 8c2b9af3e26afa74f98e0671b796e57b, type: 2}
+    spawnType: 0
+    amount: 1
+    interval: 0
 --- !u!1 &3281812978906047603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,6 +1676,7 @@ Transform:
   - {fileID: 3522248840539309036}
   - {fileID: 2923700605116768342}
   - {fileID: 3233753717817995861}
+  - {fileID: 6168289536350425681}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1664,7 +1714,7 @@ MonoBehaviour:
   entitySetting: {fileID: 11400000, guid: 21a8bb2150820774d9bd3386b6f7db7d, type: 2}
   maxHealth: 10
   health: 10
-  launcher: {fileID: 0}
+  launcher: {fileID: 871031238434433243}
   ani: {fileID: 199261966026566322}
   changeTargetTime: 3
   healthBar: {fileID: 5750318905813204260}

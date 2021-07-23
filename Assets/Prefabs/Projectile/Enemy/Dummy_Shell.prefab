@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4017de1598f8944941420cafc6a26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entitySetting: {fileID: 11400000, guid: 7bccb33411eb23e4ab81ad854da022e6, type: 2}
+  entitySetting: {fileID: 11400000, guid: 8c2b9af3e26afa74f98e0671b796e57b, type: 2}
   maxHealth: 10
   health: 10
   direction: {x: 0, y: 0, z: 0}

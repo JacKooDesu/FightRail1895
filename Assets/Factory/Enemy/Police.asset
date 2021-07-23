@@ -22,7 +22,7 @@ MonoBehaviour:
   health: 20
   maxDet: 20
   attackType: 1
-  projectile: {fileID: 0}
+  projectile: {fileID: 11400000, guid: 8c2b9af3e26afa74f98e0671b796e57b, type: 2}
   damage: 5
   attackRange: 10
   attackTime: 2
