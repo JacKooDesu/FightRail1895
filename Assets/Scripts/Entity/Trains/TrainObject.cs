@@ -5,10 +5,8 @@ using JacDev.Utils;
 
 namespace JacDev.Entity
 {
-    public class TrainObject : MonoBehaviour
+    public class TrainObject : EntityObject
     {
-        public Train train;
-
         public Transform front, back;
 
         // 20210611 fixed no longer use spline walker to move the train

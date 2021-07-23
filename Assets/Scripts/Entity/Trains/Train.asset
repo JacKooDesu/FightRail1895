@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5914695b4d6b4948b50f0d2c02e47b4, type: 3}
   m_Name: Train
   m_EditorClassIdentifier: 
-  trainName: None
-  model: {fileID: 0}
+  entityName: 
+  entityType: 2
   icon: {fileID: 0}
+  prefab: {fileID: 0}
   movementSpeed: 0.02
-  health: 20
