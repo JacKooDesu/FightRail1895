@@ -10,7 +10,8 @@ namespace JacDev.Entity
         [Header("攻擊設定")]
         public ProjectileSpawner launcher;
         // public Enemy enemy;
-        public static TrainLine target;
+        // public static TrainLine target;
+        public EntityObject target;
         [SerializeField] Animator ani;
         EntityObject attackTarget;
         Collider taretCol;
@@ -102,24 +103,24 @@ namespace JacDev.Entity
             }
         }
 
+        // 後續須改寫成可攻擊己方單位
         public void ChangeAttackTarget()
         {
-            if (target == null)
-                return;
+            TrainLine trainLine = FindObjectOfType<TrainLine>();
 
             // Near Train
-            float targetDistance = Vector3.Distance(target.trains[0].transform.position, transform.position);
+            float targetDistance = Vector3.Distance(trainLine.trains[0].transform.position, transform.position);
             int index = 0;
-            for (int i = 0; i < target.trains.Length; ++i)
+            for (int i = 0; i < trainLine.trains.Length; ++i)
             {
-                if (targetDistance > Vector3.Distance(target.trains[i].transform.position, transform.position))
+                if (targetDistance > Vector3.Distance(trainLine.trains[i].transform.position, transform.position))
                 {
-                    targetDistance = Vector3.Distance(target.trains[i].transform.position, transform.position);
+                    targetDistance = Vector3.Distance(trainLine.trains[i].transform.position, transform.position);
                     index = i;
                 }
             }
 
-            taretCol = target.trains[index].GetComponent<Collider>();
+            taretCol = trainLine.trains[index].GetComponent<Collider>();
 
             if (targetDistance > ((Enemy)entitySetting).maxDet && hasAttack)
             {

@@ -57,7 +57,7 @@ namespace JacDev.Entity
             // reset position
             transform.position = Vector3.zero;
 
-            EnemyObject.target = this;
+            // EnemyObject.target = this;
         }
 
         private void Update()
