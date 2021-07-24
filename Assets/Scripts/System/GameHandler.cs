@@ -24,6 +24,8 @@ public class GameHandler : MonoBehaviour
         }
     }
 
+    public bool debugMode;
+    
     PlayerData playerData;
     // WIP 音訊控制類別
     // public AudioHandler audioHandler;

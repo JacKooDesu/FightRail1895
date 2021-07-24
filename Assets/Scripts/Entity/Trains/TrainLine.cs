@@ -35,6 +35,9 @@ namespace JacDev.Entity
 
         private void Start()
         {
+            if(GameHandler.Singleton.debugMode)
+                return;
+            
             originCamera = Camera.main;
             if (firstPersonViewCamera)
                 firstPersonViewCamera.enabled = false;
@@ -62,6 +65,9 @@ namespace JacDev.Entity
 
         private void Update()
         {
+            if(GameHandler.Singleton.debugMode)
+                return;
+            
             TestMove();
             SwitchFocusTrain();
 

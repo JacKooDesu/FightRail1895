@@ -4,10 +4,30 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using JacDev.Entity;
+
 namespace JacDev.UI.GameScene
 {
     public class GameSceneUIHandler : MonoBehaviour
     {
+        static GameSceneUIHandler singleton = null;
+        public static GameSceneUIHandler Singleton
+        {
+            get
+            {
+                singleton = FindObjectOfType(typeof(GameSceneUIHandler)) as GameSceneUIHandler;
+
+                if (singleton == null)
+                {
+                    GameObject g = new GameObject("GameSceneUIHandler");
+                    singleton = g.AddComponent<GameSceneUIHandler>();
+                }
+
+                return singleton;
+            }
+        }
+        
+        public TrainObject trackingTrain;
         [Header("車廂狀態")]
         public Slider healthBar;
         public Text money;
@@ -44,10 +64,11 @@ namespace JacDev.UI.GameScene
 
         public void ToggleCabin(int index)
         {
-            
+
         }
 
-        private void Update() {
+        private void Update()
+        {
             // money
         }
     }
