@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 namespace JacDev.Entity
 {
@@ -10,6 +11,8 @@ namespace JacDev.Entity
         public float maxHealth = 10f;
         public float health = 10f;
 
+        [HideInInspector] public event Action onGetDamage;
+
         public virtual void Init(EntitySetting setting)
         {
             entitySetting = setting;
@@ -18,6 +21,8 @@ namespace JacDev.Entity
         public virtual void GetDamage(float damage)
         {
             health -= damage;
+            if (onGetDamage != null)
+                onGetDamage.Invoke();
         }
     }
 }
