@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 namespace JacDev.Utils.UISlicker
 {
@@ -24,7 +25,8 @@ namespace JacDev.Utils.UISlicker
             {
                 if (v.name == name)
                 {
-                    Tween<Vector2>(v, rect.anchoredPosition);
+                    DOTween.To(() => rect.anchoredPosition, x => rect.anchoredPosition = x, v.set, v.time);
+                    // Tween<Vector2>(v, rect.anchoredPosition);
                 }
             }
         }
@@ -32,7 +34,8 @@ namespace JacDev.Utils.UISlicker
         public override void SlickBack()
         {
             base.SlickBack();
-            Tween<Vector2>(origin, rect.anchoredPosition);
+            DOTween.To(() => rect.anchoredPosition, x => rect.anchoredPosition = x, origin.set, origin.time);
+            // Tween<Vector2>(origin, rect.anchoredPosition);
         }
 
         protected void TweenCallback(Vector2 value)
