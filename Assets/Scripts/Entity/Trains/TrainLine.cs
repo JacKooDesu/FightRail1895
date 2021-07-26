@@ -35,9 +35,9 @@ namespace JacDev.Entity
 
         private void Start()
         {
-            if(GameHandler.Singleton.debugMode)
+            if (GameHandler.Singleton.debugMode)
                 return;
-            
+
             originCamera = Camera.main;
             if (firstPersonViewCamera)
                 firstPersonViewCamera.enabled = false;
@@ -61,13 +61,14 @@ namespace JacDev.Entity
             transform.position = Vector3.zero;
 
             // EnemyObject.target = this;
+            JacDev.UI.GameScene.GameSceneUIHandler.Singleton.trackingTrain = trains[0];
         }
 
         private void Update()
         {
-            if(GameHandler.Singleton.debugMode)
+            if (GameHandler.Singleton.debugMode)
                 return;
-            
+
             TestMove();
             SwitchFocusTrain();
 
@@ -113,6 +114,8 @@ namespace JacDev.Entity
                 {
                     if (Camera.main.GetComponent<OrbitCamera>())
                         Camera.main.GetComponent<OrbitCamera>().SetFocus(trains[i].transform);
+
+                    JacDev.UI.GameScene.GameSceneUIHandler.Singleton.trackingTrain = trains[i];
                 }
             }
         }

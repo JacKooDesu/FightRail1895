@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: a340fd0565f567d45a07d967405760a2,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -9157,7 +9157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackingTrain: {fileID: 0}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 2124841898}
   money: {fileID: 0}
   asset: {fileID: 0}
   towerPanel: {fileID: 1353437471}
@@ -24371,8 +24371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entitySetting: {fileID: 11400000, guid: e6ee6cf770e4dc0478b301450c729908, type: 2}
-  maxHealth: 10
-  health: 10
+  maxHealth: 1000
+  health: 1000
   front: {fileID: 389366088982870508}
   back: {fileID: 3168050947100223670}
 --- !u!65 &4016652720765844699

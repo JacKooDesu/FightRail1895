@@ -26,7 +26,7 @@ namespace JacDev.UI.GameScene
                 return singleton;
             }
         }
-        
+
         public TrainObject trackingTrain;
         [Header("車廂狀態")]
         public Slider healthBar;
@@ -70,6 +70,12 @@ namespace JacDev.UI.GameScene
         private void Update()
         {
             // money
+            UpdateState();
+        }
+
+        void UpdateState()
+        {
+            healthBar.value = trackingTrain.health / trackingTrain.maxHealth;
         }
     }
 }
