@@ -46,8 +46,8 @@ namespace JacDev.Entity
         public void TestMove()
         {
             Enemy setting = (Enemy)entitySetting;
-            if (target == null)
-                return;
+            // if (target == null)
+            //     return;
 
             if (taretCol == null || notAttack >= changeTargetTime)
             {
@@ -120,6 +120,7 @@ namespace JacDev.Entity
                 }
             }
 
+            target = trainLine.trains[index];
             taretCol = trainLine.trains[index].GetComponent<Collider>();
 
             if (targetDistance > ((Enemy)entitySetting).maxDet && hasAttack)
