@@ -36,6 +36,13 @@ namespace JacDev.Entity
             }
         }
 
+        private void Start()
+        {
+            Train setting = (Train)entitySetting;
+            maxHealth = setting.health;
+            health = setting.health;
+        }
+
         private void Update()
         {
             //TestMove();
