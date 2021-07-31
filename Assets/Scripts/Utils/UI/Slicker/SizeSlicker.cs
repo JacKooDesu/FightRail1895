@@ -1,45 +1,39 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using DG.Tweening;
 
 namespace JacDev.Utils.UISlicker
 {
     [AddComponentMenu("JacDev/UI Slicker/Size Slicker")]
     public class SizeSlicker : SlickerBase
     {
-        public Vector2 origin;
-        public Vector2 final;
-        public float speed = 5f;
+        [System.Serializable]
+        public class SizeSetting : Setting<Vector2> { }
+        public List<SizeSetting> settings = new List<SizeSetting>();
+        public SizeSetting origin = new SizeSetting();
 
         private void OnEnable()
         {
-            if (origin == Vector2.zero)
-            {
-                origin = rect.sizeDelta;
-            }
+            origin.Init("origin", rect.sizeDelta, origin.time);
         }
 
-        public override void Slick()
+        public override void Slick(string name)
         {
-            base.Slick();
-            StopAllCoroutines();
-            StartCoroutine(UpdateSize(final));
+            base.Slick(name);
+            foreach (SizeSetting v in settings)
+            {
+                if (v.name == name)
+                {
+                    BindTween(DOTween.To(() => rect.sizeDelta, x => rect.sizeDelta = x, v.set, v.time));
+                }
+            }
         }
 
         public override void SlickBack()
         {
             base.SlickBack();
-            StopAllCoroutines();
-            StartCoroutine(UpdateSize(origin));
-        }
-
-        IEnumerator UpdateSize(Vector2 target)
-        {
-            while ((rect.sizeDelta - final).magnitude >= .001f)
-            {
-                rect.sizeDelta = iTween.Vector2Update(rect.sizeDelta, target, speed);
-                yield return null;
-            }
-            rect.sizeDelta = target;
+            BindTween(DOTween.To(() => rect.sizeDelta, x => rect.sizeDelta = x, origin.set, origin.time));
         }
     }
 }

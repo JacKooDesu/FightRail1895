@@ -25,7 +25,7 @@ namespace JacDev.Utils.UISlicker
             {
                 if (v.name == name)
                 {
-                    DOTween.To(() => rect.anchoredPosition, x => rect.anchoredPosition = x, v.set, v.time);
+                    BindTween(DOTween.To(() => rect.anchoredPosition, x => rect.anchoredPosition = x, v.set, v.time));
                     // Tween<Vector2>(v, rect.anchoredPosition);
                 }
             }
@@ -34,13 +34,8 @@ namespace JacDev.Utils.UISlicker
         public override void SlickBack()
         {
             base.SlickBack();
-            DOTween.To(() => rect.anchoredPosition, x => rect.anchoredPosition = x, origin.set, origin.time);
+            BindTween(DOTween.To(() => rect.anchoredPosition, x => rect.anchoredPosition = x, origin.set, origin.time));
             // Tween<Vector2>(origin, rect.anchoredPosition);
-        }
-
-        protected void TweenCallback(Vector2 value)
-        {
-            rect.anchoredPosition = value;
         }
     }
 

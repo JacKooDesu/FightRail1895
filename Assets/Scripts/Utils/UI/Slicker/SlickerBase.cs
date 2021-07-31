@@ -15,23 +15,16 @@ namespace JacDev.Utils.UISlicker
                 return this.transform as RectTransform;
             }
         }
+        protected Sequence sequence;
 
-        public virtual void Slick()
-        {
-            if (GetComponent<iTween>())
-                iTween.Stop(gameObject);
-
+        public virtual void Slick(string name) { 
+            DOTween.Kill(gameObject);
         }
+        public virtual void SlickBack() { }
 
-        public virtual void Slick(string name)
-        {
-            if (GetComponent<iTween>())
-                iTween.Stop(gameObject);
-        }
-        public virtual void SlickBack()
-        {
-            if (GetComponent<iTween>())
-                iTween.Stop(gameObject);
+        protected void BindTween(Tween tween){
+            sequence.Kill();
+            sequence.Append(tween);
         }
 
         // protected void Tween<T>(Setting<T> s, T from)

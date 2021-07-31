@@ -26,7 +26,7 @@ namespace JacDev.Utils.UISlicker
             {
                 if (c.name == name)
                 {
-                    DOTween.To(() => GetComponent<Graphic>().color, x => GetComponent<Graphic>().color = x, c.set, c.time);
+                    BindTween(DOTween.To(() => GetComponent<Graphic>().color, x => GetComponent<Graphic>().color = x, c.set, c.time));
                     // Tween<Color>(c, GetComponent<Graphic>().color);
                 }
             }
@@ -35,13 +35,8 @@ namespace JacDev.Utils.UISlicker
         public override void SlickBack()
         {
             base.SlickBack();
-            DOTween.To(() => GetComponent<Graphic>().color, x => GetComponent<Graphic>().color = x, origin.set, origin.time);
+            BindTween(DOTween.To(() => GetComponent<Graphic>().color, x => GetComponent<Graphic>().color = x, origin.set, origin.time));
             // Tween<Color>(origin, GetComponent<Graphic>().color);
-        }
-
-        protected void TweenCallback(Color value)
-        {
-            GetComponent<Graphic>().color = value;
         }
     }
 
