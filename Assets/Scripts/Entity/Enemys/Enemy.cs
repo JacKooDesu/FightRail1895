@@ -51,8 +51,8 @@ namespace JacDev.Entity
         [SerializeField]
         List<Drop> dropList = new List<Drop>();  // 掉落表
 
-
-
+        public int dropMoney = 20;  // 擊殺掉落金錢
+        
         void DamageCal()
         {
 

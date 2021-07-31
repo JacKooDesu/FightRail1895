@@ -25,11 +25,13 @@ public class GameHandler : MonoBehaviour
     }
 
     public bool debugMode;
-    
+
+    [Header("遊戲中資料")]
+    public int money;   // 後續是否整合進PlayerData?
+
     PlayerData playerData;
     // WIP 音訊控制類別
     // public AudioHandler audioHandler;
-
     GameData gameData;
 
     public List<EntityObject> entities = new List<EntityObject>();

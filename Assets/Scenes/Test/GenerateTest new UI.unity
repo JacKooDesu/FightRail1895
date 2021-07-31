@@ -9113,8 +9113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trackingTrain: {fileID: 0}
   healthBar: {fileID: 2124841898}
-  money: {fileID: 0}
-  asset: {fileID: 0}
+  money: {fileID: 1363216916}
+  asset: {fileID: 1529644078}
   towerPanel: {fileID: 1353437471}
   trainPanel: {fileID: 149963572}
   trainHeadUIPrefab: {fileID: 0}
@@ -14508,6 +14508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugMode: 0
+  money: 0
   entities: []
 --- !u!4 &1749554940
 Transform:

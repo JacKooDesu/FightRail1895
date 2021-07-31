@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using JacDev.UI.GameScene;
 
 namespace JacDev.Entity
 {
@@ -40,7 +41,7 @@ namespace JacDev.Entity
             UpdateUI();
 
             if (health <= 0)
-                Destroy(gameObject);
+                OnDead();
         }
 
         public void TestMove()
@@ -146,6 +147,11 @@ namespace JacDev.Entity
         {
             base.Init(setting);
         }
-    }
 
+        public void OnDead()
+        {
+            GameHandler.Singleton.money += (entitySetting as Enemy).dropMoney;
+            Destroy(gameObject);
+        }
+    }
 }
