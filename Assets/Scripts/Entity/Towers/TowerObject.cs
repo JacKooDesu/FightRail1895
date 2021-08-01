@@ -60,5 +60,9 @@ namespace JacDev.Entity
         {
             return true;
         }
+    
+        private void OnMouseDown() {
+            
+        }
     }
 }
