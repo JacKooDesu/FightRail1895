@@ -8,15 +8,7 @@ namespace JacDev.Mod
     {
         public string modName;
         public List<ModSetting> settings = new List<ModSetting>();
-        public enum Level
-        {
-            Basic,
-            Advance,
-            Premium,
-            Legendary
-        }
-
-        public Level level;
+        public ModQualityFactory quality;
     }
 }
 

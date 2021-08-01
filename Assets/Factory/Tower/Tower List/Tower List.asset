@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ed4db83752fb074a98f449caba43fda, type: 3}
-  m_Name: Damage
+  m_Script: {fileID: 11500000, guid: fe9c401a4539b0e4caa7056dcabcd23e, type: 3}
+  m_Name: Tower List
   m_EditorClassIdentifier: 
-  modName: "\u653B\u64CA"
-  settings:
-  - modType: 0
-    amount: 0.1
-  quality: {fileID: 11400000, guid: cc2049becfc03144c94588d2b6fe5ce3, type: 2}
+  towers:
+  - {fileID: 11400000, guid: 533ec073d72afa94f85af7221a39fe82, type: 2}
