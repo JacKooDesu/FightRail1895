@@ -28,7 +28,8 @@ namespace JacDev.GameSystem
         public enum InputState
         {
             Normal,
-            PlacingTower
+            PlacingTower,
+            SelectTower
         }
         [SerializeField] InputState state;
         InputState lastState = InputState.Normal;
@@ -81,6 +82,7 @@ namespace JacDev.GameSystem
 
         public ActionSetup normalEvent = new ActionSetup();
         public ActionSetup placingTowerEvent = new ActionSetup();
+        public ActionSetup selectTowerEvent = new ActionSetup();
         #endregion
 
         private void Start()
@@ -95,6 +97,11 @@ namespace JacDev.GameSystem
                 case InputState.PlacingTower:
                     placingTowerEvent.OnBegin();
                     StartCoroutine(placingTowerEvent.OnUpdate());
+                    break;
+
+                case InputState.SelectTower:
+                    selectTowerEvent.OnBegin();
+                    StartCoroutine(selectTowerEvent.OnUpdate());
                     break;
 
                 default:
@@ -118,6 +125,11 @@ namespace JacDev.GameSystem
                         placingTowerEvent.OnEnd();
                         break;
 
+                    case InputState.SelectTower:
+                        StopCoroutine(selectTowerEvent.OnUpdate());
+                        selectTowerEvent.OnEnd();
+                        break;
+
                     default:
                         break;
                 }
@@ -134,6 +146,11 @@ namespace JacDev.GameSystem
                     case InputState.PlacingTower:
                         placingTowerEvent.OnBegin();
                         StartCoroutine(placingTowerEvent.OnUpdate());
+                        break;
+
+                    case InputState.SelectTower:
+                        selectTowerEvent.OnBegin();
+                        StartCoroutine(selectTowerEvent.OnUpdate());
                         break;
 
                     default:
