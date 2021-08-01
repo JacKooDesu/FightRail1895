@@ -6,7 +6,7 @@ using System;
 namespace JacDev.Entity
 {
     [System.Serializable]
-    [CreateAssetMenu(fileName = "Tower", menuName = "JacDev/Create Tower", order = 1)]
+    [CreateAssetMenu(fileName = "Tower", menuName = "JacDev/Tower/Create Tower", order = 1)]
     public class Tower : EntitySetting
     {
         public override Type EntityObjectType() => typeof(TowerObject);

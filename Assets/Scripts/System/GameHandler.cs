@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using JacDev.Entity;
+using JacDev.Data;
 
 public class GameHandler : MonoBehaviour
 {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using JacDev.Data;
 
 //A class to save & load file
 public static class FileManager

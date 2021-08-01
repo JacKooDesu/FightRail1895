@@ -2,20 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameData : MonoBehaviour
+namespace JacDev.Data
 {
-    GameState state;
-    public GameState State
+    public class GameData : MonoBehaviour
     {
-        get
+        GameState state;
+        public GameState State
         {
-            return state;
+            get
+            {
+                return state;
+            }
+            set
+            {
+                state = value;
+            }
         }
-        set
-        {
-            state = value;
-        }
-    }
 
-    
+
+    }
 }
