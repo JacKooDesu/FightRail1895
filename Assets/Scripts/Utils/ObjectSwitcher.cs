@@ -6,23 +6,34 @@ public class ObjectSwitcher : MonoBehaviour
 {
     public List<GameObject> objects = new List<GameObject>();
     public bool hideAtStart;
-    public int defaultObject = 0;
+    public int defaultIndex = 0;
+    int currentIndex = 0;
 
     private void Start()
     {
         if (hideAtStart)
-            Switch(defaultObject);
+            Switch(defaultIndex);
 
     }
 
     public void Switch(int index)
     {
-        foreach (GameObject g in objects)
+        for (int i = 0; i < objects.Count; ++i)
         {
-            if (g != null)
-                g.SetActive(false);
+            objects[i].SetActive(i == index);
         }
+        currentIndex = index;
+    }
 
-        objects[index].SetActive(true);
+    public void Next()
+    {
+        if (currentIndex < objects.Count - 1)
+            Switch(currentIndex + 1);
+    }
+
+    public void Back()
+    {
+        if (currentIndex > 0)
+            Switch(currentIndex - 1);
     }
 }
