@@ -20,7 +20,8 @@ public class ObjectSwitcher : MonoBehaviour
     {
         for (int i = 0; i < objects.Count; ++i)
         {
-            objects[i].SetActive(i == index);
+            if (objects[i] != null)
+                objects[i].SetActive(i == index);
         }
         currentIndex = index;
     }
