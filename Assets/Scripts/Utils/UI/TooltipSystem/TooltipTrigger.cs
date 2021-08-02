@@ -7,7 +7,9 @@ namespace JacDev.Utils.TooltipSystem
 {
     public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
-        public string header, content;
+        public string header;
+        [TextArea(3, 10)]
+        public string content;
 
         public void OnPointerEnter(PointerEventData eventData)
         {
