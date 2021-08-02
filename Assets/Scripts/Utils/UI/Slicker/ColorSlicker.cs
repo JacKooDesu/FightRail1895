@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 namespace JacDev.Utils.UISlicker
 {
@@ -25,7 +26,8 @@ namespace JacDev.Utils.UISlicker
             {
                 if (c.name == name)
                 {
-                    Tween<Color>(c, GetComponent<Graphic>().color);
+                    BindTween(DOTween.To(() => GetComponent<Graphic>().color, x => GetComponent<Graphic>().color = x, c.set, c.time));
+                    // Tween<Color>(c, GetComponent<Graphic>().color);
                 }
             }
         }
@@ -33,12 +35,8 @@ namespace JacDev.Utils.UISlicker
         public override void SlickBack()
         {
             base.SlickBack();
-            Tween<Color>(origin, GetComponent<Graphic>().color);
-        }
-
-        protected void TweenCallback(Color value)
-        {
-            GetComponent<Graphic>().color = value;
+            BindTween(DOTween.To(() => GetComponent<Graphic>().color, x => GetComponent<Graphic>().color = x, origin.set, origin.time));
+            // Tween<Color>(origin, GetComponent<Graphic>().color);
         }
     }
 

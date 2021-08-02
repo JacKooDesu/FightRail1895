@@ -1,6 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 namespace JacDev.Utils.UISlicker
 {
@@ -14,38 +15,29 @@ namespace JacDev.Utils.UISlicker
                 return this.transform as RectTransform;
             }
         }
+        protected Sequence sequence;
 
-        public virtual void Slick()
-        {
-            if (GetComponent<iTween>())
-                iTween.Stop(gameObject);
+        public virtual void Slick(string name) { 
+            DOTween.Kill(gameObject);
+        }
+        public virtual void SlickBack() { }
 
+        protected void BindTween(Tween tween){
+            sequence.Kill();
+            sequence.Append(tween);
         }
 
-        public virtual void Slick(string name)
-        {
-            if (GetComponent<iTween>())
-                iTween.Stop(gameObject);
-        }
-        public virtual void SlickBack()
-        {
-            if (GetComponent<iTween>())
-                iTween.Stop(gameObject);
-        }
-
-        protected void Tween<T>(Setting<T> s, T from)
-        {
-            {
-                iTween.ValueTo(gameObject,
-                    iTween.Hash(
-                    "from", from,
-                    "to", s.set,
-                    "time", s.time,
-                    "easetype", s.easeType,
-                    "onupdate", "TweenCallback"
-                    ));
-            }
-        }
+        // protected void Tween<T>(Setting<T> s, T from)
+        // {
+        //     iTween.ValueTo(gameObject,
+        //         iTween.Hash(
+        //         "from", from,
+        //         "to", s.set,
+        //         "time", s.time,
+        //         "easetype", s.easeType,
+        //         "onupdate", "TweenCallback"
+        //         ));
+        // }
     }
 
     [System.Serializable]
@@ -54,7 +46,7 @@ namespace JacDev.Utils.UISlicker
         public string name;
         [SerializeField] public T set;
         public float time = .2f;
-        public iTween.EaseType easeType = iTween.EaseType.easeInQuad;
+        public Ease easeType = Ease.OutQuad;
 
         public void Init(string name, T set, float time)
         {
