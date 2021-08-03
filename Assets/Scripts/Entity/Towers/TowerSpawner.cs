@@ -22,6 +22,11 @@ namespace JacDev.Entity
             InputHandler.Singleton.placingTowerEvent.onBegin += () =>
             {
                 transform.GetChild(0).gameObject.SetActive(true);
+
+                foreach (GameObject g in GameObject.FindGameObjectsWithTag("TowerSpawnPoint"))
+                {
+                    g.GetComponent<MeshRenderer>().enabled = true;
+                }
             };
 
             InputHandler.Singleton.placingTowerEvent.onUpdate += () =>
@@ -66,6 +71,15 @@ namespace JacDev.Entity
                     Spawning();
 
                 transform.GetChild(0).gameObject.SetActive(false);
+            };
+
+            InputHandler.Singleton.normalEvent.onBegin += () =>
+            {
+                foreach (GameObject g in GameObject.FindGameObjectsWithTag("TowerSpawnPoint"))
+                {
+                    g.GetComponent<MeshRenderer>().enabled = false;
+                    // g.SetActive(false);
+                }
             };
         }
 
