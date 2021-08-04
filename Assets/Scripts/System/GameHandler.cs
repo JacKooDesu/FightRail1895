@@ -68,9 +68,9 @@ public class GameHandler : MonoBehaviour
         }
     }
 
-    public void Pause()
+    public void Pause(bool b)
     {
-        Time.timeScale = 0;
+        Time.timeScale = b ? 0 : 1;
     }
 
     private void Update()
