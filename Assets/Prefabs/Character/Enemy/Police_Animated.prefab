@@ -1715,6 +1715,7 @@ MonoBehaviour:
   maxHealth: 10
   health: 10
   launcher: {fileID: 871031238434433243}
+  target: {fileID: 0}
   ani: {fileID: 199261966026566322}
   changeTargetTime: 3
   healthBar: {fileID: 5750318905813204260}
