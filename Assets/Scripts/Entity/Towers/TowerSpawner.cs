@@ -21,6 +21,12 @@ namespace JacDev.Entity
         {
             InputHandler.Singleton.placingTowerEvent.onBegin += () =>
             {
+                if (GameHandler.Singleton.money < (spawnSettings[SelectTower].entity as Tower).price)
+                {
+                    InputHandler.Singleton.State = InputHandler.InputState.Normal;
+                    return;
+                }
+
                 transform.GetChild(0).gameObject.SetActive(true);
 
                 foreach (GameObject g in GameObject.FindGameObjectsWithTag("TowerSpawnPoint"))
@@ -68,7 +74,11 @@ namespace JacDev.Entity
             InputHandler.Singleton.placingTowerEvent.onEnd += () =>
             {
                 if (spawnPointParent != null)
+                {
                     Spawning();
+                    GameHandler.Singleton.money -= (spawnSettings[SelectTower].entity as Tower).price;
+                }
+
 
                 transform.GetChild(0).gameObject.SetActive(false);
             };
