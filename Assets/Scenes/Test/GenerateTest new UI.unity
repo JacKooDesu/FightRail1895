@@ -14615,6 +14615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugMode: 0
   money: 0
+  initMoney: 2000
   entities: []
 --- !u!4 &1749554940
 Transform:
