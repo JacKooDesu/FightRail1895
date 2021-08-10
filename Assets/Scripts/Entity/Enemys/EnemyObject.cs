@@ -81,10 +81,12 @@ namespace JacDev.Entity
             }
             else
             {
+                transform.LookAt(taretCol.ClosestPoint(transform.position));
                 if (!ani.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
                     ani.SetTrigger("Attack");
-                    launcher.Launch(taretCol.ClosestPoint(transform.position));
+                    if((entitySetting as Enemy).attackType == AttackType.Range)
+                        launcher.Launch(taretCol.ClosestPoint(launcher.transform.position));
                     attacking = true;
                     notAttack = 0;
                     taretCol = null;
