@@ -10,6 +10,9 @@ namespace JacDev.UI.GameScene
     {
         PositionSlick positionSlick;
 
+        public GameObject parentUI;
+        public GameObject prefabUI;
+
         private void Start()
         {
             positionSlick = GetComponent<PositionSlick>();
