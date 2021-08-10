@@ -29,6 +29,7 @@ public class GameHandler : MonoBehaviour
 
     [Header("遊戲中資料")]
     public int money;   // 後續是否整合進PlayerData?
+    public int initMoney;
 
     PlayerData playerData;
     // WIP 音訊控制類別
@@ -44,6 +45,11 @@ public class GameHandler : MonoBehaviour
             Destroy(gameObject);
 
         SceneManager.sceneLoaded += OnSceneLoad;
+    }
+
+    private void Start()
+    {
+        money = initMoney;
     }
 
     void OnSceneLoad(Scene scene, LoadSceneMode mode)
