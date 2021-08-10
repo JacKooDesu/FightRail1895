@@ -36,7 +36,7 @@ namespace JacDev.Entity
 
                 if (enemyObjects.Count != 0)
                 {
-                    launcher.Launch(enemyObjects[Random.Range(0, enemyObjects.Count)].transform.position);
+                    launcher.Launch(enemyObjects[Random.Range(0, enemyObjects.Count)].GetComponent<Collider>().ClosestPoint(launcher.transform.position));
 
                     canAttack = false;
                 }
@@ -60,9 +60,10 @@ namespace JacDev.Entity
         {
             return true;
         }
-    
-        private void OnMouseDown() {
-            
+
+        private void OnMouseDown()
+        {
+
         }
     }
 }
