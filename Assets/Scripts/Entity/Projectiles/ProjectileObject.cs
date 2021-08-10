@@ -64,7 +64,7 @@ namespace JacDev.Entity
             }
 
             Transform explosive = Instantiate(setting.explosivePrefab, transform);
-            explosive.position = Vector3.zero;
+            explosive.localPosition = Vector3.zero;
             bool hasCalDamage = false;
             float t = 0;
 
