@@ -19,12 +19,18 @@ namespace JacDev.Entity
             return so;
         }
 
+        public enum ExplosiveType{
+            Scale,
+            Particle
+        }
+
         public EntityType targetEntityType;
         public LayerMask collideLayer;
         public float damage;
         public float speed;
         public float maxFlyTime;
         public float radius;
+        public ExplosiveType explosiveType;
         public float explosiveTime;
         public Transform explosivePrefab;
     }

@@ -64,12 +64,16 @@ namespace JacDev.Entity
             }
 
             Transform explosive = Instantiate(setting.explosivePrefab, transform);
-            explosive.position = hitObject.position;
+            explosive.position = Vector3.zero;
             bool hasCalDamage = false;
             float t = 0;
+
+            if (setting.explosiveType == Projectile.ExplosiveType.Particle)
+                explosive.GetComponent<ParticleSystem>().Play();
+
             while (t <= 1f)
             {
-                explosive.localScale = t * setting.radius * Vector3.one;
+                explosive.localScale = t * setting.radius * Vector3.one / transform.lossyScale.x;
                 if (!hasCalDamage && t >= .5f)
                 {
                     RaycastHit[] hits = Physics.CapsuleCastAll(transform.position, transform.position, setting.radius, transform.forward, setting.collideLayer);
@@ -91,6 +95,9 @@ namespace JacDev.Entity
 
                 yield return null;
             }
+
+            while (setting.explosiveType == Projectile.ExplosiveType.Particle && explosive.GetComponent<ParticleSystem>().isPlaying)
+                yield return null;
 
             Destroy(gameObject);
         }
