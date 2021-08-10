@@ -16,6 +16,7 @@ MonoBehaviour:
   entityType: 1
   icon: {fileID: 0}
   prefab: {fileID: 1950022020884273114, guid: fbd34fb409708b441a89bea92a1b3baf, type: 3}
-  damage: 5
+  price: 20
+  projectile: {fileID: 0}
   attackRange: 20
   attackTime: 1.7
