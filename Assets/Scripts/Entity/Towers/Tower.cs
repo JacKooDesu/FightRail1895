@@ -16,6 +16,7 @@ namespace JacDev.Entity
             GameObject g = new GameObject(entityName, EntityObjectType());
             return g.GetComponent<TowerObject>();
         }
+        public int price;   // 價格
 
         public Projectile projectile;
         public float attackRange = 1f;  // 攻擊距離
