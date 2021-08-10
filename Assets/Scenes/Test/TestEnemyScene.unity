@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1090,6 +1090,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugMode: 1
+  money: 0
+  initMoney: 0
   entities: []
 --- !u!4 &1642722591
 Transform:
@@ -2512,7 +2514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb435ae8785647489e410621b3ca503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entitySetting: {fileID: 0}
+  entitySetting: {fileID: 11400000, guid: e6ee6cf770e4dc0478b301450c729908, type: 2}
   maxHealth: 10
   health: 10
   front: {fileID: 2296832759890834879}
