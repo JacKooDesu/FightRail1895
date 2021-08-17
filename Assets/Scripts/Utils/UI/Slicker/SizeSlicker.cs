@@ -25,7 +25,9 @@ namespace JacDev.Utils.UISlicker
             {
                 if (v.name == name)
                 {
-                    BindTween(DOTween.To(() => rect.sizeDelta, x => rect.sizeDelta = x, v.set, v.time));
+                    BindTween(DOTween.To(() => rect.sizeDelta, x => rect.sizeDelta = x, v.set, v.time).
+                        OnStart(() => v.onBegin.Invoke()).
+                        OnComplete(() => v.onComplete.Invoke()));
                 }
             }
         }
@@ -33,7 +35,9 @@ namespace JacDev.Utils.UISlicker
         public override void SlickBack()
         {
             base.SlickBack();
-            BindTween(DOTween.To(() => rect.sizeDelta, x => rect.sizeDelta = x, origin.set, origin.time));
+            BindTween(DOTween.To(() => rect.sizeDelta, x => rect.sizeDelta = x, origin.set, origin.time).
+                OnStart(() => origin.onBegin.Invoke()).
+                OnComplete(() => origin.onComplete.Invoke()));
         }
     }
 }

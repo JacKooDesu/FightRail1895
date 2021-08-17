@@ -17,12 +17,14 @@ namespace JacDev.Utils.UISlicker
         }
         protected Sequence sequence;
 
-        public virtual void Slick(string name) { 
+        public virtual void Slick(string name)
+        {
             DOTween.Kill(gameObject);
         }
         public virtual void SlickBack() { }
 
-        protected void BindTween(Tween tween){
+        protected void BindTween(Tween tween)
+        {
             sequence.Kill();
             sequence.Append(tween);
         }
@@ -47,6 +49,8 @@ namespace JacDev.Utils.UISlicker
         [SerializeField] public T set;
         public float time = .2f;
         public Ease easeType = Ease.OutQuad;
+        [HideInInspector] public System.Action onBegin = ()=>{};
+        [HideInInspector] public System.Action onComplete = ()=>{};
 
         public void Init(string name, T set, float time)
         {
