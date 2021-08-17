@@ -6,7 +6,7 @@ using System;
 namespace JacDev.Entity
 {
     // 敵方單位所有設定
-    [System.Serializable, CreateAssetMenu(fileName = "Enemy", menuName = "JacDev/Create Enemy", order = 1)]
+    [System.Serializable, CreateAssetMenu(fileName = "Enemy", menuName = "JacDev/Enemy/Create Enemy", order = 1)]
     public class Enemy : EntitySetting
     {
         public override Type EntityObjectType() => typeof(EnemyObject);
