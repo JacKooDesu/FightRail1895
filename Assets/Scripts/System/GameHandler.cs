@@ -31,12 +31,17 @@ public class GameHandler : MonoBehaviour
     public int money;   // 後續是否整合進PlayerData?
     public int initMoney;
 
-    PlayerData playerData;
+    static PlayerData playerData;
+    public PlayerData PlayerData { get { return playerData; } }
     // WIP 音訊控制類別
     // public AudioHandler audioHandler;
     GameData gameData;
 
     public List<EntityObject> entities = new List<EntityObject>();
+
+    [Header("設定")]
+    public TowerList towerList;
+    public EnemyList enemyList;
 
     private void Awake()
     {
@@ -89,4 +94,6 @@ public class GameHandler : MonoBehaviour
             }
         }
     }
+
+
 }
