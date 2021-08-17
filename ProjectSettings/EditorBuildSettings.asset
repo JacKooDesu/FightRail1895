@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Test/GenerateTest new UI.unity
+    guid: 26d211f2b78f70040bc31161cb92dea7
   m_configObjects: {}
