@@ -76,6 +76,7 @@ namespace JacDev.UI.GameScene
         void UpdateState()
         {
             healthBar.value = trackingTrain.health / trackingTrain.maxHealth;
+            healthBar.GetComponentInChildren<Text>().text = $"{trackingTrain.health} / {trackingTrain.maxHealth}";
             money.text = GameHandler.Singleton.money.ToString();
         }
     }
