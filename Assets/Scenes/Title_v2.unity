@@ -35259,8 +35259,8 @@ MonoBehaviour:
   origin:
     name: 
     set: {r: 0, g: 0, b: 0, a: 0}
-    time: 0.2
-    easeType: 6
+    time: 0.5
+    easeType: 18
 --- !u!114 &675560754
 MonoBehaviour:
   m_ObjectHideFlags: 0
