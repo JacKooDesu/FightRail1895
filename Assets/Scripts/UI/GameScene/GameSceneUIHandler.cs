@@ -41,6 +41,9 @@ namespace JacDev.UI.GameScene
         public GameObject trainHeadUIPrefab;
         public GameObject trainCabinUIPrefab;
 
+        [Header("傷害面板")]
+        public DamagePanel damagePanel;
+
         public void InitTrainPanel()
         {
 

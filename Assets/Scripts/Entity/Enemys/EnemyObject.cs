@@ -85,7 +85,7 @@ namespace JacDev.Entity
                 if (!ani.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
                     ani.SetTrigger("Attack");
-                    if((entitySetting as Enemy).attackType == AttackType.Range)
+                    if ((entitySetting as Enemy).attackType == AttackType.Range)
                         launcher.Launch(taretCol.ClosestPoint(launcher.transform.position));
                     attacking = true;
                     notAttack = 0;
@@ -148,6 +148,12 @@ namespace JacDev.Entity
         public override void Init(EntitySetting setting)
         {
             base.Init(setting);
+        }
+
+        public override void GetDamage(float damage)
+        {
+            base.GetDamage(damage);
+            GameSceneUIHandler.Singleton.damagePanel.DisplayDamage(this, damage);
         }
 
         public void OnDead()

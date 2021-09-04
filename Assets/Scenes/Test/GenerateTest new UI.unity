@@ -1401,6 +1401,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205427321}
   m_CullTransparentMesh: 0
+--- !u!1 &222528888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 222528891}
+  - component: {fileID: 222528890}
+  - component: {fileID: 222528889}
+  m_Layer: 5
+  m_Name: Damage Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &222528889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222528888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1829c094f4940524fbb6a034e18fca10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePrefab: {fileID: 7816271278808786265, guid: 2c9e486fb2a0d854aaadc96d42547fac,
+    type: 3}
+  display: 1
+  positionOffset: {x: 0, y: 0}
+  moveAmount: {x: 0, y: 20}
+--- !u!222 &222528890
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222528888}
+  m_CullTransparentMesh: 0
+--- !u!224 &222528891
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222528888}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1395560676}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 960, y: 540}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &223668082
 GameObject:
   m_ObjectHideFlags: 0
@@ -9179,6 +9241,7 @@ MonoBehaviour:
   trainPanel: {fileID: 149963572}
   trainHeadUIPrefab: {fileID: 0}
   trainCabinUIPrefab: {fileID: 0}
+  damagePanel: {fileID: 222528889}
 --- !u!1 &1139053394
 GameObject:
   m_ObjectHideFlags: 0
@@ -11771,6 +11834,7 @@ RectTransform:
   - {fileID: 1327479834}
   - {fileID: 1181550052}
   - {fileID: 4823554197861297016}
+  - {fileID: 222528891}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
