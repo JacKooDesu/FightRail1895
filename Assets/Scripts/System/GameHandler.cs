@@ -43,6 +43,9 @@ public class GameHandler : MonoBehaviour
     public TowerList towerList;
     public EnemyList enemyList;
 
+    public JacDev.Map.MapSetting mapSetting;
+    public MapData mapData;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -54,6 +57,11 @@ public class GameHandler : MonoBehaviour
 
     private void Start()
     {
+        if (mapData == null)
+        {
+            mapData = mapSetting.InitMap();
+        }
+
         money = initMoney;
     }
 
