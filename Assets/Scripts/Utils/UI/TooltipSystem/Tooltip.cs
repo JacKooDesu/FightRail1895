@@ -14,6 +14,9 @@ namespace JacDev.Utils.TooltipSystem
 
         public int characterWrapLimit;
 
+        // 2021.9.30 update
+        [SerializeField] float xPivotOffset, yPivotOffset;
+
         public void SetText(string content, string header = "")
         {
             if (string.IsNullOrEmpty(header))
@@ -45,7 +48,9 @@ namespace JacDev.Utils.TooltipSystem
             }
 
             Vector2 position = Input.mousePosition;
-            Vector2 pivot = new Vector2(position.x / Screen.width, position.y / Screen.height);
+            // Vector2 pivot = new Vector2(position.x / Screen.width, position.y / Screen.height);
+            // 2021.9.30 update
+            Vector2 pivot = new Vector2(position.x / Screen.width > xPivotOffset ? 1 : 0, position.y / Screen.height > yPivotOffset ? 1 : 0);
 
             (transform as RectTransform).pivot = pivot;
             transform.position = position;

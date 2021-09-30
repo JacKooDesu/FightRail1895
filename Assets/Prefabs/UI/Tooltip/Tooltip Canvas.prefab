@@ -233,6 +233,8 @@ MonoBehaviour:
   contentText: {fileID: 4035379961349381707}
   layoutElement: {fileID: 4035379961127326635}
   characterWrapLimit: 60
+  xPivotOffset: 0.5
+  yPivotOffset: 0.9
 --- !u!1 &4035379961349381709
 GameObject:
   m_ObjectHideFlags: 0
