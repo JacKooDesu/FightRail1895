@@ -17,14 +17,15 @@ namespace JacDev.Map
 
         public Data.MapData InitMap()
         {
-            GameObject g = new GameObject("MapData");
-            JacDev.Data.MapData mapData = g.AddComponent<Data.MapData>();
+            JacDev.Data.MapData mapData = new Data.MapData();
 
             for (int i = 0; i < stations.Count - 1; ++i)
             {
-                mapData.path1.Add(stations[i]);
-                mapData.path2.Add(stations[i]);
-                mapData.commonStations.Add(stations[i]);
+                Station s = stations[i];
+                s.GUID = System.Guid.NewGuid().ToString();
+                mapData.stations1.Add(s);
+                mapData.stations2.Add(s);
+                mapData.commonStations.Add(s);
 
                 int spotCount = Random.Range(minSpotCount, maxSpotCount + 1);
 
@@ -40,13 +41,17 @@ namespace JacDev.Map
 
                     if (j != spotCount - 1)
                     {
-                        mapData.path1.Add(new Station("小站", false));
-                        mapData.path2.Add(new Station("小站", false));
+                        mapData.stations1.Add(new Station("小站", false));
+                        mapData.stations2.Add(new Station("小站", false));
                     }
                 }
             }
+            mapData.stations1.Add(stations[stations.Count - 1]);
+            mapData.stations2.Add(stations[stations.Count - 1]);
             mapData.commonStations.Add(stations[stations.Count - 1]);
 
+            // for debug
+            /*
             for (int i = 0; i < mapData.path1.Count; ++i)
             {
                 if (mapData.path1[i] as Path != null)
@@ -56,6 +61,7 @@ namespace JacDev.Map
                     MonoBehaviour.print($"path object {i}. Name is {(mapData.path1[i] as Station).name}");
                 }
             }
+            */
 
             return mapData;
         }
@@ -64,6 +70,7 @@ namespace JacDev.Map
     [System.Serializable]
     public class Station
     {
+        public string GUID;
         public string name;
         public List<int> sellItemIdList = new List<int>();  // 該站可販售的物資
         public List<int> buyItemIdList = new List<int>();   // 該站可上車的物資
@@ -74,6 +81,7 @@ namespace JacDev.Map
 
         public Station(string name, bool main)
         {
+            GUID = System.Guid.NewGuid().ToString();
             this.name = name;
             if (!main)
             {
@@ -85,6 +93,7 @@ namespace JacDev.Map
     [System.Serializable]
     public class Path
     {
+        public string GUID;
         public Station s1, s2;
 
         public Level.LevelSetting levelSetting;
@@ -92,7 +101,7 @@ namespace JacDev.Map
 
         public Path()
         {
-
+            GUID = System.Guid.NewGuid().ToString();
         }
     }
 }

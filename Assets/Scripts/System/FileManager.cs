@@ -9,7 +9,7 @@ public static class FileManager
 {
     public static void Save(string fileName, object target, string dir)
     {
-        var serializeData = JsonUtility.ToJson(target);
+        var serializeData = JsonUtility.ToJson(target, true);
         var filePath = Application.dataPath + dir;
 
         Directory.CreateDirectory(filePath);

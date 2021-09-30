@@ -12,8 +12,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2303a30f29c5f9d46ad18f27ae940f77, type: 3}
   m_Name: Map Setting
   m_EditorClassIdentifier: 
-  mountainLevels: []
-  oceanLevels: []
-  stations: []
-  minSpotCount: 0
-  maxSpotCount: 0
+  mountainLevels:
+  - {fileID: 11400000, guid: ab7a4d0c0dff2ee4e9a971290e322bd9, type: 2}
+  oceanLevels:
+  - {fileID: 11400000, guid: ab7a4d0c0dff2ee4e9a971290e322bd9, type: 2}
+  stations:
+  - GUID: 
+    name: "\u57FA\u9686"
+    sellItemIdList: 
+    buyItemIdList: 
+    canFix: 0
+    canUpgradeTrain: 0
+    canUpgradeTower: 0
+  - GUID: 
+    name: "\u53F0\u5317"
+    sellItemIdList: 
+    buyItemIdList: 
+    canFix: 0
+    canUpgradeTrain: 0
+    canUpgradeTower: 0
+  - GUID: 
+    name: "\u6843\u5712"
+    sellItemIdList: 
+    buyItemIdList: 
+    canFix: 0
+    canUpgradeTrain: 0
+    canUpgradeTower: 0
+  - GUID: 
+    name: "\u65B0\u7AF9"
+    sellItemIdList: 
+    buyItemIdList: 
+    canFix: 0
+    canUpgradeTrain: 0
+    canUpgradeTower: 0
+  - GUID: 
+    name: "\u82D7\u6817"
+    sellItemIdList: 
+    buyItemIdList: 
+    canFix: 0
+    canUpgradeTrain: 0
+    canUpgradeTower: 0
+  - GUID: 
+    name: "\u53F0\u4E2D"
+    sellItemIdList: 
+    buyItemIdList: 
+    canFix: 0
+    canUpgradeTrain: 0
+    canUpgradeTower: 0
+  - GUID: 
+    name: "\u5F70\u5316"
+    sellItemIdList: 
+    buyItemIdList: 
+    canFix: 0
+    canUpgradeTrain: 0
+    canUpgradeTower: 0
+  - GUID: 
+    name: "\u5609\u7FA9"
+    sellItemIdList: 
+    buyItemIdList: 
+    canFix: 0
+    canUpgradeTrain: 0
+    canUpgradeTower: 0
+  - GUID: 
+    name: "\u53F0\u5357"
+    sellItemIdList: 
+    buyItemIdList: 
+    canFix: 0
+    canUpgradeTrain: 0
+    canUpgradeTower: 0
+  - GUID: 
+    name: "\u9AD8\u96C4"
+    sellItemIdList: 
+    buyItemIdList: 
+    canFix: 0
+    canUpgradeTrain: 0
+    canUpgradeTower: 0
+  minSpotCount: 2
+  maxSpotCount: 5

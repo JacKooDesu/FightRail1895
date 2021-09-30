@@ -43,8 +43,35 @@ public class GameHandler : MonoBehaviour
     public TowerList towerList;
     public EnemyList enemyList;
 
-    public JacDev.Map.MapSetting mapSetting;
-    public MapData mapData;
+    [SerializeField] JacDev.Map.MapSetting mapSetting;
+    public static JacDev.Map.MapSetting MapSetting
+    {
+        get => MapSetting;
+    }
+
+    static MapData mapData;
+    public static MapData MapData
+    {
+        get
+        {
+            if (mapData == null)
+            {
+                if (FileManager.Load<MapData>("/MapData", "/TestMap") as MapData != null)
+                {
+                    mapData = FileManager.Load<MapData>("/MapData", "/TestMap");
+                }
+                else
+                {
+                    mapData = Singleton.mapSetting.InitMap();
+                    FileManager.Save("/TestMap", mapData, "/MapData");
+                }
+            }
+            
+
+            return mapData;
+        }
+    }
+
 
     private void Awake()
     {
@@ -57,11 +84,6 @@ public class GameHandler : MonoBehaviour
 
     private void Start()
     {
-        if (mapData == null)
-        {
-            mapData = mapSetting.InitMap();
-        }
-
         money = initMoney;
     }
 

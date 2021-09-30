@@ -14763,6 +14763,8 @@ MonoBehaviour:
   entities: []
   towerList: {fileID: 0}
   enemyList: {fileID: 0}
+  mapSetting: {fileID: 11400000, guid: 25c0d9be47284e7478454a72862696ec, type: 2}
+  mapData: {fileID: 0}
 --- !u!4 &1749554940
 Transform:
   m_ObjectHideFlags: 0

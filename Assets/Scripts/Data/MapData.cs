@@ -5,11 +5,18 @@ using System.Collections.Generic;
 
 namespace JacDev.Data
 {
-    [Serializable]
-    public class MapData : MonoBehaviour
+    [System.Serializable]
+    public class MapData
     {
-        public List<object> path1 = new List<object>();
-        public List<object> path2 = new List<object>();
+        [Header("路線一")]
+        public List<Station> stations1 = new List<Station>();
+        public List<Path> path1 = new List<Path>();
+
+        [Header("路線二")]
+        public List<Station> stations2 = new List<Station>();
+        public List<Path> path2 = new List<Path>();
+
+        [Header("大站 (共點)")]
         public List<Station> commonStations = new List<Station>();
     }
 }
