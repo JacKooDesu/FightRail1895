@@ -49,30 +49,6 @@ public class GameHandler : MonoBehaviour
         get => MapSetting;
     }
 
-    static MapData mapData;
-    public static MapData MapData
-    {
-        get
-        {
-            if (mapData == null)
-            {
-                if (FileManager.Load<MapData>("/MapData", "/TestMap") as MapData != null)
-                {
-                    mapData = FileManager.Load<MapData>("/MapData", "/TestMap");
-                }
-                else
-                {
-                    mapData = Singleton.mapSetting.InitMap();
-                    FileManager.Save("/TestMap", mapData, "/MapData");
-                }
-            }
-            
-
-            return mapData;
-        }
-    }
-
-
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);

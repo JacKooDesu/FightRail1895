@@ -26,7 +26,7 @@ namespace JacDev.UI.ShopScene
 
         public void InitMap()
         {
-            Data.MapData map = GameHandler.MapData;
+            Data.MapData map = DataManager.Singleton.GetMapData();
 
             for (int i = 0; i < map.stations1.Count; ++i)
             {

@@ -70,8 +70,8 @@ namespace JacDev.Map
     [System.Serializable]
     public class Station
     {
-        public string GUID;
         public string name;
+        public string GUID;
         public List<int> sellItemIdList = new List<int>();  // 該站可販售的物資
         public List<int> buyItemIdList = new List<int>();   // 該站可上車的物資
 
