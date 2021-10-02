@@ -6,28 +6,20 @@ namespace TBL.Command
 {
     public class CommandManager : MonoBehaviour
     {
-        // public static Command<int, int> DRAW_CARD;
-        // public static Command<int, int> ADD_CARD;
+        public static Command<int> ADD_PLAYER_MONEY;
         public static List<object> commandList;
 
         void Awake()
         {
-            // DRAW_CARD = new Command<int, int>("drawCard", (v1, v2) =>
-            // {
-            //     (NetworkRoomManager.singleton as NetworkRoomManager).players[v1].DrawCard(v2);
-            // });
+            ADD_PLAYER_MONEY = new Command<int>("addMoney", (v1) =>
+            {
 
-            // ADD_CARD = new Command<int, int>("addCard", (v1, v2) =>
-            // {
-            //     (NetworkRoomManager.singleton as NetworkRoomManager).players[v1].AddCard(v2);
-            // });
+            });
 
+            commandList = new List<object>{
+                ADD_PLAYER_MONEY
+            };
 
-
-            // commandList = new List<object>{
-            //     DRAW_CARD,
-            //     ADD_CARD
-            // };
         }
 
         public static void CheckCommand(string s)
