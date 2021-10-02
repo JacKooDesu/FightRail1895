@@ -33,8 +33,8 @@ public class ObjectTweener : MonoBehaviour  // 物件位移類別
 
     public void MoveToPoint(int p)  // 位移至定點
     {
-        transform.DOMove(points[p].position, moveTime);
-        transform.DORotate(points[p].eulerAngles, moveTime);
+        target.transform.DOMove(points[p].position, moveTime);
+        target.transform.DORotate(points[p].eulerAngles, moveTime);
     }
 
     public void AddPoint()      // Editor mode function
