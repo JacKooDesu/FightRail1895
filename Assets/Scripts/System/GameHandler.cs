@@ -55,7 +55,8 @@ public class GameHandler : MonoBehaviour
         if (Singleton != this)
             Destroy(gameObject);
 
-        SceneManager.sceneLoaded += OnSceneLoad;
+        if (!hasAddSceneLoadAction)
+            SceneManager.sceneLoaded += OnSceneLoad;
     }
 
     private void Start()
@@ -63,8 +64,11 @@ public class GameHandler : MonoBehaviour
         money = initMoney;
     }
 
+    static bool hasAddSceneLoadAction;
     void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
+        hasAddSceneLoadAction = true;
+        print($"載入 {scene.name}");
         switch (scene.name)
         {
             case "AsyncLoadingScene":
@@ -72,7 +76,19 @@ public class GameHandler : MonoBehaviour
                 //     break;
 
                 // case "LoadGameScene":
-                if (FileManager.Load("/PlayerData", "/PlayerData"))
+                if (FileManager.Load("/PlayerData", "/PlayerData") != null)
+                {
+                    playerData = FileManager.Load("/PlayerData", "/PlayerData");
+                }
+                else
+                {
+                    playerData = new PlayerData();
+                    FileManager.Save("/PlayerData", playerData, "/PlayerData");
+                }
+                break;
+
+            case "ShopScene":
+                if (FileManager.Load("/PlayerData", "/PlayerData") != null)
                 {
                     playerData = FileManager.Load("/PlayerData", "/PlayerData");
                 }

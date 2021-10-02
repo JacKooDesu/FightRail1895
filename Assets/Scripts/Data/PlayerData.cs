@@ -5,7 +5,7 @@ using UnityEngine;
 namespace JacDev.Data
 {
     [System.Serializable]
-    public class PlayerData : MonoBehaviour
+    public class PlayerData
     {
         public string playerName = "None";          // 玩家名
         public JacDev.TimeUtil.Time playingTime = default;    // 遊玩時間
@@ -21,10 +21,15 @@ namespace JacDev.Data
         public int totalKill = 0;
         public List<int> typeKill = new List<int>();  // 依照種族表紀錄擊殺數量
 
+        public PlayerData()
+        {
+            //this.playerName = name;
+        }
+
         public void Init()
         {
-            typeKill.Capacity = GameHandler.Singleton.enemyList.enemies.Count;
-            towersGrade.Capacity = GameHandler.Singleton.towerList.towers.Count;
+            typeKill.Capacity = SettingManager.Singleton.EnemySetting.enemies.Count;
+            towersGrade.Capacity = SettingManager.Singleton.TowerSetting.towers.Count;
         }
     }
 

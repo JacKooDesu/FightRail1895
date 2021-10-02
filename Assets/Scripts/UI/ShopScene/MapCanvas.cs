@@ -21,7 +21,7 @@ namespace JacDev.UI.ShopScene
 
         private void Start()
         {
-            InitMap();
+           // InitMap();
         }
 
         public void InitMap()

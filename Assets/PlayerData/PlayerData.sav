@@ -1,0 +1,14 @@
+{
+    "playerName": "None",
+    "playingTime": {
+        "hour": 0,
+        "min": 0,
+        "sec": 0
+    },
+    "money": 0.0,
+    "inventory": [],
+    "modDatas": [],
+    "towersGrade": [],
+    "totalKill": 0,
+    "typeKill": []
+}
