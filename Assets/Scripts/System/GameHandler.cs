@@ -52,11 +52,20 @@ public class GameHandler : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        if (Singleton != this)
+        if (singleton == null)
+        {
+            singleton = this;
+        }
+        else if (singleton != this)
+        {
             Destroy(gameObject);
+        }
 
         if (!hasAddSceneLoadAction)
+        {
+            hasAddSceneLoadAction = true;
             SceneManager.sceneLoaded += OnSceneLoad;
+        }
     }
 
     private void Start()
@@ -67,7 +76,6 @@ public class GameHandler : MonoBehaviour
     static bool hasAddSceneLoadAction;
     void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
-        hasAddSceneLoadAction = true;
         print($"載入 {scene.name}");
         switch (scene.name)
         {
@@ -99,6 +107,11 @@ public class GameHandler : MonoBehaviour
                 }
                 break;
         }
+
+        if (singleton == null)
+            singleton = this;
+        if (singleton != null && singleton != this)
+            Destroy(gameObject);
     }
 
     public void Pause(bool b)
@@ -108,14 +121,21 @@ public class GameHandler : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < entities.Count; ++i)
-        {
-            if (!entities[i].GameUpdate())
-            {
-                entities.RemoveAt(i);
-            }
-        }
+
     }
 
-
+    IEnumerator GameUpdate()
+    {
+        while (true)
+        {
+            for (int i = 0; i < entities.Count; ++i)
+            {
+                if (!entities[i].GameUpdate())
+                {
+                    entities.RemoveAt(i);
+                }
+            }
+            yield return null;
+        }
+    }
 }

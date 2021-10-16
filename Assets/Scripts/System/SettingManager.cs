@@ -52,16 +52,13 @@ public class SettingManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
 
-        if (!hasAddSceneLoadAction)
-            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoad;
-    }
-
-    static bool hasAddSceneLoadAction;
-    void OnSceneLoad(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
-    {
         if (singleton == null)
+        {
             singleton = this;
-        if (singleton != null && singleton != this)
+        }
+        else if (singleton != this)
+        {
             Destroy(gameObject);
+        }
     }
 }
