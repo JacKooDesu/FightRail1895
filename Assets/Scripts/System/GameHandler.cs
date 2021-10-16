@@ -84,27 +84,27 @@ public class GameHandler : MonoBehaviour
                 //     break;
 
                 // case "LoadGameScene":
-                if (FileManager.Load("/PlayerData", "/PlayerData") != null)
-                {
-                    playerData = FileManager.Load("/PlayerData", "/PlayerData");
-                }
-                else
-                {
-                    playerData = new PlayerData();
-                    FileManager.Save("/PlayerData", playerData, "/PlayerData");
-                }
+                // if (FileManager.Load("/GameDatas", "/PlayerData") != null)
+                // {
+                //     playerData = FileManager.Load("/GameDatas", "/PlayerData");
+                // }
+                // else
+                // {
+                //     playerData = new PlayerData();
+                //     FileManager.Save("/PlayerData", playerData, "/GameDatas");
+                // }
                 break;
 
             case "ShopScene":
-                if (FileManager.Load("/PlayerData", "/PlayerData") != null)
-                {
-                    playerData = FileManager.Load("/PlayerData", "/PlayerData");
-                }
-                else
-                {
-                    playerData = new PlayerData();
-                    FileManager.Save("/PlayerData", playerData, "/PlayerData");
-                }
+                // if (FileManager.Load("/PlayerData", "/PlayerData") != null)
+                // {
+                //     playerData = FileManager.Load("/PlayerData", "/PlayerData");
+                // }
+                // else
+                // {
+                //     playerData = new PlayerData();
+                //     FileManager.Save("/PlayerData", playerData, "/GameDatas");
+                // }
                 break;
         }
 
@@ -144,5 +144,7 @@ public class GameHandler : MonoBehaviour
         PlayerData pData = new PlayerData();
         pData.Init("New Player", bloodIndex, 10000f);
         DataManager.Singleton.PlayerData = pData;
+
+        DataManager.Singleton.GetMapData(true);
     }
 }

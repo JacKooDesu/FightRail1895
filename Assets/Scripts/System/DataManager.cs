@@ -34,6 +34,7 @@ public class DataManager : MonoBehaviour
         set
         {
             playerData = value;
+            FileManager.Save("/PlayerData", playerData, "/GameDatas");
         }
     }
     [SerializeField] MapData mapData;
@@ -59,18 +60,18 @@ public class DataManager : MonoBehaviour
         if (regenerate)
         {
             mapData = SettingManager.Singleton.MapSetting.InitMap();
-            FileManager.Save("/TestMap", mapData, "/MapData");
+            FileManager.Save("/TestMap", mapData, "/GameDatas");
         }
         else
         {
-            if (FileManager.Load<MapData>("/MapData", "/TestMap") as MapData != null)
+            if (FileManager.Load<MapData>("/GameDatas", "/TestMap") as MapData != null)
             {
-                mapData = FileManager.Load<MapData>("/MapData", "/TestMap");
+                mapData = FileManager.Load<MapData>("/GameDatas", "/TestMap");
             }
             else
             {
                 mapData = SettingManager.Singleton.MapSetting.InitMap();
-                FileManager.Save("/TestMap", mapData, "/MapData");
+                FileManager.Save("/TestMap", mapData, "/GameDatas");
             }
         }
 

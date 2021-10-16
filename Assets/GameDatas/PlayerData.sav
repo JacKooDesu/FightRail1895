@@ -1,11 +1,12 @@
 {
-    "playerName": "None",
+    "playerName": "New Player",
     "playingTime": {
         "hour": 0,
         "min": 0,
         "sec": 0
     },
-    "money": 0.0,
+    "bloodType": 0,
+    "money": 10000.0,
     "inventory": [],
     "modDatas": [],
     "towersGrade": [],
