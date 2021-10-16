@@ -138,4 +138,11 @@ public class GameHandler : MonoBehaviour
             yield return null;
         }
     }
+
+    public void NewGame(int bloodIndex)
+    {
+        PlayerData pData = new PlayerData();
+        pData.Init("New Player", bloodIndex, 10000f);
+        DataManager.Singleton.PlayerData = pData;
+    }
 }

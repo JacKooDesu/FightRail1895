@@ -25,6 +25,17 @@ public class DataManager : MonoBehaviour
 
     #region DATA_VARIABLES
     [SerializeField] PlayerData playerData;
+    public PlayerData PlayerData
+    {
+        get
+        {
+            return playerData;
+        }
+        set
+        {
+            playerData = value;
+        }
+    }
     [SerializeField] MapData mapData;
     [SerializeField] ModData modData;
 

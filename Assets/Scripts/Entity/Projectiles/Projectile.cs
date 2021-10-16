@@ -24,7 +24,7 @@ namespace JacDev.Entity
             Particle
         }
 
-        public EntityType targetEntityType;
+        public EntityEnums.EntityType targetEntityType;
         public LayerMask collideLayer;
         public float damage;
         public float speed;

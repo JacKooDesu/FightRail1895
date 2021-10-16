@@ -22,15 +22,8 @@ namespace JacDev.Entity
 
         public int level = 1;
 
-        public enum BloodType
-        {
-            Aboriginal,
-            Japanese,
-            Hakka
-        }
-
         [SerializeField]
-        BloodType bloodType;     // 種族
+        EntityEnums.BloodType bloodType;     // 種族
 
         public float movementSpeed = 5.0f;  // 移動速度
         public float health = 20.0f;    // 血量

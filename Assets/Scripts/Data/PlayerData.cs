@@ -10,6 +10,8 @@ namespace JacDev.Data
         public string playerName = "None";          // 玩家名
         public JacDev.TimeUtil.Time playingTime = default;    // 遊玩時間
 
+        public Entity.EntityEnums.BloodType bloodType;
+
         public float money = 0f;        // 金錢
 
         public List<Item> inventory = new List<Item>();     // 道具
@@ -26,10 +28,14 @@ namespace JacDev.Data
             //this.playerName = name;
         }
 
-        public void Init()
+        public void Init(string name, int bloodIndex, float money)
         {
             typeKill.Capacity = SettingManager.Singleton.EnemySetting.enemies.Count;
             towersGrade.Capacity = SettingManager.Singleton.TowerSetting.towers.Count;
+
+            this.playerName = name;
+            this.bloodType = (Entity.EntityEnums.BloodType)bloodIndex;
+            this.money = money;
         }
     }
 

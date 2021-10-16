@@ -9,7 +9,7 @@ namespace JacDev.Entity
         protected string entityName;
 
         [SerializeField, Header("物件種類")]
-        public EntityType entityType = default;
+        public EntityEnums.EntityType entityType = default;
 
         [SerializeField, Header("圖示")]
         protected Sprite icon;
