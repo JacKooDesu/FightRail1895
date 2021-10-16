@@ -47,9 +47,21 @@ public class SettingManager : MonoBehaviour
     {
         get => enemySetting;
     }
-    
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+
+        if (!hasAddSceneLoadAction)
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoad;
+    }
+
+    static bool hasAddSceneLoadAction;
+    void OnSceneLoad(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
+    {
+        if (singleton == null)
+            singleton = this;
+        if (singleton != null && singleton != this)
+            Destroy(gameObject);
     }
 }

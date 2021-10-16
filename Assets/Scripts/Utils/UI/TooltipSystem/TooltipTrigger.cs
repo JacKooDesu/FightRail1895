@@ -5,8 +5,9 @@ using UnityEngine.EventSystems;
 
 namespace JacDev.Utils.TooltipSystem
 {
-    public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
+        public bool clickHide = false;
         public string header;
         [TextArea(3, 10)]
         public string content;
@@ -19,6 +20,12 @@ namespace JacDev.Utils.TooltipSystem
         public void OnPointerExit(PointerEventData eventData)
         {
             TooltipSystem.Hide();
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            if (clickHide)
+                TooltipSystem.Hide();
         }
     }
 }
