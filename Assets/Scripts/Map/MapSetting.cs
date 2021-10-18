@@ -71,7 +71,8 @@ namespace JacDev.Map
     public class Station
     {
         public string name;
-        public string GUID;
+        [HideInInspector] public string GUID;
+        public Level.MapObject stationObject;
         public List<int> sellItemIdList = new List<int>();  // 該站可販售的物資
         public List<int> buyItemIdList = new List<int>();   // 該站可上車的物資
 

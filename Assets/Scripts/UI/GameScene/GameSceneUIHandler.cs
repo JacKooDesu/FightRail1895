@@ -72,6 +72,8 @@ namespace JacDev.UI.GameScene
 
         private void Update()
         {
+            if (GameHandler.Singleton.debugMode)
+                return;
             // money
             UpdateState();
         }

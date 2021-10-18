@@ -106,6 +106,10 @@ public class GameHandler : MonoBehaviour
                 //     FileManager.Save("/PlayerData", playerData, "/GameDatas");
                 // }
                 break;
+
+            case "GameScene":
+                
+                break;
         }
 
         if (singleton == null)
