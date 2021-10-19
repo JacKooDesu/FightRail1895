@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22ffd1d04cab5a4a8476622e807ef41, type: 3}
+  m_Name: "\u6D77\u7DDA"
+  m_EditorClassIdentifier: 
+  mapObjects:
+  - name: rock
+    origins:
+    - {fileID: 4145459195611424288, guid: 758bde8c04d082742b11ce37409ba7c8, type: 3}
+    - {fileID: 8284571901809451141, guid: 1f9d4499fc45f1b43b16fd8dcf86ecf4, type: 3}
+    - {fileID: 4616168537673792045, guid: 654f6d84fb3196f4e90d3f1492d56120, type: 3}
+    size: 2
+    max: 40
+    min: 5
+    res: 0.512
+  - name: tree
+    origins:
+    - {fileID: 4525017976969926823, guid: a9a9a162406bc954b90cdce6dbaf00d9, type: 3}
+    - {fileID: 2014172542847907031, guid: f302a126a6426884881f6994150269a6, type: 3}
+    size: 5
+    max: 59
+    min: 5
+    res: 0.501
+  - name: chair
+    origins:
+    - {fileID: 1822245674303328030, guid: c4c9df2e986aa104d96a70691a53b092, type: 3}
+    - {fileID: 2393105993833094452, guid: e699d1abef7ea9d4f85a5fe9493cbf68, type: 3}
+    - {fileID: 5155900697024127120, guid: af84df4a726fa074ab0831487624f3c5, type: 3}
+    size: 5
+    max: 391
+    min: 252
+    res: 0.553
+  size: 160
+  railWidth: 15
+  spawnpointAvoidSize: 5
+  blockCount: 3
+  spawnpoint:
+    name: spawnpoint
+    origins:
+    - {fileID: 2585509394926135914, guid: 38c7d08a19af6ff4bbcb25351e637366, type: 3}
+    - {fileID: 6708375657172244380, guid: 59159bf8097e6ae44887ffc2c25a4f9e, type: 3}
+    - {fileID: 4013699473120758432, guid: 76b366dfc5a9b3244a28a49acd8e119c, type: 3}
+    size: 6
+    max: 4
+    min: 1
+    res: 1
+  spawnpointWidth: 50
+  rail: {fileID: 807166930679618977, guid: a6ec60262937dce45a75b127208b5622, type: 3}
+  stationOffset: {x: 12, y: 0}
+  from:
+    name: From
+    origins:
+    - {fileID: 8443185768323588318, guid: 47a26ec09853bc44596a73a0f0767f57, type: 3}
+    size: 30
+    max: 0
+    min: 0
+    res: 0
+  dest:
+    name: From
+    origins:
+    - {fileID: 8443185768323588318, guid: 47a26ec09853bc44596a73a0f0767f57, type: 3}
+    size: 30
+    max: 0
+    min: 0
+    res: 0
