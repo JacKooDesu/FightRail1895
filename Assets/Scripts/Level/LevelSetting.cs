@@ -37,11 +37,14 @@ namespace JacDev.Level
     {
         public string name;
         public GameObject[] origins;
+        public Vector3 positionOffset;
         public float size = 2f;
         public int max = 20;
         public int min = 5;
         [Range(0f, 1f)]
         public float res = .5f;
+
+        public bool leftSide = true, rightSide = true;
 
         public MapObject(string name, GameObject[] origins, float size, int max, int min, float res)
         {

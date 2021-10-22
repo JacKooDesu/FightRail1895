@@ -2674,6 +2674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5da0100cdcfa5f4298a03da962a9785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickHide: 0
   header: 
   content: "\u8A72\u5C40\u91D1\u9322"
 --- !u!1 &339647831
@@ -6115,6 +6116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5da0100cdcfa5f4298a03da962a9785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickHide: 0
   header: 
   content: "\u7576\u524D\u8ECA\u5EC2\u8CC7\u6E90"
 --- !u!1 &805932433
@@ -6650,6 +6652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5da0100cdcfa5f4298a03da962a9785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickHide: 0
   header: 
   content: "\u7576\u524D\u8ECA\u5EC2\u8840\u91CF"
 --- !u!1 &849874858
@@ -7225,6 +7228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5da0100cdcfa5f4298a03da962a9785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickHide: 0
   header: 
   content: "\u5207\u63DB\u81F3\u8ECA\u5EC2\u9762\u677F"
 --- !u!1 &921029136
@@ -10166,6 +10170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5da0100cdcfa5f4298a03da962a9785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickHide: 0
   header: 
   content: "\u7A7A\u8972"
 --- !u!1 &1190247206
@@ -11104,6 +11109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5da0100cdcfa5f4298a03da962a9785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickHide: 0
   header: 
   content: "\u97F3\u6A02"
 --- !u!1 &1329658405
@@ -12005,6 +12011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5da0100cdcfa5f4298a03da962a9785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickHide: 0
   header: 
   content: "\u5831\u7D19"
 --- !u!1 &1433566087
@@ -12276,8 +12283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generateType: 0
-  levelSetting: {fileID: 11400000, guid: ab7a4d0c0dff2ee4e9a971290e322bd9, type: 2}
-  ground: {fileID: 1585209409}
+  levelSetting: {fileID: 11400000, guid: c9de156e03ec81b47a2651b1ed9867b6, type: 2}
+  ground: {fileID: 1466448884}
   rail: {fileID: 849874859}
   totalLength: 0
   dest: {fileID: 0}
@@ -12297,6 +12304,7 @@ Transform:
   - {fileID: 1931488514}
   - {fileID: 1585209409}
   - {fileID: 849874859}
+  - {fileID: 1466448884}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12458,6 +12466,99 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450343828}
   m_Mesh: {fileID: 8484624010021205781, guid: 102d0aa8dc788fb478f3d596695151e2, type: 3}
+--- !u!1 &1466448883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466448884}
+  - component: {fileID: 1466448887}
+  - component: {fileID: 1466448886}
+  - component: {fileID: 1466448885}
+  m_Layer: 0
+  m_Name: SandGround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1466448884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466448883}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.65, z: 0}
+  m_LocalScale: {x: 160, y: 1, z: 160}
+  m_Children: []
+  m_Father: {fileID: 1435561925}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1466448885
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466448883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1466448886
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466448883}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 422506d706d02694ebe1b2bc017d399d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1466448887
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466448883}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1470273908
 GameObject:
   m_ObjectHideFlags: 0
@@ -13180,7 +13281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1585209409
 Transform:
   m_ObjectHideFlags: 0
@@ -14764,7 +14865,6 @@ MonoBehaviour:
   towerList: {fileID: 0}
   enemyList: {fileID: 0}
   mapSetting: {fileID: 11400000, guid: 25c0d9be47284e7478454a72862696ec, type: 2}
-  mapData: {fileID: 0}
 --- !u!4 &1749554940
 Transform:
   m_ObjectHideFlags: 0
@@ -16021,6 +16121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5da0100cdcfa5f4298a03da962a9785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickHide: 0
   header: 
   content: "\u5207\u63DB\u81F3\u6C11\u5175\u9762\u677F"
 --- !u!1 &1903211342
@@ -16420,6 +16521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5da0100cdcfa5f4298a03da962a9785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickHide: 0
   header: 
   content: "\u66AB\u505C"
 --- !u!114 &1976522199

@@ -189,7 +189,7 @@ namespace JacDev.Level
             // placing map object
             for (int i = 0; i < count; ++i)
             {
-                float x = Random.Range(-(genAreaX / 2) + mo.size, (genAreaX / 2) - mo.size);
+                float x = Random.Range((mo.leftSide ? -(genAreaX / 2) + mo.size : 0), (mo.rightSide ? (genAreaX / 2) - mo.size : 0));
                 float z = Random.Range(-(genAreaZ / 2) + mo.size, (genAreaZ / 2) - mo.size);
                 Rect rect = new Rect(x + mo.size / 2, z + mo.size / 2, mo.size, mo.size);
                 bool overlap = false;
@@ -213,7 +213,7 @@ namespace JacDev.Level
                     objectMapping.Add(rect);
                     GameObject g = Instantiate(mo.origins[Random.Range(0, mo.origins.Length)]);
                     g.transform.SetParent(parent);
-                    g.transform.localPosition = new Vector3(x, 0, z);
+                    g.transform.localPosition = (new Vector3(x, 0, z)) + mo.positionOffset;
                     g.transform.eulerAngles = new Vector3(0, Random.Range(0, 360f));
                 }
             }

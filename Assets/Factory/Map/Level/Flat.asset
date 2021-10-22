@@ -18,26 +18,35 @@ MonoBehaviour:
     - {fileID: 4145459195611424288, guid: 758bde8c04d082742b11ce37409ba7c8, type: 3}
     - {fileID: 8284571901809451141, guid: 1f9d4499fc45f1b43b16fd8dcf86ecf4, type: 3}
     - {fileID: 4616168537673792045, guid: 654f6d84fb3196f4e90d3f1492d56120, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
     size: 2
     max: 40
     min: 5
     res: 0.512
+    leftSide: 1
+    rightSide: 1
   - name: tree
     origins:
     - {fileID: 6548290252151889981, guid: 1b910e95c76923c4a9e43232a421a6b5, type: 3}
     - {fileID: 682063898333826019, guid: 680330513802da94ca342771343325c2, type: 3}
     - {fileID: 8918029108778408009, guid: 130a8258827e07e409bc28c6b3eb183b, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
     size: 5
     max: 59
     min: 5
     res: 0.501
+    leftSide: 1
+    rightSide: 0
   - name: grass
     origins:
     - {fileID: 8724073853793961533, guid: 1bf802e678075764887fa7b8a8086096, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
     size: 1
     max: 330
     min: 5
     res: 0.845
+    leftSide: 1
+    rightSide: 1
   size: 160
   railWidth: 15
   spawnpointAvoidSize: 5
@@ -48,10 +57,13 @@ MonoBehaviour:
     - {fileID: 2585509394926135914, guid: 38c7d08a19af6ff4bbcb25351e637366, type: 3}
     - {fileID: 6708375657172244380, guid: 59159bf8097e6ae44887ffc2c25a4f9e, type: 3}
     - {fileID: 4013699473120758432, guid: 76b366dfc5a9b3244a28a49acd8e119c, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
     size: 6
     max: 4
     min: 1
     res: 1
+    leftSide: 1
+    rightSide: 1
   spawnpointWidth: 50
   rail: {fileID: 807166930679618977, guid: a6ec60262937dce45a75b127208b5622, type: 3}
   stationOffset: {x: 12, y: 0}
@@ -59,15 +71,21 @@ MonoBehaviour:
     name: From
     origins:
     - {fileID: 8443185768323588318, guid: 47a26ec09853bc44596a73a0f0767f57, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
     size: 30
     max: 0
     min: 0
     res: 0
+    leftSide: 0
+    rightSide: 0
   dest:
     name: From
     origins:
     - {fileID: 8443185768323588318, guid: 47a26ec09853bc44596a73a0f0767f57, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
     size: 30
     max: 0
     min: 0
     res: 0
+    leftSide: 0
+    rightSide: 0
