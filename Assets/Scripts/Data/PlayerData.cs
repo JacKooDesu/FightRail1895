@@ -23,12 +23,15 @@ namespace JacDev.Data
         public int totalKill = 0;
         public List<int> typeKill = new List<int>();  // 依照種族表紀錄擊殺數量
 
+        [Header("遊戲進度")]
+        public Map.Station currentStation;
+
         public PlayerData()
         {
             //this.playerName = name;
         }
 
-        public void Init(string name, int bloodIndex, float money)
+        public void Init(string name, int bloodIndex, float money, Map.Station startStation)
         {
             typeKill.Capacity = SettingManager.Singleton.EnemySetting.enemies.Count;
             towersGrade.Capacity = SettingManager.Singleton.TowerSetting.towers.Count;
@@ -36,6 +39,8 @@ namespace JacDev.Data
             this.playerName = name;
             this.bloodType = (Entity.EntityEnums.BloodType)bloodIndex;
             this.money = money;
+
+            currentStation = startStation;
         }
     }
 

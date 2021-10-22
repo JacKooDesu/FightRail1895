@@ -12,7 +12,10 @@ public class DataManager : MonoBehaviour
     {
         get
         {
-            singleton = FindObjectOfType(typeof(DataManager)) as DataManager;
+            if (singleton != null)
+                return singleton;
+            else
+                singleton = FindObjectOfType(typeof(DataManager)) as DataManager;
 
             if (singleton == null)
             {
@@ -53,6 +56,8 @@ public class DataManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        LoadPlayerData();
     }
 
     public MapData GetMapData(bool regenerate = false)
@@ -76,5 +81,18 @@ public class DataManager : MonoBehaviour
         }
 
         return mapData;
+    }
+
+    public void LoadPlayerData()
+    {
+        if (FileManager.Load<PlayerData>("/GameDatas", "/PlayerData") != null)
+        {
+            PlayerData = FileManager.Load<PlayerData>("/GameDatas", "/PlayerData");
+        }
+        else
+        {
+            PlayerData = null;
+        }
+
     }
 }

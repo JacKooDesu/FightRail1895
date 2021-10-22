@@ -2881,6 +2881,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361898185}
   m_CullTransparentMesh: 0
+--- !u!1 &375172863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 375172864}
+  m_Layer: 0
+  m_Name: TradeCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &375172864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375172863}
+  m_LocalRotation: {x: 0.040284984, y: 0.9431144, z: -0.124272205, w: 0.30572683}
+  m_LocalPosition: {x: 14.7, y: 10.9, z: -159.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 467100110}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 15.0130005, y: 144.078, z: 0}
 --- !u!1 &395683944
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,6 +3241,7 @@ Transform:
   - {fileID: 705273747}
   - {fileID: 708520888}
   - {fileID: 765970012}
+  - {fileID: 375172864}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3232,7 +3263,7 @@ MonoBehaviour:
   - {fileID: 818487842}
   - {fileID: 705273747}
   - {fileID: 708520888}
-  - {fileID: 0}
+  - {fileID: 375172864}
   - {fileID: 765970012}
   moveTime: 0.8
 --- !u!1 &485712379
@@ -8514,7 +8545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1472735760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8614,8 +8645,10 @@ MonoBehaviour:
   subStationIconPrefab: {fileID: 2351976275487500486, guid: 65539b0be18bab843b3c2ff581893a59,
     type: 3}
   branchPosOffset: 80
-  pathLength: 100
+  pathLength: 150
   mapParent: {fileID: 1129491530}
+  stationObjects1: []
+  stationObjects2: []
 --- !u!1 &1497939784
 GameObject:
   m_ObjectHideFlags: 0
@@ -12573,6 +12606,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DataManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049772889539749538, guid: f983b405861588b4398cd52ae0f41c12,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2180049219703550045, guid: f983b405861588b4398cd52ae0f41c12,
         type: 3}

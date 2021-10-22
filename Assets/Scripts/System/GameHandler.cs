@@ -146,9 +146,8 @@ public class GameHandler : MonoBehaviour
     public void NewGame(int bloodIndex)
     {
         PlayerData pData = new PlayerData();
-        pData.Init("New Player", bloodIndex, 10000f);
+       // pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).commonStations[0]);
+        pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).stations1[0]);
         DataManager.Singleton.PlayerData = pData;
-
-        DataManager.Singleton.GetMapData(true);
     }
 }

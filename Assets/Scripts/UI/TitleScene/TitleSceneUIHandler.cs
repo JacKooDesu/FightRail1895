@@ -30,9 +30,9 @@ namespace JacDev.UI.TitleScene
                 EventTriggerType.PointerClick,
                 (data) =>
                 {
-                    if (FileManager.Load("/PlayerData", "/PlayerData") != null)
+                    if (DataManager.Singleton.PlayerData != null)
                     {
-                        AsyncSceneLoader.Singleton.LoadScene("GenerateTest new UI");
+                        AsyncSceneLoader.Singleton.LoadScene("ShopScene");
                     }
                     else
                     {

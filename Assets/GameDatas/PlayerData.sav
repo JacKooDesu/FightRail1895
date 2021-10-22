@@ -11,5 +11,29 @@
     "modDatas": [],
     "towersGrade": [],
     "totalKill": 0,
-    "typeKill": []
+    "typeKill": [],
+    "currentStation": {
+        "name": "小站",
+        "GUID": "a2f33716-ceb4-419f-aaeb-a3dd01947fad",
+        "stationObject": {
+            "name": "",
+            "origins": [],
+            "positionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "size": 0.0,
+            "max": 0,
+            "min": 0,
+            "res": 0.0,
+            "leftSide": false,
+            "rightSide": false
+        },
+        "sellItemIdList": [],
+        "buyItemIdList": [],
+        "canFix": false,
+        "canUpgradeTrain": false,
+        "canUpgradeTower": false
+    }
 }
