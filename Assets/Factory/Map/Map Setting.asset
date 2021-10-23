@@ -15,130 +15,157 @@ MonoBehaviour:
   mountainLevels:
   - {fileID: 11400000, guid: ab7a4d0c0dff2ee4e9a971290e322bd9, type: 2}
   oceanLevels:
-  - {fileID: 11400000, guid: ab7a4d0c0dff2ee4e9a971290e322bd9, type: 2}
+  - {fileID: 11400000, guid: c9de156e03ec81b47a2651b1ed9867b6, type: 2}
   stations:
   - name: "\u57FA\u9686"
-    GUID: 
+    GUID: e2b506c6-a83d-40e9-9e64-11c744fa6acb
     stationObject:
       name: "\u57FA\u9686"
       origins:
       - {fileID: 0}
+      positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
       min: 0
       res: 0
+      leftSide: 0
+      rightSide: 0
     sellItemIdList: 
     buyItemIdList: 
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u53F0\u5317"
-    GUID: 
+    GUID: 43928960-e82d-4c13-8e1c-5d2c4d5d0b2b
     stationObject:
       name: 
       origins: []
+      positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
       min: 0
       res: 0
+      leftSide: 0
+      rightSide: 0
     sellItemIdList: 
     buyItemIdList: 
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u6843\u5712"
-    GUID: 
+    GUID: 6b7bc573-3bce-42c7-9be7-9ef3bc113518
     stationObject:
       name: 
       origins: []
+      positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
       min: 0
       res: 0
+      leftSide: 0
+      rightSide: 0
     sellItemIdList: 
     buyItemIdList: 
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u65B0\u7AF9"
-    GUID: 
+    GUID: fb3c6db6-0b41-455a-ac88-e9ede4e9854e
     stationObject:
       name: 
       origins: []
+      positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
       min: 0
       res: 0
+      leftSide: 0
+      rightSide: 0
     sellItemIdList: 
     buyItemIdList: 
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u82D7\u6817"
-    GUID: 
+    GUID: fb599b4a-8b06-4730-8a52-61f5fb054612
     stationObject:
       name: 
       origins: []
+      positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
       min: 0
       res: 0
+      leftSide: 0
+      rightSide: 0
     sellItemIdList: 
     buyItemIdList: 
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u53F0\u4E2D"
-    GUID: 
+    GUID: 92c6f8c7-163e-44db-8bbb-cf5669e13060
     stationObject:
       name: 
       origins: []
+      positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
       min: 0
       res: 0
+      leftSide: 0
+      rightSide: 0
     sellItemIdList: 
     buyItemIdList: 
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u5F70\u5316"
-    GUID: 
+    GUID: 55133823-4d64-4d99-b0b1-13845322efd6
     stationObject:
       name: 
       origins: []
+      positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
       min: 0
       res: 0
+      leftSide: 0
+      rightSide: 0
     sellItemIdList: 
     buyItemIdList: 
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u5609\u7FA9"
-    GUID: 
+    GUID: 074c7959-20bc-43e8-9d81-952aa3569e12
     stationObject:
       name: 
       origins: []
+      positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
       min: 0
       res: 0
+      leftSide: 0
+      rightSide: 0
     sellItemIdList: 
     buyItemIdList: 
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u53F0\u5357"
-    GUID: 
+    GUID: ab745753-5ac0-4cca-a72c-55d7d2f37261
     stationObject:
       name: 
       origins: []
+      positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
       min: 0
       res: 0
+      leftSide: 0
+      rightSide: 0
     sellItemIdList: 
     buyItemIdList: 
     canFix: 0
@@ -149,10 +176,13 @@ MonoBehaviour:
     stationObject:
       name: 
       origins: []
+      positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
       min: 0
       res: 0
+      leftSide: 0
+      rightSide: 0
     sellItemIdList: 
     buyItemIdList: 
     canFix: 0

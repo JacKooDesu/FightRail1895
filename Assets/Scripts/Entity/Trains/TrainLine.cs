@@ -59,6 +59,7 @@ namespace JacDev.Entity
 
             // reset position
             transform.position = Vector3.zero;
+            hasMove = 0;
 
             // EnemyObject.target = this;
             JacDev.UI.GameScene.GameSceneUIHandler.Singleton.trackingTrain = trains[0];
@@ -89,6 +90,10 @@ namespace JacDev.Entity
                 Camera.main.GetComponent<OrbitCamera>().SetFocus(LevelGenerator.Singleton.dest);
                 AsyncSceneLoader.Singleton.LoadScene("ShopScene", 2f);
                 finished = true;
+
+                // 2021.10.23 added (for test only, will remove in future)
+                DataManager.Singleton.PlayerData.currentStation = DataManager.Singleton.PlayerData.nextStation;
+                DataManager.Singleton.PlayerData.nextStation = null;
             }
         }
 

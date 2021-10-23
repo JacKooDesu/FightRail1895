@@ -14,7 +14,7 @@
     "typeKill": [],
     "currentStation": {
         "name": "小站",
-        "GUID": "a2f33716-ceb4-419f-aaeb-a3dd01947fad",
+        "GUID": "f196ba35-924a-49ec-a227-237782a8793f",
         "stationObject": {
             "name": "",
             "origins": [],
@@ -35,5 +35,87 @@
         "canFix": false,
         "canUpgradeTrain": false,
         "canUpgradeTower": false
-    }
+    },
+    "nextStation": {
+        "name": "",
+        "GUID": "",
+        "stationObject": {
+            "name": "",
+            "origins": [],
+            "positionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "size": 0.0,
+            "max": 0,
+            "min": 0,
+            "res": 0.0,
+            "leftSide": false,
+            "rightSide": false
+        },
+        "sellItemIdList": [],
+        "buyItemIdList": [],
+        "canFix": false,
+        "canUpgradeTrain": false,
+        "canUpgradeTower": false
+    },
+    "currentPath": {
+        "GUID": "bafe32a5-0635-4c08-b1a1-a6cf2c21911c",
+        "s1": {
+            "name": "",
+            "GUID": "",
+            "stationObject": {
+                "name": "",
+                "origins": [],
+                "positionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": 0.0,
+                "max": 0,
+                "min": 0,
+                "res": 0.0,
+                "leftSide": false,
+                "rightSide": false
+            },
+            "sellItemIdList": [],
+            "buyItemIdList": [],
+            "canFix": false,
+            "canUpgradeTrain": false,
+            "canUpgradeTower": false
+        },
+        "s2": {
+            "name": "",
+            "GUID": "",
+            "stationObject": {
+                "name": "",
+                "origins": [],
+                "positionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": 0.0,
+                "max": 0,
+                "min": 0,
+                "res": 0.0,
+                "leftSide": false,
+                "rightSide": false
+            },
+            "sellItemIdList": [],
+            "buyItemIdList": [],
+            "canFix": false,
+            "canUpgradeTrain": false,
+            "canUpgradeTower": false
+        },
+        "levelSetting": {
+            "instanceID": 30118
+        },
+        "japanese": 0,
+        "aboriginal": 0,
+        "hakka": 0
+    },
+    "state": 0
 }
