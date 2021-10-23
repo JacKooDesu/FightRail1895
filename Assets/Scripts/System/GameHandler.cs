@@ -13,6 +13,9 @@ public class GameHandler : MonoBehaviour
     {
         get
         {
+            if (singleton != null)
+                return singleton;
+
             singleton = FindObjectOfType(typeof(GameHandler)) as GameHandler;
 
             if (singleton == null)
@@ -105,10 +108,19 @@ public class GameHandler : MonoBehaviour
                 //     playerData = new PlayerData();
                 //     FileManager.Save("/PlayerData", playerData, "/GameDatas");
                 // }
+                DataManager.Singleton.SavePlayerData();
                 break;
 
             case "GameScene":
-                
+
+                break;
+
+            // for test
+            case "GenerateTest new UI":
+                JacDev.Level.LevelGenerator.Singleton.levelSetting = DataManager.Singleton.PlayerData.currentPath.levelSetting;
+                JacDev.Level.LevelGenerator.Singleton.BuildMap();
+
+                DataManager.Singleton.SavePlayerData();
                 break;
         }
 
@@ -146,7 +158,7 @@ public class GameHandler : MonoBehaviour
     public void NewGame(int bloodIndex)
     {
         PlayerData pData = new PlayerData();
-       // pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).commonStations[0]);
+        // pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).commonStations[0]);
         pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).stations1[0]);
         DataManager.Singleton.PlayerData = pData;
     }

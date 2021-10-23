@@ -47,10 +47,10 @@ namespace JacDev.Level
 
         private void OnEnable()
         {
-            BuildMap();
+           // BuildMap();
         }
 
-        void BuildMap()
+        public void BuildMap()
         {
             for (int j = 0; j < levelSetting.blockCount; ++j)
             {

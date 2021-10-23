@@ -25,6 +25,16 @@ namespace JacDev.Data
 
         [Header("遊戲進度")]
         public Map.Station currentStation;
+        public Map.Station nextStation;
+        public Map.Path currentPath;
+
+        public enum State
+        {
+            InStation,
+            OnPath
+        }
+
+        public State state;
 
         public PlayerData()
         {

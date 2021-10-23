@@ -95,4 +95,12 @@ public class DataManager : MonoBehaviour
         }
 
     }
+
+    public void SavePlayerData()
+    {
+        if (PlayerData != null)
+        {
+            FileManager.Save("/PlayerData", PlayerData, "/GameDatas");
+        }
+    }
 }

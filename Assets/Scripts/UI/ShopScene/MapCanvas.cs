@@ -125,7 +125,7 @@ namespace JacDev.UI.ShopScene
 
             if (currentStation == null)
                 currentStation = map.commonStations[0];
-            
+
 
             int s1 = map.stations1.FindIndex((i) => currentStation.GUID == i.GUID);
             int s2 = map.stations2.FindIndex((i) => currentStation.GUID == i.GUID);
@@ -156,15 +156,23 @@ namespace JacDev.UI.ShopScene
                 {
                     i = map.stations1.IndexOf(s);
                     stationObjects1[i].GetComponent<Image>().color = Color.red;
-                    // Utils.EventBinder.Bind(stationObjects1[i].GetComponent<EventTrigger>(), EventTriggerType.PointerDown, (data) =>
-                    // {
-
-                    // });
+                    Utils.EventBinder.Bind(stationObjects1[i].GetComponent<EventTrigger>(), EventTriggerType.PointerDown, (data) =>
+                    {
+                        DataManager.Singleton.PlayerData.nextStation = s;
+                        DataManager.Singleton.PlayerData.currentPath = map.path1[i > map.stations1.IndexOf(currentStation) ? i : i - 1];
+                        AsyncSceneLoader.Singleton.LoadScene("GenerateTest new UI");
+                    });
                 }
                 else if (map.stations2.Contains(s))
                 {
                     i = map.stations2.IndexOf(s);
                     stationObjects2[i].GetComponent<Image>().color = Color.red;
+                    Utils.EventBinder.Bind(stationObjects2[i].GetComponent<EventTrigger>(), EventTriggerType.PointerDown, (data) =>
+                    {
+                        DataManager.Singleton.PlayerData.nextStation = s;
+                        DataManager.Singleton.PlayerData.currentPath = map.path2[i > map.stations2.IndexOf(currentStation) ? i : i - 1];
+                        AsyncSceneLoader.Singleton.LoadScene("GenerateTest new UI");
+                    });
                 }
 
 
