@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using JacDev.Entity;
 using JacDev.Data;
+using JacDev.Audio;
 
 public class GameHandler : MonoBehaviour
 {
@@ -82,6 +83,10 @@ public class GameHandler : MonoBehaviour
         print($"載入 {scene.name}");
         switch (scene.name)
         {
+            case "Title_v2":
+                AudioHandler.Singleton.PlayBgm("OP");
+                break;
+
             case "AsyncLoadingScene":
                 //     Pause();
                 //     break;
@@ -108,6 +113,7 @@ public class GameHandler : MonoBehaviour
                 //     playerData = new PlayerData();
                 //     FileManager.Save("/PlayerData", playerData, "/GameDatas");
                 // }
+                AudioHandler.Singleton.PlayBgm("Moring News");
                 DataManager.Singleton.SavePlayerData();
                 break;
 
@@ -119,6 +125,8 @@ public class GameHandler : MonoBehaviour
             case "GenerateTest new UI":
                 JacDev.Level.LevelGenerator.Singleton.levelSetting = DataManager.Singleton.PlayerData.currentPath.levelSetting;
                 JacDev.Level.LevelGenerator.Singleton.BuildMap();
+
+                AudioHandler.Singleton.PlayBgm("Funky Girl Never Hurt");
 
                 DataManager.Singleton.SavePlayerData();
                 break;

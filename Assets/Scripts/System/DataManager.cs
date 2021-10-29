@@ -58,7 +58,10 @@ public class DataManager : MonoBehaviour
                     string[] ss = s.Split(',');
                     for (int i = 0; i < SettingManager.Singleton.BgmSetting.soundSettings.Length; ++i)
                     {
-                        bgmUnlockProgress[i] = System.Int32.Parse(ss[i]);
+                        if (i < ss.Length)
+                            bgmUnlockProgress[i] = System.Int32.Parse(ss[i]);
+                        else
+                            bgmUnlockProgress[i] = 0;
                     }
                 }
                 else
@@ -96,9 +99,10 @@ public class DataManager : MonoBehaviour
 
         LoadPlayerData();
         SaveBgmUnlockProgress();
-        print(bgmUnlockProgress.Length);
-        BgmUnlockProgress[0] = 1;
-        SaveBgmUnlockProgress();
+        // test Bgm save system
+        // print(bgmUnlockProgress.Length);
+        // BgmUnlockProgress[0] = 1;
+        // SaveBgmUnlockProgress();
     }
 
     public MapData GetMapData(bool regenerate = false)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using JacDev.Audio;
 
 public class AsyncSceneLoader : MonoBehaviour
 {
@@ -58,6 +59,9 @@ public class AsyncSceneLoader : MonoBehaviour
     {
         ani.SetTrigger("FadeOut");
 
+        AudioHandler.Singleton.PauseBgm();
+        GameObject soundObject = AudioHandler.Singleton.PlaySound("loading", 0f);
+
         while (!hasFadeOut)
         {
             yield return null;
@@ -76,5 +80,7 @@ public class AsyncSceneLoader : MonoBehaviour
         }
 
         async.allowSceneActivation = true;
+
+        Destroy(soundObject);
     }
 }

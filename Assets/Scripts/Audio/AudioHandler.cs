@@ -11,7 +11,10 @@ namespace JacDev.Audio
         {
             get
             {
-                singleton = FindObjectOfType(typeof(AudioHandler)) as AudioHandler;
+                if (singleton != null)
+                    return singleton;
+                else
+                    singleton = FindObjectOfType(typeof(AudioHandler)) as AudioHandler;
 
                 if (singleton == null)
                 {
@@ -25,25 +28,93 @@ namespace JacDev.Audio
 
         public GameObject audioSourcePrefab;
 
+        public GameObject bgmPlayer;
+
         [Header("Sound List")]
         public SoundList soundList;
 
         // public Dictionary<string, AudioSource> currentPlayingSounds = new Dictionary<string, AudioSource>();
 
+        private void Awake()
+        {
+            DontDestroyOnLoad(gameObject);
+            if (singleton == null)
+            {
+                singleton = this;
+            }
+            else if (singleton != this)
+            {
+                Destroy(gameObject);
+            }
+        }
+
         public void PlaySound(string name)  // 播2D音效
         {
             SoundSetting sound = soundList.GetSound(name);
-            GameObject temp = Instantiate(audioSourcePrefab);
-            DontDestroyOnLoad(temp);    // avoid change scene stop the sound
+            GameObject temp = Instantiate(audioSourcePrefab, transform);
+            // DontDestroyOnLoad(temp);    // avoid change scene stop the sound
             AudioSource audioSource = temp.GetComponent<AudioSource>();
             audioSource.clip = sound.clip;
             audioSource.Play();
-            // StartCoroutine(DestroyAudioSource(sound.clip.length, temp));
-            Destroy(temp, sound.clip.length);
+            StartCoroutine(DestroyAudioSource(sound.clip.length, temp));
+            // Destroy(temp, sound.clip.length);
 
             // currentPlayingSounds.Add(sound.name, audioSource);
         }
 
+        public GameObject PlaySound(string name, float t = -1f)  // 播2D音效
+        {
+            SoundSetting sound = soundList.GetSound(name);
+            GameObject temp = Instantiate(audioSourcePrefab, transform);
+            // DontDestroyOnLoad(temp);    // avoid change scene stop the sound
+            AudioSource audioSource = temp.GetComponent<AudioSource>();
+            audioSource.clip = sound.clip;
+            audioSource.Play();
+            StartCoroutine(DestroyAudioSource(sound.clip.length, temp));
+            // Destroy(temp, sound.clip.length);
+            return temp;
+            // currentPlayingSounds.Add(sound.name, audioSource);
+        }
+
+        public void PlayBgm(int index)
+        {
+            AudioSource au = bgmPlayer.GetComponent<AudioSource>();
+            au.clip = SettingManager.Singleton.BgmSetting.soundSettings[index].clip;
+            au.Play();
+        }
+
+        public void PlayBgm(string name)
+        {
+            AudioSource au = bgmPlayer.GetComponent<AudioSource>();
+            au.clip = SettingManager.Singleton.BgmSetting.soundSettings[0].clip;
+            foreach (SoundSetting s in SettingManager.Singleton.BgmSetting.soundSettings)
+            {
+                if (s.name == name)
+                {
+                    au.clip = s.clip;
+                    break;
+                }
+            }
+            au.Play();
+        }
+
+        public void RandPlayBgm(params int[] avoid)
+        {
+            int i = 0;
+            List<int> avoidList = new List<int>(avoid);
+            do
+            {
+                i = Random.Range(0, SettingManager.Singleton.BgmSetting.soundSettings.Length);
+            } while (avoidList.IndexOf(i) != -1);
+
+            PlayBgm(i);
+        }
+
+        public void PauseBgm()
+        {
+            AudioSource au = bgmPlayer.GetComponent<AudioSource>();
+            au.Pause();
+        }
 
         // public AudioSource PlayAudio(AudioClip audio, bool loop)
         // {
@@ -87,7 +158,8 @@ namespace JacDev.Audio
         IEnumerator DestroyAudioSource(float t, GameObject target)
         {
             yield return new WaitForSeconds(t);
-            Destroy(target);
+            if (target != null)
+                Destroy(target);
         }
 
         // 清空喇叭

@@ -12,4 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d56092ab57925749bc9d7202f1e2049, type: 3}
   m_Name: Bgm List
   m_EditorClassIdentifier: 
-  soundSettings: []
+  soundSettings:
+  - name: OP
+    clip: {fileID: 8300000, guid: a027958fe61b70a43a8b0c7388d0a34a, type: 3}
+  - name: Funky Girl Never Hurt
+    clip: {fileID: 8300000, guid: 7b3049a4fe5287145a5f8c238b47be76, type: 3}
+  - name: For Senpai
+    clip: {fileID: 8300000, guid: a19923bea9290e442891fb2f9dfb2b03, type: 3}
+  - name: 4 UR Eyes
+    clip: {fileID: 8300000, guid: 48311fdb9a22dde4e87fae30ec090630, type: 3}
+  - name: 
+    clip: {fileID: 8300000, guid: 24ab1e5be1d0077429d33966794b113c, type: 3}
+  - name: 
+    clip: {fileID: 8300000, guid: 7517e26350485a44d823bd3a5071c5ff, type: 3}
+  - name: Moring News
+    clip: {fileID: 8300000, guid: 773e5b0ec221d9f4db731c280354d8e3, type: 3}

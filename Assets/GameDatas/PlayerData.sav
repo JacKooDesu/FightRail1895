@@ -13,11 +13,15 @@
     "totalKill": 0,
     "typeKill": [],
     "currentStation": {
-        "name": "小站",
-        "GUID": "06458303-dc10-41d8-bee8-04e723b48b91",
+        "name": "基隆",
+        "GUID": "311bac73-9ca8-4074-ae2e-d5a7cb0968d3",
         "stationObject": {
-            "name": "",
-            "origins": [],
+            "name": "基隆",
+            "origins": [
+                {
+                    "instanceID": 0
+                }
+            ],
             "positionOffset": {
                 "x": 0.0,
                 "y": 0.0,
@@ -37,8 +41,8 @@
         "canUpgradeTower": false
     },
     "nextStation": {
-        "name": "",
-        "GUID": "",
+        "name": "小站",
+        "GUID": "4604afdb-29fd-46c9-b686-349b03ab6281",
         "stationObject": {
             "name": "",
             "origins": [],
@@ -61,7 +65,7 @@
         "canUpgradeTower": false
     },
     "currentPath": {
-        "GUID": "c08bcb08-3b49-49f1-b233-f847bc30e507",
+        "GUID": "67724ac1-d1e1-4736-aaa2-9f95df9d79f8",
         "s1": {
             "name": "",
             "GUID": "",
