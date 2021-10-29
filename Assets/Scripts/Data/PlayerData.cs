@@ -27,6 +27,7 @@ namespace JacDev.Data
         public Map.Station currentStation;
         public Map.Station nextStation;
         public Map.Path currentPath;
+        public int hasMoveCount;    // 計數玩家經過站點數量，用於計算敵方單位等級
 
         public enum State
         {

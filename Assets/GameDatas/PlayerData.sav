@@ -115,11 +115,12 @@
             "canUpgradeTower": false
         },
         "levelSetting": {
-            "instanceID": 28748
+            "instanceID": 0
         },
         "japanese": 0,
         "aboriginal": 0,
         "hakka": 0
     },
+    "hasMoveCount": 0,
     "state": 0
 }
