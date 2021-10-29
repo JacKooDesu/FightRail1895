@@ -123,10 +123,12 @@ public class GameHandler : MonoBehaviour
 
             // for test
             case "GenerateTest new UI":
-                JacDev.Level.LevelGenerator.Singleton.levelSetting = DataManager.Singleton.PlayerData.currentPath.levelSetting;
+                if (DataManager.Singleton.PlayerData.currentPath.levelSetting != null)
+                    JacDev.Level.LevelGenerator.Singleton.levelSetting = DataManager.Singleton.PlayerData.currentPath.levelSetting;
                 JacDev.Level.LevelGenerator.Singleton.BuildMap();
 
-                AudioHandler.Singleton.PlayBgm("Funky Girl Never Hurt");
+                //AudioHandler.Singleton.PlayBgm("Funky Girl Never Hurt");
+                AudioHandler.Singleton.RandPlayBgm();
 
                 DataManager.Singleton.SavePlayerData();
                 break;
