@@ -1473,11 +1473,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeeHouse_01
       objectReference: {fileID: 0}
-    - target: {fileID: 6265499804643821367, guid: 8a8047dd67d6f8346add4f58d21e6973,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a8047dd67d6f8346add4f58d21e6973, type: 3}
 --- !u!1001 &1610962761100180425
