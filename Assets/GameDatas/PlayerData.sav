@@ -14,7 +14,7 @@
     "typeKill": [],
     "currentStation": {
         "name": "小站",
-        "GUID": "f196ba35-924a-49ec-a227-237782a8793f",
+        "GUID": "06458303-dc10-41d8-bee8-04e723b48b91",
         "stationObject": {
             "name": "",
             "origins": [],
@@ -61,7 +61,7 @@
         "canUpgradeTower": false
     },
     "currentPath": {
-        "GUID": "bafe32a5-0635-4c08-b1a1-a6cf2c21911c",
+        "GUID": "c08bcb08-3b49-49f1-b233-f847bc30e507",
         "s1": {
             "name": "",
             "GUID": "",
@@ -111,7 +111,7 @@
             "canUpgradeTower": false
         },
         "levelSetting": {
-            "instanceID": 30118
+            "instanceID": 28748
         },
         "japanese": 0,
         "aboriginal": 0,

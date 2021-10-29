@@ -4,6 +4,7 @@ using UnityEngine;
 using JacDev.Map;
 using JacDev.Mod;
 using JacDev.Entity;
+using JacDev.Audio;
 
 public class SettingManager : MonoBehaviour
 {
@@ -48,6 +49,12 @@ public class SettingManager : MonoBehaviour
         get => enemySetting;
     }
 
+    [SerializeField] SoundList bgmSetting;
+    public SoundList BgmSetting
+    {
+        get => bgmSetting;
+    }
+    
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);

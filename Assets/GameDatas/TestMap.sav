@@ -2,7 +2,7 @@
     "stations1": [
         {
             "name": "基隆",
-            "GUID": "6d1b1254-35e9-401c-816f-f4fd3ad18664",
+            "GUID": "70b8a2e8-13a6-4c4e-9b83-a1ff0671ab71",
             "stationObject": {
                 "name": "基隆",
                 "origins": [
@@ -30,7 +30,7 @@
         },
         {
             "name": "小站",
-            "GUID": "0e9067c2-9321-4319-968f-490792605cab",
+            "GUID": "2bdf1b46-0040-4ccd-bd4d-7749274378f6",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -54,7 +54,31 @@
         },
         {
             "name": "小站",
-            "GUID": "827af842-3217-4014-b0e4-ee0b20f51ec3",
+            "GUID": "8b629df7-da30-40bd-9633-701d47cfac41",
+            "stationObject": {
+                "name": "",
+                "origins": [],
+                "positionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": 0.0,
+                "max": 0,
+                "min": 0,
+                "res": 0.0,
+                "leftSide": false,
+                "rightSide": false
+            },
+            "sellItemIdList": [],
+            "buyItemIdList": [],
+            "canFix": false,
+            "canUpgradeTrain": false,
+            "canUpgradeTower": false
+        },
+        {
+            "name": "小站",
+            "GUID": "9d2f4fad-a874-45e7-9e39-d39dcefd987d",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -78,7 +102,7 @@
         },
         {
             "name": "台北",
-            "GUID": "ae3fc0d7-67de-43ce-b0d4-2b815fc6565c",
+            "GUID": "1dfa7b53-a349-422e-b55b-9d8280ba7c61",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -102,7 +126,7 @@
         },
         {
             "name": "小站",
-            "GUID": "929d23af-5bd2-47fb-9a2d-2df30893b8c1",
+            "GUID": "86891fb0-9965-4314-97d2-ab9bc242ac67",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -126,7 +150,31 @@
         },
         {
             "name": "小站",
-            "GUID": "285abd6d-89e8-484b-8976-3f9a732bf419",
+            "GUID": "02b8dd77-7186-441c-ace5-4083a0c18eda",
+            "stationObject": {
+                "name": "",
+                "origins": [],
+                "positionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": 0.0,
+                "max": 0,
+                "min": 0,
+                "res": 0.0,
+                "leftSide": false,
+                "rightSide": false
+            },
+            "sellItemIdList": [],
+            "buyItemIdList": [],
+            "canFix": false,
+            "canUpgradeTrain": false,
+            "canUpgradeTower": false
+        },
+        {
+            "name": "小站",
+            "GUID": "c9012740-f718-4480-b39d-10e0e90e411f",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -150,7 +198,7 @@
         },
         {
             "name": "桃園",
-            "GUID": "3d3828b6-6fc6-499e-862c-16503972fc9a",
+            "GUID": "47121e45-4abe-4017-ad4d-6df47ec8444e",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -174,7 +222,7 @@
         },
         {
             "name": "小站",
-            "GUID": "51b87286-f497-4acf-a6be-9cda185ee4e5",
+            "GUID": "8bf3925c-cfe0-48e4-9e0f-6ae7a201cd03",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -198,55 +246,7 @@
         },
         {
             "name": "小站",
-            "GUID": "78b1c022-0da9-4fc7-824f-87ea54a0d709",
-            "stationObject": {
-                "name": "",
-                "origins": [],
-                "positionOffset": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                },
-                "size": 0.0,
-                "max": 0,
-                "min": 0,
-                "res": 0.0,
-                "leftSide": false,
-                "rightSide": false
-            },
-            "sellItemIdList": [],
-            "buyItemIdList": [],
-            "canFix": false,
-            "canUpgradeTrain": false,
-            "canUpgradeTower": false
-        },
-        {
-            "name": "小站",
-            "GUID": "2cee09da-1aa6-4613-9c5a-5fdb1832f197",
-            "stationObject": {
-                "name": "",
-                "origins": [],
-                "positionOffset": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                },
-                "size": 0.0,
-                "max": 0,
-                "min": 0,
-                "res": 0.0,
-                "leftSide": false,
-                "rightSide": false
-            },
-            "sellItemIdList": [],
-            "buyItemIdList": [],
-            "canFix": false,
-            "canUpgradeTrain": false,
-            "canUpgradeTower": false
-        },
-        {
-            "name": "小站",
-            "GUID": "30876128-6e71-444e-b0ed-cdb22d14da43",
+            "GUID": "8bab1579-7e02-410f-aeb9-c1deac37a1ac",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -270,7 +270,7 @@
         },
         {
             "name": "新竹",
-            "GUID": "6517ffda-1a52-4f41-a8f6-52d0b95bf08f",
+            "GUID": "2e531917-c12a-478b-8451-906494f5f624",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -294,7 +294,7 @@
         },
         {
             "name": "小站",
-            "GUID": "09884948-3835-4c5d-9ef9-82f6748cc72d",
+            "GUID": "efc3acdf-f06a-47b5-9ca3-96496bfe43cd",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -318,31 +318,7 @@
         },
         {
             "name": "小站",
-            "GUID": "313fc512-68e8-4121-9d31-af83634d7c45",
-            "stationObject": {
-                "name": "",
-                "origins": [],
-                "positionOffset": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                },
-                "size": 0.0,
-                "max": 0,
-                "min": 0,
-                "res": 0.0,
-                "leftSide": false,
-                "rightSide": false
-            },
-            "sellItemIdList": [],
-            "buyItemIdList": [],
-            "canFix": false,
-            "canUpgradeTrain": false,
-            "canUpgradeTower": false
-        },
-        {
-            "name": "小站",
-            "GUID": "d24fc25b-a457-436a-ac4e-ead4076275f7",
+            "GUID": "b23b9abb-d564-4e34-866a-b11c1adee886",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -366,7 +342,7 @@
         },
         {
             "name": "苗栗",
-            "GUID": "45045dbd-4307-42f7-a53c-69abb27b2b88",
+            "GUID": "837d4541-13d3-47e9-9c73-83ea08e10e3a",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -390,7 +366,7 @@
         },
         {
             "name": "小站",
-            "GUID": "59db4b8b-1c1b-4029-a070-0242ec963029",
+            "GUID": "02e8215c-02c3-40ad-86fd-2ccd009c40ea",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -414,7 +390,7 @@
         },
         {
             "name": "小站",
-            "GUID": "89864adb-b584-4d5a-9de6-da989e4ec912",
+            "GUID": "b3c5719f-3e53-417b-b1f3-7af365ea3338",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -438,7 +414,7 @@
         },
         {
             "name": "小站",
-            "GUID": "7d182aee-4d02-4ab9-b2d0-1f5de6828aff",
+            "GUID": "dcdaeff1-6daf-4d87-aa04-3045148c4719",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -462,7 +438,7 @@
         },
         {
             "name": "小站",
-            "GUID": "55e146fc-d568-4b57-a764-367a5a3ca4c8",
+            "GUID": "cd1d09c5-1620-45ea-ade2-8851942add32",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -486,7 +462,7 @@
         },
         {
             "name": "台中",
-            "GUID": "7aac1c0a-5047-4b6d-896f-e87dd7e692ee",
+            "GUID": "76bd29f6-4c25-41d1-baad-8072cdc6b9ca",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -510,7 +486,7 @@
         },
         {
             "name": "小站",
-            "GUID": "39e38a5e-1ec3-43fb-acef-77da12a97d45",
+            "GUID": "eb81a7ca-45a1-47cc-8370-cf5bb33f289e",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -534,7 +510,7 @@
         },
         {
             "name": "小站",
-            "GUID": "7c6541ab-c80c-4bc9-90c9-8c8caebf7722",
+            "GUID": "55006710-c26c-4286-9218-e6ec4e0b568f",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -558,7 +534,7 @@
         },
         {
             "name": "小站",
-            "GUID": "06f56a1c-8cd8-47e9-b1b3-c2ee6e12455d",
+            "GUID": "8e8fc685-25d6-476f-8715-3ca96840287b",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -582,7 +558,7 @@
         },
         {
             "name": "小站",
-            "GUID": "0995512e-814e-45ea-92e0-0f64cadf901e",
+            "GUID": "a07f78bd-8f47-46a3-a03e-455389abb612",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -606,7 +582,7 @@
         },
         {
             "name": "彰化",
-            "GUID": "024d9640-8e01-4d69-8906-4c2585a5bd99",
+            "GUID": "06113db6-fc66-48bc-b174-e25cef257544",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -630,7 +606,7 @@
         },
         {
             "name": "小站",
-            "GUID": "2efb6882-cd00-4377-8c3e-0712eb408132",
+            "GUID": "d375a182-2417-4a43-859c-9cf1274f86da",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -654,7 +630,7 @@
         },
         {
             "name": "小站",
-            "GUID": "64977a6a-d91d-4a72-a527-e1e424f1cea6",
+            "GUID": "5a21a8c8-8302-44e0-adde-e4d0ab7ad7f9",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -678,7 +654,7 @@
         },
         {
             "name": "小站",
-            "GUID": "5c6fc6f6-e5a9-4a79-9022-0c075ea45a01",
+            "GUID": "b6b6bf2e-871f-4bf8-9632-069d6b8588b9",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -702,7 +678,7 @@
         },
         {
             "name": "小站",
-            "GUID": "40a8e591-3e1d-4aea-bf78-5527e8b11900",
+            "GUID": "12de7671-27b7-40eb-9764-f1a0129aac7a",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -726,7 +702,7 @@
         },
         {
             "name": "嘉義",
-            "GUID": "87e48090-628f-4010-bd97-b1876c2bd43b",
+            "GUID": "d6bd2082-cd1f-40ed-afde-101f0b53a259",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -750,7 +726,7 @@
         },
         {
             "name": "小站",
-            "GUID": "92624d95-77d2-477f-81d7-608d99dcf302",
+            "GUID": "93cb59e4-bdd2-4cc5-9bfe-cb7b1c0e8fce",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -774,7 +750,31 @@
         },
         {
             "name": "小站",
-            "GUID": "186cc545-e096-4bac-8a09-41c88e5c3800",
+            "GUID": "e3d3b4af-774e-4467-a212-28ec68f34e8d",
+            "stationObject": {
+                "name": "",
+                "origins": [],
+                "positionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": 0.0,
+                "max": 0,
+                "min": 0,
+                "res": 0.0,
+                "leftSide": false,
+                "rightSide": false
+            },
+            "sellItemIdList": [],
+            "buyItemIdList": [],
+            "canFix": false,
+            "canUpgradeTrain": false,
+            "canUpgradeTower": false
+        },
+        {
+            "name": "小站",
+            "GUID": "a1510470-d50a-4e03-9696-ba9925c18ef4",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -798,7 +798,7 @@
         },
         {
             "name": "台南",
-            "GUID": "40c85af2-6eae-4d90-b854-31a4b586dabc",
+            "GUID": "e5fac8cc-5765-463d-a433-96cd24f04ab6",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -822,55 +822,7 @@
         },
         {
             "name": "小站",
-            "GUID": "b337ead9-58e5-4b69-a05a-2ff0ac583c23",
-            "stationObject": {
-                "name": "",
-                "origins": [],
-                "positionOffset": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                },
-                "size": 0.0,
-                "max": 0,
-                "min": 0,
-                "res": 0.0,
-                "leftSide": false,
-                "rightSide": false
-            },
-            "sellItemIdList": [],
-            "buyItemIdList": [],
-            "canFix": false,
-            "canUpgradeTrain": false,
-            "canUpgradeTower": false
-        },
-        {
-            "name": "小站",
-            "GUID": "a3e71e80-669d-479b-aa43-3f6580f7a5a4",
-            "stationObject": {
-                "name": "",
-                "origins": [],
-                "positionOffset": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                },
-                "size": 0.0,
-                "max": 0,
-                "min": 0,
-                "res": 0.0,
-                "leftSide": false,
-                "rightSide": false
-            },
-            "sellItemIdList": [],
-            "buyItemIdList": [],
-            "canFix": false,
-            "canUpgradeTrain": false,
-            "canUpgradeTower": false
-        },
-        {
-            "name": "小站",
-            "GUID": "9861f853-adc1-4297-8326-2546baf7cfc5",
+            "GUID": "ffe79de6-f540-479a-9b16-fdd16a3bfd42",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -919,7 +871,7 @@
     ],
     "path1": [
         {
-            "GUID": "5add9158-3c3f-4fa9-9aeb-91c5c3a1806c",
+            "GUID": "58c989d7-2e96-4002-81bd-ebe062efe6d4",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -976,7 +928,7 @@
             "hakka": 0
         },
         {
-            "GUID": "2cead5ee-e90b-4a2e-9442-d99c6c1c861b",
+            "GUID": "72b1cfce-4a23-409c-998c-b1dec508f74c",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1033,7 +985,7 @@
             "hakka": 0
         },
         {
-            "GUID": "ae29d1e6-c926-492e-bd7d-804935e35214",
+            "GUID": "82d4dd7e-76b1-4f37-b9cd-40b5cf0ce270",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1090,7 +1042,7 @@
             "hakka": 0
         },
         {
-            "GUID": "f82c990b-c0b9-47ff-9437-77f6a77665f2",
+            "GUID": "3845f237-a4a0-4134-ab05-33908e2e196d",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1147,7 +1099,7 @@
             "hakka": 0
         },
         {
-            "GUID": "adcb28bf-f6cb-4900-a877-f9b844f67e4f",
+            "GUID": "70a287a5-ff57-4825-83f3-411b8cd6c538",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1204,7 +1156,7 @@
             "hakka": 0
         },
         {
-            "GUID": "a66dfedf-ecfa-4d60-817b-46d44a965985",
+            "GUID": "22a33b58-5c4f-4f00-9e7d-52954a74bca1",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1261,7 +1213,7 @@
             "hakka": 0
         },
         {
-            "GUID": "7f039840-c5f6-4c6c-b010-a640fe0f8c75",
+            "GUID": "c2a19c05-0225-44e8-b507-df21e67fb4eb",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1318,7 +1270,7 @@
             "hakka": 0
         },
         {
-            "GUID": "0ce38c90-23a7-4c4a-9ed0-d11ced7ba0f1",
+            "GUID": "2ab7b742-2910-4552-8ec3-2c34da280e26",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1375,7 +1327,7 @@
             "hakka": 0
         },
         {
-            "GUID": "c9f3b90e-0e9e-4921-86ba-03c7d3ef5ef0",
+            "GUID": "c6d44b0b-f77e-478d-9673-e520fdce5778",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1432,7 +1384,7 @@
             "hakka": 0
         },
         {
-            "GUID": "fbe0ac9a-9217-4852-8322-873713e45b19",
+            "GUID": "90ddd47c-276a-404a-90c2-7ad7b7c5e8b8",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1489,7 +1441,7 @@
             "hakka": 0
         },
         {
-            "GUID": "d989faf8-efb2-453b-96b6-3ef59eda3815",
+            "GUID": "2f607e9a-1c45-412c-89ce-c82a936c5c83",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1546,7 +1498,7 @@
             "hakka": 0
         },
         {
-            "GUID": "c04f5e10-d194-426e-b6ec-22a4b287e635",
+            "GUID": "486872f1-47df-4c55-b951-ee03d1d814a3",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1603,7 +1555,7 @@
             "hakka": 0
         },
         {
-            "GUID": "30e5dd58-786a-4a31-bd8b-b71cbfac1fc2",
+            "GUID": "f7eda0b0-d56a-4109-95ce-cf0d5f2d243e",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1660,7 +1612,7 @@
             "hakka": 0
         },
         {
-            "GUID": "34f06497-2309-4b06-b73e-21cec5eafc09",
+            "GUID": "381b9443-08ac-4659-91a2-8e44f901369a",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1717,7 +1669,7 @@
             "hakka": 0
         },
         {
-            "GUID": "70378b06-9a26-4093-a503-9a83325dcaee",
+            "GUID": "98df08f0-5773-48eb-8802-e6e13625ffa8",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1774,7 +1726,7 @@
             "hakka": 0
         },
         {
-            "GUID": "5d4c234a-f20e-473b-b15e-bea124fa493e",
+            "GUID": "66b656c1-704b-4d38-a547-897efce72028",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1831,7 +1783,7 @@
             "hakka": 0
         },
         {
-            "GUID": "30f0e363-800f-439b-b9d1-340b37665791",
+            "GUID": "b99de36a-0dd3-4f50-b65e-b61581323dd5",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1888,7 +1840,7 @@
             "hakka": 0
         },
         {
-            "GUID": "6173c50f-8efc-43f4-8ec8-bb8c5bf473c1",
+            "GUID": "06a19389-93a7-484c-806b-073368225856",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -1945,7 +1897,7 @@
             "hakka": 0
         },
         {
-            "GUID": "c71f2fcd-b06c-4a8a-8667-c1e203158022",
+            "GUID": "fd795832-6e3d-46dc-91a7-c839d99a1b64",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2002,7 +1954,7 @@
             "hakka": 0
         },
         {
-            "GUID": "2c426712-dfcd-47b2-b559-0a61304a15dc",
+            "GUID": "46d91528-244b-48ec-9118-2a4e012ed6c7",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2059,7 +2011,7 @@
             "hakka": 0
         },
         {
-            "GUID": "923ad0fd-2add-4ba4-b251-4224677f5f12",
+            "GUID": "55b34f71-2e85-4377-98bb-b41e310cfa27",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2116,7 +2068,7 @@
             "hakka": 0
         },
         {
-            "GUID": "dd430188-32f4-4210-831e-f46328b594b2",
+            "GUID": "47165b09-d6e0-4ce9-97b7-35b3b8196498",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2173,7 +2125,7 @@
             "hakka": 0
         },
         {
-            "GUID": "6d0d04e3-5583-4731-a2db-953df00f7b91",
+            "GUID": "6ca7e226-183c-4a3c-9c39-7279281ba401",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2230,7 +2182,7 @@
             "hakka": 0
         },
         {
-            "GUID": "e8c7c779-ec14-4ce5-90f5-6c3fd1e5574b",
+            "GUID": "b3f069bf-fbfb-4646-9167-e798f37253e5",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2287,7 +2239,7 @@
             "hakka": 0
         },
         {
-            "GUID": "1ec2a081-0fe0-4f10-b91c-8aa07f806767",
+            "GUID": "544c3adf-ca56-46ef-b25f-0fa1c6cb61f9",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2344,7 +2296,7 @@
             "hakka": 0
         },
         {
-            "GUID": "d9dade85-f41b-480b-a8b8-22367b87978e",
+            "GUID": "d814c29b-2e2b-4d23-b492-5ed27a3cecba",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2401,7 +2353,7 @@
             "hakka": 0
         },
         {
-            "GUID": "d7e5429f-d0c7-4e5b-9fb4-17baca408192",
+            "GUID": "0aeb7ef8-e605-439e-be5b-3a4c7392e315",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2458,7 +2410,7 @@
             "hakka": 0
         },
         {
-            "GUID": "2db27a99-e60a-45ce-86fe-9bb2b6945797",
+            "GUID": "4ee41ed0-813e-40d4-a300-53511ef5a678",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2515,7 +2467,7 @@
             "hakka": 0
         },
         {
-            "GUID": "21484244-3145-4b0e-a899-1be4d7edfa9a",
+            "GUID": "10f4f282-a5c3-4074-aad6-d88b058edb1c",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2572,7 +2524,7 @@
             "hakka": 0
         },
         {
-            "GUID": "c4675e32-5a7b-45da-b21b-ae6f4e40bdcf",
+            "GUID": "c699de61-facd-461b-a078-72c4a409c126",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2629,7 +2581,7 @@
             "hakka": 0
         },
         {
-            "GUID": "f3fdd1ee-b803-4675-b141-9c31a56740d3",
+            "GUID": "94d1ba27-5532-4571-add9-88a11aefceed",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2686,7 +2638,7 @@
             "hakka": 0
         },
         {
-            "GUID": "c3459bef-4f7a-4a67-a453-609652073013",
+            "GUID": "b11f7f6e-8a2d-4da2-8763-60c1659a4ac6",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2743,7 +2695,7 @@
             "hakka": 0
         },
         {
-            "GUID": "2f4e1ff7-f14f-4383-a7d9-df89b4c7f570",
+            "GUID": "1d79ed55-8ca3-4407-8dd6-beb879c56a3e",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2800,7 +2752,7 @@
             "hakka": 0
         },
         {
-            "GUID": "9003f460-4a90-4cbc-809a-ce6d8eca242d",
+            "GUID": "0bbe0f79-6346-4b3b-a164-7ed4823bafa4",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -2857,121 +2809,7 @@
             "hakka": 0
         },
         {
-            "GUID": "428c9d03-88ab-4d20-964f-e8603f08d01e",
-            "s1": {
-                "name": "",
-                "GUID": "",
-                "stationObject": {
-                    "name": "",
-                    "origins": [],
-                    "positionOffset": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                    },
-                    "size": 0.0,
-                    "max": 0,
-                    "min": 0,
-                    "res": 0.0,
-                    "leftSide": false,
-                    "rightSide": false
-                },
-                "sellItemIdList": [],
-                "buyItemIdList": [],
-                "canFix": false,
-                "canUpgradeTrain": false,
-                "canUpgradeTower": false
-            },
-            "s2": {
-                "name": "",
-                "GUID": "",
-                "stationObject": {
-                    "name": "",
-                    "origins": [],
-                    "positionOffset": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                    },
-                    "size": 0.0,
-                    "max": 0,
-                    "min": 0,
-                    "res": 0.0,
-                    "leftSide": false,
-                    "rightSide": false
-                },
-                "sellItemIdList": [],
-                "buyItemIdList": [],
-                "canFix": false,
-                "canUpgradeTrain": false,
-                "canUpgradeTower": false
-            },
-            "levelSetting": {
-                "instanceID": 28746
-            },
-            "japanese": 0,
-            "aboriginal": 0,
-            "hakka": 0
-        },
-        {
-            "GUID": "88fb5a3a-2689-4c4a-96dc-d65a7bb4396d",
-            "s1": {
-                "name": "",
-                "GUID": "",
-                "stationObject": {
-                    "name": "",
-                    "origins": [],
-                    "positionOffset": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                    },
-                    "size": 0.0,
-                    "max": 0,
-                    "min": 0,
-                    "res": 0.0,
-                    "leftSide": false,
-                    "rightSide": false
-                },
-                "sellItemIdList": [],
-                "buyItemIdList": [],
-                "canFix": false,
-                "canUpgradeTrain": false,
-                "canUpgradeTower": false
-            },
-            "s2": {
-                "name": "",
-                "GUID": "",
-                "stationObject": {
-                    "name": "",
-                    "origins": [],
-                    "positionOffset": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                    },
-                    "size": 0.0,
-                    "max": 0,
-                    "min": 0,
-                    "res": 0.0,
-                    "leftSide": false,
-                    "rightSide": false
-                },
-                "sellItemIdList": [],
-                "buyItemIdList": [],
-                "canFix": false,
-                "canUpgradeTrain": false,
-                "canUpgradeTower": false
-            },
-            "levelSetting": {
-                "instanceID": 28746
-            },
-            "japanese": 0,
-            "aboriginal": 0,
-            "hakka": 0
-        },
-        {
-            "GUID": "71c8c159-a0b9-4aed-a14d-9a0e5e9c8a5b",
+            "GUID": "a85e1ff6-4676-495b-bcbd-43c732cc7958",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -3031,7 +2869,7 @@
     "stations2": [
         {
             "name": "基隆",
-            "GUID": "6d1b1254-35e9-401c-816f-f4fd3ad18664",
+            "GUID": "70b8a2e8-13a6-4c4e-9b83-a1ff0671ab71",
             "stationObject": {
                 "name": "基隆",
                 "origins": [
@@ -3059,7 +2897,7 @@
         },
         {
             "name": "小站",
-            "GUID": "b323e6e1-b9e4-41e1-a0c4-e16c076a2d22",
+            "GUID": "06458303-dc10-41d8-bee8-04e723b48b91",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3083,7 +2921,31 @@
         },
         {
             "name": "小站",
-            "GUID": "f196ba35-924a-49ec-a227-237782a8793f",
+            "GUID": "8cf9f9d3-0268-44c4-9141-1f156515f0eb",
+            "stationObject": {
+                "name": "",
+                "origins": [],
+                "positionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": 0.0,
+                "max": 0,
+                "min": 0,
+                "res": 0.0,
+                "leftSide": false,
+                "rightSide": false
+            },
+            "sellItemIdList": [],
+            "buyItemIdList": [],
+            "canFix": false,
+            "canUpgradeTrain": false,
+            "canUpgradeTower": false
+        },
+        {
+            "name": "小站",
+            "GUID": "476093ff-f94e-4dbd-b860-1979c04b686e",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3107,7 +2969,7 @@
         },
         {
             "name": "台北",
-            "GUID": "ae3fc0d7-67de-43ce-b0d4-2b815fc6565c",
+            "GUID": "1dfa7b53-a349-422e-b55b-9d8280ba7c61",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3131,7 +2993,7 @@
         },
         {
             "name": "小站",
-            "GUID": "4542b772-6081-4a4f-b73b-91001a36411b",
+            "GUID": "d78763a7-29f7-4aae-82fc-034b5bbbfe15",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3155,7 +3017,31 @@
         },
         {
             "name": "小站",
-            "GUID": "f57e127f-e628-403c-b2e6-b4fc0301cec9",
+            "GUID": "f63f7163-19dc-4b05-a83e-3b24926f65a2",
+            "stationObject": {
+                "name": "",
+                "origins": [],
+                "positionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": 0.0,
+                "max": 0,
+                "min": 0,
+                "res": 0.0,
+                "leftSide": false,
+                "rightSide": false
+            },
+            "sellItemIdList": [],
+            "buyItemIdList": [],
+            "canFix": false,
+            "canUpgradeTrain": false,
+            "canUpgradeTower": false
+        },
+        {
+            "name": "小站",
+            "GUID": "a468a69c-8414-485a-baa4-4d8e674456dd",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3179,7 +3065,7 @@
         },
         {
             "name": "桃園",
-            "GUID": "3d3828b6-6fc6-499e-862c-16503972fc9a",
+            "GUID": "47121e45-4abe-4017-ad4d-6df47ec8444e",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3203,7 +3089,7 @@
         },
         {
             "name": "小站",
-            "GUID": "46f13960-4856-4ec0-87de-092a41fef828",
+            "GUID": "6d56c5a8-263f-46a7-83dd-0f37a4610434",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3227,55 +3113,7 @@
         },
         {
             "name": "小站",
-            "GUID": "1123d6ae-1d1f-4f25-9e4c-24707392b7d9",
-            "stationObject": {
-                "name": "",
-                "origins": [],
-                "positionOffset": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                },
-                "size": 0.0,
-                "max": 0,
-                "min": 0,
-                "res": 0.0,
-                "leftSide": false,
-                "rightSide": false
-            },
-            "sellItemIdList": [],
-            "buyItemIdList": [],
-            "canFix": false,
-            "canUpgradeTrain": false,
-            "canUpgradeTower": false
-        },
-        {
-            "name": "小站",
-            "GUID": "04162160-0b95-43aa-9c17-453c08f00bac",
-            "stationObject": {
-                "name": "",
-                "origins": [],
-                "positionOffset": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                },
-                "size": 0.0,
-                "max": 0,
-                "min": 0,
-                "res": 0.0,
-                "leftSide": false,
-                "rightSide": false
-            },
-            "sellItemIdList": [],
-            "buyItemIdList": [],
-            "canFix": false,
-            "canUpgradeTrain": false,
-            "canUpgradeTower": false
-        },
-        {
-            "name": "小站",
-            "GUID": "e8c9cced-60f2-4fab-b1c8-a8c7caaf5187",
+            "GUID": "077ea8a1-7357-4593-bc14-19b57727d619",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3299,7 +3137,7 @@
         },
         {
             "name": "新竹",
-            "GUID": "6517ffda-1a52-4f41-a8f6-52d0b95bf08f",
+            "GUID": "2e531917-c12a-478b-8451-906494f5f624",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3323,7 +3161,7 @@
         },
         {
             "name": "小站",
-            "GUID": "2d0a6e75-3128-4ea8-973e-9b60ecb5f668",
+            "GUID": "b6de6b53-64db-49b3-b191-b62bf3905c9d",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3347,31 +3185,7 @@
         },
         {
             "name": "小站",
-            "GUID": "b762027e-9832-4223-81d9-33a610ae2ee4",
-            "stationObject": {
-                "name": "",
-                "origins": [],
-                "positionOffset": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                },
-                "size": 0.0,
-                "max": 0,
-                "min": 0,
-                "res": 0.0,
-                "leftSide": false,
-                "rightSide": false
-            },
-            "sellItemIdList": [],
-            "buyItemIdList": [],
-            "canFix": false,
-            "canUpgradeTrain": false,
-            "canUpgradeTower": false
-        },
-        {
-            "name": "小站",
-            "GUID": "656175f9-8899-488c-912e-3259d1e68a7a",
+            "GUID": "607bad4f-f073-46d8-9a42-0029aaa759dd",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3395,7 +3209,7 @@
         },
         {
             "name": "苗栗",
-            "GUID": "45045dbd-4307-42f7-a53c-69abb27b2b88",
+            "GUID": "837d4541-13d3-47e9-9c73-83ea08e10e3a",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3419,7 +3233,7 @@
         },
         {
             "name": "小站",
-            "GUID": "c95b66c8-29a8-41e1-bca6-85c3c2a3010f",
+            "GUID": "675254fc-ffdd-42a2-8438-b962b1141888",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3443,7 +3257,7 @@
         },
         {
             "name": "小站",
-            "GUID": "df3b28ae-71f2-4d5e-9308-7a91f4798c26",
+            "GUID": "e0bd8a47-96d2-409f-9d7c-608ae9994be9",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3467,7 +3281,7 @@
         },
         {
             "name": "小站",
-            "GUID": "7cea3a4e-15c7-4ecc-8c77-15ba602bcc75",
+            "GUID": "bfa20b62-06c8-4a5b-a8ec-3d52b3420642",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3491,7 +3305,7 @@
         },
         {
             "name": "小站",
-            "GUID": "cf89715e-3d79-4740-9722-461cd47ad7ed",
+            "GUID": "0ea4f902-bbbd-4025-97e2-50322e521267",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3515,7 +3329,7 @@
         },
         {
             "name": "台中",
-            "GUID": "7aac1c0a-5047-4b6d-896f-e87dd7e692ee",
+            "GUID": "76bd29f6-4c25-41d1-baad-8072cdc6b9ca",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3539,7 +3353,7 @@
         },
         {
             "name": "小站",
-            "GUID": "6d09d8e0-12df-4a41-a354-82f15d3fb4a6",
+            "GUID": "8d6a2855-15f9-46fa-aca9-c4e6aa50886f",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3563,7 +3377,7 @@
         },
         {
             "name": "小站",
-            "GUID": "44b3a54c-f675-4d6c-9cb5-5cdb4cc59d0b",
+            "GUID": "c8f1d9cd-b67a-4f3a-80ee-727a2402a23a",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3587,7 +3401,7 @@
         },
         {
             "name": "小站",
-            "GUID": "07d2d584-432d-46ab-af41-cf461ebb38dd",
+            "GUID": "b96dac09-9377-4188-9bfc-6f7504cbeb08",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3611,7 +3425,7 @@
         },
         {
             "name": "小站",
-            "GUID": "74122728-7066-44d4-93ac-7c9052f97ff4",
+            "GUID": "d781e2a6-ba8f-4268-a5dd-886ab0b001c4",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3635,7 +3449,7 @@
         },
         {
             "name": "彰化",
-            "GUID": "024d9640-8e01-4d69-8906-4c2585a5bd99",
+            "GUID": "06113db6-fc66-48bc-b174-e25cef257544",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3659,7 +3473,7 @@
         },
         {
             "name": "小站",
-            "GUID": "6569f7f7-b747-4bf9-90b4-0daf7706bd3e",
+            "GUID": "3d15dd23-8d8b-4f9d-9564-65a1402f0344",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3683,7 +3497,7 @@
         },
         {
             "name": "小站",
-            "GUID": "dda1433d-69bf-4996-a7d5-e0dfb79fa729",
+            "GUID": "2d764cca-e6fd-43f5-93d4-3284b41dd4eb",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3707,7 +3521,7 @@
         },
         {
             "name": "小站",
-            "GUID": "6807597f-0077-4bd7-b4ae-71d962f1a31c",
+            "GUID": "a5420d46-1f30-4cc7-9a17-0f2c3fae58ec",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3731,7 +3545,7 @@
         },
         {
             "name": "小站",
-            "GUID": "1b55ecfe-c9ca-43d0-a940-17ce68adaefd",
+            "GUID": "b2544926-ac6b-410e-8563-882a090dd695",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3755,7 +3569,7 @@
         },
         {
             "name": "嘉義",
-            "GUID": "87e48090-628f-4010-bd97-b1876c2bd43b",
+            "GUID": "d6bd2082-cd1f-40ed-afde-101f0b53a259",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3779,7 +3593,7 @@
         },
         {
             "name": "小站",
-            "GUID": "a5172102-c5ac-4df9-88db-7ec712a7ba90",
+            "GUID": "c22a2b9e-c1d2-4929-8990-8d2402da7165",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3803,7 +3617,31 @@
         },
         {
             "name": "小站",
-            "GUID": "050fd57d-cf9f-451c-ae00-ebedfe95c5fd",
+            "GUID": "e0478522-6b35-47b3-bb5e-6215238f49e3",
+            "stationObject": {
+                "name": "",
+                "origins": [],
+                "positionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": 0.0,
+                "max": 0,
+                "min": 0,
+                "res": 0.0,
+                "leftSide": false,
+                "rightSide": false
+            },
+            "sellItemIdList": [],
+            "buyItemIdList": [],
+            "canFix": false,
+            "canUpgradeTrain": false,
+            "canUpgradeTower": false
+        },
+        {
+            "name": "小站",
+            "GUID": "10331ab4-0ba4-4e6c-ad43-ad12aad55dab",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3827,7 +3665,7 @@
         },
         {
             "name": "台南",
-            "GUID": "40c85af2-6eae-4d90-b854-31a4b586dabc",
+            "GUID": "e5fac8cc-5765-463d-a433-96cd24f04ab6",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3851,55 +3689,7 @@
         },
         {
             "name": "小站",
-            "GUID": "72c7e1f0-3958-4f66-bb0a-efe2aaf311fa",
-            "stationObject": {
-                "name": "",
-                "origins": [],
-                "positionOffset": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                },
-                "size": 0.0,
-                "max": 0,
-                "min": 0,
-                "res": 0.0,
-                "leftSide": false,
-                "rightSide": false
-            },
-            "sellItemIdList": [],
-            "buyItemIdList": [],
-            "canFix": false,
-            "canUpgradeTrain": false,
-            "canUpgradeTower": false
-        },
-        {
-            "name": "小站",
-            "GUID": "f1511fbf-a9be-425c-a263-4bdcacc95e92",
-            "stationObject": {
-                "name": "",
-                "origins": [],
-                "positionOffset": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
-                },
-                "size": 0.0,
-                "max": 0,
-                "min": 0,
-                "res": 0.0,
-                "leftSide": false,
-                "rightSide": false
-            },
-            "sellItemIdList": [],
-            "buyItemIdList": [],
-            "canFix": false,
-            "canUpgradeTrain": false,
-            "canUpgradeTower": false
-        },
-        {
-            "name": "小站",
-            "GUID": "3eb32932-1c24-4d29-a800-e6a53aed8494",
+            "GUID": "35fbe749-1ef1-4342-9309-7528cf33152d",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -3948,7 +3738,7 @@
     ],
     "path2": [
         {
-            "GUID": "94bc32e6-138f-4e71-951e-f4115da7ad5c",
+            "GUID": "20dbd100-b524-4a17-8ccc-7f312ee52ccd",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -3998,14 +3788,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "4ed7bc4d-a395-425e-a175-a511886d02ad",
+            "GUID": "c08bcb08-3b49-49f1-b233-f847bc30e507",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4055,14 +3845,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "bafe32a5-0635-4c08-b1a1-a6cf2c21911c",
+            "GUID": "105d888b-71a5-4790-b740-10bce6cd9424",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4112,14 +3902,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "eccb9a64-72de-4b51-b570-62d51a056f23",
+            "GUID": "6fa193aa-0735-4e30-b11d-d58d9b840f13",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4169,14 +3959,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "963ebcae-5191-466d-84b0-9454fdcdebba",
+            "GUID": "8b3e8550-ba6f-413e-9c1a-c7952db2e3bf",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4226,14 +4016,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "9fefb6bc-372d-4299-bf0e-066f85f5d755",
+            "GUID": "9d3ea431-dd7f-488e-a2cf-fd4c69db219a",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4283,14 +4073,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "a171567f-328a-4d06-85b2-e20e6a891d4f",
+            "GUID": "b8d1c004-d3fe-4d67-8176-a3a03cbaefff",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4340,14 +4130,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "acfd81c2-adc2-4849-8d57-3fbbc95c15b6",
+            "GUID": "c415ca84-71dd-4416-8296-680802de60ea",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4397,14 +4187,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "b8981124-5619-4461-a327-620df4242396",
+            "GUID": "8ea798a0-469f-45ad-9b8c-6bb6c4f0b04f",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4454,14 +4244,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "236a0a52-d114-4561-8320-fe18a8c7d25f",
+            "GUID": "d0a72e17-3b58-4478-8d23-d4e64ecba52b",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4511,14 +4301,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "258c0443-3cab-4ba1-8215-90e40aa595bc",
+            "GUID": "66b10b21-a539-4025-ae5c-a2a319c0dbda",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4568,14 +4358,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "6aae65bb-9e22-4d97-bca6-08beab9c17d8",
+            "GUID": "f5a0e143-c009-4d61-b3ab-e349b1eaac4f",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4625,14 +4415,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "6fdd7c16-6c50-4915-b1bb-049ff634d012",
+            "GUID": "dc6b32ff-0cc0-4906-8e06-f9ef1c51ab5a",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4682,14 +4472,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "852cae52-958f-40d2-8b23-fccb3da2bb95",
+            "GUID": "38b22c9c-81fc-4645-820b-f389d4c8e297",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4739,14 +4529,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "b9d83e84-9fed-4579-a208-463d517eb01b",
+            "GUID": "eae8f974-1652-4342-b3e2-00bb06cb37bb",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4796,14 +4586,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "0efbf73a-b6ac-4d44-a1ba-bb82ffe325a1",
+            "GUID": "001102a9-5c4c-4377-90f4-fa4979b88f26",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4853,14 +4643,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "06e06beb-46da-4ec7-9235-806bb524ddd6",
+            "GUID": "0511a0da-54a1-41cb-bfc1-0e2e4d8b6430",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4910,14 +4700,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "c091051d-5762-47d8-bff3-4a88385a0bec",
+            "GUID": "f6c81b3e-161e-4a54-a19d-0c9f7346824f",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -4967,14 +4757,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "e4d7883c-4ade-44f1-a7e3-d6dbe4c3e6e7",
+            "GUID": "fe133d81-1c2e-4765-a6fc-f55d923c39de",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5024,14 +4814,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "4cbfd314-96b9-4029-af97-55f803a7b010",
+            "GUID": "f483d9a1-5056-4b81-9c67-8bba0b00b273",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5081,14 +4871,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "772a25f2-c4c6-4425-a65b-4e204bef34cf",
+            "GUID": "017faf59-8277-46bd-949d-44586cc0502c",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5138,14 +4928,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "e34ff4f8-8ec6-4736-ad22-08bd1dc62adc",
+            "GUID": "0db13a58-f5be-4467-b2ca-16692f610ccd",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5195,14 +4985,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "a7008273-500c-4f2f-a61b-15535e29621f",
+            "GUID": "b14b78ca-5dda-46ca-af37-0874254d3e3b",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5252,14 +5042,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "29a7b62a-1ce4-4f16-a164-3b4bb1ad1956",
+            "GUID": "bdad3ede-19d0-4655-8da1-59337b579f32",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5309,14 +5099,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "243b521c-b488-4c09-86c5-0c644bc86b09",
+            "GUID": "aa927505-8de9-4751-800c-21ad5ac09827",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5366,14 +5156,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "a37fccab-0c0a-46c1-8f52-74ada9063ae8",
+            "GUID": "72e60c03-aea5-475d-9ee1-d72a0a69772d",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5423,14 +5213,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "50fd44af-56bf-419f-a654-cea5d5c768b1",
+            "GUID": "ebc46b74-05eb-4ac5-b4b1-918c71768699",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5480,14 +5270,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "6d7cf9ac-5d8b-4c7c-993e-d117751735c0",
+            "GUID": "cffef66a-d084-4fb6-8385-7169194467e5",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5537,14 +5327,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "ccf43326-2ec3-44f0-a9aa-0bfa2b94d67f",
+            "GUID": "20b004ce-5620-4d42-88a7-4f84fcd23d33",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5594,14 +5384,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "01acb1d5-f5d7-4351-9ac1-a14df780753a",
+            "GUID": "64f9d8b0-dff9-478f-ac11-9ae91852bc56",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5651,14 +5441,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "d3b3a686-1efb-4427-9cbd-c547704df4d7",
+            "GUID": "32d6f4e0-c67f-491b-a67b-41109d0031be",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5708,14 +5498,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "2f712168-8e12-49b9-a77d-0296195ef404",
+            "GUID": "939fe0bc-4477-4998-a7c2-9d40d7247c59",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5765,14 +5555,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "bfbf78e0-6de0-4f31-9e3a-ed9ac0f89948",
+            "GUID": "b4e36491-b180-472a-9706-5d6e35073d2b",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5822,14 +5612,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "b50d9c42-f18e-466d-a040-c3608bc633ad",
+            "GUID": "f4d5b940-f4eb-4e4c-9f05-d24219621eae",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5879,14 +5669,14 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
             "hakka": 0
         },
         {
-            "GUID": "f41d3cb0-a323-44b4-8ba9-e10fcbb649c7",
+            "GUID": "9d4fefde-784c-415e-980c-7bbe23351c60",
             "s1": {
                 "name": "",
                 "GUID": "",
@@ -5936,121 +5726,7 @@
                 "canUpgradeTower": false
             },
             "levelSetting": {
-                "instanceID": 30118
-            },
-            "japanese": 0,
-            "aboriginal": 0,
-            "hakka": 0
-        },
-        {
-            "GUID": "85db4e7e-6fa7-4813-b842-c1a508462cb6",
-            "s1": {
-                "name": "",
-                "GUID": "",
-                "stationObject": {
-                    "name": "",
-                    "origins": [],
-                    "positionOffset": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                    },
-                    "size": 0.0,
-                    "max": 0,
-                    "min": 0,
-                    "res": 0.0,
-                    "leftSide": false,
-                    "rightSide": false
-                },
-                "sellItemIdList": [],
-                "buyItemIdList": [],
-                "canFix": false,
-                "canUpgradeTrain": false,
-                "canUpgradeTower": false
-            },
-            "s2": {
-                "name": "",
-                "GUID": "",
-                "stationObject": {
-                    "name": "",
-                    "origins": [],
-                    "positionOffset": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                    },
-                    "size": 0.0,
-                    "max": 0,
-                    "min": 0,
-                    "res": 0.0,
-                    "leftSide": false,
-                    "rightSide": false
-                },
-                "sellItemIdList": [],
-                "buyItemIdList": [],
-                "canFix": false,
-                "canUpgradeTrain": false,
-                "canUpgradeTower": false
-            },
-            "levelSetting": {
-                "instanceID": 30118
-            },
-            "japanese": 0,
-            "aboriginal": 0,
-            "hakka": 0
-        },
-        {
-            "GUID": "f0c0f393-c7a8-4e73-910c-fd39fa1b1d9b",
-            "s1": {
-                "name": "",
-                "GUID": "",
-                "stationObject": {
-                    "name": "",
-                    "origins": [],
-                    "positionOffset": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                    },
-                    "size": 0.0,
-                    "max": 0,
-                    "min": 0,
-                    "res": 0.0,
-                    "leftSide": false,
-                    "rightSide": false
-                },
-                "sellItemIdList": [],
-                "buyItemIdList": [],
-                "canFix": false,
-                "canUpgradeTrain": false,
-                "canUpgradeTower": false
-            },
-            "s2": {
-                "name": "",
-                "GUID": "",
-                "stationObject": {
-                    "name": "",
-                    "origins": [],
-                    "positionOffset": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0
-                    },
-                    "size": 0.0,
-                    "max": 0,
-                    "min": 0,
-                    "res": 0.0,
-                    "leftSide": false,
-                    "rightSide": false
-                },
-                "sellItemIdList": [],
-                "buyItemIdList": [],
-                "canFix": false,
-                "canUpgradeTrain": false,
-                "canUpgradeTower": false
-            },
-            "levelSetting": {
-                "instanceID": 30118
+                "instanceID": 28748
             },
             "japanese": 0,
             "aboriginal": 0,
@@ -6060,7 +5736,7 @@
     "commonStations": [
         {
             "name": "基隆",
-            "GUID": "6d1b1254-35e9-401c-816f-f4fd3ad18664",
+            "GUID": "70b8a2e8-13a6-4c4e-9b83-a1ff0671ab71",
             "stationObject": {
                 "name": "基隆",
                 "origins": [
@@ -6088,7 +5764,7 @@
         },
         {
             "name": "台北",
-            "GUID": "ae3fc0d7-67de-43ce-b0d4-2b815fc6565c",
+            "GUID": "1dfa7b53-a349-422e-b55b-9d8280ba7c61",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -6112,7 +5788,7 @@
         },
         {
             "name": "桃園",
-            "GUID": "3d3828b6-6fc6-499e-862c-16503972fc9a",
+            "GUID": "47121e45-4abe-4017-ad4d-6df47ec8444e",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -6136,7 +5812,7 @@
         },
         {
             "name": "新竹",
-            "GUID": "6517ffda-1a52-4f41-a8f6-52d0b95bf08f",
+            "GUID": "2e531917-c12a-478b-8451-906494f5f624",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -6160,7 +5836,7 @@
         },
         {
             "name": "苗栗",
-            "GUID": "45045dbd-4307-42f7-a53c-69abb27b2b88",
+            "GUID": "837d4541-13d3-47e9-9c73-83ea08e10e3a",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -6184,7 +5860,7 @@
         },
         {
             "name": "台中",
-            "GUID": "7aac1c0a-5047-4b6d-896f-e87dd7e692ee",
+            "GUID": "76bd29f6-4c25-41d1-baad-8072cdc6b9ca",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -6208,7 +5884,7 @@
         },
         {
             "name": "彰化",
-            "GUID": "024d9640-8e01-4d69-8906-4c2585a5bd99",
+            "GUID": "06113db6-fc66-48bc-b174-e25cef257544",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -6232,7 +5908,7 @@
         },
         {
             "name": "嘉義",
-            "GUID": "87e48090-628f-4010-bd97-b1876c2bd43b",
+            "GUID": "d6bd2082-cd1f-40ed-afde-101f0b53a259",
             "stationObject": {
                 "name": "",
                 "origins": [],
@@ -6256,7 +5932,7 @@
         },
         {
             "name": "台南",
-            "GUID": "40c85af2-6eae-4d90-b854-31a4b586dabc",
+            "GUID": "e5fac8cc-5765-463d-a433-96cd24f04ab6",
             "stationObject": {
                 "name": "",
                 "origins": [],

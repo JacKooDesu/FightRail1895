@@ -19,3 +19,5 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 31d8d05ce2945e94782058c1885391d9, type: 3}
   - name: begin
     clip: {fileID: 8300000, guid: 03849ba3669f5ab46b32923e530e9151, type: 3}
+  - name: loading
+    clip: {fileID: 8300000, guid: fd37d1255ffcaf047afa8ba64e8a977f, type: 3}

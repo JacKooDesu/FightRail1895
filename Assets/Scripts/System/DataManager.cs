@@ -43,6 +43,43 @@ public class DataManager : MonoBehaviour
     [SerializeField] MapData mapData;
     [SerializeField] ModData modData;
 
+    static int[] bgmUnlockProgress;
+    public int[] BgmUnlockProgress
+    {
+        get
+        {
+            if (bgmUnlockProgress == null)
+            {
+                bgmUnlockProgress = new int[SettingManager.Singleton.BgmSetting.soundSettings.Length];
+                string s = "";
+                if (PlayerPrefs.HasKey("BgmUnlockProgress"))
+                {
+                    s = PlayerPrefs.GetString("BgmUnlockProgress");
+                    string[] ss = s.Split(',');
+                    for (int i = 0; i < SettingManager.Singleton.BgmSetting.soundSettings.Length; ++i)
+                    {
+                        bgmUnlockProgress[i] = System.Int32.Parse(ss[i]);
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < SettingManager.Singleton.BgmSetting.soundSettings.Length; ++i)
+                    {
+                        bgmUnlockProgress[i] = 0;
+                        s += "0" + (i == SettingManager.Singleton.BgmSetting.soundSettings.Length - 1 ? "" : ",");
+                    }
+                }
+            }
+
+            return bgmUnlockProgress;
+        }
+        set
+        {
+            bgmUnlockProgress = value;
+            SaveBgmUnlockProgress();
+        }
+    }
+
     #endregion
 
     private void Awake()
@@ -58,6 +95,10 @@ public class DataManager : MonoBehaviour
         }
 
         LoadPlayerData();
+        SaveBgmUnlockProgress();
+        print(bgmUnlockProgress.Length);
+        BgmUnlockProgress[0] = 1;
+        SaveBgmUnlockProgress();
     }
 
     public MapData GetMapData(bool regenerate = false)
@@ -102,5 +143,15 @@ public class DataManager : MonoBehaviour
         {
             FileManager.Save("/PlayerData", PlayerData, "/GameDatas");
         }
+    }
+
+    public void SaveBgmUnlockProgress()
+    {
+        string key = "";
+        for (int i = 0; i < SettingManager.Singleton.BgmSetting.soundSettings.Length; ++i)
+        {
+            key += BgmUnlockProgress[i].ToString() + (i == SettingManager.Singleton.BgmSetting.soundSettings.Length - 1 ? "" : ",");
+        }
+        PlayerPrefs.SetString("BgmUnlockProgress", key);
     }
 }
