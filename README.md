@@ -50,6 +50,8 @@
 
 烈焰火鳳凰
 
+Sound Design: [**Trapping 1999**](https://soundcloud.com/trapping1999)
+
 ## 專案進度
 
 2021/03/24  專案建立
