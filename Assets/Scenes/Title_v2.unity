@@ -7118,6 +7118,17 @@ MonoBehaviour:
             m_StringArgument: hover
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 868896636}
+          m_MethodName: Slick
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -7131,6 +7142,17 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 868896636}
+          m_MethodName: SlickBack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &141590346
@@ -32290,6 +32312,7 @@ GameObject:
   - component: {fileID: 612693373}
   - component: {fileID: 612693375}
   - component: {fileID: 612693374}
+  - component: {fileID: 612693376}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -32329,7 +32352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -32357,6 +32380,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612693372}
   m_CullTransparentMesh: 0
+--- !u!114 &612693376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612693372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7eb78cdfa84a14bb6cdaef14236e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+  - name: hover
+    set: {r: 0, g: 0, b: 0, a: 1}
+    time: 0.2
+    easeType: 0
+  origin:
+    name: 
+    set: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+    time: 0.2
+    easeType: 0
 --- !u!1 &612977558
 GameObject:
   m_ObjectHideFlags: 0
@@ -35406,6 +35451,17 @@ MonoBehaviour:
             m_StringArgument: hover
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 766285698}
+          m_MethodName: Slick
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -35419,6 +35475,17 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 766285698}
+          m_MethodName: SlickBack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!222 &675722919
@@ -36818,12 +36885,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8730141266384603408, guid: 9afa9a7a919f26e47aa42b92e6b6b0b3,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: c8c9aa4b5dc7c8742beeb2944fd158f7,
-        type: 3}
     - target: {fileID: 8730141266387277504, guid: 9afa9a7a919f26e47aa42b92e6b6b0b3,
         type: 3}
       propertyPath: m_Name
@@ -39658,6 +39719,7 @@ GameObject:
   - component: {fileID: 766285695}
   - component: {fileID: 766285697}
   - component: {fileID: 766285696}
+  - component: {fileID: 766285698}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -39697,7 +39759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -39725,6 +39787,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766285694}
   m_CullTransparentMesh: 0
+--- !u!114 &766285698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766285694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7eb78cdfa84a14bb6cdaef14236e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+  - name: hover
+    set: {r: 0, g: 0, b: 0, a: 1}
+    time: 0.2
+    easeType: 0
+  origin:
+    name: 
+    set: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+    time: 0.2
+    easeType: 0
 --- !u!1 &767031053
 GameObject:
   m_ObjectHideFlags: 0
@@ -45301,6 +45385,7 @@ GameObject:
   - component: {fileID: 868896633}
   - component: {fileID: 868896635}
   - component: {fileID: 868896634}
+  - component: {fileID: 868896636}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -45340,7 +45425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -45368,6 +45453,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868896632}
   m_CullTransparentMesh: 0
+--- !u!114 &868896636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868896632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7eb78cdfa84a14bb6cdaef14236e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+  - name: hover
+    set: {r: 0, g: 0, b: 0, a: 1}
+    time: 0.2
+    easeType: 0
+  origin:
+    name: 
+    set: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+    time: 0.2
+    easeType: 0
 --- !u!1 &869746664
 GameObject:
   m_ObjectHideFlags: 0
@@ -55524,6 +55631,7 @@ GameObject:
   - component: {fileID: 1074860333}
   - component: {fileID: 1074860335}
   - component: {fileID: 1074860334}
+  - component: {fileID: 1074860336}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -55563,7 +55671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -55591,6 +55699,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074860332}
   m_CullTransparentMesh: 0
+--- !u!114 &1074860336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074860332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7eb78cdfa84a14bb6cdaef14236e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+  - name: hover
+    set: {r: 0, g: 0, b: 0, a: 1}
+    time: 0.2
+    easeType: 0
+  origin:
+    name: 
+    set: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+    time: 0.2
+    easeType: 0
 --- !u!1 &1075351045
 GameObject:
   m_ObjectHideFlags: 0
@@ -64960,6 +65090,17 @@ MonoBehaviour:
             m_StringArgument: hover
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1735797868}
+          m_MethodName: Slick
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -64973,6 +65114,17 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1735797868}
+          m_MethodName: SlickBack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 4
@@ -65794,6 +65946,17 @@ MonoBehaviour:
             m_StringArgument: hover
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1074860336}
+          m_MethodName: Slick
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -65807,6 +65970,17 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1074860336}
+          m_MethodName: SlickBack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!222 &1305106042
@@ -68306,6 +68480,17 @@ MonoBehaviour:
             m_StringArgument: hover
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 612693376}
+          m_MethodName: Slick
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -68319,6 +68504,17 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: hover
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 612693376}
+          m_MethodName: SlickBack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!222 &1345969077
@@ -89518,6 +89714,7 @@ GameObject:
   - component: {fileID: 1735797865}
   - component: {fileID: 1735797867}
   - component: {fileID: 1735797866}
+  - component: {fileID: 1735797868}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -89557,7 +89754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -89585,6 +89782,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735797864}
   m_CullTransparentMesh: 0
+--- !u!114 &1735797868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735797864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7eb78cdfa84a14bb6cdaef14236e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+  - name: hover
+    set: {r: 0, g: 0, b: 0, a: 1}
+    time: 0.2
+    easeType: 0
+  origin:
+    name: 
+    set: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+    time: 0.2
+    easeType: 0
 --- !u!1 &1739566473
 GameObject:
   m_ObjectHideFlags: 0
