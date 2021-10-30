@@ -30,8 +30,10 @@ namespace JacDev.UI.GameScene
         public TrainObject trackingTrain;
         [Header("車廂狀態")]
         public Slider healthBar;
+        public Slider fuel;
         public Text money;
         public Text asset;
+        public Text speed;
 
 
         [Header("車廂面板")]
