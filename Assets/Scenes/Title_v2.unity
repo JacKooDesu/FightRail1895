@@ -7107,17 +7107,6 @@ MonoBehaviour:
             m_StringArgument: hover
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1340066829}
-          m_MethodName: PlaySound
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: hover
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 868896636}
           m_MethodName: Slick
           m_Mode: 5
@@ -34991,7 +34980,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &673232483
 GameObject:
@@ -35431,17 +35420,6 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1441475376}
           m_MethodName: Slick
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: hover
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1340066829}
-          m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -53227,18 +53205,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030689498}
   m_Mesh: {fileID: -5495902117074765545, guid: b195f86c01f1ee247b67c792c2abe0b1, type: 3}
---- !u!114 &1033694789 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 530459111655942208, guid: 130c7fdd2411fc64f85bc6f17c772f2c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1392828543}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc6335cb064658949a0e6be9e90299b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1035752517
 GameObject:
   m_ObjectHideFlags: 0
@@ -58543,18 +58509,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133422773}
   m_Mesh: {fileID: 289301614986012343, guid: e26fe402bbf665d4a8dd3ca31015a71d, type: 3}
---- !u!114 &1134013783 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8730141266387277513, guid: 9afa9a7a919f26e47aa42b92e6b6b0b3,
-    type: 3}
-  m_PrefabInstance: {fileID: 720596502}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf19939349bee84cb9f1675822e4212, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1134722831
 GameObject:
   m_ObjectHideFlags: 0
@@ -64194,7 +64148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1271218965
 GameObject:
@@ -65079,17 +65033,6 @@ MonoBehaviour:
             m_StringArgument: hover
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1340066829}
-          m_MethodName: PlaySound
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: hover
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1735797868}
           m_MethodName: Slick
           m_Mode: 5
@@ -65926,17 +65869,6 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 815108508}
           m_MethodName: Slick
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: hover
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1340066829}
-          m_MethodName: PlaySound
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -68469,17 +68401,6 @@ MonoBehaviour:
             m_StringArgument: hover
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1340066829}
-          m_MethodName: PlaySound
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: hover
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 612693376}
           m_MethodName: Slick
           m_Mode: 5
@@ -70749,40 +70670,7 @@ MonoBehaviour:
   - eventID: 4
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1134013783}
-          m_MethodName: LoadScene
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 4
-            m_FloatArgument: 0
-            m_StringArgument: ShopScene
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1340066829}
-          m_MethodName: PlaySound
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: begin
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1033694789}
-          m_MethodName: NewGame
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!1 &1385914155
 GameObject:
   m_ObjectHideFlags: 0
@@ -74527,6 +74415,7 @@ GameObject:
   - component: {fileID: 1451705262}
   - component: {fileID: 1451705263}
   - component: {fileID: 1451705264}
+  - component: {fileID: 1451705265}
   m_Layer: 5
   m_Name: SelectBloodPanel
   m_TagString: Untagged
@@ -74595,6 +74484,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1451705265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451705261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a79729fa08120f4f953094c40603f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodCellParent: {fileID: 152433989}
+  backButton: {fileID: 1503221087}
 --- !u!1 &1452452502
 GameObject:
   m_ObjectHideFlags: 0
@@ -77156,17 +77059,6 @@ MonoBehaviour:
             m_StringArgument: hover
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1340066829}
-          m_MethodName: PlaySound
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: hover
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -77195,17 +77087,6 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: hover
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1340066829}
-          m_MethodName: PlaySound
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: select
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1503221088

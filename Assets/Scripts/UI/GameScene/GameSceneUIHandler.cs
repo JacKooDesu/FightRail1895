@@ -49,6 +49,26 @@ namespace JacDev.UI.GameScene
         [Header("音樂選擇")]
         public MusicSelectPanel musicSelectPandel;
 
+        [Header("暫停")]
+        public EventTrigger pauseButton;
+        public GameObject pausePanel;
+        public EventTrigger continueButton;
+        public EventTrigger settingButton;
+        public EventTrigger mainMenuButton;
+
+        private void OnEnable()
+        {
+            JacDev.Utils.EventBinder.Bind(pauseButton, EventTriggerType.PointerClick,
+                (e) => { GameHandler.Singleton.Pause(true); pausePanel.SetActive(true); }
+            );
+            JacDev.Utils.EventBinder.Bind(continueButton, EventTriggerType.PointerClick,
+                (e) => { GameHandler.Singleton.Pause(false); pausePanel.SetActive(false); }
+            );
+            JacDev.Utils.EventBinder.Bind(mainMenuButton, EventTriggerType.PointerClick,
+                (e) => { AsyncSceneLoader.Singleton.LoadScene("Title_v2"); }
+            );
+        }
+
         public void InitTrainPanel()
         {
 

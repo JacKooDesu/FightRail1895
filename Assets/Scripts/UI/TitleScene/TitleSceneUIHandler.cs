@@ -40,6 +40,8 @@ namespace JacDev.UI.TitleScene
                         hintUI.GetComponent<ColorSlicker>().Slick("in");
                     }
                 });
+
+            mainSelections.BindSound();
         }
     }
 }

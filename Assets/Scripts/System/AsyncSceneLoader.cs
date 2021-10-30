@@ -64,10 +64,17 @@ public class AsyncSceneLoader : MonoBehaviour
 
         while (!hasFadeOut)
         {
-            yield return null;
+            if (Time.timeScale == 0)
+                yield return new WaitForSecondsRealtime(.01f);
+            else
+                yield return null;
         }
 
-        yield return null;  // 避免過快載入
+        // 避免過快載入
+        if (Time.timeScale == 0)
+            yield return new WaitForSecondsRealtime(.01f);
+        else
+            yield return null;
         AsyncOperation async = SceneManager.LoadSceneAsync(name);
         async.allowSceneActivation = false;
 
@@ -75,12 +82,12 @@ public class AsyncSceneLoader : MonoBehaviour
 
         while (async.progress < .9f || t < minLoadingTime)
         {
-            t += Time.deltaTime;
+            t += Time.unscaledDeltaTime;
             yield return null;
         }
 
         async.allowSceneActivation = true;
-
+        Time.timeScale = 1;
         Destroy(soundObject);
     }
 }

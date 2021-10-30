@@ -171,5 +171,7 @@ public class GameHandler : MonoBehaviour
         // pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).commonStations[0]);
         pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).stations1[0]);
         DataManager.Singleton.PlayerData = pData;
+
+        AsyncSceneLoader.Singleton.LoadScene("ShopScene");
     }
 }
