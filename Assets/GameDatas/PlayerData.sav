@@ -11,18 +11,22 @@
     "modDatas": [],
     "towersGrade": [
         1,
-        1,
-        1,
-        1
+        0,
+        0,
+        0
     ],
     "totalKill": 0,
     "typeKill": [],
     "currentStation": {
-        "name": "",
-        "GUID": "",
+        "name": "基隆",
+        "GUID": "e146454a-cb70-4266-9193-8724a58bf0c0",
         "stationObject": {
-            "name": "",
-            "origins": [],
+            "name": "基隆",
+            "origins": [
+                {
+                    "instanceID": 0
+                }
+            ],
             "positionOffset": {
                 "x": 0.0,
                 "y": 0.0,
@@ -66,7 +70,7 @@
         "canUpgradeTower": false
     },
     "currentPath": {
-        "GUID": "7825a4b5-b272-467b-a81e-255a49e8698f",
+        "GUID": "a0e9068e-05d0-4c73-ad1b-030eee0c5adc",
         "s1": {
             "name": "",
             "GUID": "",
