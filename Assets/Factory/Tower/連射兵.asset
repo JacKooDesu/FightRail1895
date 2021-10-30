@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: "\u9023\u5C04\u5175"
   entityNickName: --
+  entityInfo: 
   entityType: 1
-  icon: {fileID: 21300000, guid: 278e860fdff7f0041bb42f49e2ddc62c, type: 3}
+  icon: {fileID: 21300000, guid: 3c18ec41990183a46a0064a76c35811b, type: 3}
   prefab: {fileID: 1950022020884273114, guid: fbd34fb409708b441a89bea92a1b3baf, type: 3}
   price: 20
   projectile: {fileID: 11400000, guid: 518db5dfbf0441c4eb48ae8e3ee15489, type: 2}
