@@ -44,6 +44,9 @@ namespace JacDev.UI.GameScene
         [Header("傷害面板")]
         public DamagePanel damagePanel;
 
+        [Header("音樂選擇")]
+        public MusicSelectPanel musicSelectPandel;
+
         public void InitTrainPanel()
         {
 

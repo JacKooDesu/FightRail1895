@@ -21,9 +21,11 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: a19923bea9290e442891fb2f9dfb2b03, type: 3}
   - name: 4 UR Eyes
     clip: {fileID: 8300000, guid: 48311fdb9a22dde4e87fae30ec090630, type: 3}
-  - name: 
+  - name: Colour Bass Hit
     clip: {fileID: 8300000, guid: 24ab1e5be1d0077429d33966794b113c, type: 3}
-  - name: 
+  - name: We Cum
     clip: {fileID: 8300000, guid: 7517e26350485a44d823bd3a5071c5ff, type: 3}
   - name: Moring News
     clip: {fileID: 8300000, guid: 773e5b0ec221d9f4db731c280354d8e3, type: 3}
+  - name: Formosa Life Radio
+    clip: {fileID: 8300000, guid: ee946bf705ab1ec48a76e106302b53c0, type: 3}

@@ -29,6 +29,7 @@ namespace JacDev.Audio
         public GameObject audioSourcePrefab;
 
         public GameObject bgmPlayer;
+        public int currentPlayingBgm = -1;
 
         [Header("Sound List")]
         public SoundList soundList;
@@ -81,12 +82,14 @@ namespace JacDev.Audio
             AudioSource au = bgmPlayer.GetComponent<AudioSource>();
             au.clip = SettingManager.Singleton.BgmSetting.soundSettings[index].clip;
             au.Play();
+            currentPlayingBgm = index;
         }
 
         public void PlayBgm(string name)
         {
             AudioSource au = bgmPlayer.GetComponent<AudioSource>();
             au.clip = SettingManager.Singleton.BgmSetting.soundSettings[0].clip;
+            int temp = 0;
             foreach (SoundSetting s in SettingManager.Singleton.BgmSetting.soundSettings)
             {
                 if (s.name == name)
@@ -94,8 +97,10 @@ namespace JacDev.Audio
                     au.clip = s.clip;
                     break;
                 }
+                temp++;
             }
             au.Play();
+            currentPlayingBgm = temp;
         }
 
         public void RandPlayBgm(params int[] avoid)
@@ -114,6 +119,8 @@ namespace JacDev.Audio
         {
             AudioSource au = bgmPlayer.GetComponent<AudioSource>();
             au.Pause();
+
+            currentPlayingBgm = -1;
         }
 
         // public AudioSource PlayAudio(AudioClip audio, bool loop)

@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1da0177fdfafcc438b379a115dc046c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
+  spawnpoint: {fileID: 3967090012516911476}
   spawnSettings:
   - entity: {fileID: 11400000, guid: 21a8bb2150820774d9bd3386b6f7db7d, type: 2}
     spawnType: 1
