@@ -31,6 +31,15 @@ namespace JacDev.UI.TitleScene
                 EventTriggerType.PointerClick,
                 (data) => { Audio.AudioHandler.Singleton.PlaySound("select"); }
                 );
+
+                if (g == leave)
+                {
+                    EventBinder.Bind(
+                        g.GetComponent<EventTrigger>(),
+                        EventTriggerType.PointerClick,
+                        (data) => { Application.Quit(); }
+                        );
+                }
             }
         }
     }

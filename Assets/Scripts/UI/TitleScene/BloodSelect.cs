@@ -23,15 +23,6 @@ namespace JacDev.UI.TitleScene
                     EventTriggerType.PointerClick,
                     (data) => { Audio.AudioHandler.Singleton.PlaySound("begin"); GameHandler.Singleton.NewGame(x); }
                     );
-
-                if (i == bloodCellParent.childCount - 1)
-                {
-                    EventBinder.Bind(
-                        trigger,
-                        EventTriggerType.PointerClick,
-                        (data) => { Application.Quit(); }
-                        );
-                }
             }
 
             EventBinder.Bind(
