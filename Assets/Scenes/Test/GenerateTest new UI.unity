@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: a340fd0565f567d45a07d967405760a2,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3131,6 +3131,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnpoint: {fileID: 339647833}
   spawnSettings:
+  - entity: {fileID: 11400000, guid: 48d05763442625347ae64dbc15ffc369, type: 2}
+    spawnType: 0
+    amount: 1
+    interval: 0
   - entity: {fileID: 11400000, guid: 533ec073d72afa94f85af7221a39fe82, type: 2}
     spawnType: 0
     amount: 1

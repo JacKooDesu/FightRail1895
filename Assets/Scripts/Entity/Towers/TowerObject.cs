@@ -10,6 +10,13 @@ namespace JacDev.Entity
         float cooldownTime = 0f;
         bool canAttack = true;
         public ProjectileSpawner launcher;
+        Animator animator;
+
+        private void OnEnable()
+        {
+            if (GetComponentInChildren<Animator>() != null)
+                animator = GetComponentInChildren<Animator>();
+        }
 
         private void Update()
         {
@@ -36,7 +43,14 @@ namespace JacDev.Entity
 
                 if (enemyObjects.Count != 0)
                 {
-                    launcher.Launch(enemyObjects[Random.Range(0, enemyObjects.Count)].GetComponent<Collider>().ClosestPoint(launcher.transform.position));
+                    int target = Random.Range(0, enemyObjects.Count);
+                    Vector3 targetPoint = enemyObjects[target].GetComponent<Collider>().ClosestPoint(launcher.transform.position);
+                    launcher.Launch(targetPoint);
+                    // transform.localRotation = Quaternion.LookRotation(targetPoint);
+                    transform.LookAt(new Vector3(targetPoint.x, transform.position.y, targetPoint.z));
+
+                    if (animator != null)
+                        animator.SetTrigger("Attack");
 
                     canAttack = false;
                 }

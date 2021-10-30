@@ -18,15 +18,11 @@
     "totalKill": 0,
     "typeKill": [],
     "currentStation": {
-        "name": "基隆",
-        "GUID": "9afc8460-0c31-4be2-8690-5f5eb2fa3e8c",
+        "name": "",
+        "GUID": "",
         "stationObject": {
-            "name": "基隆",
-            "origins": [
-                {
-                    "instanceID": 0
-                }
-            ],
+            "name": "",
+            "origins": [],
             "positionOffset": {
                 "x": 0.0,
                 "y": 0.0,
