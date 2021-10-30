@@ -52,6 +52,11 @@ namespace JacDev.Data
             this.money = money;
 
             currentStation = startStation;
+
+            // towersGrade = new List<int>(SettingManager.Singleton.TowerSetting.towers.Count);
+            towersGrade.Add(1);
+            for (int i = 1; i < SettingManager.Singleton.TowerSetting.towers.Count; ++i)
+                towersGrade.Add(0);
         }
     }
 

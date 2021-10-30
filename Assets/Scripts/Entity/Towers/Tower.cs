@@ -21,6 +21,16 @@ namespace JacDev.Entity
         public Projectile projectile;
         public float attackRange = 1f;  // 攻擊距離
         public float attackTime = 1.0f; // 攻擊花費時長(秒)
+
+        [Serializable]
+        public class Upgrade
+        {
+            public float attackTime;
+            public float damage;
+            public float attackRange;
+        }
+
+        public Upgrade upgradeMultiply;
     }
 }
 

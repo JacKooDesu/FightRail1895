@@ -6,13 +6,15 @@ namespace JacDev.Entity
     public abstract class EntitySetting : ScriptableObject
     {
         [SerializeField, Header("名稱")]
-        protected string entityName;
+        public string entityName;
+        public string entityNickName;
+        [TextArea(4, 8)] public string entityInfo;
 
         [SerializeField, Header("物件種類")]
         public EntityEnums.EntityType entityType = default;
 
         [SerializeField, Header("圖示")]
-        protected Sprite icon;
+        public Sprite icon;
 
         [SerializeField, Header("預製物")]
         public GameObject prefab;

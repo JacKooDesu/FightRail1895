@@ -9,12 +9,17 @@
     "money": 10000.0,
     "inventory": [],
     "modDatas": [],
-    "towersGrade": [],
+    "towersGrade": [
+        1,
+        1,
+        1,
+        1
+    ],
     "totalKill": 0,
     "typeKill": [],
     "currentStation": {
         "name": "基隆",
-        "GUID": "311bac73-9ca8-4074-ae2e-d5a7cb0968d3",
+        "GUID": "9afc8460-0c31-4be2-8690-5f5eb2fa3e8c",
         "stationObject": {
             "name": "基隆",
             "origins": [
@@ -41,8 +46,8 @@
         "canUpgradeTower": false
     },
     "nextStation": {
-        "name": "小站",
-        "GUID": "4604afdb-29fd-46c9-b686-349b03ab6281",
+        "name": "",
+        "GUID": "",
         "stationObject": {
             "name": "",
             "origins": [],
@@ -65,7 +70,7 @@
         "canUpgradeTower": false
     },
     "currentPath": {
-        "GUID": "67724ac1-d1e1-4736-aaa2-9f95df9d79f8",
+        "GUID": "7825a4b5-b272-467b-a81e-255a49e8698f",
         "s1": {
             "name": "",
             "GUID": "",
