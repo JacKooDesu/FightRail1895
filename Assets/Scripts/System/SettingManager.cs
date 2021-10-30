@@ -14,7 +14,10 @@ public class SettingManager : MonoBehaviour
     {
         get
         {
-            singleton = FindObjectOfType(typeof(SettingManager)) as SettingManager;
+            if (singleton != null)
+                return singleton;
+            else
+                singleton = FindObjectOfType(typeof(SettingManager)) as SettingManager;
 
             if (singleton == null)
             {
@@ -54,7 +57,7 @@ public class SettingManager : MonoBehaviour
     {
         get => bgmSetting;
     }
-    
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
