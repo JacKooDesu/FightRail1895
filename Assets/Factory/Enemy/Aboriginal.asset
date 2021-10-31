@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e18c4360347e74ab642f3dbe01ec47, type: 3}
+  m_Name: Aboriginal
+  m_EditorClassIdentifier: 
+  entityName: "\u5F13\u7BAD\u539F\u4F4F\u6C11"
+  entityNickName: 
+  entityInfo: 
+  entityType: 0
+  icon: {fileID: 0}
+  prefab: {fileID: 1809390422595602079, guid: 48725acc09f5f5e4a84e8f4d06871454, type: 3}
+  level: 1
+  bloodType: 0
+  movementSpeed: 2
+  health: 20
+  maxDet: 20
+  attackType: 1
+  projectile: {fileID: 11400000, guid: 8c2b9af3e26afa74f98e0671b796e57b, type: 2}
+  damage: 5
+  attackRange: 10
+  attackTime: 2
+  dropList: []
+  dropMoney: 20

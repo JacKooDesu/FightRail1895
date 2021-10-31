@@ -14,7 +14,8 @@ namespace JacDev.Entity
         {
             Aboriginal,
             Japanese,
-            Hakka
+            Hakka,
+            Foreigner
         }
     }
 }
