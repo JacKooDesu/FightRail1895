@@ -15,6 +15,9 @@ namespace JacDev.Map
         public List<Station> stations = new List<Station>();
         public int minSpotCount, maxSpotCount;  // 兩大站之間小站數量
 
+        [Header("小站設定")]
+        public Level.MapObject subStationObject;
+
         public Data.MapData InitMap()
         {
             JacDev.Data.MapData mapData = new Data.MapData();

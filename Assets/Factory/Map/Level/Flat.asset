@@ -36,7 +36,7 @@ MonoBehaviour:
     min: 5
     res: 0.501
     leftSide: 1
-    rightSide: 0
+    rightSide: 1
   - name: grass
     origins:
     - {fileID: 8724073853793961533, guid: 1bf802e678075764887fa7b8a8086096, type: 3}
@@ -89,3 +89,4 @@ MonoBehaviour:
     res: 0
     leftSide: 0
     rightSide: 0
+  groundMaterial: {fileID: 2100000, guid: dd541360b8204be4bbd4965c57b9fb99, type: 2}

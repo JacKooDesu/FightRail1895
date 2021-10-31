@@ -42,16 +42,29 @@ namespace JacDev.Level
 
         public float totalLength;
 
+        public MapObject fromMapObject, destMapObject;  // 車站地圖物件
         [HideInInspector]
         public Transform dest;  // 目的地
 
         private void OnEnable()
         {
-           // BuildMap();
+            // BuildMap();
+        }
+
+        public void BindSetting()
+        {
+            MapObject from = DataManager.Singleton.PlayerData.currentStation.stationObject;
+            MapObject dest = DataManager.Singleton.PlayerData.nextStation.stationObject;
+            fromMapObject = from.origins.Length == 0 ? SettingManager.Singleton.MapSetting.subStationObject : from;
+            destMapObject = dest.origins.Length == 0 ? SettingManager.Singleton.MapSetting.subStationObject : dest;
+
+            ground.GetComponent<MeshRenderer>().sharedMaterial = levelSetting.groundMaterial;
         }
 
         public void BuildMap()
         {
+            BindSetting();
+
             for (int j = 0; j < levelSetting.blockCount; ++j)
             {
                 // Clear Rect and init the rail
@@ -67,21 +80,37 @@ namespace JacDev.Level
                 {
                     if (j == 0)
                     {
-                        Rect rect = new Rect(levelSetting.stationOffset.x + levelSetting.from.size / 2, levelSetting.stationOffset.y + levelSetting.from.size / 2, levelSetting.from.size, levelSetting.from.size);
+                        // 2021.10.31 added
+                        Rect rect = new Rect(levelSetting.stationOffset.x + fromMapObject.size / 2, levelSetting.stationOffset.y + fromMapObject.size / 2, fromMapObject.size, fromMapObject.size);
                         objectMapping.Add(rect);
-                        GameObject g = Instantiate(levelSetting.from.origins[0]);
+                        GameObject g = Instantiate(fromMapObject.origins[0]);
                         g.transform.SetParent(parent.transform);
                         g.transform.localPosition = new Vector3(levelSetting.stationOffset.x, 0, levelSetting.stationOffset.y);
+
+                        // Rect rect = new Rect(levelSetting.stationOffset.x + levelSetting.from.size / 2, levelSetting.stationOffset.y + levelSetting.from.size / 2, levelSetting.from.size, levelSetting.from.size);
+                        // objectMapping.Add(rect);
+                        // GameObject g = Instantiate(levelSetting.from.origins[0]);
+                        // g.transform.SetParent(parent.transform);
+                        // g.transform.localPosition = new Vector3(levelSetting.stationOffset.x, 0, levelSetting.stationOffset.y);
                     }
                     else if (j == levelSetting.blockCount - 1)
                     {
-                        Rect rect = new Rect(levelSetting.stationOffset.x + levelSetting.dest.size / 2, levelSetting.stationOffset.y + levelSetting.dest.size / 2, levelSetting.dest.size, levelSetting.dest.size);
+                        // 2021.10.31 added
+                        Rect rect = new Rect(levelSetting.stationOffset.x + destMapObject.size / 2, levelSetting.stationOffset.y + destMapObject.size / 2, destMapObject.size, destMapObject.size);
                         objectMapping.Add(rect);
-                        GameObject g = Instantiate(levelSetting.dest.origins[0]);
+                        GameObject g = Instantiate(destMapObject.origins[0]);
                         g.transform.SetParent(parent.transform);
                         g.transform.localPosition = new Vector3(levelSetting.stationOffset.x, 0, levelSetting.stationOffset.y);
                         // need assign dest for map
                         dest = g.transform;
+
+                        // Rect rect = new Rect(levelSetting.stationOffset.x + levelSetting.dest.size / 2, levelSetting.stationOffset.y + levelSetting.dest.size / 2, levelSetting.dest.size, levelSetting.dest.size);
+                        // objectMapping.Add(rect);
+                        // GameObject g = Instantiate(levelSetting.dest.origins[0]);
+                        // g.transform.SetParent(parent.transform);
+                        // g.transform.localPosition = new Vector3(levelSetting.stationOffset.x, 0, levelSetting.stationOffset.y);
+                        // // need assign dest for map
+                        // dest = g.transform;
                     }
                     else
                     {

@@ -30,6 +30,8 @@ namespace JacDev.Level
         public MapObject from;
         [Header("終點")]
         public MapObject dest;
+
+        public Material groundMaterial;
     }
 
     [System.Serializable]

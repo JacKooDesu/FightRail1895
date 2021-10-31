@@ -71,7 +71,7 @@ MonoBehaviour:
   from:
     name: From
     origins:
-    - {fileID: 8443185768323588318, guid: 47a26ec09853bc44596a73a0f0767f57, type: 3}
+    - {fileID: 5936682909192520095, guid: d0496a72789b2204b85c63f0eba3104b, type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     size: 30
     max: 0
@@ -90,3 +90,4 @@ MonoBehaviour:
     res: 0
     leftSide: 0
     rightSide: 0
+  groundMaterial: {fileID: 2100000, guid: 422506d706d02694ebe1b2bc017d399d, type: 2}

@@ -18,13 +18,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c9de156e03ec81b47a2651b1ed9867b6, type: 2}
   stations:
   - name: "\u57FA\u9686"
-    GUID: e2b506c6-a83d-40e9-9e64-11c744fa6acb
+    GUID: 89a14a60-d8d3-44b0-8629-f248cd992db7
     stationObject:
       name: "\u57FA\u9686"
       origins:
-      - {fileID: 0}
+      - {fileID: 636685550521974622, guid: 425114676c090d94a856617adc108b9d, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
-      size: 0
+      size: 10000
       max: 0
       min: 0
       res: 0
@@ -36,10 +36,11 @@ MonoBehaviour:
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u53F0\u5317"
-    GUID: 43928960-e82d-4c13-8e1c-5d2c4d5d0b2b
+    GUID: b0669704-b2da-4441-b120-1512912e7d0e
     stationObject:
-      name: 
-      origins: []
+      name: "\u53F0\u5317"
+      origins:
+      - {fileID: 5680146718074238892, guid: ed01686af71d4c149bff4007ae40b77d, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
@@ -53,10 +54,11 @@ MonoBehaviour:
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u6843\u5712"
-    GUID: 6b7bc573-3bce-42c7-9be7-9ef3bc113518
+    GUID: 8bdafca3-54da-4f99-96d7-9b7655f79523
     stationObject:
       name: 
-      origins: []
+      origins:
+      - {fileID: 5936682909192520095, guid: d0496a72789b2204b85c63f0eba3104b, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
@@ -70,10 +72,11 @@ MonoBehaviour:
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u65B0\u7AF9"
-    GUID: fb3c6db6-0b41-455a-ac88-e9ede4e9854e
+    GUID: 91e653b3-1cc7-4749-a791-02ef9652446a
     stationObject:
       name: 
-      origins: []
+      origins:
+      - {fileID: 3018935029193962774, guid: 2b6240fc0e5dc194f980d07df47e9b81, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
@@ -87,7 +90,7 @@ MonoBehaviour:
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u82D7\u6817"
-    GUID: fb599b4a-8b06-4730-8a52-61f5fb054612
+    GUID: 565f8f19-4f3c-4109-bae9-f64e74c24eb5
     stationObject:
       name: 
       origins: []
@@ -104,10 +107,11 @@ MonoBehaviour:
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u53F0\u4E2D"
-    GUID: 92c6f8c7-163e-44db-8bbb-cf5669e13060
+    GUID: 5e58ce6c-d4a9-42b5-9d83-0830fca75f97
     stationObject:
       name: 
-      origins: []
+      origins:
+      - {fileID: 8443185768323588318, guid: 47a26ec09853bc44596a73a0f0767f57, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
@@ -121,10 +125,11 @@ MonoBehaviour:
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u5F70\u5316"
-    GUID: 55133823-4d64-4d99-b0b1-13845322efd6
+    GUID: 4a91eb77-d7dc-4833-8333-23c2896e969c
     stationObject:
       name: 
-      origins: []
+      origins:
+      - {fileID: 6740432258225453055, guid: a964061dc6e35c04291cdd322ae744f6, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
@@ -138,7 +143,7 @@ MonoBehaviour:
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u5609\u7FA9"
-    GUID: 074c7959-20bc-43e8-9d81-952aa3569e12
+    GUID: b3b7691a-93b9-4dfc-9343-31b8ec70e297
     stationObject:
       name: 
       origins: []
@@ -155,10 +160,11 @@ MonoBehaviour:
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u53F0\u5357"
-    GUID: ab745753-5ac0-4cca-a72c-55d7d2f37261
+    GUID: b260c59d-8c14-411a-a009-a1dbba873f64
     stationObject:
       name: 
-      origins: []
+      origins:
+      - {fileID: 1216045999036669065, guid: 521edd596b54a994f80a19bf8399ddf8, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0
@@ -190,3 +196,14 @@ MonoBehaviour:
     canUpgradeTower: 0
   minSpotCount: 2
   maxSpotCount: 5
+  subStationObject:
+    name: "\u5C0F\u7AD9"
+    origins:
+    - {fileID: 2388373193009689188, guid: e2a1b700c64fc1347991ca9f81c8dae1, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
+    size: 30
+    max: 0
+    min: 0
+    res: 0
+    leftSide: 0
+    rightSide: 0

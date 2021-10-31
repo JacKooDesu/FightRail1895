@@ -29,9 +29,11 @@ namespace JacDev.Entity
 
                 transform.GetChild(0).gameObject.SetActive(true);
 
-                foreach (GameObject g in GameObject.FindGameObjectsWithTag("TowerSpawnPoint"))
+                // foreach (GameObject g in GameObject.FindGameObjectsWithTag("TowerSpawnPoint"))
+                foreach (TowerSpawnpoint g in GameObject.FindObjectsOfType<TowerSpawnpoint>())
                 {
-                    g.GetComponent<MeshRenderer>().enabled = true;
+                    // g.GetComponent<MeshRenderer>().enabled = true;
+                    g.GetComponent<TowerSpawnpoint>().SpawnAreaRendered(true);
                 }
             };
 
@@ -51,9 +53,11 @@ namespace JacDev.Entity
                     Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zOffset)),
                     out hit);
 
-                if (hit.transform != null && hit.transform.tag == "TowerSpawnPoint")
+                // if (hit.transform != null && hit.transform.tag == "TowerSpawnPoint")
+                if (hit.transform != null && hit.transform.GetComponent<TowerSpawnpoint>() != null)
                 {
-                    transform.position = hit.transform.position;
+                    // transform.position = hit.transform.position;
+                    transform.position = hit.transform.GetComponent<TowerSpawnpoint>().spawnpoint.position;
                     spawnPointParent = hit.transform;
                 }
                 else if (hit.point != null)
@@ -85,9 +89,11 @@ namespace JacDev.Entity
 
             InputHandler.Singleton.normalEvent.onBegin += () =>
             {
-                foreach (GameObject g in GameObject.FindGameObjectsWithTag("TowerSpawnPoint"))
+                // foreach (GameObject g in GameObject.FindGameObjectsWithTag("TowerSpawnPoint"))
+                foreach (TowerSpawnpoint g in GameObject.FindObjectsOfType<TowerSpawnpoint>())
                 {
-                    g.GetComponent<MeshRenderer>().enabled = false;
+                    // g.GetComponent<MeshRenderer>().enabled = false;
+                    g.GetComponent<TowerSpawnpoint>().SpawnAreaRendered(false);
                     // g.SetActive(false);
                 }
             };
@@ -96,6 +102,9 @@ namespace JacDev.Entity
         void Spawning()
         {
             StartCoroutine(Spawn(SelectTower, spawnPointParent));
+
+            // 2021.10.31 added
+            spawnPointParent.GetComponent<TowerSpawnpoint>().hasTower = true;
         }
     }
 }
