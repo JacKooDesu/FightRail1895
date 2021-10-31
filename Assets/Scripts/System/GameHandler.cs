@@ -165,11 +165,19 @@ public class GameHandler : MonoBehaviour
         }
     }
 
-    public void NewGame(int bloodIndex)
+    public void NewGame(int bloodIndex, bool bug = false)
     {
         PlayerData pData = new PlayerData();
         // pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).commonStations[0]);
-        pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).stations1[0]);
+        if (bug)
+        {
+            pData.Init("封閉者", bloodIndex, 9999999f, DataManager.Singleton.GetMapData(true).stations1[0]);
+        }
+        else
+        {
+            pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).stations1[0]);
+        }
+
         DataManager.Singleton.PlayerData = pData;
 
         AsyncSceneLoader.Singleton.LoadScene("ShopScene");
