@@ -13,18 +13,48 @@ namespace JacDev.Map
 
         [Header("大站設定")]
         public List<StationSetting> stationSettings = new List<StationSetting>();
-        public List<Station> stations = new List<Station>();
+        // public List<Station> stations = new List<Station>();
         public int minSpotCount, maxSpotCount;  // 兩大站之間小站數量
 
         [Header("小站設定")]
         public Level.MapObject subStationObject;
 
+        [Header("販售物資設定")]
+        public float minSellPriceMultiplyPerStation, maxSellPriceMultiplyPerStation;    // 距離影響初始價格
+        public int minSellStationDistant, maxSellStationDistant;    // 物資販售與收購最大距離
+
         public Data.MapData InitMap()
         {
-            stations = new List<Station>();
+            // 綁定大站
+            List<Station> stations = new List<Station>();
             foreach (StationSetting ss in stationSettings)
                 stations.Add(ss.station);
 
+            // 綁定所有站點販售與收購的物品
+            bool settingSell = Random.Range(0f, 1f) >= .5f;
+            foreach (Data.ItemPriceData.PriceSetting ps in DataManager.Singleton.ItemPriceData.priceSettings)
+            {
+                int interval = Random.Range(minSellStationDistant, maxSellStationDistant + 1);
+                int iter = interval;
+                foreach (Station s in stations)
+                {
+                    if (iter >= interval)
+                    {
+                        if (settingSell)
+                            s.sellItemIdList.Add(ps.id);
+                        else
+                            s.buyItemIdList.Add(ps.id);
+                        iter = 0;
+                    }
+                    else
+                    {
+                        
+                    }
+                    iter++;
+                }
+            }
+
+            // 生成小站與路徑
             JacDev.Data.MapData mapData = new Data.MapData();
 
             for (int i = 0; i < stations.Count - 1; ++i)
@@ -81,9 +111,9 @@ namespace JacDev.Map
         public string name;
         [HideInInspector] public string GUID;
         public Level.MapObject stationObject;
-        public JacDev.Shop.ShopSetting shopsetting;
-        // public List<int> sellItemIdList = new List<int>();  // 該站可販售的物資
-        // public List<int> buyItemIdList = new List<int>();   // 該站可上車的物資
+        // public JacDev.Shop.ShopSetting shopsetting;
+        public List<int> sellItemIdList = new List<int>();  // 該站可販售的物資
+        public List<int> buyItemIdList = new List<int>();   // 該站可上車的物資
 
         public bool canFix;
         public bool canUpgradeTrain;
