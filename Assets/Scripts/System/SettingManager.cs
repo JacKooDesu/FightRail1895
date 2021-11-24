@@ -5,6 +5,7 @@ using JacDev.Map;
 using JacDev.Mod;
 using JacDev.Entity;
 using JacDev.Audio;
+using JacDev.Item;
 
 public class SettingManager : MonoBehaviour
 {
@@ -50,6 +51,12 @@ public class SettingManager : MonoBehaviour
     public EnemyList EnemySetting
     {
         get => enemySetting;
+    }
+
+    [SerializeField] ItemList itemSetting;
+    public ItemList ItemSetting
+    {
+        get => itemSetting;
     }
 
     [SerializeField] SoundList bgmSetting;
