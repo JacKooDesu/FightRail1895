@@ -43,6 +43,26 @@ public class DataManager : MonoBehaviour
     [SerializeField] MapData mapData;
     [SerializeField] ModData modData;
 
+    [SerializeField] ItemPriceData itemPriceData;
+    public ItemPriceData ItemPriceData
+    {
+        set
+        {
+            itemPriceData = value;
+            FileManager.Save("/ItemPriceData", itemPriceData, "/GameDatas");
+        }
+        get
+        {
+            if (itemPriceData == null)
+            {
+                itemPriceData = new ItemPriceData();
+                itemPriceData.Init();
+            }
+
+            return itemPriceData;
+        }
+    }
+
     static int[] bgmUnlockProgress;
     public int[] BgmUnlockProgress
     {

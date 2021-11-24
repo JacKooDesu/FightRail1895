@@ -50,7 +50,7 @@ namespace JacDev.Item
             stackText.color = (item.stackable ? new Color(.22f, .86f, .27f) : new Color(.85f, .22f, .26f));
 
             // 設定價值
-            valueText.text = "$" + item.price.ToString();
+            // valueText.text = "$" + item.originPrice.ToString();
 
             // 綁定鼠標事件
             // 懸浮開始

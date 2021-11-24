@@ -87,7 +87,7 @@ namespace JacDev.UI.ShopScene
 
             var item = itemList[index];
             selectingItemName.text = item.itemName;
-            selectingItemPrice.text = $"${item.price}";
+            selectingItemPrice.text = $"${item.originBuyPrice}";
             selectingItemDescription.text = item.description;
 
             selectingItemAmount.text = itemAmount.ToString();

@@ -7,17 +7,30 @@ namespace TBL.Command
     public class CommandManager : MonoBehaviour
     {
         public static Command<int> ADD_PLAYER_MONEY;
+        public static Command<int, float> ITEM_BUY_PRICE_MULTIPLY;
+        public static Command<int, float> ITEM_SELL_PRICE_MULTIPLY;
         public static List<object> commandList;
 
         void Awake()
         {
             ADD_PLAYER_MONEY = new Command<int>("addMoney", (v1) =>
             {
+                
+            });
 
+            ITEM_BUY_PRICE_MULTIPLY = new Command<int, float>("itemBuyPrice", (id, amount) =>
+            {
+                DataManager.Singleton.ItemPriceData.BuyPriceMultiply(id, amount);
+            });
+
+            ITEM_SELL_PRICE_MULTIPLY = new Command<int, float>("itemSellPrice", (id, amount) =>
+            {
+                DataManager.Singleton.ItemPriceData.SellPriceMultiply(id, amount);
             });
 
             commandList = new List<object>{
-                ADD_PLAYER_MONEY
+                ADD_PLAYER_MONEY,
+                ITEM_BUY_PRICE_MULTIPLY
             };
 
         }

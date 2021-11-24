@@ -172,17 +172,22 @@ public class GameHandler : MonoBehaviour
     public void NewGame(int bloodIndex, bool bug = false)
     {
         PlayerData pData = new PlayerData();
+        ItemPriceData iData = new ItemPriceData();
         // pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).commonStations[0]);
         if (bug)
         {
             pData.Init("封閉者", bloodIndex, 9999999f, DataManager.Singleton.GetMapData(true).stations1[0]);
+            // iData
         }
         else
         {
             pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).stations1[0]);
         }
 
+        iData.Init();
+
         DataManager.Singleton.PlayerData = pData;
+        DataManager.Singleton.ItemPriceData = iData;
 
         AsyncSceneLoader.Singleton.LoadScene("ShopScene");
     }

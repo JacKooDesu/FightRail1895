@@ -13,7 +13,8 @@ namespace JacDev.Item
         [Header("說明"), TextArea(3, 5)]
         public string description; // 道具說明
 
-        public int id = 0;      // 道具ID，應在後續版本刪除
+        // 道具ID，應在後續版本刪除
+        public int id { get => SettingManager.Singleton.ItemSetting.itemList.IndexOf(this); }
 
         [Header("圖")]
         public Sprite icon;     // 依照之後是否為3D物件改為MeshRenderer
@@ -42,7 +43,13 @@ namespace JacDev.Item
         public bool droppable = false;   // 可掉落
 
         public bool saleable = true;    // 可販售
-        public float price = 100f;      // 價值
+        public float originBuyPrice = 100f;      // 初始購買價值
+        public float originSellPrice = 200f;    // 初始售出價值
+
+        // 價格浮動
+        [Header("價格浮動設定")]
+        [Range(0f, 1f)] public float defaultSellPriceMultiply = .1f;
+        [Range(0f, 1f)] public float defaultBuyPriceMultiply = .1f;
     }
 
 }
