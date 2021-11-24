@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using JacDev.Item;
 
 namespace JacDev.Entity
 {
@@ -37,7 +38,7 @@ namespace JacDev.Entity
         [System.Serializable]
         class Drop
         {
-            Item item;
+            ItemSetting item;   // 後續用int取代
             float dropRate;
         }
 
@@ -45,7 +46,7 @@ namespace JacDev.Entity
         List<Drop> dropList = new List<Drop>();  // 掉落表
 
         public int dropMoney = 20;  // 擊殺掉落金錢
-        
+
         void DamageCal()
         {
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using JacDev.Item;
 
 namespace JacDev.Data
 {
@@ -14,7 +15,7 @@ namespace JacDev.Data
 
         public float money = 0f;        // 金錢
 
-        public List<Item> inventory = new List<Item>();     // 道具
+        public List<ItemSetting> inventory = new List<ItemSetting>();     // 道具，後續用int代替(由item list 取值)
         public List<ModData> modDatas = new List<ModData>();    // Mod 綁定資料
         [Header("塔解鎖進度")]
         public List<int> towersGrade = new List<int>(); // 0代表未解鎖

@@ -13,6 +13,16 @@ namespace JacDev.UI.ShopScene
         [Header("側欄")]
         public Transform sideSelector;
 
+        [Header("貨物買進")]
+        public Transform shopItemParent;
+        public Text shoppingSelectingItemName;
+        public Image shoppingSelectingItemImage;
+        public Text shoppingSelectingItemPrice;
+        public Text shoppingSelectingItemAmount;
+        int selectingItemAmount;
+        public Text shoppingSelectingItemDescription;
+        
+
         void Start()
         {
             foreach (Transform t in sideSelector)

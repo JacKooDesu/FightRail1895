@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemObject : MonoBehaviour
+namespace JacDev.Item
 {
-    public Item item;
-    private void OnEnable()
+    public class ItemObject : MonoBehaviour
     {
-        
+        public ItemSetting item;
+        private void OnEnable()
+        {
+
+        }
     }
+
 }
