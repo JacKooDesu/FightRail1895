@@ -59,6 +59,12 @@ public class SettingManager : MonoBehaviour
         get => itemSetting;
     }
 
+    [SerializeField] JacDev.Event.EventList eventList;
+    public JacDev.Event.EventList EventList
+    {
+        get => eventList;
+    }
+
     [SerializeField] SoundList bgmSetting;
     public SoundList BgmSetting
     {
