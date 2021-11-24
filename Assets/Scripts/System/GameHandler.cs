@@ -123,9 +123,10 @@ public class GameHandler : MonoBehaviour
 
             // for test
             case "GenerateTest new UI":
-                if (DataManager.Singleton.GetMapData(false).FindPath(PlayerData.currentPath) != null)
+                DataManager dm = DataManager.Singleton;
+                if (dm.GetMapData(false).FindPath(dm.PlayerData.currentPath) != null)
                 {
-                    JacDev.Level.LevelGenerator.Singleton.levelSetting = DataManager.Singleton.GetMapData(false).FindPath(DataManager.Singleton.PlayerData.currentPath).levelSetting;
+                    JacDev.Level.LevelGenerator.Singleton.levelSetting = dm.GetMapData(false).FindPath(dm.PlayerData.currentPath).levelSetting;
                 }
 
                 JacDev.Level.LevelGenerator.Singleton.BuildMap();
@@ -133,7 +134,7 @@ public class GameHandler : MonoBehaviour
                 //AudioHandler.Singleton.PlayBgm("Funky Girl Never Hurt");
                 AudioHandler.Singleton.RandPlayBgm();
 
-                DataManager.Singleton.SavePlayerData();
+                dm.SavePlayerData();
                 break;
         }
 
