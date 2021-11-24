@@ -5,7 +5,7 @@
         "min": 0,
         "sec": 0
     },
-    "bloodType": 0,
+    "bloodType": 1,
     "money": 10000.0,
     "inventory": [],
     "modDatas": [],
@@ -19,12 +19,12 @@
     "typeKill": [],
     "currentStation": {
         "name": "基隆",
-        "GUID": "e146454a-cb70-4266-9193-8724a58bf0c0",
+        "GUID": "a9fe2189-d460-4795-9486-8bb295066cf0",
         "stationObject": {
             "name": "基隆",
             "origins": [
                 {
-                    "instanceID": 0
+                    "instanceID": 148914
                 }
             ],
             "positionOffset": {
@@ -32,22 +32,23 @@
                 "y": 0.0,
                 "z": 0.0
             },
-            "size": 0.0,
+            "size": 10000.0,
             "max": 0,
             "min": 0,
             "res": 0.0,
             "leftSide": false,
             "rightSide": false
         },
-        "sellItemIdList": [],
-        "buyItemIdList": [],
+        "shopsetting": {
+            "instanceID": 0
+        },
         "canFix": false,
         "canUpgradeTrain": false,
         "canUpgradeTower": false
     },
     "nextStation": {
-        "name": "",
-        "GUID": "",
+        "name": "小站",
+        "GUID": "566b37d7-4638-4c02-b826-378bd9af3816",
         "stationObject": {
             "name": "",
             "origins": [],
@@ -63,14 +64,15 @@
             "leftSide": false,
             "rightSide": false
         },
-        "sellItemIdList": [],
-        "buyItemIdList": [],
+        "shopsetting": {
+            "instanceID": 0
+        },
         "canFix": false,
         "canUpgradeTrain": false,
         "canUpgradeTower": false
     },
     "currentPath": {
-        "GUID": "a0e9068e-05d0-4c73-ad1b-030eee0c5adc",
+        "GUID": "11a96029-033f-4176-b6d4-088fe8062559",
         "s1": {
             "name": "",
             "GUID": "",
@@ -89,8 +91,9 @@
                 "leftSide": false,
                 "rightSide": false
             },
-            "sellItemIdList": [],
-            "buyItemIdList": [],
+            "shopsetting": {
+                "instanceID": 0
+            },
             "canFix": false,
             "canUpgradeTrain": false,
             "canUpgradeTower": false
@@ -113,8 +116,9 @@
                 "leftSide": false,
                 "rightSide": false
             },
-            "sellItemIdList": [],
-            "buyItemIdList": [],
+            "shopsetting": {
+                "instanceID": 0
+            },
             "canFix": false,
             "canUpgradeTrain": false,
             "canUpgradeTower": false
