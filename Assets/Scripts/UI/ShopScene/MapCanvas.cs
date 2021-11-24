@@ -25,7 +25,7 @@ namespace JacDev.UI.ShopScene
         private void Start()
         {
             InitMap();
-            BindSelectableStation(DataManager.Singleton.PlayerData.currentStation);
+            BindSelectableStation(DataManager.Singleton.GetMapData(false).FindStation(DataManager.Singleton.PlayerData.currentStation));
         }
 
         public void InitMap()
@@ -158,8 +158,8 @@ namespace JacDev.UI.ShopScene
                     stationObjects1[i].GetComponent<Image>().color = Color.red;
                     Utils.EventBinder.Bind(stationObjects1[i].GetComponent<EventTrigger>(), EventTriggerType.PointerDown, (data) =>
                     {
-                        DataManager.Singleton.PlayerData.nextStation = s;
-                        DataManager.Singleton.PlayerData.currentPath = map.path1[i > map.stations1.IndexOf(currentStation) ? i : i - 1];
+                        DataManager.Singleton.PlayerData.nextStation = s.GUID;
+                        DataManager.Singleton.PlayerData.currentPath = map.path1[i > map.stations1.IndexOf(currentStation) ? i : i - 1].GUID;
                         AsyncSceneLoader.Singleton.LoadScene("GenerateTest new UI");
                     });
                 }
@@ -169,8 +169,8 @@ namespace JacDev.UI.ShopScene
                     stationObjects2[i].GetComponent<Image>().color = Color.red;
                     Utils.EventBinder.Bind(stationObjects2[i].GetComponent<EventTrigger>(), EventTriggerType.PointerDown, (data) =>
                     {
-                        DataManager.Singleton.PlayerData.nextStation = s;
-                        DataManager.Singleton.PlayerData.currentPath = map.path2[i > map.stations2.IndexOf(currentStation) ? i : i - 1];
+                        DataManager.Singleton.PlayerData.nextStation = s.GUID;
+                        DataManager.Singleton.PlayerData.currentPath = map.path2[i > map.stations2.IndexOf(currentStation) ? i : i - 1].GUID;
                         AsyncSceneLoader.Singleton.LoadScene("GenerateTest new UI");
                     });
                 }

@@ -123,9 +123,9 @@ public class GameHandler : MonoBehaviour
 
             // for test
             case "GenerateTest new UI":
-                if (DataManager.Singleton.PlayerData.currentPath.levelSetting != null)
+                if (DataManager.Singleton.GetMapData(false).FindPath(PlayerData.currentPath) != null)
                 {
-                    JacDev.Level.LevelGenerator.Singleton.levelSetting = DataManager.Singleton.PlayerData.currentPath.levelSetting;
+                    JacDev.Level.LevelGenerator.Singleton.levelSetting = DataManager.Singleton.GetMapData(false).FindPath(DataManager.Singleton.PlayerData.currentPath).levelSetting;
                 }
 
                 JacDev.Level.LevelGenerator.Singleton.BuildMap();

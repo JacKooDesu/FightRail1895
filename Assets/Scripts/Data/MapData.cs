@@ -18,5 +18,31 @@ namespace JacDev.Data
 
         [Header("大站 (共點)")]
         public List<Station> commonStations = new List<Station>();
+
+        public Path FindPath(string GUID)
+        {
+            List<Path> pTemp = new List<Path>();
+            pTemp.AddRange(path1);
+            pTemp.AddRange(path2);
+            foreach (Path p in pTemp)
+            {
+                if (p.GUID == GUID)
+                    return p;
+            }
+            return null;
+        }
+
+        public Station FindStation(string GUID)
+        {
+            List<Station> sTemp = new List<Station>();
+            sTemp.AddRange(stations1);
+            sTemp.AddRange(stations2);
+            foreach (Station s in sTemp)
+            {
+                if (s.GUID == GUID)
+                    return s;
+            }
+            return null;
+        }
     }
 }

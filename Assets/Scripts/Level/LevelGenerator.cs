@@ -53,8 +53,10 @@ namespace JacDev.Level
 
         public void BindSetting()
         {
-            MapObject from = DataManager.Singleton.PlayerData.currentStation.stationObject;
-            MapObject dest = DataManager.Singleton.PlayerData.nextStation.stationObject;
+            DataManager dm = DataManager.Singleton;
+
+            MapObject from = dm.GetMapData().FindStation(dm.PlayerData.currentStation).stationObject;
+            MapObject dest = dm.GetMapData().FindStation(dm.PlayerData.nextStation).stationObject;
             fromMapObject = from.origins.Length == 0 ? SettingManager.Singleton.MapSetting.subStationObject : from;
             destMapObject = dest.origins.Length == 0 ? SettingManager.Singleton.MapSetting.subStationObject : dest;
 

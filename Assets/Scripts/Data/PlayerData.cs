@@ -25,9 +25,9 @@ namespace JacDev.Data
         public List<int> typeKill = new List<int>();  // 依照種族表紀錄擊殺數量
 
         [Header("遊戲進度")]
-        public Map.Station currentStation;
-        public Map.Station nextStation;
-        public Map.Path currentPath;
+        public string currentStation;
+        public string nextStation;
+        public string currentPath;
         public int hasMoveCount;    // 計數玩家經過站點數量，用於計算敵方單位等級
 
         public enum State
@@ -52,7 +52,7 @@ namespace JacDev.Data
             this.bloodType = (Entity.EntityEnums.BloodType)bloodIndex;
             this.money = money;
 
-            currentStation = startStation;
+            currentStation = startStation.GUID;
 
             // towersGrade = new List<int>(SettingManager.Singleton.TowerSetting.towers.Count);
             towersGrade.Add(1);
