@@ -16,9 +16,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab7a4d0c0dff2ee4e9a971290e322bd9, type: 2}
   oceanLevels:
   - {fileID: 11400000, guid: c9de156e03ec81b47a2651b1ed9867b6, type: 2}
+  stationSettings:
+  - {fileID: 11400000, guid: 7b063538f6fa4b34fbb37c6036f1e6be, type: 2}
+  - {fileID: 11400000, guid: 51d651e641829904c92ff9a35e6167c5, type: 2}
+  - {fileID: 11400000, guid: 9a31f4798961fd741923558c7fe8d8fc, type: 2}
+  - {fileID: 11400000, guid: f3da2835efc92b545a5f804d499bd31e, type: 2}
+  - {fileID: 11400000, guid: 24b8864a282154e4b99413a8bc2f7de8, type: 2}
+  - {fileID: 11400000, guid: 908dbd795ad73ef419b44fedd57942e8, type: 2}
+  - {fileID: 11400000, guid: b5671319c6b6ed246ad5ce45a69aea21, type: 2}
+  - {fileID: 11400000, guid: 2d13926575286b649a5eb6fa4672adff, type: 2}
+  - {fileID: 11400000, guid: d3ca247f2f798764eb3ff5065af19f33, type: 2}
+  - {fileID: 11400000, guid: e8b6fe1e815277c46aa4bc6c24934b5e, type: 2}
   stations:
   - name: "\u57FA\u9686"
-    GUID: 89a14a60-d8d3-44b0-8629-f248cd992db7
+    GUID: 429c0c2a-cc22-47a7-b566-3d36f860fae4
     stationObject:
       name: "\u57FA\u9686"
       origins:
@@ -30,33 +41,31 @@ MonoBehaviour:
       res: 0
       leftSide: 0
       rightSide: 0
-    sellItemIdList: 
-    buyItemIdList: 
+    shopsetting: {fileID: 0}
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u53F0\u5317"
-    GUID: b0669704-b2da-4441-b120-1512912e7d0e
+    GUID: c150d077-9cbc-499f-ab94-22a62af5bcd0
     stationObject:
       name: "\u53F0\u5317"
       origins:
       - {fileID: 5680146718074238892, guid: ed01686af71d4c149bff4007ae40b77d, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
-      size: 0
+      size: 10000
       max: 0
       min: 0
       res: 0
       leftSide: 0
       rightSide: 0
-    sellItemIdList: 
-    buyItemIdList: 
+    shopsetting: {fileID: 0}
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u6843\u5712"
-    GUID: 8bdafca3-54da-4f99-96d7-9b7655f79523
+    GUID: 92be9502-87dc-4e1c-a812-2c7f9acfbbbd
     stationObject:
-      name: 
+      name: "\u6843\u5712"
       origins:
       - {fileID: 5936682909192520095, guid: d0496a72789b2204b85c63f0eba3104b, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
@@ -66,15 +75,14 @@ MonoBehaviour:
       res: 0
       leftSide: 0
       rightSide: 0
-    sellItemIdList: 
-    buyItemIdList: 
+    shopsetting: {fileID: 0}
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u65B0\u7AF9"
-    GUID: 91e653b3-1cc7-4749-a791-02ef9652446a
+    GUID: b9aef59e-4c07-4b6b-9c02-d69c2f37253b
     stationObject:
-      name: 
+      name: "\u65B0\u7AF9"
       origins:
       - {fileID: 3018935029193962774, guid: 2b6240fc0e5dc194f980d07df47e9b81, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
@@ -84,15 +92,14 @@ MonoBehaviour:
       res: 0
       leftSide: 0
       rightSide: 0
-    sellItemIdList: 
-    buyItemIdList: 
+    shopsetting: {fileID: 0}
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u82D7\u6817"
-    GUID: 565f8f19-4f3c-4109-bae9-f64e74c24eb5
+    GUID: 56af47da-5d49-4648-86dd-d66e28a6f3cf
     stationObject:
-      name: 
+      name: "\u82D7\u6817"
       origins: []
       positionOffset: {x: 0, y: 0, z: 0}
       size: 0
@@ -101,96 +108,90 @@ MonoBehaviour:
       res: 0
       leftSide: 0
       rightSide: 0
-    sellItemIdList: 
-    buyItemIdList: 
+    shopsetting: {fileID: 0}
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u53F0\u4E2D"
-    GUID: 5e58ce6c-d4a9-42b5-9d83-0830fca75f97
+    GUID: 0d3ebb5b-fc2d-485c-97df-62b360378b08
     stationObject:
-      name: 
+      name: "\u53F0\u4E2D"
       origins:
       - {fileID: 8443185768323588318, guid: 47a26ec09853bc44596a73a0f0767f57, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
-      size: 0
+      size: 10000
       max: 0
       min: 0
       res: 0
       leftSide: 0
       rightSide: 0
-    sellItemIdList: 
-    buyItemIdList: 
+    shopsetting: {fileID: 0}
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u5F70\u5316"
-    GUID: 4a91eb77-d7dc-4833-8333-23c2896e969c
+    GUID: 5b2b7327-2ec8-4039-abb3-f69058942a9d
     stationObject:
-      name: 
+      name: "\u5F70\u5316"
       origins:
       - {fileID: 6740432258225453055, guid: a964061dc6e35c04291cdd322ae744f6, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
-      size: 0
+      size: 10000
       max: 0
       min: 0
       res: 0
       leftSide: 0
       rightSide: 0
-    sellItemIdList: 
-    buyItemIdList: 
+    shopsetting: {fileID: 0}
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u5609\u7FA9"
-    GUID: b3b7691a-93b9-4dfc-9343-31b8ec70e297
+    GUID: 2afed05d-69c5-421e-bebb-3102d18aa55e
     stationObject:
-      name: 
+      name: "\u5609\u7FA9"
       origins: []
       positionOffset: {x: 0, y: 0, z: 0}
-      size: 0
+      size: 10000
       max: 0
       min: 0
       res: 0
       leftSide: 0
       rightSide: 0
-    sellItemIdList: 
-    buyItemIdList: 
+    shopsetting: {fileID: 0}
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u53F0\u5357"
-    GUID: b260c59d-8c14-411a-a009-a1dbba873f64
+    GUID: e53f360a-6001-420e-a457-781a5a94254e
     stationObject:
-      name: 
+      name: "\u53F0\u5357"
       origins:
       - {fileID: 1216045999036669065, guid: 521edd596b54a994f80a19bf8399ddf8, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
-      size: 0
+      size: 10000
       max: 0
       min: 0
       res: 0
       leftSide: 0
       rightSide: 0
-    sellItemIdList: 
-    buyItemIdList: 
+    shopsetting: {fileID: 0}
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0
   - name: "\u9AD8\u96C4"
     GUID: 
     stationObject:
-      name: 
+      name: "\u9AD8\u96C4"
       origins: []
       positionOffset: {x: 0, y: 0, z: 0}
-      size: 0
+      size: 10000
       max: 0
       min: 0
       res: 0
       leftSide: 0
       rightSide: 0
-    sellItemIdList: 
-    buyItemIdList: 
+    shopsetting: {fileID: 0}
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0

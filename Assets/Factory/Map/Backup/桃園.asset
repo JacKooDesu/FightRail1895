@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: "\u6843\u5712"
   m_EditorClassIdentifier: 
   station:
-    name: 
-    GUID: 
+    name: "\u6843\u5712"
+    GUID: 92be9502-87dc-4e1c-a812-2c7f9acfbbbd
     stationObject:
-      name: 
-      origins: []
+      name: "\u6843\u5712"
+      origins:
+      - {fileID: 5936682909192520095, guid: d0496a72789b2204b85c63f0eba3104b, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
       size: 0
       max: 0

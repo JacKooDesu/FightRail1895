@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1714627286e70f418bd6f958b8ec128, type: 3}
-  m_Name: "\u5609\u7FA9"
+  m_Name: "\u53F0\u4E2D"
   m_EditorClassIdentifier: 
   station:
-    name: "\u53F0\u5317"
-    GUID: 
+    name: "\u53F0\u4E2D"
+    GUID: 0d3ebb5b-fc2d-485c-97df-62b360378b08
     stationObject:
-      name: "\u53F0\u5317"
+      name: "\u53F0\u4E2D"
       origins:
-      - {fileID: 5680146718074238892, guid: ed01686af71d4c149bff4007ae40b77d, type: 3}
+      - {fileID: 8443185768323588318, guid: 47a26ec09853bc44596a73a0f0767f57, type: 3}
       positionOffset: {x: 0, y: 0, z: 0}
       size: 10000
       max: 0
