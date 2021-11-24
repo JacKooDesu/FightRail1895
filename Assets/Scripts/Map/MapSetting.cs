@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace JacDev.Map
 {
-    [CreateAssetMenu(fileName = "Map Setting", menuName = "JacDev/Map Setting", order = 0)]
+    [CreateAssetMenu(fileName = "Map Setting", menuName = "JacDev/Map/Create Map Setting", order = 0)]
     public class MapSetting : ScriptableObject
     {
         [Header("地圖設定")]
@@ -12,6 +12,7 @@ namespace JacDev.Map
         public List<Level.LevelSetting> oceanLevels = new List<Level.LevelSetting>();
 
         [Header("大站設定")]
+        public List<StationSetting> stationSettings = new List<StationSetting>();
         public List<Station> stations = new List<Station>();
         public int minSpotCount, maxSpotCount;  // 兩大站之間小站數量
 
@@ -20,6 +21,10 @@ namespace JacDev.Map
 
         public Data.MapData InitMap()
         {
+            stations = new List<Station>();
+            foreach (StationSetting ss in stationSettings)
+                stations.Add(ss.station);
+
             JacDev.Data.MapData mapData = new Data.MapData();
 
             for (int i = 0; i < stations.Count - 1; ++i)
