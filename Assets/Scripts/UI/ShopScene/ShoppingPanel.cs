@@ -31,8 +31,8 @@ namespace JacDev.UI.ShopScene
             BindItem();
 
             GenerateItemView();
-            
-            if(itemList.Count>=1)
+
+            if (itemList.Count >= 1)
                 SelectItem(0);
         }
 
