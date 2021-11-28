@@ -171,8 +171,12 @@ public class GameHandler : MonoBehaviour
 
     public void NewGame(int bloodIndex, bool bug = false)
     {
-        PlayerData pData = new PlayerData();
         ItemPriceData iData = new ItemPriceData();
+        iData.Init();
+        DataManager.Singleton.ItemPriceData = iData;
+        
+        PlayerData pData = new PlayerData();
+        
         // pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).commonStations[0]);
         if (bug)
         {
@@ -184,10 +188,7 @@ public class GameHandler : MonoBehaviour
             pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).stations1[0]);
         }
 
-        iData.Init();
-
         DataManager.Singleton.PlayerData = pData;
-        DataManager.Singleton.ItemPriceData = iData;
 
         AsyncSceneLoader.Singleton.LoadScene("ShopScene");
     }

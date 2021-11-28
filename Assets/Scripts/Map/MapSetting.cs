@@ -20,6 +20,7 @@ namespace JacDev.Map
         public Level.MapObject subStationObject;
 
         [Header("販售物資設定")]
+        public int tradeCount;  // 交易物品種類數量
         public float minSellPriceMultiplyPerStation, maxSellPriceMultiplyPerStation;    // 距離影響初始價格
         public int minSellStationDistant, maxSellStationDistant;    // 物資販售與收購最大距離
 
@@ -31,26 +32,50 @@ namespace JacDev.Map
                 stations.Add(ss.station);
 
             // 綁定所有站點販售與收購的物品
-            bool settingSell = Random.Range(0f, 1f) >= .5f;
+            // int totalTradeCount = tradeCount * stations.Count;
+            
             foreach (Data.ItemPriceData.PriceSetting ps in DataManager.Singleton.ItemPriceData.priceSettings)
             {
+                bool settingSell = Random.Range(0f, 1f) >= .5f;
                 int interval = Random.Range(minSellStationDistant, maxSellStationDistant + 1);
-                int iter = interval;
-                foreach (Station s in stations)
+                UnityEngine.Debug.Log(interval);
+                int iter = 0;  // 買賣站點不少於2
+
+                int from = Random.Range(0, stations.Count);
+                if (settingSell)
+                    stations[from].sellItemIdList.Add(ps.id);
+                else
+                    stations[from].buyItemIdList.Add(ps.id);
+
+                settingSell = !settingSell;
+
+                interval *= (Random.Range(0f, 1f) >= .5f ? +1 : -1);
+                while (iter < 1)
                 {
-                    if (iter >= interval)
+                    int temp = from + interval;
+                    for (int i = temp; i < stations.Count && i >= 0; i += interval)
                     {
-                        if (settingSell)
-                            s.sellItemIdList.Add(ps.id);
+                        if (Random.Range(0f, 1f) >= .5f)
+                        {
+                            Station s = stations[i];
+                            if (s.buyItemIdList.Contains(ps.id) || s.sellItemIdList.Contains(ps.id))
+                                continue;
+                            
+                            if (settingSell)
+                                s.sellItemIdList.Add(ps.id);
+                            else if (!settingSell)
+                                s.buyItemIdList.Add(ps.id);
+
+                            settingSell = !settingSell;
+
+                            iter++;
+                        }
                         else
-                            s.buyItemIdList.Add(ps.id);
-                        iter = 0;
+                        {
+                            break;
+                        }
                     }
-                    else
-                    {
-                        
-                    }
-                    iter++;
+                    interval *= -1;
                 }
             }
 
