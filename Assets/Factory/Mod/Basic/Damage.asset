@@ -13,7 +13,19 @@ MonoBehaviour:
   m_Name: Damage
   m_EditorClassIdentifier: 
   modName: "\u653B\u64CA"
-  settings:
-  - modType: 0
-    amount: 0.1
-  quality: {fileID: 11400000, guid: cc2049becfc03144c94588d2b6fe5ce3, type: 2}
+  modType: 0
+  copper:
+    max: 0
+    min: 0
+  silver:
+    max: 0
+    min: 0
+  gold:
+    max: 0
+    min: 0
+  purple:
+    max: 0
+    min: 0
+  rainbow:
+    max: 0
+    min: 0

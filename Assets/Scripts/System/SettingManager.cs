@@ -53,6 +53,12 @@ public class SettingManager : MonoBehaviour
         get => enemySetting;
     }
 
+    [SerializeField] ModList modList;
+    public ModList ModList
+    {
+        get => modList;
+    }
+
     [SerializeField] ItemList itemSetting;
     public ItemList ItemSetting
     {

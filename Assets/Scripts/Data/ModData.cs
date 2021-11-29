@@ -10,6 +10,6 @@ namespace JacDev.Data
     public class ModData : MonoBehaviour
     {
         public int bindingTowerIndex;
-        public ModFactory mod;
+        public int modSettingIndex;  // Mod Setting index
     }
 }
