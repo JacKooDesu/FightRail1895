@@ -12,7 +12,14 @@ namespace JacDev.Level
         [HideInInspector] public Vector3[] vertexDatas;
         [HideInInspector] public int[] triangles;
 
+        [HideInInspector] public Vector2[] uvData;
+
         [HideInInspector] public Mesh[] meshes;
+        [HideInInspector] public Color[] colorMap;
+
+        [HideInInspector] public Material material;
+        [HideInInspector] public Texture2D texture;
+
         public float[] heightMap;
 
         // public int sizeX, sizeZ;    // 地形大小
@@ -33,6 +40,7 @@ namespace JacDev.Level
         public Vector2 offset;  // noise offset
         public float heightMultiplier;  // 高度
         public AnimationCurve heightCurve; // 山的長相
+        public Gradient gradient;
 
         public int chunkSize = 6000;
 
@@ -45,13 +53,14 @@ namespace JacDev.Level
         {
             while (transform.childCount > 0)
                 DestroyImmediate(transform.GetChild(0).gameObject);
-            
 
             heightMap = CreateHeightMap(seed, scale, octaves, persistance, lacunarity, falloffStrength, falloffRamp, falloffRange, offset, heightMultiplier, heightCurve);
+            colorMap = CreateColorMap();
 
             vertices = new Vertex[resolution.x * resolution.y];
             vertexDatas = new Vector3[resolution.x * resolution.y];
             triangles = new int[6 * resolution.x * resolution.y];
+            uvData = new Vector2[resolution.x * resolution.y];
 
             // 計算所有頂點距離
             vertexDistance = new Vector2(size.x / (float)resolution.x, size.y / (float)resolution.y);
@@ -119,15 +128,29 @@ namespace JacDev.Level
             }
 
             // Create UV
+            for (int y = 0; y < resolution.y; ++y)
+            {
+                for (int x = 0; x < resolution.x; ++x)
+                {
+                    float percentX = (float)x / (float)resolution.x;
+                    float percentY = (float)y / (float)resolution.y;
+                    uvData[GridToArray(x, y)] = new Vector2(percentX, percentY);
+                }
+            }
 
             // Apply flat shading
-            Utility.FlatShading(ref vertexDatas, ref triangles);
+            Utility.FlatShading(ref vertexDatas, ref triangles, ref uvData);
 
             // Create Meshes
-            meshes = Utility.CreateMeshes(vertexDatas, triangles, chunkSize);
+            meshes = Utility.CreateMeshes(vertexDatas, triangles, uvData, chunkSize);
 
             // Create material
-            var material = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+            material = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+            texture = Utility.CreateTexture(colorMap, resolution.x, resolution.y, FilterMode.Trilinear);
+            material.mainTexture = texture;
+
+            // Set material smoothness
+            material.SetFloat("_Smoothness",0f);
 
             // Instantiate
             for (int i = 0; i < meshes.Length; ++i)
@@ -140,38 +163,23 @@ namespace JacDev.Level
                 filter.sharedMesh = meshes[i];
                 g.AddComponent<MeshCollider>();
             }
+        }
 
-            // int sizeX = size.x, sizeZ = size.y;
-            // Vector3 from = transform.position + (Vector3.back * (float)sizeZ * .5f) + (Vector3.left * (float)sizeX * .5f);
+        public Color[] CreateColorMap()
+        {
+            Color[] colorMap = new Color[resolution.x * resolution.y];
+            for (int y = 0; y < resolution.y; ++y)
+            {
+                for (int x = 0; x < resolution.x; ++x)
+                {
+                    float height = vertices[GridToArray(x, y)].GetHeight(heightMap) / heightMultiplier;
+                    // print(height);
+                    Color c = gradient.Evaluate(height);
+                    colorMap[GridToArray(x, y)] = c;
+                }
+            }
 
-            // // Init vertices
-            // for (int z = 0; z <= sizeZ; ++z)
-            // {
-            //     for (int x = 0; x <= sizeX; ++x)
-            //     {
-            //         vertices.Add(new Vector3(x, 0, z) + from);
-            //     }
-            // }
-
-            // // cal triangles
-            // int vert = 0;
-            // for (int z = 0; z < sizeZ; ++z)
-            // {
-            //     for (int x = 0; x < sizeX; ++x)
-            //     {
-            //         triangles.Add(vert + 0);
-            //         triangles.Add(vert + 1 + sizeX);
-            //         triangles.Add(vert + 1);
-
-            //         triangles.Add(vert + 1);
-            //         triangles.Add(vert + 1 + sizeX);
-            //         triangles.Add(vert + 2 + sizeX);
-
-            //         vert++;
-            //     }
-            //     vert++;
-            // }
-
+            return colorMap;
         }
 
         public float[] CreateHeightMap(
@@ -232,7 +240,7 @@ namespace JacDev.Level
                     float a = Mathf.Pow(value, falloffRamp);
                     float b = Mathf.Pow(falloffRange - falloffRange * value, falloffRamp);
                     float falloff = 1f - (a + b != 0f ? falloffStrength * a / (a + b) : 0f);
-                    print(Utility.Normalize(heightMap[GridToArray(x, y)], minLocalNoiseHeight, maxLocalNoiseHeight, 0f, 1f));
+                    // print(Utility.Normalize(heightMap[GridToArray(x, y)], minLocalNoiseHeight, maxLocalNoiseHeight, 0f, 1f));
                     heightMap[GridToArray(x, y)] = heightMultiplier * heightCurve.Evaluate(falloff * Utility.Normalize(heightMap[GridToArray(x, y)], minLocalNoiseHeight, maxLocalNoiseHeight, 0f, 1f));
                     //heightMap[GridToArray(x, y)] = heightMultiplier * heightCurve.Evaluate(Mathf.Clamp01(heightMap[GridToArray(x, y)]));
 
@@ -309,6 +317,9 @@ namespace JacDev.Level
             meshIndices[meshIndices.Length - 1] = index;
         }
 
-
+        public float GetHeight(float[] heightMap)
+        {
+            return heightMap[index];
+        }
     }
 }
