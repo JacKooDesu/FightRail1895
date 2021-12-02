@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: "\u6A1F\u8166"
   description: "\u6A1F\u8166\u6A1F\u8166\u6A1F\u8166\u5F35\u6A1F\u8166\u8166\u5F35\u3002"
   icon: {fileID: 0}
-  prefab: {fileID: 0}
+  prefab: {fileID: 6556099524285818629, guid: dec4c61f85fb13b46a991afe28d4aac4, type: 3}
   rarity: 0
   stackable: 0
   maxStack: 16

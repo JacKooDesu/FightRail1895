@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: "\u7C73"
   description: "\u9761\u9761\u9761\u9761\u9761\u9761\u7C73\u3002"
   icon: {fileID: 0}
-  prefab: {fileID: 0}
+  prefab: {fileID: 7558268151397173970, guid: cbb65b6710f2ae0418b43d01baec7d14, type: 3}
   rarity: 0
   stackable: 0
   maxStack: 16

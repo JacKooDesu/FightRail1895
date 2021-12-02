@@ -33,7 +33,7 @@ namespace JacDev.Map
 
             // 綁定所有站點販售與收購的物品
             // int totalTradeCount = tradeCount * stations.Count;
-            
+
             foreach (Data.ItemPriceData.PriceSetting ps in DataManager.Singleton.ItemPriceData.priceSettings)
             {
                 bool settingSell = Random.Range(0f, 1f) >= .5f;
@@ -50,6 +50,7 @@ namespace JacDev.Map
                 settingSell = !settingSell;
 
                 interval *= (Random.Range(0f, 1f) >= .5f ? +1 : -1);
+                int breaker = 0;
                 while (iter < 1)
                 {
                     int temp = from + interval;
@@ -60,7 +61,7 @@ namespace JacDev.Map
                             Station s = stations[i];
                             if (s.buyItemIdList.Contains(ps.id) || s.sellItemIdList.Contains(ps.id))
                                 continue;
-                            
+
                             if (settingSell)
                                 s.sellItemIdList.Add(ps.id);
                             else if (!settingSell)
@@ -76,6 +77,14 @@ namespace JacDev.Map
                         }
                     }
                     interval *= -1;
+
+                    if (breaker > 1000)
+                    {
+                        UnityEngine.Debug.Log("loop break");
+                        break;
+                    }
+
+                    breaker++;
                 }
             }
 
