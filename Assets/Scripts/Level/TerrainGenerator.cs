@@ -20,34 +20,61 @@ namespace JacDev.Level
         [HideInInspector] public Material material;
         [HideInInspector] public Texture2D texture;
 
-        public float[] heightMap;
+        [HideInInspector] public float[] heightMap;
 
-        // public int sizeX, sizeZ;    // 地形大小
+        
         public Vector2Int size = new Vector2Int(500, 500); // 地形大小
         public Vector2Int resolution = new Vector2Int(100, 100);
 
-        public Vector2 vertexDistance;
+        [HideInInspector] public Vector2 vertexDistance;
 
+        public TerrainSetting setting;
+
+        #region  private_variable
         [Header("細項")]
-        public int seed;
-        public float scale;
-        public int octaves;
-        public float persistance;   // 高度持續
-        public float lacunarity;    // 空缺
-        public float falloffStrength;
-        public float falloffRamp;
-        public float falloffRange;
-        public Vector2 offset;  // noise offset
-        public float heightMultiplier;  // 高度
-        public AnimationCurve heightCurve; // 山的長相
-        public Gradient gradient;
+        [SerializeField] private int seed;
+        [SerializeField] private float scale;
+        [SerializeField] private int octaves;
+        [SerializeField] private float persistance;   // 高度持續
+        [SerializeField] private float lacunarity;    // 空缺
+        [SerializeField] private float falloffStrength;
+        [SerializeField] private float falloffRamp;
+        [SerializeField] private float falloffRange;
+        [SerializeField] private Vector2 offset;  // noise offset
+        [SerializeField] private float heightMultiplier;  // 高度
+        [SerializeField] private AnimationCurve heightCurve; // 山的長相
+        [SerializeField] private Gradient gradient;
 
-        public int chunkSize = 6000;
+        [SerializeField] private int chunkSize = 6000;
 
-        // void Start()
-        // {
-        //     InitTerrain();
-        // }
+        #endregion
+
+        public void SetTerrainSetting(TerrainSetting setting)
+        {
+            this.setting = setting;
+
+            BindSetting();
+        }
+
+        public void BindSetting()
+        {
+            if (setting == null) return;
+
+            this.seed = setting.seed;
+            this.scale = setting.scale;
+            this.octaves = setting.octaves;
+            this.persistance = setting.persistance;   // 高度持續
+            this.lacunarity = setting.lacunarity;    // 空缺
+            this.falloffStrength = setting.falloffStrength;
+            this.falloffRamp = setting.falloffRamp;
+            this.falloffRange = setting.falloffRange;
+            this.offset = setting.offset;  // noise offset
+            this.heightMultiplier = setting.heightMultiplier;  // 高度
+            this.heightCurve = setting.heightCurve; // 山的長相
+            this.gradient = setting.gradient;
+
+            this.chunkSize = setting.chunkSize;
+        }
 
         public void InitTerrain()
         {
@@ -150,7 +177,7 @@ namespace JacDev.Level
             material.mainTexture = texture;
 
             // Set material smoothness
-            material.SetFloat("_Smoothness",0f);
+            material.SetFloat("_Smoothness", 0f);
 
             // Instantiate
             for (int i = 0; i < meshes.Length; ++i)
