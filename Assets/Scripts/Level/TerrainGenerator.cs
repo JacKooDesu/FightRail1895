@@ -22,7 +22,7 @@ namespace JacDev.Level
 
         [HideInInspector] public float[] heightMap;
 
-        
+
         public Vector2Int size = new Vector2Int(500, 500); // 地形大小
         public Vector2Int resolution = new Vector2Int(100, 100);
 
@@ -46,6 +46,8 @@ namespace JacDev.Level
         [SerializeField] private Gradient gradient;
 
         [SerializeField] private int chunkSize = 6000;
+
+        [SerializeField] private int saveAreaWidth;
 
         #endregion
 
@@ -249,6 +251,13 @@ namespace JacDev.Level
 
                         amplitude *= persistance;   // 高度
                         freq *= lacunarity;     // 空缺
+                    }
+
+                    if (x < (float)(resolution.x + saveAreaWidth) / 2f && x > (float)(resolution.x - saveAreaWidth) / 2f)
+                    {
+                        float current = Mathf.Abs((float)x - (float)resolution.x / 2f);
+                        // (resolution.x + saveAreaWidth) / 2
+                        noiseHeight *= Mathf.Lerp(0, 1, current / (float)saveAreaWidth*2);
                     }
 
                     // Get min & max
