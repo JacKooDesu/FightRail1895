@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: a98e65710f1cd3343a2aea83c3ac8504
   - enabled: 1
-    path: Assets/Scenes/Test/GenerateTest.unity
+    path: Assets/Scenes/Obslete/GenerateTest.unity
     guid: db39a053ef3795e4e82557615efc3b72
   - enabled: 0
     path: 
