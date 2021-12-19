@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4484142792022318688}
   - component: {fileID: 1863952951405357738}
   m_Layer: 0
-  m_Name: deer skin_01
+  m_Name: deer skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,11 +58,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3846018093981099296, guid: 075a8b4ff8f9378429969c1933708d99, type: 3}
-  - {fileID: 4874126678125670354, guid: 075a8b4ff8f9378429969c1933708d99, type: 3}
-  - {fileID: -6629797300637803691, guid: 075a8b4ff8f9378429969c1933708d99, type: 3}
-  - {fileID: -6922793697723135513, guid: 075a8b4ff8f9378429969c1933708d99, type: 3}
-  - {fileID: -6478536213147159724, guid: 075a8b4ff8f9378429969c1933708d99, type: 3}
+  - {fileID: 2100000, guid: 739c7a01f50d00f4b9c85c81990e9f30, type: 2}
+  - {fileID: 2100000, guid: 76b8c54ca2a40b749881e88b5588107d, type: 2}
+  - {fileID: 2100000, guid: c96ed4a3178b59246b702ad4c8570e5d, type: 2}
+  - {fileID: 2100000, guid: 3a34f8cd152804d49b498fe7c2813b4f, type: 2}
+  - {fileID: 2100000, guid: 75483683ad4d2b347955108c5810ecb2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
