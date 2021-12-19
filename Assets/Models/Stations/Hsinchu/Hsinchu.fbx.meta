@@ -3,7 +3,27 @@ guid: 75722b870e51fcc4dabca9b0ea7011da
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.035
+    second: {fileID: 2100000, guid: 65df8de38251c514ca4cde6fbd787062, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.036
+    second: {fileID: 2100000, guid: 12e57e1f3daab3d47afca370983d5391, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_window_bars.004
+    second: {fileID: 2100000, guid: 194b08425621db84693901fb8ee0782c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_window_bars.005
+    second: {fileID: 2100000, guid: ad02cd4dc3eb8ce489462a8c62d81318, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -81,7 +101,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
