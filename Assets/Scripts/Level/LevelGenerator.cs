@@ -38,6 +38,7 @@ namespace JacDev.Level
         List<GameObject> blocks = new List<GameObject>();
 
         public Transform ground = default;
+        public TerrainGenerator terrainGenerator = default;
         public Transform rail = default;
 
         public float totalLength;
@@ -60,13 +61,33 @@ namespace JacDev.Level
             fromMapObject = from.origins.Length == 0 ? SettingManager.Singleton.MapSetting.subStationObject : from;
             destMapObject = dest.origins.Length == 0 ? SettingManager.Singleton.MapSetting.subStationObject : dest;
 
-            ground.GetComponent<MeshRenderer>().sharedMaterial = levelSetting.groundMaterial;
+            // ground.GetComponent<MeshRenderer>().sharedMaterial = levelSetting.groundMaterial;
+
         }
 
         public void BuildMap()
         {
             BindSetting();
 
+            for (int i = 0; i < levelSetting.blockCount; ++i)
+            {
+                Transform t = Instantiate(ground, transform);
+                t.localPosition += Vector3.forward * levelSetting.size * i;
+                t.localScale = new Vector3(levelSetting.size, 1, levelSetting.size);
+                t.GetComponent<MeshRenderer>().sharedMaterial = levelSetting.groundMaterial;
+            }
+            ground.gameObject.SetActive(false);
+
+            // init ground size
+            terrainGenerator.setting = levelSetting.terrainSetting;
+            terrainGenerator.size = new Vector2Int((int)(levelSetting.size), (int)(levelSetting.size * levelSetting.blockCount));
+            terrainGenerator.resolution = new Vector2Int(100, 100 * levelSetting.blockCount);
+            terrainGenerator.InitTerrain();
+            terrainGenerator.transform.localPosition += Vector3.forward * levelSetting.size;
+
+            totalLength = (float)(levelSetting.blockCount - 1) * levelSetting.size;
+
+            // init mapOjbect
             for (int j = 0; j < levelSetting.blockCount; ++j)
             {
                 // Clear Rect and init the rail
@@ -134,24 +155,12 @@ namespace JacDev.Level
                 parent.transform.localPosition = new Vector3(0, ground.localPosition.y, j * levelSetting.size);
             }
 
-            for (int i = 0; i < (int)(levelSetting.size * levelSetting.blockCount); ++i)
+            // init rail
+            for (int i = 0; i < (int)(levelSetting.size * levelSetting.blockCount / levelSetting.railLength); ++i)
             {
                 GameObject temp = Instantiate(levelSetting.rail, rail);
-                temp.transform.localPosition = Vector3.forward * ((float)i - levelSetting.size / 2);
+                temp.transform.localPosition = Vector3.forward * ((float)i * levelSetting.railLength - levelSetting.size / 2);
             }
-
-            // init ground size
-            ground.localScale = new Vector3(
-                Mathf.Min(1000, levelSetting.size * levelSetting.blockCount),
-                ground.localScale.y,
-                levelSetting.size * levelSetting.blockCount);
-            // re-position ground
-            ground.localPosition = new Vector3(
-                ground.localPosition.x,
-                ground.localPosition.y,
-                ((float)levelSetting.blockCount / 2 - .5f) * levelSetting.size);
-
-            totalLength = (float)(levelSetting.blockCount - 1) * levelSetting.size;
         }
 
         void Setup()
@@ -244,7 +253,8 @@ namespace JacDev.Level
                     objectMapping.Add(rect);
                     GameObject g = Instantiate(mo.origins[Random.Range(0, mo.origins.Length)]);
                     g.transform.SetParent(parent);
-                    g.transform.localPosition = (new Vector3(x, 0, z)) + mo.positionOffset;
+                    g.transform.localPosition = (new Vector3(x, 0, z) + mo.positionOffset);
+                    // g.transform.localPosition += Vector3.up * ground.GetComponent<TerrainGenerator>().GetHeight(new Vector2(x + mo.size, z + mo.size));
                     g.transform.eulerAngles = new Vector3(0, Random.Range(0, 360f));
                 }
             }

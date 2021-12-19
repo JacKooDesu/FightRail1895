@@ -9,6 +9,7 @@ namespace JacDev.Level
     [System.Serializable, CreateAssetMenu(fileName = "Level", menuName = "JacDev/Create Level", order = 1)]
     public class LevelSetting : ScriptableObject
     {
+        public TerrainSetting terrainSetting;
         public List<MapObject> mapObjects = new List<MapObject>();
 
         public float size = 10f;
@@ -23,7 +24,9 @@ namespace JacDev.Level
         public MapObject spawnpoint;
         public float spawnpointWidth = 10f;
 
+        [Header("Rail Setting")]
         public GameObject rail;
+        public float railLength;
 
         public Vector2 stationOffset;
         [Header("起站")]

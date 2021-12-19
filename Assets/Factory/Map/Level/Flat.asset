@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22ffd1d04cab5a4a8476622e807ef41, type: 3}
   m_Name: Flat
   m_EditorClassIdentifier: 
+  terrainSetting: {fileID: 0}
   mapObjects:
   - name: rock
     origins:
@@ -47,7 +48,7 @@ MonoBehaviour:
     res: 0.845
     leftSide: 1
     rightSide: 1
-  size: 160
+  size: 500
   railWidth: 15
   spawnpointAvoidSize: 5
   blockCount: 3
@@ -66,6 +67,7 @@ MonoBehaviour:
     rightSide: 1
   spawnpointWidth: 50
   rail: {fileID: 807166930679618977, guid: a6ec60262937dce45a75b127208b5622, type: 3}
+  railLength: 5
   stationOffset: {x: 12, y: 0}
   from:
     name: From

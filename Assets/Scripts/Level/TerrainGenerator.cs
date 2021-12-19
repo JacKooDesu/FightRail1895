@@ -30,6 +30,8 @@ namespace JacDev.Level
 
         public TerrainSetting setting;
 
+        public Vector2 offset;  // noise offset
+
         #region  private_variable
         [Header("細項")]
         [SerializeField] private int seed;
@@ -40,7 +42,6 @@ namespace JacDev.Level
         [SerializeField] private float falloffStrength;
         [SerializeField] private float falloffRamp;
         [SerializeField] private float falloffRange;
-        [SerializeField] private Vector2 offset;  // noise offset
         [SerializeField] private float heightMultiplier;  // 高度
         [SerializeField] private AnimationCurve heightCurve; // 山的長相
         [SerializeField] private Gradient gradient;
@@ -48,6 +49,7 @@ namespace JacDev.Level
         [SerializeField] private int chunkSize = 6000;
 
         [SerializeField] private int saveAreaWidth;
+        [SerializeField] float groundHeight;
 
         #endregion
 
@@ -70,7 +72,6 @@ namespace JacDev.Level
             this.falloffStrength = setting.falloffStrength;
             this.falloffRamp = setting.falloffRamp;
             this.falloffRange = setting.falloffRange;
-            this.offset = setting.offset;  // noise offset
             this.heightMultiplier = setting.heightMultiplier;  // 高度
             this.heightCurve = setting.heightCurve; // 山的長相
             this.gradient = setting.gradient;
@@ -84,7 +85,6 @@ namespace JacDev.Level
                 DestroyImmediate(transform.GetChild(0).gameObject);
 
             heightMap = CreateHeightMap(seed, scale, octaves, persistance, lacunarity, falloffStrength, falloffRamp, falloffRange, offset, heightMultiplier, heightCurve);
-            colorMap = CreateColorMap();
 
             vertices = new Vertex[resolution.x * resolution.y];
             vertexDatas = new Vector3[resolution.x * resolution.y];
@@ -105,6 +105,8 @@ namespace JacDev.Level
                     vertexDatas[index] = new Vector3(position.x, heightMap[index], position.y);    // 後續須製作Height Map
                 }
             }
+
+            colorMap = CreateColorMap();
 
             // Create triangles
             int triIndex = 0;
@@ -186,6 +188,7 @@ namespace JacDev.Level
             {
                 GameObject g = new GameObject($"Mesh {i}");
                 g.transform.SetParent(transform);
+                g.transform.localPosition = Vector3.zero;
                 MeshRenderer renderer = g.AddComponent<MeshRenderer>();
                 renderer.sharedMaterial = material;
                 MeshFilter filter = g.AddComponent<MeshFilter>();
@@ -218,6 +221,7 @@ namespace JacDev.Level
             Vector2 offset, float heightMultiplier, AnimationCurve heightCurve)
         {
             float[] heightMap = new float[resolution.x * resolution.y];
+            print(heightMap.Length);
 
             Vector2[] octaveOffset = new Vector2[octaves];
             Random.InitState(seed);
@@ -244,7 +248,7 @@ namespace JacDev.Level
                         float xPos = (((float)x + offset.x) - (float)resolution.x / 2f) / (float)resolution.x;
                         float yPos = (((float)y + offset.y) - (float)resolution.y / 2f) / (float)resolution.y;
                         float sampleX = freq * scale * xPos + octaveOffset[i].x;    // ?
-                        float sampleY = freq * scale * yPos + octaveOffset[i].y;
+                        float sampleY = freq * scale * (resolution.y / resolution.x) * yPos + octaveOffset[i].x;
 
                         float perlinValue = Mathf.PerlinNoise(sampleX, sampleY) * 2f - 1f;  // why?
                         noiseHeight += perlinValue * amplitude;
@@ -257,7 +261,9 @@ namespace JacDev.Level
                     {
                         float current = Mathf.Abs((float)x - (float)resolution.x / 2f);
                         // (resolution.x + saveAreaWidth) / 2
-                        noiseHeight *= Mathf.Lerp(0, 1, current / (float)saveAreaWidth*2);
+                        print(Mathf.Lerp(0, 1, (current) / (float)saveAreaWidth * 2));
+                        noiseHeight = noiseHeight * Mathf.Lerp(0, 1, (current) / (float)saveAreaWidth * 2) + groundHeight;
+                        // noiseHeight *= 0.1f;
                     }
 
                     // Get min & max
@@ -315,9 +321,20 @@ namespace JacDev.Level
                 size.y * (float)y / ((float)resolution.y - 1f) - size.y / 2f);
         }
 
+        // public Vector2Int WorldToGrid(Vector2 v2)
+        // {
+
+        // }
+
+        public float GetHeight(Vector2 v2)
+        {
+            int i = GridToArray(Mathf.RoundToInt(v2.x), Mathf.RoundToInt(v2.y) / resolution.x);
+            return vertices[i].GetHeight(heightMap);
+        }
+
         private void OnEnable()
         {
-            InitTerrain();
+           // InitTerrain();
         }
     }
 
