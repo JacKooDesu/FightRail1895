@@ -43,9 +43,21 @@ MonoBehaviour:
     - {fileID: 5155900697024127120, guid: af84df4a726fa074ab0831487624f3c5, type: 3}
     positionOffset: {x: 0, y: 0.5, z: 0}
     size: 5
-    max: 391
-    min: 252
-    res: 0.553
+    max: 50
+    min: 50
+    res: 0.59
+    leftSide: 1
+    rightSide: 1
+  - name: chair
+    origins:
+    - {fileID: 1822245674303328030, guid: c4c9df2e986aa104d96a70691a53b092, type: 3}
+    - {fileID: 2393105993833094452, guid: e699d1abef7ea9d4f85a5fe9493cbf68, type: 3}
+    - {fileID: 5155900697024127120, guid: af84df4a726fa074ab0831487624f3c5, type: 3}
+    positionOffset: {x: 0, y: 0.5, z: 0}
+    size: 5
+    max: 50
+    min: 50
+    res: 0.59
     leftSide: 1
     rightSide: 1
   size: 160
