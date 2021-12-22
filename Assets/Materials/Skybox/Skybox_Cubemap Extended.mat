@@ -28,7 +28,7 @@ Material:
     - _Cubemapp: 1
     - _EnableFog: 0
     - _EnableRotation: 1
-    - _Exposure: 1
+    - _Exposure: 3.09
     - _FogFill: 0.5
     - _FogHeight: 1
     - _FogIntensity: 1
@@ -41,4 +41,4 @@ Material:
     - _Rotationn: 1
     - _SkyboxExtended: 1
     m_Colors:
-    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _TintColor: {r: 0.9960785, g: 0.9333334, b: 0.61960787, a: 1}
