@@ -1,28 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5016801535813312156
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
-  m_Name: LiftGammaGain
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  lift:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
-  gamma:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: -0.016863285}
-  gain:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
 --- !u!114 &-4850282601148388738
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -57,7 +34,7 @@ MonoBehaviour:
   master:
     m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 3
+      <length>k__BackingField: 2
       m_Loop: 0
       m_ZeroValue: 0
       m_Range: 1
@@ -67,17 +44,8 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 1
-          outSlope: 2.3126721
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 0.28310502
-          value: 0.52121186
-          inSlope: 1.298276
-          outSlope: 1.298276
+          inSlope: 0
+          outSlope: 2.0185578
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -264,7 +232,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   temperature:
     m_OverrideState: 1
-    m_Value: 22.91
+    m_Value: 24.55
     min: -100
     max: 100
   tint:
@@ -292,7 +260,6 @@ MonoBehaviour:
   - {fileID: -3726062831047228077}
   - {fileID: -3444380918335284424}
   - {fileID: 8374539207836368868}
-  - {fileID: -5016801535813312156}
 --- !u!114 &1787383631716904944
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -345,11 +312,11 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.41
+    m_Value: 0.3
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.56
+    m_Value: 0.21
     min: 0
   scatter:
     m_OverrideState: 1
