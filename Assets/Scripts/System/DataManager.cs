@@ -178,4 +178,10 @@ public class DataManager : MonoBehaviour
         }
         PlayerPrefs.SetString("BgmUnlockProgress", key);
     }
+
+    [ContextMenu("強制存檔")]
+    public void ForceSave()
+    {
+        SavePlayerData();
+    }
 }
