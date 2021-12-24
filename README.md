@@ -1,6 +1,6 @@
 # **激戰鐵支路1895** - FightRail1895
 
-<img src="https://github.com/JacKooDesu/FightRail1895/blob/main/Arts/unsorted/Logo.png" width="50%">
+<img src="https://github.com/JacKooDesu/FightRail1895/blob/main/Arts/unsorted/Post.png" width="70%">
 
 [**更新影片**](https://youtube.com/playlist?list=PLG-7kiz0ACzrQqwFpSssOY36gJRpN9dQJ)
 
