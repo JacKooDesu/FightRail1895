@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71cfef5881493f74896e0c2b09c271ec, type: 3}
+  m_Name: Sinper_LV1
+  m_EditorClassIdentifier: 
+  entityName: "\u596A\u547D\u80F8\u5F48"
+  entityNickName: 
+  entityInfo: 
+  entityType: 3
+  icon: {fileID: 0}
+  prefab: {fileID: 7721943181098325966, guid: b25a484d6943a21409f22496d3f2b685, type: 3}
+  targetEntityType: 0
+  collideLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  damage: 3
+  speed: 41.05
+  maxFlyTime: 1
+  radius: 1
+  explosiveType: 1
+  explosiveTime: 1
+  explosivePrefab: {fileID: 7114764238811819559, guid: 9e7b5321c3457f04780a6ab4d036fc1a,
+    type: 3}

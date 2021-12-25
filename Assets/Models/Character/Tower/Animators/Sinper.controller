@@ -28,7 +28,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Soldier_gun_shoot
+  m_Name: Sinper
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Attack
@@ -97,7 +97,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 2073693694548410006, guid: c0b6c78b6ac4c6f479b57e97e08e8ec7,
+  m_Motion: {fileID: -4791504522942941401, guid: 42bb3d0737d77934fab3da3537db863e,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -149,7 +149,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9db2aeecb9fdfed4b8a7534ed9b4874f, type: 2}
+  m_Motion: {fileID: -4791504522942941401, guid: 039f02066f9832e41993913ab2af604f,
+    type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

@@ -17,7 +17,7 @@ MonoBehaviour:
   entityInfo: "\u6709\u4EBA\u5728\u81ED\u3002"
   entityType: 1
   icon: {fileID: 21300000, guid: 3c18ec41990183a46a0064a76c35811b, type: 3}
-  prefab: {fileID: 1950022020884273114, guid: fbd34fb409708b441a89bea92a1b3baf, type: 3}
+  prefab: {fileID: 8179316329678327715, guid: 8b39a17cfe997884baa99ba845d5237d, type: 3}
   price: 20
   projectile: {fileID: 11400000, guid: 518db5dfbf0441c4eb48ae8e3ee15489, type: 2}
   attackRange: 20
