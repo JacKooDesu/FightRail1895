@@ -11,10 +11,6 @@ namespace JacDev.UI.ShopScene
     {
         public Transform itemsParent;
         public Text selectingItemName;
-        public Image selectingItemImage;
-        public Text selectingItemPrice;
-        public Text selectingItemAmount;
-        int itemAmount = 1;
         public Text selectingItemDescription;
 
         [Header("按鈕")]
@@ -48,7 +44,7 @@ namespace JacDev.UI.ShopScene
                 {
                     var item = SettingManager.Singleton.ItemSetting.itemList[itemIds[iter]];
                     itemList.Add(item);
-                    t.GetChild(0).GetChild(0).GetComponent<Image>().sprite = item.icon;
+                    t.GetChild(0).GetComponent<Image>().sprite = item.icon;
                     EventTrigger trigger = t.gameObject.AddComponent<EventTrigger>();
                     int temp = iter;
                     Utils.EventBinder.Bind(
@@ -68,7 +64,7 @@ namespace JacDev.UI.ShopScene
                 }
                 else
                 {
-                    t.GetChild(0).GetChild(0).GetComponent<Image>().sprite = null;
+                    t.GetChild(0).GetComponent<Image>().sprite = null;
                 }
 
                 ++iter;
@@ -96,14 +92,9 @@ namespace JacDev.UI.ShopScene
 
         void SelectItem(int index)
         {
-            itemAmount = 1;
-
             var item = itemList[index];
             selectingItemName.text = item.itemName;
-            selectingItemPrice.text = $"${item.originBuyPrice}";
             selectingItemDescription.text = item.description;
-
-            selectingItemAmount.text = itemAmount.ToString();
 
             foreach (Transform t in itemViewerParent)
                 t.gameObject.SetActive(false);

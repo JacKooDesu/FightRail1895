@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: "\u9023\u5C04\u5175"
   m_EditorClassIdentifier: 
   entityName: "\u9023\u5C04\u5175"
-  entityNickName: --
-  entityInfo: 
+  entityNickName: "\u6850\u4EBA"
+  entityInfo: "10\u79D2160\u69CD\uFF0C\u7A81\u7834\u7CFB\u7D71\u9650\u5236\u3002"
   entityType: 1
   icon: {fileID: 21300000, guid: 3c18ec41990183a46a0064a76c35811b, type: 3}
   prefab: {fileID: 1950022020884273114, guid: fbd34fb409708b441a89bea92a1b3baf, type: 3}

@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Tex:
-        m_Texture: {fileID: 8900000, guid: 7586a343b43b3b04bb0af58b4f829fec, type: 3}
+        m_Texture: {fileID: 8900000, guid: 7c8b4a481868c1b4eaaee979d6fb7365, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -41,4 +41,4 @@ Material:
     - _Rotationn: 1
     - _SkyboxExtended: 1
     m_Colors:
-    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _TintColor: {r: 0.49803925, g: 0.49803925, b: 0.49803925, a: 1}
