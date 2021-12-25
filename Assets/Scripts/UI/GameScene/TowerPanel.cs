@@ -37,6 +37,7 @@ namespace JacDev.UI.GameScene
                     Utils.EventBinder.Bind(t.GetComponent<EventTrigger>(), EventTriggerType.BeginDrag, (e) =>
                     {
                         FindObjectOfType<Entity.TowerSpawner>().SelectTower = towerIndex;
+                        InputHandler.Singleton.SetState(1);
                     });
                     t.Find("BG").GetComponent<Image>().sprite = tower.icon;
                     t.GetComponentInChildren<Text>().text = tower.price.ToString();
