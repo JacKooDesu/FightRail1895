@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71cfef5881493f74896e0c2b09c271ec, type: 3}
   m_Name: Sinper_LV1
   m_EditorClassIdentifier: 
-  entityName: "\u596A\u547D\u80F8\u5F48"
+  entityName: "\u72D9\u64CA\u5F48\u85E5"
   entityNickName: 
   entityInfo: 
   entityType: 3
@@ -22,10 +22,10 @@ MonoBehaviour:
   collideLayer:
     serializedVersion: 2
     m_Bits: 256
-  damage: 3
-  speed: 41.05
+  damage: 20
+  speed: 100.54
   maxFlyTime: 1
-  radius: 1
+  radius: 0
   explosiveType: 1
   explosiveTime: 1
   explosivePrefab: {fileID: 7114764238811819559, guid: 9e7b5321c3457f04780a6ab4d036fc1a,

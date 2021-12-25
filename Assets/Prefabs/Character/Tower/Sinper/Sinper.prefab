@@ -96,7 +96,7 @@ MonoBehaviour:
   entitySetting: {fileID: 11400000, guid: 533ec073d72afa94f85af7221a39fe82, type: 2}
   maxHealth: 10
   health: 10
-  launcher: {fileID: 0}
+  launcher: {fileID: 673931172}
 --- !u!1001 &4232445108896871544
 PrefabInstance:
   m_ObjectHideFlags: 0
