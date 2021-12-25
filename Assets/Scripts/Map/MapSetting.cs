@@ -34,58 +34,60 @@ namespace JacDev.Map
             // 綁定所有站點販售與收購的物品
             // int totalTradeCount = tradeCount * stations.Count;
 
+            int currentItemCount = 1;
             foreach (Data.ItemPriceData.PriceSetting ps in DataManager.Singleton.ItemPriceData.priceSettings)
             {
-                bool settingSell = Random.Range(0f, 1f) >= .5f;
-                int interval = Random.Range(minSellStationDistant, maxSellStationDistant + 1);
-                UnityEngine.Debug.Log(interval);
-                int iter = 0;  // 買賣站點不少於2
+                // bool settingSell = Random.Range(0f, 1f) >= .5f;
+                bool settingSell = true;    // 得先有得賣才有得買嗎?
+                int interval = Random.Range(minSellStationDistant, maxSellStationDistant + 1);  // 物品大站間隔
+                int total = Random.Range(2, stations.Count / (interval + 1));   // 決定販售站點數量
+                UnityEngine.Debug.Log($"總共:{total} / 間隔:{interval}");
 
-                int from = Random.Range(0, stations.Count);
-                if (settingSell)
-                    stations[from].sellItemIdList.Add(ps.id);
-                else
-                    stations[from].buyItemIdList.Add(ps.id);
-
-                settingSell = !settingSell;
-
-                interval *= (Random.Range(0f, 1f) >= .5f ? +1 : -1);
-                int breaker = 0;
-                while (iter < 1)
+                // 盡量讓所有站點都有販售物資
+                List<int> stationIndexList = new List<int>();
+                int sellMax = 1;
+                while (stationIndexList.Count < currentItemCount)
                 {
-                    int temp = from + interval;
-                    for (int i = temp; i < stations.Count && i >= 0; i += interval)
+                    for (int s = 0; s < stations.Count; s++)
                     {
-                        if (Random.Range(0f, 1f) >= .5f)
-                        {
-                            Station s = stations[i];
-                            if (s.buyItemIdList.Contains(ps.id) || s.sellItemIdList.Contains(ps.id))
-                                continue;
-
-                            if (settingSell)
-                                s.sellItemIdList.Add(ps.id);
-                            else if (!settingSell)
-                                s.buyItemIdList.Add(ps.id);
-
-                            settingSell = !settingSell;
-
-                            iter++;
-                        }
-                        else
-                        {
-                            break;
-                        }
+                        if (stations[s].sellItemIdList.Count <= sellMax)
+                            stationIndexList.Add(s);
                     }
-                    interval *= -1;
-
-                    if (breaker > 1000)
-                    {
-                        UnityEngine.Debug.Log("loop break");
-                        break;
-                    }
-
-                    breaker++;
                 }
+
+                int from = stationIndexList[Random.Range(0, stationIndexList.Count)];
+
+                int count = 0;
+                int breakCount = 0, iter = 0;
+                int breaker = 1000;
+                while (count < total)
+                {
+                    int current = from + count * interval;
+                    if (current >= stations.Count || current < 0)
+                    {
+                        if (iter == 1)
+                            break;
+
+                        interval *= -1;
+                        count = 1;
+                        current = from + count * interval;
+                        iter++;
+                    }
+
+                    if (settingSell)
+                        stations[current].sellItemIdList.Add(ps.id);
+                    else
+                        stations[current].buyItemIdList.Add(ps.id);
+                    count++;
+
+                    breakCount++;
+                    if (breakCount >= breaker)
+                        total--;
+
+                    settingSell = !settingSell;
+                }
+
+                currentItemCount++;
             }
 
             // 生成小站與路徑
