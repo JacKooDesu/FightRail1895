@@ -14,18 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modName: "\u653B\u64CA"
   modType: 0
+  description: "\u653B\u64CA\u529B+"
   copper:
-    max: 0
-    min: 0
+    icon: {fileID: 21300000, guid: 2ae996e3d5fdd3747b3f7e2c73cae394, type: 3}
+    baseValue: 0
   silver:
-    max: 0
-    min: 0
+    icon: {fileID: 21300000, guid: eebc6a72c04653d4192528cd8572491a, type: 3}
+    baseValue: 0
   gold:
-    max: 0
-    min: 0
+    icon: {fileID: 21300000, guid: dfd12d07a4975a34981cbed2aa9e5d05, type: 3}
+    baseValue: 0
   purple:
-    max: 0
-    min: 0
+    icon: {fileID: 21300000, guid: e6c3e9e5e5635014f82da957102df64b, type: 3}
+    baseValue: 0
   rainbow:
-    max: 0
-    min: 0
+    icon: {fileID: 21300000, guid: a477562c41248ff47b59da966e5006f4, type: 3}
+    baseValue: 0

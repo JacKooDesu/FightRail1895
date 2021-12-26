@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ed4db83752fb074a98f449caba43fda, type: 3}
-  m_Name: Overclock
+  m_Name: drop rate
   m_EditorClassIdentifier: 
-  modName: "\u8D85\u983B"
+  modName: "\u6DF1\u5C64\u9632\u8B77"
   modType: 0
-  description: "\u653B\u901F+"
+  description: "\u8CA8\u7269\u6389\u843D\u901F\u5EA6-"
   copper:
-    icon: {fileID: 21300000, guid: 2ae996e3d5fdd3747b3f7e2c73cae394, type: 3}
+    icon: {fileID: 21300000, guid: c7539a76959586047810d6724b2b6534, type: 3}
     baseValue: 0
   silver:
-    icon: {fileID: 21300000, guid: eebc6a72c04653d4192528cd8572491a, type: 3}
+    icon: {fileID: 21300000, guid: ebfe242da9454ef4b8cba867d8dd0270, type: 3}
     baseValue: 0
   gold:
-    icon: {fileID: 21300000, guid: dfd12d07a4975a34981cbed2aa9e5d05, type: 3}
+    icon: {fileID: 21300000, guid: 61b7cc8738958094fb451ae05ee2e235, type: 3}
     baseValue: 0
   purple:
-    icon: {fileID: 21300000, guid: e6c3e9e5e5635014f82da957102df64b, type: 3}
+    icon: {fileID: 21300000, guid: f279e3ca506b2d342ae2b78e20b47d3a, type: 3}
     baseValue: 0
   rainbow:
-    icon: {fileID: 21300000, guid: a477562c41248ff47b59da966e5006f4, type: 3}
+    icon: {fileID: 21300000, guid: c6224d26e7abdb94cafcc5e23f491ad1, type: 3}
     baseValue: 0
