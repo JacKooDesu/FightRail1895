@@ -9,6 +9,8 @@ public class ObjectSwitcher : MonoBehaviour
     public int defaultIndex = 0;
     int currentIndex = 0;
 
+    public System.Action<int> OnSwitch;
+
     private void Start()
     {
         if (hideAtStart)
@@ -24,6 +26,9 @@ public class ObjectSwitcher : MonoBehaviour
                 objects[i].SetActive(i == index);
         }
         currentIndex = index;
+
+        if (OnSwitch != null)
+            OnSwitch.Invoke(currentIndex);
     }
 
     public void Next()
