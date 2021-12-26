@@ -15,6 +15,8 @@ namespace JacDev.UI.ShopScene.Mod
         public Image bg;
         public GameObject equipUI;
 
+        string description = "";
+
         public void Init(ModPanel modPanel, int index)
         {
             this.modPanel = modPanel;
@@ -37,7 +39,20 @@ namespace JacDev.UI.ShopScene.Mod
                 icon.gameObject.SetActive(true);
 
                 equipUI.SetActive(!isInstance && data.SetIndex[modPanel.currentSet] != -1);
+
+                SetDescription();
             }
+        }
+
+        void SetDescription()
+        {
+            description = "";
+            var data = modPanel.modTargetData[modIndex];
+            description += $"{data.ToModFactory().description} ";
+
+            float value = data.ToModFactory().GetRankSetting(data.rank).baseValue;
+            string color = value >= 0 ? "#ffd500" : "#ff0090";
+            description += $"<color={color}>{value}</color>";
         }
 
         public void OnPointerClick(PointerEventData eventData)
@@ -58,12 +73,19 @@ namespace JacDev.UI.ShopScene.Mod
         public void OnPointerEnter(PointerEventData eventData)
         {
             if (modIndex != -1)
+            {
                 Audio.AudioHandler.Singleton.PlaySound("hover");
+                modPanel.modDescription.text = description;
+            }
+
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-
+            if (modIndex != -1)
+            {
+                modPanel.modDescription.text = "";
+            }
         }
     }
 

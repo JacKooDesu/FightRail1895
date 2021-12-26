@@ -18,6 +18,10 @@ namespace JacDev.UI.ShopScene.Mod
         List<ModUIObject> inventory = new List<ModUIObject>();
         List<ModUIObject> onBlank = new List<ModUIObject>();
 
+        [Header("UI設定")]
+        public Text modName;
+        public Text modDescription;
+
         private void OnEnable()
         {
             switch (modTarget)
@@ -32,7 +36,7 @@ namespace JacDev.UI.ShopScene.Mod
                     modTargetData = DataManager.Singleton.PlayerData.towerModDatas;
                     break;
             }
-            
+
             BindInvertory();
             BindSet();
         }
