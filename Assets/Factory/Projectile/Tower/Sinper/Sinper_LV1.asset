@@ -17,7 +17,7 @@ MonoBehaviour:
   entityInfo: 
   entityType: 3
   icon: {fileID: 0}
-  prefab: {fileID: 7721943181098325966, guid: b25a484d6943a21409f22496d3f2b685, type: 3}
+  prefab: {fileID: 7721943181098325966, guid: 8b6ef8b2e51dd3e499155245803f1235, type: 3}
   targetEntityType: 0
   collideLayer:
     serializedVersion: 2

@@ -21,7 +21,7 @@ MonoBehaviour:
   price: 1500
   projectile: {fileID: 11400000, guid: ef6893a9349559d45b5812a93505b1a6, type: 2}
   attackRange: 60
-  attackTime: 1.7
+  attackTime: 3
   upgradeMultiply:
     attackTime: 0.2
     damage: 0.5
