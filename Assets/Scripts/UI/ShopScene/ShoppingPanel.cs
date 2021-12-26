@@ -36,6 +36,8 @@ namespace JacDev.UI.ShopScene
 
             if (itemList.Count >= 1)
                 SelectItem(0);
+
+            sellButton.onClick.Invoke();
         }
 
         void BindEvent()
@@ -72,6 +74,8 @@ namespace JacDev.UI.ShopScene
 
             sellButton.onClick.AddListener(() =>
             {
+                sellButton.transform.Find("Cover").gameObject.SetActive(false);
+                buyButton.transform.Find("Cover").gameObject.SetActive(true);
                 isSelling = true;     // 0號是正在買東西
                 BindItem();
                 GenerateItemView();
@@ -82,6 +86,8 @@ namespace JacDev.UI.ShopScene
 
             buyButton.onClick.AddListener(() =>
             {
+                buyButton.transform.Find("Cover").gameObject.SetActive(false);
+                sellButton.transform.Find("Cover").gameObject.SetActive(true);
                 isSelling = false;     // 0號是正在買東西
                 BindItem();
                 GenerateItemView();
@@ -106,7 +112,6 @@ namespace JacDev.UI.ShopScene
             {
                 if (iter < itemIds.Count)
                 {
-                    print("hi");
                     var item = SettingManager.Singleton.ItemSetting.itemList[itemIds[iter]];
                     itemList.Add(item);
                     t.Find("icon").GetComponent<Image>().sprite = item.icon;
