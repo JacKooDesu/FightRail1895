@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: health
   m_EditorClassIdentifier: 
   modName: "\u7D50\u69CB\u52A0\u5F37"
-  modType: 0
+  modType: 8
   description: "\u8840\u91CF+"
   copper:
     icon: {fileID: 21300000, guid: 38c0093d6683e1b45a83e653054d26b6, type: 3}

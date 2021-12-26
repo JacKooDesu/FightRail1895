@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: capacity
   m_EditorClassIdentifier: 
   modName: "\u8ECA\u5EC2\u64F4\u5145"
-  modType: 0
+  modType: 7
   description: "\u8CA8\u7269\u5BB9\u91CF+"
   copper:
     icon: {fileID: 21300000, guid: 38c0093d6683e1b45a83e653054d26b6, type: 3}

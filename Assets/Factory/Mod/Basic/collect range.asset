@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ed4db83752fb074a98f449caba43fda, type: 3}
-  m_Name: pick range
+  m_Name: collect range
   m_EditorClassIdentifier: 
   modName: "\u6A5F\u68B0\u624B\u81C2"
-  modType: 0
+  modType: 6
   description: "\u81EA\u52D5\u62FE\u53D6\u7269\u54C1\u7BC4\u570D+"
   copper:
     icon: {fileID: 21300000, guid: c7539a76959586047810d6724b2b6534, type: 3}
