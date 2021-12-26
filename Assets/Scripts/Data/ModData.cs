@@ -9,7 +9,9 @@ namespace JacDev.Data
     [System.Serializable]
     public class ModData : MonoBehaviour
     {
-        public int bindingTowerIndex;
+        public EntityEnums.EntityType entityBindType;
+        public int bindingIndex;   // 0 代表沒有綁
         public int modSettingIndex;  // Mod Setting index
+        public int rank;
     }
 }

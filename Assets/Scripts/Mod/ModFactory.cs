@@ -7,43 +7,60 @@ namespace JacDev.Mod
     public class ModFactory : ScriptableObject
     {
         public string modName;
+        public ModType modType = ModType.Tower_Damage;
+
+        [TextArea(3, 10)]
+        public string description;
 
         public Entity.EntityEnums targetEntity;
 
-        public List<ModSetting> copper = new List<ModSetting>();
-        public List<ModSetting> silver = new List<ModSetting>();
-        public List<ModSetting> gold = new List<ModSetting>();
-        public List<ModSetting> purple = new List<ModSetting>();
-        public List<ModSetting> rainbow = new List<ModSetting>();
+        public RankSetting copper = new RankSetting();
+        public RankSetting silver = new RankSetting();
+        public RankSetting gold = new RankSetting();
+        public RankSetting purple = new RankSetting();
+        public RankSetting rainbow = new RankSetting();
+
+        public RankSetting GetRankSetting(int rk)
+        {
+            RankSetting[] rankSettings = {
+                copper,
+                silver,
+                gold,
+                purple,
+                rainbow
+            };
+
+            return rankSettings[rk];
+        }
     }
 
     [System.Serializable]
-    public class ModSetting
+    public class RankSetting
     {
-        public ModType modType = ModType.Tower_Damage;
-        public float baseValue, max, min;
+        public Sprite icon;
+        public float baseValue;
 
-        public string ModToString()
-        {
-            // switch (modType)
-            // {
-            //     case ModType.Damage: return "傷害";
+        // public string ModToString()
+        // {
+        //     // switch (modType)
+        //     // {
+        //     //     case ModType.Damage: return "傷害";
 
-            //     case ModType.AtkSpeed: return "攻速";
+        //     //     case ModType.AtkSpeed: return "攻速";
 
-            //     case ModType.Accurate: return "精準";
+        //     //     case ModType.Accurate: return "精準";
 
-            //     case ModType.Poison: return "中毒";
+        //     //     case ModType.Poison: return "中毒";
 
-            //     case ModType.Burn: return "燃燒";
+        //     //     case ModType.Burn: return "燃燒";
 
-            //     case ModType.Dizzy: return "暈眩";
+        //     //     case ModType.Dizzy: return "暈眩";
 
-            //     case ModType.Capacity: return "彈匣";
-            // }
+        //     //     case ModType.Capacity: return "彈匣";
+        //     // }
 
-            return "MOD TYPE ERROR";
-        }
+        //     return "MOD TYPE ERROR";
+        // }
     }
 }
 
