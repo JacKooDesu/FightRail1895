@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modName: "\u9AD8\u7D1A\u71C3\u7164"
   modType: 11
+  icon: {fileID: 21300000, guid: 39f6aa5c321ae9b45b063567c35bd578, type: 3}
   description: "\u884C\u99DB\u901F\u5EA6+"
+  targetEntity: 2
   copper:
     icon: {fileID: 21300000, guid: 38c0093d6683e1b45a83e653054d26b6, type: 3}
     baseValue: 0

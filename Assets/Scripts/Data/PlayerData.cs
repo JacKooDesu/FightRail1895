@@ -17,7 +17,41 @@ namespace JacDev.Data
 
         public List<int> inventory = new List<int>();     // 道具，後續用int代替(由item list 取值)
         public int modCapacity = 28;     // Mod容量，小龍說先來個28張
-        public List<ModData> modDatas = new List<ModData>();    // Mod 綁定資料
+
+        public List<ModData> trainModDatas = new List<ModData>();    // Mod 綁定資料
+        public List<ModData> cabinModDatas = new List<ModData>();    // Mod 綁定資料
+        public List<ModData> towerModDatas = new List<ModData>();    // Mod 綁定資料
+
+        public void SortMod()
+        {
+            List<ModData> allMod = new List<ModData>();
+            allMod.AddRange(trainModDatas);
+            allMod.AddRange(cabinModDatas);
+            allMod.AddRange(towerModDatas);
+
+            trainModDatas = new List<ModData>();
+            cabinModDatas = new List<ModData>();
+            towerModDatas = new List<ModData>();
+            foreach (var mod in allMod)
+            {
+                switch (mod.ToModFactory().targetEntity)
+                {
+                    case Entity.EntityEnums.EntityType.Train:
+                        trainModDatas.Add(mod);
+                        break;
+
+                    case Entity.EntityEnums.EntityType.Cabin:
+                        cabinModDatas.Add(mod);
+                        break;
+
+                    case Entity.EntityEnums.EntityType.Tower:
+                        towerModDatas.Add(mod);
+                        break;
+                }
+            }
+        }
+
+
         [Header("塔解鎖進度")]
         public List<int> towersGrade = new List<int>(); // 0代表未解鎖
 

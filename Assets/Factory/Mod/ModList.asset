@@ -12,4 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cfc855b78c8e244da4bf83d7f2bcacc, type: 3}
   m_Name: ModList
   m_EditorClassIdentifier: 
-  modList: []
+  rankBg: []
+  modList:
+  - {fileID: 11400000, guid: a6e67b5bea7d7c84fa2a146bc9ed5e89, type: 2}
+  - {fileID: 11400000, guid: 1af200c4d64a6dd46bb6bdd1a816ad25, type: 2}
+  - {fileID: 11400000, guid: 7e2cbc76621545f418a77f45925e8986, type: 2}
+  - {fileID: 11400000, guid: 6c94b1e799618a34da4ee78ba6d63a9b, type: 2}
+  - {fileID: 11400000, guid: 67730f143a200ae49acbe99f2e84cf7f, type: 2}
+  - {fileID: 11400000, guid: 16b3202c7bf3dcc47a4ede7532a409ef, type: 2}
+  - {fileID: 11400000, guid: 16454dc3e94007649894efc631ad6be9, type: 2}
+  - {fileID: 11400000, guid: 445805be860e3f24eb541d22713df86e, type: 2}
+  - {fileID: 11400000, guid: 3c1eedf0aecc8a648b07991b43b34558, type: 2}
+  - {fileID: 11400000, guid: 5b35e8b6af3a39e4a89494a535733c8f, type: 2}
+  - {fileID: 11400000, guid: 124d5eed9d886f44ea23c0cf3cf09ef3, type: 2}
+  - {fileID: 11400000, guid: 701d10d7c980b2243bd231fd5c1b418e, type: 2}

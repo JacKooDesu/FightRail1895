@@ -21,3 +21,9 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 03849ba3669f5ab46b32923e530e9151, type: 3}
   - name: loading
     clip: {fileID: 8300000, guid: fd37d1255ffcaf047afa8ba64e8a977f, type: 3}
+  - name: mod equip
+    clip: {fileID: 8300000, guid: 5ceec8e142e71c546bb0fe144ee3ed3b, type: 3}
+  - name: mod unequip
+    clip: {fileID: 8300000, guid: a1173f2e27acd0f4eab5fff935373610, type: 3}
+  - name: mod warning
+    clip: {fileID: 8300000, guid: 2970da4bd3dadb543b45b0b1e29558b9, type: 3}

@@ -8,11 +8,12 @@ namespace JacDev.Mod
     {
         public string modName;
         public ModType modType = ModType.Tower_Damage;
+        public Sprite icon;
 
         [TextArea(3, 10)]
         public string description;
 
-        public Entity.EntityEnums targetEntity;
+        public Entity.EntityEnums.EntityType targetEntity;
 
         public RankSetting copper = new RankSetting();
         public RankSetting silver = new RankSetting();
