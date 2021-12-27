@@ -657,18 +657,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 45625127}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1378473783}
-        m_MethodName: ChangeSet
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &45625127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,7 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.05490196}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3008,7 +2997,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -3018,7 +3007,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -3068,12 +3057,12 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 417.40002
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -209.79999
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -3484,7 +3473,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.18859863}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -1168.2776, y: -9.172668}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &205817491
 MonoBehaviour:
@@ -4641,6 +4630,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b952ef7fc129042aed473a5efc9368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: []
+  eventTriggers:
+  - {fileID: 1983931820}
+  - {fileID: 347910399}
+  - {fileID: 1281659896}
+  - {fileID: 1901559290}
+  - {fileID: 915772046}
+  - {fileID: 579403603}
   objects:
   - {fileID: 1589170400}
   - {fileID: 103617178}
@@ -4650,6 +4647,9 @@ MonoBehaviour:
   - {fileID: 2071299867}
   hideAtStart: 1
   defaultIndex: 0
+  autoBind: 1
+  tabMode: 0
+  tabModeColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &251523322
 GameObject:
   m_ObjectHideFlags: 0
@@ -4731,18 +4731,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 251523325}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1140087340}
-        m_MethodName: ChangeSet
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &251523325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4756,7 +4745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.05490196}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5840,17 +5829,6 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 467100111}
           m_MethodName: MoveToPoint
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 244543090}
-          m_MethodName: Switch
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -8591,17 +8569,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 244543090}
-          m_MethodName: Switch
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 5
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &579403604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9300,18 +9267,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 631191948}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1754287589}
-        m_MethodName: ChangeSet
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &631191948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9325,7 +9281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.05490196}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10146,18 +10102,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 678357945}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1140087340}
-        m_MethodName: ChangeSet
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &678357945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10171,7 +10116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.05490196}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -12646,18 +12591,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 820202628}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1378473783}
-        m_MethodName: ChangeSet
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &820202628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12671,7 +12605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.05490196}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -14261,7 +14195,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -14271,7 +14205,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -14321,12 +14255,12 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -55.09999
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -14451,17 +14385,6 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 3
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 244543090}
-          m_MethodName: Switch
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 4
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -15351,18 +15274,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 990562285}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1754287589}
-        m_MethodName: ChangeSet
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &990562285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15376,7 +15288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.05490196}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -15646,18 +15558,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1032906412}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1140087340}
-        m_MethodName: ChangeSet
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1032906412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15671,7 +15572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.05490196}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -17051,6 +16952,10 @@ MonoBehaviour:
   currentSet: 0
   modName: {fileID: 796298222}
   modDescription: {fileID: 845812545}
+  setButtons:
+  - {fileID: 251523324}
+  - {fileID: 678357944}
+  - {fileID: 1032906411}
 --- !u!1 &1145738839
 GameObject:
   m_ObjectHideFlags: 0
@@ -17206,18 +17111,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1150668264}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1378473783}
-        m_MethodName: ChangeSet
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1150668264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17231,7 +17125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.05490196}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -17737,7 +17631,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -17747,7 +17641,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -17797,12 +17691,12 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 594.8
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -55.09999
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -18078,7 +17972,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -18088,7 +17982,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -18138,12 +18032,12 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -209.79999
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -18442,18 +18336,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1226468131}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1754287589}
-        m_MethodName: ChangeSet
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1226468131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18467,7 +18350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.05490196}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -19544,17 +19427,6 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 467100111}
           m_MethodName: MoveToPoint
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 2
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 244543090}
-          m_MethodName: Switch
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -21310,6 +21182,10 @@ MonoBehaviour:
   currentSet: 0
   modName: {fileID: 312702983}
   modDescription: {fileID: 1645608778}
+  setButtons:
+  - {fileID: 820202627}
+  - {fileID: 45625126}
+  - {fileID: 1150668263}
 --- !u!1 &1378500771
 GameObject:
   m_ObjectHideFlags: 0
@@ -22545,7 +22421,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -22555,7 +22431,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -22605,12 +22481,12 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 417.40002
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -55.09999
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -22932,7 +22808,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -22942,7 +22818,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -22992,12 +22868,12 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 62.600006
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -55.09999
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -27533,7 +27409,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -27543,7 +27419,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -27593,12 +27469,12 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 62.600006
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -209.79999
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -28081,6 +27957,10 @@ MonoBehaviour:
   currentSet: 0
   modName: {fileID: 1837373072}
   modDescription: {fileID: 1242215909}
+  setButtons:
+  - {fileID: 631191947}
+  - {fileID: 1226468130}
+  - {fileID: 990562284}
 --- !u!1 &1755911305
 GameObject:
   m_ObjectHideFlags: 0
@@ -28914,7 +28794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1837749561
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28974,12 +28854,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b952ef7fc129042aed473a5efc9368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 1312058599}
+  - {fileID: 798825253}
+  - {fileID: 1906513557}
+  eventTriggers: []
   objects:
   - {fileID: 1754287587}
   - {fileID: 1140087338}
   - {fileID: 1378473781}
   hideAtStart: 1
   defaultIndex: 0
+  autoBind: 1
+  tabMode: 1
+  tabModeColor: {r: 0.41799998, g: 0.41799998, b: 0.41799998, a: 1}
 --- !u!1 &1841415091
 GameObject:
   m_ObjectHideFlags: 0
@@ -30154,18 +30042,7 @@ MonoBehaviour:
   - eventID: 4
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 244543090}
-          m_MethodName: Switch
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 3
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!114 &1901559291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31102,7 +30979,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -31448,17 +31325,6 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 467100111}
           m_MethodName: MoveToPoint
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 244543090}
-          m_MethodName: Switch
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -32423,7 +32289,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -32433,7 +32299,7 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
@@ -32483,12 +32349,12 @@ PrefabInstance:
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 594.8
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -209.79999
       objectReference: {fileID: 0}
     - target: {fileID: 7792125952863868582, guid: f4332a4c0ddc6cb4d8dfd381f4783e8e,
         type: 3}

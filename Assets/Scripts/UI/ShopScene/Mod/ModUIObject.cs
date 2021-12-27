@@ -15,6 +15,7 @@ namespace JacDev.UI.ShopScene.Mod
         public Image bg;
         public GameObject equipUI;
 
+        string modName = "";
         string description = "";
 
         public void Init(ModPanel modPanel, int index)
@@ -46,8 +47,10 @@ namespace JacDev.UI.ShopScene.Mod
 
         void SetDescription()
         {
+            modName = "";
             description = "";
             var data = modPanel.modTargetData[modIndex];
+            modName = $"{data.ToModFactory().modName}";
             description += $"{data.ToModFactory().description} ";
 
             float value = data.ToModFactory().GetRankSetting(data.rank).baseValue;
@@ -75,6 +78,7 @@ namespace JacDev.UI.ShopScene.Mod
             if (modIndex != -1)
             {
                 Audio.AudioHandler.Singleton.PlaySound("hover");
+                modPanel.modName.text = modName;
                 modPanel.modDescription.text = description;
             }
 
@@ -84,6 +88,7 @@ namespace JacDev.UI.ShopScene.Mod
         {
             if (modIndex != -1)
             {
+                modPanel.modName.text = "";
                 modPanel.modDescription.text = "";
             }
         }

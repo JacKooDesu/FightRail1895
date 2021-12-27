@@ -21,6 +21,13 @@ namespace JacDev.UI.ShopScene.Mod
         [Header("UI設定")]
         public Text modName;
         public Text modDescription;
+        public Button[] setButtons;
+        Color setTabOriginColor;
+
+        private void Awake()
+        {
+            BindEvent();
+        }
 
         private void OnEnable()
         {
@@ -39,6 +46,8 @@ namespace JacDev.UI.ShopScene.Mod
 
             BindInvertory();
             BindSet();
+
+            ChangeSet(currentSet);
         }
 
         void BindSet()
@@ -89,6 +98,18 @@ namespace JacDev.UI.ShopScene.Mod
             }
         }
 
+        void BindEvent()
+        {
+            for (int i = 0; i < setButtons.Length; ++i)
+            {
+                var b = setButtons[i];
+                int temp = i;
+                b.onClick.AddListener(() => ChangeSet(temp));
+            }
+
+            setTabOriginColor = setButtons[0].image.color;
+        }
+
         public void AddModToBlank(ModUIObject mod)
         {
             int iter = 0;
@@ -136,6 +157,12 @@ namespace JacDev.UI.ShopScene.Mod
             currentSet = i;
             BindInvertory();
             BindSet();
+
+            for (int iter = 0; iter < setButtons.Length; ++iter)
+            {
+                var b = setButtons[iter];
+                b.image.color = iter == currentSet ? setTabOriginColor : new Color(0, 0, 0, 0);
+            }
         }
     }
 
