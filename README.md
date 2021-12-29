@@ -2,7 +2,11 @@
 
 <img src="https://github.com/JacKooDesu/FightRail1895/blob/main/Arts/unsorted/Post.jpg" width="70%">
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MIbXtjqsMtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div align="center">
+    <iframe width="620" height="315"
+        src="https://youtu.be/MIbXtjqsMtw">
+    </iframe>
+</div>
 
 [**更新影片**](https://youtube.com/playlist?list=PLG-7kiz0ACzrQqwFpSssOY36gJRpN9dQJ)
 
