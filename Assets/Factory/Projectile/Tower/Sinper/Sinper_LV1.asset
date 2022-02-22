@@ -25,8 +25,8 @@ MonoBehaviour:
   damage: 20
   speed: 100.54
   maxFlyTime: 1
-  radius: 0
-  explosiveType: 1
+  radius: 0.001
+  explosiveType: 2
   explosiveTime: 1
-  explosivePrefab: {fileID: 7114764238811819559, guid: 9e7b5321c3457f04780a6ab4d036fc1a,
+  explosivePrefab: {fileID: 1765528453515561511, guid: 668d9ca103f36834a93ce5aa50ca63d0,
     type: 3}
