@@ -27,7 +27,7 @@ namespace JacDev.GameSystem
 
         public enum InputState
         {
-            Normal,
+            Normal = 0,
             PlacingTower,
             SelectTower
         }
@@ -53,55 +53,43 @@ namespace JacDev.GameSystem
         #region EVENTS
         public class ActionSetup
         {
-            public event Action onBegin;
-            public void OnBegin()
-            {
-                if (onBegin != null)
-                    onBegin();
-            }
+            public Action onBegin;
 
-            public event Action onUpdate;
-            public IEnumerator OnUpdate()
-            {
-                while (true)
-                {
-                    if (onUpdate != null)
-                        onUpdate();
+            public Action onUpdate;
 
-                    yield return null;
-                }
-            }
-
-            public event Action onEnd;
-            public void OnEnd()
-            {
-                if (onEnd != null)
-                    onEnd();
-            }
+            public Action onEnd;
         }
 
         public ActionSetup normalEvent = new ActionSetup();
         public ActionSetup placingTowerEvent = new ActionSetup();
         public ActionSetup selectTowerEvent = new ActionSetup();
+
+        ActionSetup[] actionSetups;
         #endregion
 
         private void Start()
         {
+            actionSetups = new ActionSetup[]{
+                normalEvent,
+                placingTowerEvent,
+                selectTowerEvent
+            };
+
             switch (state)
             {
                 case InputState.Normal:
-                    normalEvent.OnBegin();
-                    StartCoroutine(normalEvent.OnUpdate());
+                    if (normalEvent.onBegin != null)
+                        normalEvent.onBegin.Invoke();
                     break;
 
                 case InputState.PlacingTower:
-                    placingTowerEvent.OnBegin();
-                    StartCoroutine(placingTowerEvent.OnUpdate());
+                    if (placingTowerEvent.onBegin != null)
+                        placingTowerEvent.onBegin.Invoke();
                     break;
 
                 case InputState.SelectTower:
-                    selectTowerEvent.OnBegin();
-                    StartCoroutine(selectTowerEvent.OnUpdate());
+                    if (selectTowerEvent.onBegin != null)
+                        selectTowerEvent.onBegin.Invoke();
                     break;
 
                 default:
@@ -113,50 +101,17 @@ namespace JacDev.GameSystem
         {
             if (lastState != state)
             {
-                switch (lastState)
-                {
-                    case InputState.Normal:
-                        StopCoroutine(normalEvent.OnUpdate());
-                        normalEvent.OnEnd();
-                        break;
-
-                    case InputState.PlacingTower:
-                        StopCoroutine(placingTowerEvent.OnUpdate());
-                        placingTowerEvent.OnEnd();
-                        break;
-
-                    case InputState.SelectTower:
-                        StopCoroutine(selectTowerEvent.OnUpdate());
-                        selectTowerEvent.OnEnd();
-                        break;
-
-                    default:
-                        break;
-                }
+                if (actionSetups[(int)lastState].onEnd != null)
+                    actionSetups[(int)lastState].onEnd.Invoke();
 
                 lastState = state;
 
-                switch (state)
-                {
-                    case InputState.Normal:
-                        normalEvent.OnBegin();
-                        StartCoroutine(normalEvent.OnUpdate());
-                        break;
-
-                    case InputState.PlacingTower:
-                        placingTowerEvent.OnBegin();
-                        StartCoroutine(placingTowerEvent.OnUpdate());
-                        break;
-
-                    case InputState.SelectTower:
-                        selectTowerEvent.OnBegin();
-                        StartCoroutine(selectTowerEvent.OnUpdate());
-                        break;
-
-                    default:
-                        break;
-                }
+                if (actionSetups[(int)state].onBegin != null)
+                    actionSetups[(int)state].onBegin.Invoke();
             }
+
+            if (actionSetups[(int)state].onUpdate != null)
+                actionSetups[(int)state].onUpdate.Invoke();
         }
     }
 }
