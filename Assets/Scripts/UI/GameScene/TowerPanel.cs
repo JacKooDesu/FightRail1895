@@ -26,7 +26,7 @@ namespace JacDev.UI.GameScene
             int currentTower = 0;
             foreach (Transform t in parentUI)
             {
-                print(t.name);
+                // print(t.name);
                 while (currentTower < towerSetting.towers.Count && playerData.towersGrade[currentTower] == 0)
                     currentTower++;
 

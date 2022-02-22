@@ -17,6 +17,7 @@ namespace JacDev.Entity
 
         Transform spawnPointParent = default;
 
+
         private void OnEnable()
         {
             InputHandler.Singleton.placingTowerEvent.onBegin += () =>
@@ -104,7 +105,7 @@ namespace JacDev.Entity
             StartCoroutine(Spawn(SelectTower, spawnPointParent));
 
             // 2021.10.31 added
-            spawnPointParent.GetComponent<TowerSpawnpoint>().hasTower = true;
+            spawnPointParent.GetComponent<TowerSpawnpoint>().SpawnOn();
         }
     }
 }

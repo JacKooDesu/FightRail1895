@@ -123,18 +123,19 @@ public class GameHandler : MonoBehaviour
 
             // for test
             case "GenerateTest new UI":
+                // 設定並儲存Player Data
                 DataManager dm = DataManager.Singleton;
                 if (dm.GetMapData(false).FindPath(dm.PlayerData.currentPath) != null)
                 {
                     JacDev.Level.LevelGenerator.Singleton.levelSetting = dm.GetMapData(false).FindPath(dm.PlayerData.currentPath).levelSetting;
                 }
+                dm.SavePlayerData();
 
+                // 場景建置
                 JacDev.Level.LevelGenerator.Singleton.BuildMap();
-
-                //AudioHandler.Singleton.PlayBgm("Funky Girl Never Hurt");
                 AudioHandler.Singleton.RandPlayBgm();
 
-                dm.SavePlayerData();
+
                 break;
         }
 
@@ -174,9 +175,9 @@ public class GameHandler : MonoBehaviour
         ItemPriceData iData = new ItemPriceData();
         iData.Init();
         DataManager.Singleton.ItemPriceData = iData;
-        
+
         PlayerData pData = new PlayerData();
-        
+
         // pData.Init("New Player", bloodIndex, 10000f, DataManager.Singleton.GetMapData(true).commonStations[0]);
         if (bug)
         {

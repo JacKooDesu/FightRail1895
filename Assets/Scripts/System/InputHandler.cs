@@ -47,71 +47,83 @@ namespace JacDev.GameSystem
 
         public void SetState(int i)
         {
+            if ((int)this.state == i)
+            {
+                actionSetups[(int)state].OnEnd();
+                actionSetups[(int)i].OnBegin();
+            }
+
             this.state = (InputState)i;
         }
 
-        #region EVENTS
-        public class ActionSetup
+        public void SetState(InputState i)
         {
-            public Action onBegin;
+            if (this.state == i)
+            {
+                actionSetups[(int)state].OnEnd();
+                actionSetups[(int)i].OnBegin();
+            }
 
-            public Action onUpdate;
-
-            public Action onEnd;
+            this.state = i;
         }
 
-        public ActionSetup normalEvent = new ActionSetup();
-        public ActionSetup placingTowerEvent = new ActionSetup();
-        public ActionSetup selectTowerEvent = new ActionSetup();
+        #region EVENTS
+        public class ActionSetupBase
+        {
+            public event Action onBegin;
+            public void OnBegin()
+            {
+                if (onBegin != null)
+                    onBegin();
+            }
 
-        ActionSetup[] actionSetups;
+            public event Action onUpdate;
+            public void OnUpdate()
+            {
+                if (onUpdate != null)
+                    onUpdate();
+            }
+
+            public event Action onEnd;
+            public void OnEnd()
+            {
+                if (onEnd != null)
+                    onEnd();
+            }
+        }
+
+        public ActionSetupBase normalEvent = new ActionSetupBase();
+        public ActionSetupBase placingTowerEvent = new ActionSetupBase();
+        public ActionSetupBase selectTowerEvent = new ActionSetupBase();
+
+        ActionSetupBase[] actionSetups;
         #endregion
 
         private void Start()
         {
-            actionSetups = new ActionSetup[]{
+            actionSetups = new ActionSetupBase[]{
                 normalEvent,
                 placingTowerEvent,
                 selectTowerEvent
             };
 
-            switch (state)
-            {
-                case InputState.Normal:
-                    if (normalEvent.onBegin != null)
-                        normalEvent.onBegin.Invoke();
-                    break;
-
-                case InputState.PlacingTower:
-                    if (placingTowerEvent.onBegin != null)
-                        placingTowerEvent.onBegin.Invoke();
-                    break;
-
-                case InputState.SelectTower:
-                    if (selectTowerEvent.onBegin != null)
-                        selectTowerEvent.onBegin.Invoke();
-                    break;
-
-                default:
-                    break;
-            }
+            actionSetups[(int)state].OnBegin();
         }
 
         void Update()
         {
             if (lastState != state)
             {
-                if (actionSetups[(int)lastState].onEnd != null)
-                    actionSetups[(int)lastState].onEnd.Invoke();
+                actionSetups[(int)lastState].OnEnd();
 
                 lastState = state;
 
-                if (actionSetups[(int)state].onBegin != null)
-                    actionSetups[(int)state].onBegin.Invoke();
+                actionSetups[(int)state].OnBegin();
             }
-
-            if (actionSetups[(int)state].onUpdate != null)
-                actionSetups[(int)state].onUpdate.Invoke();
+            else
+            {
+                actionSetups[(int)state].OnUpdate();
+            }
         }
     }
 }

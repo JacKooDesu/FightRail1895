@@ -19,14 +19,30 @@ public class OrbitCamera : MonoBehaviour
 
     [SerializeField]
     Transform focus = default;
+    public Transform Focus
+    {
+        set
+        {
+            focus = value;
+        }
+        get => focus;
+    }
     public void SetFocus(Transform t)
     {
         focus = t;
     }
 
 
-    [SerializeField, Range(1f, 20f)]
+    [SerializeField, Range(1f, 50f)]
     float distance = 5f;
+    public float Distance
+    {
+        set
+        {
+            distance = value;
+        }
+        get => distance;
+    }
 
     [SerializeField, Min(0f)]
     float focusRadius = 1f;

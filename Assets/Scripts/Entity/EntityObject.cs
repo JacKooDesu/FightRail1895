@@ -13,6 +13,8 @@ namespace JacDev.Entity
 
         [HideInInspector] public event Action onGetDamage;
 
+        public int id;  // 用於GameHandler管理物件
+
         public virtual void Init(EntitySetting setting)
         {
             entitySetting = setting;
@@ -23,6 +25,11 @@ namespace JacDev.Entity
             health -= damage;
             if (onGetDamage != null)
                 onGetDamage.Invoke();
+        }
+
+        protected void OnDestroy()
+        {
+            GameHandler.Singleton.entities.Remove(this);
         }
     }
 }
