@@ -35,7 +35,7 @@ namespace JacDev.UI.ShopScene
             GenerateItemView();
 
             if (itemList.Count >= 1)
-                SelectItem(0);
+                SelectItem(-1);
 
             sellButton.onClick.Invoke();
         }
@@ -54,7 +54,7 @@ namespace JacDev.UI.ShopScene
                     {
                         if (temp < itemList.Count)
                         {
-                            SelectItem(temp);
+                            // SelectItem(temp);
                             AudioHandler.Singleton.PlaySound("select");
                         }
                     }
@@ -65,7 +65,18 @@ namespace JacDev.UI.ShopScene
                     (d) =>
                     {
                         if (temp < itemList.Count)
+                        {
+                            SelectItem(temp);
                             AudioHandler.Singleton.PlaySound("hover");
+                        }
+                    }
+                );
+                Utils.EventBinder.Bind(
+                    trigger,
+                    EventTriggerType.PointerExit,
+                    (d) =>
+                    {
+                        SelectItem(-1);
                     }
                 );
 
@@ -81,7 +92,7 @@ namespace JacDev.UI.ShopScene
                 GenerateItemView();
 
                 if (itemList.Count >= 1)
-                    SelectItem(0);
+                    SelectItem(-1);
             });
 
             buyButton.onClick.AddListener(() =>
@@ -93,7 +104,7 @@ namespace JacDev.UI.ShopScene
                 GenerateItemView();
 
                 if (itemList.Count >= 1)
-                    SelectItem(0);
+                    SelectItem(-1);
             });
         }
 
@@ -151,12 +162,19 @@ namespace JacDev.UI.ShopScene
 
         void SelectItem(int index)
         {
+            foreach (Transform t in itemViewerParent)
+                t.gameObject.SetActive(false);
+
+            if (index == -1)
+            {
+                selectingItemName.text = "";
+                selectingItemDescription.text = "";
+                return;
+            }
+
             var item = itemList[index];
             selectingItemName.text = item.itemName;
             selectingItemDescription.text = item.description;
-
-            foreach (Transform t in itemViewerParent)
-                t.gameObject.SetActive(false);
 
             itemViewerParent.GetChild(index).gameObject.SetActive(true);
         }
