@@ -59,6 +59,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1253603388778600320}
   - component: {fileID: 4730861256916147375}
+  - component: {fileID: -8669621215573771305}
+  - component: {fileID: 2076063538712906722}
   m_Layer: 0
   m_Name: Sinper
   m_TagString: Untagged
@@ -96,7 +98,40 @@ MonoBehaviour:
   entitySetting: {fileID: 11400000, guid: 533ec073d72afa94f85af7221a39fe82, type: 2}
   maxHealth: 10
   health: 10
+  id: 0
   launcher: {fileID: 673931172}
+--- !u!114 &-8669621215573771305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179316329678327715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!136 &2076063538712906722
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179316329678327715}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.36980397
+  m_Height: 1.2262391
+  m_Direction: 1
+  m_Center: {x: -0.084362626, y: 0.62963825, z: 0.3307014}
 --- !u!1001 &4232445108896871544
 PrefabInstance:
   m_ObjectHideFlags: 0

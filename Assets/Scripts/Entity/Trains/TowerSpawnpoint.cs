@@ -67,6 +67,9 @@ namespace JacDev.Entity
 
         private void OnMouseDown()
         {
+            if (tower == null)
+                return;
+
             InputHandler.Singleton.SetState(InputHandler.InputState.SelectTower);
             ShowTowerData(true);
 
@@ -81,6 +84,28 @@ namespace JacDev.Entity
                 // orbitCam.Focus = camOriginFocus;
                 orbitCam.Distance = camOriginDistant;
             };
+        }
+
+        private void OnMouseEnter()
+        {
+            if (tower == null)
+                return;
+
+            if (tower.GetComponent<Outline>())
+            {
+                tower.GetComponent<Outline>().enabled = true;
+            }
+        }
+
+        private void OnMouseExit()
+        {
+            if (tower == null)
+                return;
+
+            if (tower.GetComponent<Outline>())
+            {
+                tower.GetComponent<Outline>().enabled = false;
+            }
         }
 
         void CheckingTowerData()

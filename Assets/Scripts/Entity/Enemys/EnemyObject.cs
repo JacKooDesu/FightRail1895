@@ -49,6 +49,8 @@ namespace JacDev.Entity
             Enemy setting = (Enemy)entitySetting;
             // if (target == null)
             //     return;
+            if (FindObjectOfType<TrainLine>() == null)
+                return;
 
             if (taretCol == null || notAttack >= changeTargetTime)
             {
