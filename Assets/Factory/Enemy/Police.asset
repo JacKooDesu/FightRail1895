@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Police
   m_EditorClassIdentifier: 
   entityName: "\u65E5\u672C\u8B66\u5BDF"
+  entityNickName: 
+  entityInfo: 
   entityType: 0
   icon: {fileID: 0}
   prefab: {fileID: 6874770995342731890, guid: ef3f0b46e54213e48b4674e978f0dc22, type: 3}
@@ -25,5 +27,7 @@ MonoBehaviour:
   projectile: {fileID: 11400000, guid: 8c2b9af3e26afa74f98e0671b796e57b, type: 2}
   damage: 5
   attackRange: 10
-  attackTime: 2
+  attackTime: 1
+  attackTimeOffset: 0.5
   dropList: []
+  dropMoney: 20
