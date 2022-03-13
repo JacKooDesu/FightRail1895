@@ -9,7 +9,7 @@ namespace JacDev.Item
 {
     public class ItemUIObject : MonoBehaviour
     {
-        public ItemSetting item;
+        public TradeItem item;
 
         public Transform itemState; // 敘述父物件
         public Text nameText;       // 名稱物件
@@ -40,7 +40,7 @@ namespace JacDev.Item
 
             // 設定物件名稱
             nameText.text = item.itemName;
-            nameText.color = ItemSetting.rarityColors[(int)item.rarity];
+            // nameText.color = TradeItem.rarityColors[(int)item.rarity];
 
             // 設定物件敘述
             descriptionText.text = item.description;

@@ -13,7 +13,7 @@ namespace JacDev.Data
             public int id;
             public float buyPrice;
             public float sellPrice;
-            public PriceSetting(Item.ItemSetting item)
+            public PriceSetting(Item.TradeItem item)
             {
                 this.id = item.id;
                 this.buyPrice = item.originBuyPrice;
@@ -48,12 +48,10 @@ namespace JacDev.Data
 
         public void Init()
         {
-            foreach (Item.ItemSetting item in SettingManager.Singleton.ItemSetting.itemList)
+            foreach (Item.TradeItem item in SettingManager.Singleton.ItemSetting.tradeItemList)
             {
-                if (item.saleable)
-                {
-                    priceSettings.Add(new PriceSetting(item));
-                }
+                priceSettings.Add(new PriceSetting(item));
+
             }
         }
     }

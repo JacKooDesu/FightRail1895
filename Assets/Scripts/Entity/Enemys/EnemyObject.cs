@@ -17,9 +17,10 @@ namespace JacDev.Entity
         EntityObject attackTarget;
         Collider taretCol;
 
-        bool hasAttack = false;
+        bool hasAttackOnce = false; // 是否攻擊過一次，避免沒攻擊就消失
         float notAttack = 0;
         bool attacking = false; // 之後應以狀態寫成寫成Enum
+        bool hasAttack = false; // 是否進行攻擊(投射器or進戰傷害觸發)
         float attackTime = 0f;  // 攻擊時間(每次攻擊所花時間)
         public float changeTargetTime = 3f;
 
@@ -63,6 +64,11 @@ namespace JacDev.Entity
                 if (attackTime <= setting.attackTime)
                 {
                     attackTime += Time.deltaTime;
+                    if (attackTime >= setting.attackTimeOffset && !hasAttack)
+                    {
+                        launcher.Launch(taretCol.ClosestPoint(launcher.transform.position));
+                        hasAttack = true;
+                    }
                     return;
                 }
                 attacking = false;
@@ -83,16 +89,16 @@ namespace JacDev.Entity
             }
             else
             {
+                print("can attack");
                 transform.LookAt(taretCol.ClosestPoint(transform.position));
                 if (!ani.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
                     ani.SetTrigger("Attack");
-                    if ((entitySetting as Enemy).attackType == AttackType.Range)
-                        launcher.Launch(taretCol.ClosestPoint(launcher.transform.position));
                     attacking = true;
                     notAttack = 0;
                     taretCol = null;
-                    hasAttack = true;
+                    hasAttack = false;
+                    // hasAttackOnce = true;
                 }
 
             }
@@ -128,11 +134,11 @@ namespace JacDev.Entity
             target = trainLine.trains[index];
             taretCol = trainLine.trains[index].GetComponent<Collider>();
 
-            if (targetDistance > ((Enemy)entitySetting).maxDet && hasAttack)
-            {
-                GameHandler.Singleton.entities.Remove(this);
-                Destroy(gameObject);
-            }
+            // if (targetDistance > ((Enemy)entitySetting).maxDet && hasAttackOnce)
+            // {
+            //     GameHandler.Singleton.entities.Remove(this);
+            //     Destroy(gameObject);
+            // }
             // taretCol = target.trains[Random.Range(0, target.trains.Length)].GetComponent<Collider>();
         }
 

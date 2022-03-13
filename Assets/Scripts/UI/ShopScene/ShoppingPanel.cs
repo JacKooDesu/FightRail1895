@@ -20,7 +20,7 @@ namespace JacDev.UI.ShopScene
         [Header("3D預覽")]
         public Transform itemViewerParent;
 
-        public List<Item.ItemSetting> itemList = new List<Item.ItemSetting>();
+        public List<Item.TradeItem> itemList = new List<Item.TradeItem>();
 
         public bool isSelling;  // true=>正在買東西 || false=>正在賣東西
 
@@ -110,7 +110,7 @@ namespace JacDev.UI.ShopScene
 
         void BindItem()
         {
-            itemList = new List<Item.ItemSetting>();
+            itemList = new List<Item.TradeItem>();
 
             // var items = SettingManager.Singleton.ItemSetting.itemList;  // 後續應更改為當站販售物品List
             DataManager dm = DataManager.Singleton;
@@ -123,7 +123,7 @@ namespace JacDev.UI.ShopScene
             {
                 if (iter < itemIds.Count)
                 {
-                    var item = SettingManager.Singleton.ItemSetting.itemList[itemIds[iter]];
+                    var item = SettingManager.Singleton.ItemSetting.tradeItemList[itemIds[iter]];
                     itemList.Add(item);
                     t.Find("icon").GetComponent<Image>().sprite = item.icon;
                     // t.Find("Cover").gameObject.SetActive(false);

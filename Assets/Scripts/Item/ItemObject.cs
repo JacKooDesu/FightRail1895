@@ -6,7 +6,7 @@ namespace JacDev.Item
 {
     public class ItemObject : MonoBehaviour
     {
-        public ItemSetting item;
+        public TradeItem item;
         private void OnEnable()
         {
 

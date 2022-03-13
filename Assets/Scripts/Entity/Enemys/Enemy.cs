@@ -34,11 +34,12 @@ namespace JacDev.Entity
         public float damage = 5.0f;     // 基礎傷害，之後可寫成獨立類別，與種族寫在一起
         public float attackRange = 1f;  // 攻擊距離
         public float attackTime = 1.0f; // 攻擊花費時長(秒)
+        public float attackTimeOffset = .75f;   // 攻擊判定時間點
 
         [System.Serializable]
         class Drop
         {
-            ItemSetting item;   // 後續用int取代
+            DropItem item;   // 後續用int取代
             float dropRate;
         }
 
