@@ -15,9 +15,10 @@ namespace JacDev.Entity
 
         public int id;  // 用於GameHandler管理物件
 
-        public virtual void Init(EntitySetting setting)
+        // public virtual void Init(EntitySetting setting)
+        public virtual void Init()
         {
-            entitySetting = setting;
+           // entitySetting = setting;
         }
 
         public virtual void GetDamage(float damage)

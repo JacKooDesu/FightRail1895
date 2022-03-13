@@ -60,6 +60,7 @@ namespace JacDev.Entity
                 {
                     GameObject go = Instantiate(setting.entity.prefab);
                     EntityObject eo = go.GetComponent<EntityObject>();
+                    eo.Init();
                     go.transform.position = spawnpoint.position;
                     go.transform.SetParent(parent);
                     GameHandler.Singleton.entities.Add(eo);
@@ -76,6 +77,7 @@ namespace JacDev.Entity
                     {
                         GameObject go = Instantiate(setting.entity.prefab);
                         EntityObject eo = go.GetComponent<EntityObject>();
+                        eo.Init();
                         go.transform.position = spawnpoint.position;
                         go.transform.SetParent(parent);
                         GameHandler.Singleton.entities.Add(eo);

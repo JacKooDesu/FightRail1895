@@ -8,6 +8,10 @@ namespace JacDev.Entity
 {
     public class EnemyObject : EntityObject
     {
+        [Header("等級")]
+        // 需於Spawner 時設定完成，順便把攻擊係數調整好
+        // 當前100等為最高
+        public int level;
         [Header("攻擊設定")]
         public ProjectileSpawner launcher;
         // public Enemy enemy;
@@ -89,7 +93,7 @@ namespace JacDev.Entity
             }
             else
             {
-                print("can attack");
+                // print("can attack");
                 transform.LookAt(taretCol.ClosestPoint(transform.position));
                 if (!ani.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
@@ -153,9 +157,11 @@ namespace JacDev.Entity
             return true;
         }
 
-        public override void Init(EntitySetting setting)
+        // public override void Init(EntitySetting setting)
+        public override void Init()
         {
-            base.Init(setting);
+            // base.Init(setting);
+            level = 10; // for test
         }
 
         public override void GetDamage(float damage)
@@ -168,7 +174,24 @@ namespace JacDev.Entity
         public void OnDead()
         {
             GameHandler.Singleton.money += (entitySetting as Enemy).dropMoney;
+            Drop();
             Destroy(gameObject);
+        }
+
+        void Drop()
+        {
+            var dropTable = (entitySetting as Enemy).dropTable;
+            if (dropTable == null)
+                return;
+
+            var drop = dropTable.CalDrop(this);
+
+            if (drop is Item.DropTable.ItemDropSetting)
+                print((drop as Item.DropTable.ItemDropSetting).item.itemName);
+
+            else if (drop is Item.DropTable.ModDropSetting)
+                print((drop as Item.DropTable.ModDropSetting).mod.modName);
+
         }
     }
 }

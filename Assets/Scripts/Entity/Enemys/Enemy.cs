@@ -21,7 +21,9 @@ namespace JacDev.Entity
             return eo;
         }
 
-        public int level = 1;
+        [Header("數值設定")]
+        // public int level = 1;
+        public AnimationCurve levelCurve;   // 等級曲線，依照遊戲進度提升的曲線
 
         [SerializeField]
         EntityEnums.BloodType bloodType;     // 種族
@@ -36,15 +38,8 @@ namespace JacDev.Entity
         public float attackTime = 1.0f; // 攻擊花費時長(秒)
         public float attackTimeOffset = .75f;   // 攻擊判定時間點
 
-        [System.Serializable]
-        class Drop
-        {
-            DropItem item;   // 後續用int取代
-            float dropRate;
-        }
 
-        [SerializeField]
-        List<Drop> dropList = new List<Drop>();  // 掉落表
+        [Header("掉落")] public DropTable dropTable;  // 掉落表
 
         public int dropMoney = 20;  // 擊殺掉落金錢
 
