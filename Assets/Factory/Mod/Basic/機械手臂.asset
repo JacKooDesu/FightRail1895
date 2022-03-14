@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ed4db83752fb074a98f449caba43fda, type: 3}
-  m_Name: collect range
+  m_Name: "\u6A5F\u68B0\u624B\u81C2"
   m_EditorClassIdentifier: 
   modName: "\u6A5F\u68B0\u624B\u81C2"
   modType: 6

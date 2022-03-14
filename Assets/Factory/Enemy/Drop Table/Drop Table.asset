@@ -17,13 +17,22 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
+      value: 0.6
+      inSlope: 0.94696784
+      outSlope: 0.94696784
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.0795107
+    - serializedVersion: 3
+      time: 0.5840905
+      value: 0.9788391
+      inSlope: 0.1537732
+      outSlope: 0.1537732
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.36765823
     - serializedVersion: 3
       time: 1
       value: 1
@@ -37,40 +46,112 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   modDropSettings:
-  - name: Aim
+  - name: "\u7CBE\u6E96"
     dropRate:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1.5073562
+        outSlope: 1.5073562
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.13847494
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
       m_RotationOrder: 0
     mod: {fileID: 11400000, guid: a6e67b5bea7d7c84fa2a146bc9ed5e89, type: 2}
-  - name: capacity
+  - name: "\u8ECA\u5EC2\u64F4\u5145"
     dropRate:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
       m_RotationOrder: 0
     mod: {fileID: 11400000, guid: 1af200c4d64a6dd46bb6bdd1a816ad25, type: 2}
   itemDropSettings:
-  - name: "\u8001\u4E8C"
+  - name: "\u6E2C\u8A66\u7269\u54C1 II"
     dropRate:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
       m_RotationOrder: 0
     item: {fileID: 11400000, guid: d4bf7d6c0c5f22048a8e843d4b88c78d, type: 2}
     minAmount: 0
     maxAmount: 0
-  - name: --none--
+  - name: "\u6E2C\u8A66\u7269\u54C1"
     dropRate:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.5317647
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.5317647
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
       m_RotationOrder: 0
-    item: {fileID: 0}
+    item: {fileID: 11400000, guid: b0beb8fa33abac74786d50d28df4817a, type: 2}
     minAmount: 0
     maxAmount: 0

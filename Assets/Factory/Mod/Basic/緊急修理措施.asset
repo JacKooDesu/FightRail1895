@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ed4db83752fb074a98f449caba43fda, type: 3}
-  m_Name: reshield
+  m_Name: "\u7DCA\u6025\u4FEE\u7406\u63AA\u65BD"
   m_EditorClassIdentifier: 
   modName: "\u7DCA\u6025\u4FEE\u7406\u63AA\u65BD"
   modType: 9

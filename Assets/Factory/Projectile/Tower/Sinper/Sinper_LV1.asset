@@ -15,7 +15,7 @@ MonoBehaviour:
   entityName: "\u72D9\u64CA\u5F48\u85E5"
   entityNickName: 
   entityInfo: 
-  entityType: 3
+  entityType: 4
   icon: {fileID: 0}
   prefab: {fileID: 7721943181098325966, guid: 8b6ef8b2e51dd3e499155245803f1235, type: 3}
   targetEntityType: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   damage: 20
   speed: 100.54
   maxFlyTime: 1
-  radius: 0.001
+  radius: 0
   explosiveType: 2
   explosiveTime: 1
   explosivePrefab: {fileID: 1765528453515561511, guid: 668d9ca103f36834a93ce5aa50ca63d0,

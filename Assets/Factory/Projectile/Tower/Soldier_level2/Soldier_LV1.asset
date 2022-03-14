@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71cfef5881493f74896e0c2b09c271ec, type: 3}
   m_Name: Soldier_LV1
   m_EditorClassIdentifier: 
-  entityName: "\u72D9\u64CA\u5F48\u85E5"
+  entityName: "\u9023\u5C04\u5F48\u85E5"
   entityNickName: 
   entityInfo: 
-  entityType: 3
+  entityType: 4
   icon: {fileID: 0}
-  prefab: {fileID: 7721943181098325966, guid: 8b6ef8b2e51dd3e499155245803f1235, type: 3}
+  prefab: {fileID: 7721943181098325966, guid: 05be24dfe0d79174d9d8a8adc2a340b3, type: 3}
   targetEntityType: 0
   collideLayer:
     serializedVersion: 2
     m_Bits: 256
-  damage: 20
+  damage: 30
   speed: 100.54
   maxFlyTime: 1
-  radius: 0.001
+  radius: 0
   explosiveType: 2
   explosiveTime: 0
   explosivePrefab: {fileID: 1765528453515561511, guid: 668d9ca103f36834a93ce5aa50ca63d0,
