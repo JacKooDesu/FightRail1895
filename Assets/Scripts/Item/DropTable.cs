@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using JacDev.Mod;
 using JacDev.Entity;
+using JacDev.Data;
 
 namespace JacDev.Item
 {
@@ -11,6 +12,13 @@ namespace JacDev.Item
     {
         [Header("總掉落機率"), Tooltip("需大於此掉落率，才計算最後掉落的物品")]
         public AnimationCurve dropRate; // 需大於此掉落率，才計算最後掉落的物品
+
+        [System.Serializable]
+        public class LevelSetting
+        {
+            public int min = 0;
+            public int max = 101;
+        }
 
         [System.Serializable]
         public class DropSettingBase
@@ -26,6 +34,61 @@ namespace JacDev.Item
         {
             [Header("掉落物")]
             public ModFactory mod;
+            [Header("最低等級掉落")]
+            public LevelSetting copper;
+            public LevelSetting silver;
+            public LevelSetting gold;
+            public LevelSetting purple;
+            public LevelSetting rainbow;
+
+            public LevelSetting[] GetLevelArray()
+            {
+                return new LevelSetting[] { copper, silver, gold, purple, rainbow };
+            }
+
+            public void SetLevelMin(int index, int value)
+            {
+                var levels = new LevelSetting[] { copper, silver, gold, purple, rainbow };
+                if (index > 0)
+                {
+                    levels[index].min = Mathf.Max(levels[index - 1].min, value);
+                    levels[index - 1].max = levels[index].min;
+                }
+                else
+                {
+                    levels[index].min = 0;
+                }
+            }
+
+            public void SetLevelMax(int index, int value)
+            {
+                var levels = new LevelSetting[] { copper, silver, gold, purple, rainbow };
+                if (index < levels.Length - 1)
+                {
+                    levels[index].max = Mathf.Min(levels[index + 1].max, value);
+                    levels[index + 1].min = levels[index].max;
+                }
+                else
+                {
+                    levels[index].max = 101;
+                }
+            }
+
+            // 依照等級掉落
+            public ModData GetLevelDrop(int rank)
+            {
+                int iter = 0;
+                foreach (var level in GetLevelArray())
+                {
+                    if (level.min <= rank && level.max > rank)
+                        break;
+                    
+                    iter++;
+                }
+                
+
+                return new ModData(mod.GetSettingIndex(), iter);
+            }
         }
 
         [System.Serializable]
@@ -42,6 +105,25 @@ namespace JacDev.Item
         public List<ModDropSetting> modDropSettings = new List<ModDropSetting>();
         [Header("物品掉落率")]
         public List<ItemDropSetting> itemDropSettings = new List<ItemDropSetting>();
+
+        private void OnValidate()
+        {
+            UpdateModLevelSetting();
+        }
+
+        void UpdateModLevelSetting()
+        {
+            foreach (var m in modDropSettings)
+            {
+                var array = m.GetLevelArray();
+                for (int i = 0; i < array.Length; ++i)
+                {
+                    m.SetLevelMin(i, array[i].min);
+                    m.SetLevelMax(i, array[i].max);
+                }
+            }
+
+        }
 
         #region 公開方法
         public DropSettingBase CalDrop(EnemyObject enemy)

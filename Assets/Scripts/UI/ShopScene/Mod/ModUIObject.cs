@@ -32,9 +32,10 @@ namespace JacDev.UI.ShopScene.Mod
             }
             else
             {
+                var qualityFactory = SettingManager.Singleton.ModList.qualityFactory;
                 var data = modPanel.modTargetData[index];
                 icon.sprite = data.ToModFactory().icon;
-                bg.sprite = data.ToModFactory().GetRankSetting(data.rank).icon;
+                bg.sprite = qualityFactory.GetQualitySetting(data.ToModFactory()).GetQualityIcon(data.rank);
                 bg.color = new Color(1, 1, 1);
 
                 icon.gameObject.SetActive(true);
@@ -53,7 +54,7 @@ namespace JacDev.UI.ShopScene.Mod
             modName = $"{data.ToModFactory().modName}";
             description += $"{data.ToModFactory().description} ";
 
-            float value = data.ToModFactory().GetRankSetting(data.rank).baseValue;
+            float value = data.ToModFactory().GetQualityValue(data.rank);
             string color = value >= 0 ? "#ffd500" : "#ff0090";
             description += $"<color={color}>{value}</color>";
         }

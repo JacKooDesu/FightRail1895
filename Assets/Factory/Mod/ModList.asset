@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cfc855b78c8e244da4bf83d7f2bcacc, type: 3}
   m_Name: ModList
   m_EditorClassIdentifier: 
-  rankBg: []
+  qualityFactory: {fileID: 11400000, guid: f5cf5a0742eef82468be95b7c2ce6cf6, type: 2}
   modList:
   - {fileID: 11400000, guid: a6e67b5bea7d7c84fa2a146bc9ed5e89, type: 2}
   - {fileID: 11400000, guid: 1af200c4d64a6dd46bb6bdd1a816ad25, type: 2}
@@ -26,3 +26,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5b35e8b6af3a39e4a89494a535733c8f, type: 2}
   - {fileID: 11400000, guid: 124d5eed9d886f44ea23c0cf3cf09ef3, type: 2}
   - {fileID: 11400000, guid: 701d10d7c980b2243bd231fd5c1b418e, type: 2}
+  modPrefab: {fileID: 5592100597528234213, guid: 2258bac5ce9fd02448195d6a1537a822,
+    type: 3}

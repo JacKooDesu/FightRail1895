@@ -128,6 +128,6 @@ MonoBehaviour:
   spawnSettings:
   - entity: {fileID: 11400000, guid: 21a8bb2150820774d9bd3386b6f7db7d, type: 2}
     spawnType: 1
-    amount: 10
-    interval: 0.5
+    amount: 30
+    interval: 0.15
   radius: 30

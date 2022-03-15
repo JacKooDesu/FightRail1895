@@ -10,11 +10,11 @@ public class DropTableEditor : Editor
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
-        UpdateSettingName("modDropSettings","mod");
-        UpdateSettingName("itemDropSettings","item");
+        UpdateSettingName("modDropSettings", "mod");
+        UpdateSettingName("itemDropSettings", "item");
     }
 
-    void UpdateSettingName(string listName,string itemName)
+    void UpdateSettingName(string listName, string itemName)
     {
         var settings = serializedObject.FindProperty(listName);
         var arraySize = settings.arraySize;

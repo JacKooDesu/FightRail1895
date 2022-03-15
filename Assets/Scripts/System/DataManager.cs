@@ -41,7 +41,7 @@ public class DataManager : MonoBehaviour
         }
     }
     [SerializeField] MapData mapData;
-    [SerializeField] ModData modData;
+    // [SerializeField] ModData modData;
 
     [SerializeField] ItemPriceData itemPriceData;
     public ItemPriceData ItemPriceData

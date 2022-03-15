@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5397a603fd18a4bb251159360f97bd, type: 3}
+  m_Name: Mod Quality Setting
+  m_EditorClassIdentifier: 
+  cabin:
+    copper: {fileID: 21300000, guid: d79256c5655ff44429e54746e0f7f664, type: 3}
+    silver: {fileID: 21300000, guid: 5939b14966a63da4290d5d6cc6d674c9, type: 3}
+    gold: {fileID: 21300000, guid: 7ff2b81691397944881463387994745f, type: 3}
+    purple: {fileID: 21300000, guid: 1685da7fec5402148be5d0b481a5001a, type: 3}
+    rainbow: {fileID: 21300000, guid: 8af5e754aec4baf49997b2e92515789c, type: 3}
+  tower:
+    copper: {fileID: 21300000, guid: 3935fc7af789f7946b1f2e0853fa1a0b, type: 3}
+    silver: {fileID: 21300000, guid: ac5c4fc7ddc81514faf4e9a566fdca6d, type: 3}
+    gold: {fileID: 21300000, guid: 07bcf222ebb0b62439c2b1a36227e271, type: 3}
+    purple: {fileID: 21300000, guid: 1685da7fec5402148be5d0b481a5001a, type: 3}
+    rainbow: {fileID: 21300000, guid: 88033d765182103478c1a740054ba56b, type: 3}
+  train:
+    copper: {fileID: 21300000, guid: 052be77a64d5bbc428ba7b7f559621e1, type: 3}
+    silver: {fileID: 21300000, guid: cda13a80b780eaa449e7ce4ccec8669f, type: 3}
+    gold: {fileID: 21300000, guid: 426c35aef0c53da4491f308d43f7f0a1, type: 3}
+    purple: {fileID: 21300000, guid: a48ccab6e642a9240b4cdafc17d3fb5e, type: 3}
+    rainbow: {fileID: 21300000, guid: d4e5752fe7f2b71409d899402f7ff2bd, type: 3}

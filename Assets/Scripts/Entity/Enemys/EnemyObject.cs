@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using JacDev.UI.GameScene;
+using JacDev.Mod;
 
 namespace JacDev.Entity
 {
@@ -161,7 +162,7 @@ namespace JacDev.Entity
         public override void Init()
         {
             // base.Init(setting);
-            level = 10; // for test
+            level = Random.Range(0, 101); // for test
         }
 
         public override void GetDamage(float damage)
@@ -187,11 +188,17 @@ namespace JacDev.Entity
             var drop = dropTable.CalDrop(this);
 
             if (drop is Item.DropTable.ItemDropSetting)
+            {
                 print((drop as Item.DropTable.ItemDropSetting).item.itemName);
-
+            }
             else if (drop is Item.DropTable.ModDropSetting)
+            {
+                var mod = drop as Item.DropTable.ModDropSetting;
+                var modObject = Instantiate(SettingManager.Singleton.ModList.modPrefab).GetComponent<ModObject>();
+                modObject.transform.position = transform.position;
+                modObject.BuildMod(mod.GetLevelDrop(level));
                 print((drop as Item.DropTable.ModDropSetting).mod.modName);
-
+            }
         }
     }
 }

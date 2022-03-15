@@ -8,18 +8,48 @@ namespace JacDev.Mod
     public class ModQualityFactory : ScriptableObject
     {
         [System.Serializable]
-        public class Setting
+        public class QualitySetting
         {
-            public float worstValue;
-            public float bestValue;
+            public Sprite copper;
+            public Sprite silver;
+            public Sprite gold;
+            public Sprite purple;
+            public Sprite rainbow;
+
+            public Sprite GetQualityIcon(int rk)
+            {
+                Sprite[] rankSettings = {
+                    copper,
+                    silver,
+                    gold,
+                    purple,
+                    rainbow
+                };
+
+                return rankSettings[rk];
+            }
         }
 
-        public Setting Damage;
-        public Setting AtkSpeed;
-        public Setting Accurate;
-        public Setting Poison;
-        public Setting Burn;
-        public Setting Dizzy;
-        public Setting Capacity;
+        public QualitySetting cabin = new QualitySetting();
+        public QualitySetting tower = new QualitySetting();
+        public QualitySetting train = new QualitySetting();
+
+        public QualitySetting GetQualitySetting(ModFactory mod)
+        {
+            switch (mod.targetEntity)
+            {
+                case Entity.EntityEnums.EntityType.Tower:
+                    return tower;
+
+                case Entity.EntityEnums.EntityType.Cabin:
+                    return cabin;
+
+                case Entity.EntityEnums.EntityType.Train:
+                    return train;
+            }
+
+            UnityEngine.Debug.LogWarning("不可使用Mod的Entity");
+            return null;
+        }
     }
 }

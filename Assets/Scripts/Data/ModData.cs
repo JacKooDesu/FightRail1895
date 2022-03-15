@@ -32,6 +32,12 @@ namespace JacDev.Data
         }
         public int rank;
 
+        public ModData(int settingIndex, int rank)
+        {
+            this.modSettingIndex = settingIndex;
+            this.rank = rank;
+        }
+
         public Mod.ModFactory ToModFactory()
         {
             return SettingManager.Singleton.ModList.modList[modSettingIndex];

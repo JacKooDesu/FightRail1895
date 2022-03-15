@@ -18,7 +18,12 @@ MonoBehaviour:
   entityType: 0
   icon: {fileID: 0}
   prefab: {fileID: 6874770995342731890, guid: ef3f0b46e54213e48b4674e978f0dc22, type: 3}
-  level: 1
+  levelCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   bloodType: 1
   movementSpeed: 2
   health: 20
@@ -29,5 +34,5 @@ MonoBehaviour:
   attackRange: 10
   attackTime: 1
   attackTimeOffset: 0.5
-  dropList: []
+  dropTable: {fileID: 11400000, guid: 2c332c15ddcf00e45aaad0e2e66d84d9, type: 2}
   dropMoney: 20
