@@ -73,6 +73,9 @@ namespace JacDev.Entity
                 var particle = explosive.GetComponent<ParticleSystem>();
                 explosive.localScale = Vector3.one;
                 particle.Play();
+                if (hitObject.GetComponent<EntityObject>() != null)
+                    if (hitObject.transform.GetComponent<EntityObject>().entitySetting.entityType == setting.targetEntityType)
+                        hitObject.transform.GetComponent<EntityObject>().GetDamage(setting.damage);
                 yield return new WaitForSeconds(particle.main.duration);
             }
             else

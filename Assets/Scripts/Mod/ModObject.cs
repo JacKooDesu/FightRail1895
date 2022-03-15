@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using JacDev.Data;
+using DG.Tweening;
 
 namespace JacDev.Mod
 {
@@ -16,6 +17,8 @@ namespace JacDev.Mod
         public GameObject cabin;
         public GameObject tower;
         public GameObject train;
+
+        bool hasPicked = false;
 
 
         private void Start()
@@ -91,6 +94,21 @@ namespace JacDev.Mod
         void Refresh()
         {
             BuildMod(modData);
+        }
+
+        private void OnMouseEnter()
+        {
+            if (hasPicked)
+                return;
+
+            hasPicked = true;
+            transform.DOScale(Vector3.zero, .5f).SetEase(Ease.InBack).OnComplete(() => PickedUp());
+        }
+
+        void PickedUp()
+        {
+            DataManager.Singleton.PlayerData.AddMod(modData);
+            Destroy(gameObject);
         }
     }
 }

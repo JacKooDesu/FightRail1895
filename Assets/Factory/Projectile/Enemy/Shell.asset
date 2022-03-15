@@ -15,14 +15,14 @@ MonoBehaviour:
   entityName: "\u596A\u547D\u80F8\u5F48"
   entityNickName: 
   entityInfo: 
-  entityType: 3
+  entityType: 4
   icon: {fileID: 0}
   prefab: {fileID: 7721943181098325966, guid: 5879927495a2c5847b0ffdf28692a5e0, type: 3}
   targetEntityType: 2
   collideLayer:
     serializedVersion: 2
-    m_Bits: 768
-  damage: 3
+    m_Bits: 769
+  damage: 1
   speed: 41.05
   maxFlyTime: 1
   radius: 1

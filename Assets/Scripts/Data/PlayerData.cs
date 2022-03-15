@@ -94,6 +94,24 @@ namespace JacDev.Data
             for (int i = 1; i < SettingManager.Singleton.TowerSetting.towers.Count; ++i)
                 towersGrade.Add(0);
         }
+
+        public void AddMod(ModData mod)
+        {
+            switch (mod.ToModFactory().targetEntity)
+            {
+                case Entity.EntityEnums.EntityType.Tower:
+                    towerModDatas.Add(mod);
+                    return;
+
+                case Entity.EntityEnums.EntityType.Cabin:
+                    cabinModDatas.Add(mod);
+                    return;
+
+                case Entity.EntityEnums.EntityType.Train:
+                    trainModDatas.Add(mod);
+                    return;
+            }
+        }
     }
 
 }

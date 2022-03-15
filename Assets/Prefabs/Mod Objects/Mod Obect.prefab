@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 155617213144550696}
   - component: {fileID: 521734177}
   - component: {fileID: 5108078466240876973}
+  - component: {fileID: 778908968378422710}
   m_Layer: 0
   m_Name: Mod Obect
   m_TagString: Untagged
@@ -102,3 +103,16 @@ MonoBehaviour:
   cabin: {fileID: 919132149155446097, guid: d0a7af68706dc9e45bcd1e37a11a7d95, type: 3}
   tower: {fileID: 919132149155446097, guid: 976e336bf423e274380700064627f6f9, type: 3}
   train: {fileID: 919132149155446097, guid: 726c901951468e243a976976202c53b3, type: 3}
+--- !u!135 &778908968378422710
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5592100597528234213}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Center: {x: 0, y: 0, z: 0}
