@@ -18,6 +18,10 @@ MonoBehaviour:
     - {fileID: 4145459195611424288, guid: 758bde8c04d082742b11ce37409ba7c8, type: 3}
     - {fileID: 8284571901809451141, guid: 1f9d4499fc45f1b43b16fd8dcf86ecf4, type: 3}
     - {fileID: 4616168537673792045, guid: 654f6d84fb3196f4e90d3f1492d56120, type: 3}
+    - {fileID: 919132149155446097, guid: 99fc0499294566142b68873d6c6eb534, type: 3}
+    - {fileID: 919132149155446097, guid: bb1dffa54b817a343b52d4102b0a8992, type: 3}
+    - {fileID: 919132149155446097, guid: 00fb41f455c86b44297ccbeb4ea47213, type: 3}
+    - {fileID: 919132149155446097, guid: 5a3fa7294f1f5f6438ee041a7742e143, type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     size: 2
     max: 40
@@ -31,20 +35,22 @@ MonoBehaviour:
     - {fileID: 682063898333826019, guid: 680330513802da94ca342771343325c2, type: 3}
     - {fileID: 8918029108778408009, guid: 130a8258827e07e409bc28c6b3eb183b, type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
-    size: 5
-    max: 59
+    size: 2
+    max: 201
     min: 5
-    res: 0.501
+    res: 0.56
     leftSide: 1
     rightSide: 1
   - name: grass
     origins:
     - {fileID: 8724073853793961533, guid: 1bf802e678075764887fa7b8a8086096, type: 3}
+    - {fileID: 3857902147553979573, guid: 72dde3c77f9eea34f8efc04c24dd27ae, type: 3}
+    - {fileID: 418402815686674842, guid: 1ccc0089e13c99446889cee1fdee05e2, type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     size: 1
-    max: 330
+    max: 1000
     min: 5
-    res: 0.845
+    res: 1
     leftSide: 1
     rightSide: 1
   - name: house
