@@ -47,6 +47,19 @@ MonoBehaviour:
     res: 0.845
     leftSide: 1
     rightSide: 1
+  - name: house
+    origins:
+    - {fileID: 919132149155446097, guid: ee0517052c04d6843bedcac0e0a1513b, type: 3}
+    - {fileID: 919132149155446097, guid: 5d4fd812eecc0a14c934170e0d2d3621, type: 3}
+    - {fileID: 919132149155446097, guid: a5edf8423c58b5f42b12fa60f1555839, type: 3}
+    - {fileID: 919132149155446097, guid: 34e4a0905ea8c1943935617ac2bf1a8d, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
+    size: 1
+    max: 50
+    min: 5
+    res: 0.845
+    leftSide: 1
+    rightSide: 1
   size: 160
   railWidth: 15
   spawnpointAvoidSize: 5
