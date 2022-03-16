@@ -58,6 +58,9 @@ namespace JacDev.UI.GameScene
 
         private void OnEnable()
         {
+            if (GameHandler.Singleton.debugMode)
+                return;
+                
             JacDev.Utils.EventBinder.Bind(pauseButton, EventTriggerType.PointerClick,
                 (e) => { GameHandler.Singleton.Pause(true); pausePanel.SetActive(true); }
             );

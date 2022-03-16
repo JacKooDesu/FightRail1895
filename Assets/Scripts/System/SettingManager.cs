@@ -35,12 +35,6 @@ public class SettingManager : MonoBehaviour
         get => mapSetting;
     }
 
-    [SerializeField] ModFactory modSetting;
-    public ModFactory ModSetting
-    {
-        get => modSetting;
-    }
-
     [SerializeField] TowerList towerSetting;
     public TowerList TowerSetting
     {

@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapSetting: {fileID: 11400000, guid: 25c0d9be47284e7478454a72862696ec, type: 2}
-  modSetting: {fileID: 0}
   towerSetting: {fileID: 11400000, guid: 1a127f5b1daf32f43b4a613c9426250b, type: 2}
   enemySetting: {fileID: 11400000, guid: 01acbb372e1ddf248bbba166004e2619, type: 2}
+  modList: {fileID: 11400000, guid: 4016d93f64c6f5948b9ff0ed1d11c76c, type: 2}
   itemSetting: {fileID: 11400000, guid: 4c6c29a990da0a74a9abaadb767211cc, type: 2}
+  eventList: {fileID: 0}
   bgmSetting: {fileID: 11400000, guid: c928945409c76a843b32039b604a9fe0, type: 2}

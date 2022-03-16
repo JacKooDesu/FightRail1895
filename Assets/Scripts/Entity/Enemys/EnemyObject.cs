@@ -153,7 +153,8 @@ namespace JacDev.Entity
         public override void GetDamage(float damage)
         {
             base.GetDamage(damage);
-            GameSceneUIHandler.Singleton.damagePanel.DisplayDamage(this, damage);
+            if (GameSceneUIHandler.Singleton.damagePanel != null)
+                GameSceneUIHandler.Singleton.damagePanel.DisplayDamage(this, damage);
         }
 
         public void OnDead()

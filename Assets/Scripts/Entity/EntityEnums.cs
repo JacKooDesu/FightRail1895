@@ -7,6 +7,7 @@ namespace JacDev.Entity
             Enemy,
             Tower,
             Train,
+            Cabin,
             Projectile
         }
 

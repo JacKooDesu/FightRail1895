@@ -182,6 +182,8 @@ public class DataManager : MonoBehaviour
     [ContextMenu("強制存檔")]
     public void ForceSave()
     {
+        playerData.SortMod();
         SavePlayerData();
+        FileManager.Save("/TestMap", mapData, "/GameDatas");
     }
 }

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed4db83752fb074a98f449caba43fda, type: 3}
+  m_Name: collect range
+  m_EditorClassIdentifier: 
+  modName: "\u6A5F\u68B0\u624B\u81C2"
+  modType: 6
+  icon: {fileID: 21300000, guid: b86a29f0e4115af46a506e9c6d6ff236, type: 3}
+  description: "\u81EA\u52D5\u62FE\u53D6\u7269\u54C1\u7BC4\u570D+"
+  targetEntity: 3
+  copper:
+    icon: {fileID: 21300000, guid: c7539a76959586047810d6724b2b6534, type: 3}
+    baseValue: 0
+  silver:
+    icon: {fileID: 21300000, guid: ebfe242da9454ef4b8cba867d8dd0270, type: 3}
+    baseValue: 0
+  gold:
+    icon: {fileID: 21300000, guid: 61b7cc8738958094fb451ae05ee2e235, type: 3}
+    baseValue: 0
+  purple:
+    icon: {fileID: 21300000, guid: f279e3ca506b2d342ae2b78e20b47d3a, type: 3}
+    baseValue: 0
+  rainbow:
+    icon: {fileID: 21300000, guid: c6224d26e7abdb94cafcc5e23f491ad1, type: 3}
+    baseValue: 0

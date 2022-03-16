@@ -69,35 +69,43 @@ namespace JacDev.Entity
             float t = 0;
 
             if (setting.explosiveType == Projectile.ExplosiveType.Particle)
-                explosive.GetComponent<ParticleSystem>().Play();
-
-            while (t <= 1f)
             {
-                explosive.localScale = t * setting.radius * Vector3.one / transform.lossyScale.x;
-                if (!hasCalDamage && t >= .5f)
+                var particle = explosive.GetComponent<ParticleSystem>();
+                explosive.localScale = Vector3.one;
+                particle.Play();
+                yield return new WaitForSeconds(particle.main.duration);
+            }
+            else
+            {
+                while (t <= 1f)
                 {
-                    RaycastHit[] hits = Physics.CapsuleCastAll(transform.position, transform.position, setting.radius, transform.forward, setting.collideLayer);
-                    foreach (RaycastHit hit in hits)
+                    explosive.localScale = t * setting.radius * Vector3.one / transform.lossyScale.x;
+                    if (!hasCalDamage && t >= .5f)
                     {
-                        if (hit.transform.GetComponent<EntityObject>() != null)
+                        RaycastHit[] hits = Physics.CapsuleCastAll(transform.position, transform.position, setting.radius, transform.forward, setting.collideLayer);
+                        foreach (RaycastHit hit in hits)
                         {
-                            if (hit.transform.GetComponent<EntityObject>().entitySetting.entityType == setting.targetEntityType)
+                            if (hit.transform.GetComponent<EntityObject>() != null)
                             {
-                                hit.transform.GetComponent<EntityObject>().GetDamage(setting.damage);
-                                print(hit.transform.name);
+                                if (hit.transform.GetComponent<EntityObject>().entitySetting.entityType == setting.targetEntityType)
+                                {
+                                    hit.transform.GetComponent<EntityObject>().GetDamage(setting.damage);
+                                    print(hit.transform.name);
+                                }
+
                             }
-
                         }
+                        hasCalDamage = true;
                     }
-                    hasCalDamage = true;
-                }
-                t += Time.deltaTime / setting.explosiveTime;
+                    t += Time.deltaTime / setting.explosiveTime;
 
-                yield return null;
+                    yield return null;
+                }
             }
 
-            while (setting.explosiveType == Projectile.ExplosiveType.Particle && explosive.GetComponent<ParticleSystem>().isPlaying)
-                yield return null;
+
+            // while (setting.explosiveType == Projectile.ExplosiveType.Particle && explosive.GetComponent<ParticleSystem>().isPlaying)
+            //     yield return null;
 
             Destroy(gameObject);
         }

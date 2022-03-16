@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed4db83752fb074a98f449caba43fda, type: 3}
+  m_Name: new Mod
+  m_EditorClassIdentifier: 
+  modName: "\u74B0\u4FDD"
+  modType: 5
+  description: 
+  copper:
+    icon: {fileID: 0}
+    baseValue: 0
+  silver:
+    icon: {fileID: 0}
+    baseValue: 0
+  gold:
+    icon: {fileID: 0}
+    baseValue: 0
+  purple:
+    icon: {fileID: 0}
+    baseValue: 0
+  rainbow:
+    icon: {fileID: 0}
+    baseValue: 0

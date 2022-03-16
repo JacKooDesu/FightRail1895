@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\u6728\u6750"
   m_EditorClassIdentifier: 
   itemName: "\u6728\u6750"
-  description: "\u6728\u6750\u6728\u6750\u6728\u6750"
+  description: "\u9AD8\u7D1A\u6750\u7684\u6A9C\u6728\uFF0C\u5C1A\u672A\u52A0\u5DE5\u5C31\u6563\u767C\u8457\u4E00\u80A1\u6A9C\u6728\u9999\u3002\u6728\u6750\u5448\u9EC3\u8272\u504F\u7D05\uFF0C\u6728\u7D0B\u6E05\u6670\u7F8E\u9E97\u3002"
   icon: {fileID: 0}
   prefab: {fileID: 6556099524285818629, guid: dec4c61f85fb13b46a991afe28d4aac4, type: 3}
   rarity: 0

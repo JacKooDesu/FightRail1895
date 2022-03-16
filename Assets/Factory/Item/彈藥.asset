@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: "\u5F48\u85E5"
   m_EditorClassIdentifier: 
   itemName: "\u5F48\u85E5"
-  description: "\u5F48\u85E5\u4F46\u8981\u4F46\u8981\u5F48\u85E5\u5F48\u85E5\u4F46\u8981\u4F46\u8981\u5F48\u85E5\u5F48\u85E5\u4F46\u8981\u4F46\u8981\u5F48\u85E5\u3002"
-  id: 0
+  description: "\u5F48\u85E5"
   icon: {fileID: 21300000, guid: 1559b38be120a834e809c37c15ab9044, type: 3}
   prefab: {fileID: 3307998246248637069, guid: 7acbc91d4fb7dd5439899a3edaae5800, type: 3}
   rarity: 0
@@ -22,4 +21,7 @@ MonoBehaviour:
   maxStack: 16
   droppable: 0
   saleable: 1
-  price: 80
+  originBuyPrice: 100
+  originSellPrice: 200
+  defaultSellPriceMultiply: 0.1
+  defaultBuyPriceMultiply: 0.1

@@ -19,7 +19,9 @@ namespace JacDev.Entity
             return so;
         }
 
-        public enum ExplosiveType{
+        public enum ExplosiveType
+        {
+            None,
             Scale,
             Particle
         }

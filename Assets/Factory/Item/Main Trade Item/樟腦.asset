@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: "\u6A1F\u8166"
   m_EditorClassIdentifier: 
   itemName: "\u6A1F\u8166"
-  description: "\u6A1F\u8166\u6A1F\u8166\u6A1F\u8166\u5F35\u6A1F\u8166\u8166\u5F35\u3002"
-  icon: {fileID: 0}
-  prefab: {fileID: 6556099524285818629, guid: dec4c61f85fb13b46a991afe28d4aac4, type: 3}
+  description: "\u6A1F\u8166\u7684\u4E3B\u8981\u7528\u9014\u5728\u65BC\u91AB\u7642\uFF0C\u53EF\u6CBB\u98A8\u6FD5\u3001\u75B9\u766C\u3001\u970D\u4E82\u3001\u6216\u4F5C\u5F37\u5FC3\u5291\uFF0C\u6CBB\u7642\u76AE\u819A\u75C5\u3001\u795E\u7D93\u8870\u5F31\u75C7\u7B49\u7B49\u3002\u6B64\u5916\uFF0C\u4E5F\u7528\u4F86\u9632\u87F2\u3001\u88FD\u9020\u7159\u706B\u3001\u9999\u6599\u3001\u7121\u7159\u706B\u85E5\u3001\u88FD\u9999\u3002"
+  icon: {fileID: 21300000, guid: 446d934eb7befb444bfaa428f8456c7b, type: 3}
+  prefab: {fileID: 2166616749828012683, guid: 7ea94e1164a03a74f8242b8e44a0e99e, type: 3}
   rarity: 0
   stackable: 0
   maxStack: 16
