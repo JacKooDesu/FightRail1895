@@ -19,12 +19,18 @@ namespace JacDev.UI.ShopScene
                 EventTriggerType.PointerEnter,
                 (data) => AudioHandler.Singleton.PlaySound("hover")
             );
-            
+
             EventBinder.Bind(
                 backButton,
                 EventTriggerType.PointerClick,
                 (data) => AudioHandler.Singleton.PlaySound("select")
             );
+
+            FindObjectOfType<ObjectSwitcher>().OnSwitch += (newIndex, oldIndex) =>
+            {
+                if (newIndex == 0 && newIndex == oldIndex)
+                    AsyncSceneLoader.Singleton.LoadScene("Title_v2");
+            };
         }
 
         // Update is called once per frame

@@ -18,9 +18,9 @@ MonoBehaviour:
   entityType: 1
   icon: {fileID: 21300000, guid: 3c18ec41990183a46a0064a76c35811b, type: 3}
   prefab: {fileID: 121041306517873994, guid: 831c284bf01a61048b74dd090b10a5d6, type: 3}
-  price: 20
+  price: 100
   projectile: {fileID: 11400000, guid: 518db5dfbf0441c4eb48ae8e3ee15489, type: 2}
-  attackRange: 8
+  attackRange: 16
   attackTime: 1.7
   upgradeMultiply:
     attackTime: 0.2

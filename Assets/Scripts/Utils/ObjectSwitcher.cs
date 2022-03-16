@@ -12,9 +12,10 @@ public class ObjectSwitcher : MonoBehaviour
     public List<GameObject> objects = new List<GameObject>();
     public bool hideAtStart;
     public int defaultIndex = 0;
-    int currentIndex = 0;
+    public int currentIndex = 0;
+    public int oldIndex = 0;
 
-    public System.Action<int> OnSwitch;
+    public System.Action<int, int> OnSwitch; // (NewIndex,OldIndex)
     public bool autoBind = false;
     public bool tabMode = false;
     public Color tabModeColor;
@@ -69,10 +70,11 @@ public class ObjectSwitcher : MonoBehaviour
             if (objects[i] != null)
                 objects[i].SetActive(i == index);
         }
+        oldIndex = currentIndex;
         currentIndex = index;
 
         if (OnSwitch != null)
-            OnSwitch.Invoke(currentIndex);
+            OnSwitch.Invoke(currentIndex, oldIndex);
 
         if (tabMode)
         {

@@ -90,9 +90,13 @@ namespace JacDev.Data
             currentStation = startStation.GUID;
 
             // towersGrade = new List<int>(SettingManager.Singleton.TowerSetting.towers.Count);
-            towersGrade.Add(1);
-            for (int i = 1; i < SettingManager.Singleton.TowerSetting.towers.Count; ++i)
-                towersGrade.Add(0);
+            // 測試版本自動解鎖前三個塔
+            // towersGrade.Add(1);
+            // for (int i = 1; i < SettingManager.Singleton.TowerSetting.towers.Count; ++i)
+            //     towersGrade.Add(0);
+            for (int i = 0; i < SettingManager.Singleton.TowerSetting.towers.Count - 1; ++i)
+                towersGrade.Add(1);
+            towersGrade.Add(0);
         }
 
         public void AddMod(ModData mod)

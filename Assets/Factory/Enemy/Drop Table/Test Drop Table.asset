@@ -17,30 +17,30 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.6
-      inSlope: 0.94696784
-      outSlope: 0.94696784
+      value: 0.023
+      inSlope: 0.05272946
+      outSlope: 0.05272946
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.0795107
+      outWeight: 0.28156
     - serializedVersion: 3
-      time: 0.5840905
-      value: 0.9788391
-      inSlope: 0.1537732
-      outSlope: 0.1537732
+      time: 0.39287686
+      value: 0.03754226
+      inSlope: 0.008668719
+      outSlope: 0.008668719
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.36765823
+      inWeight: 0.2540985
+      outWeight: 0.25127932
     - serializedVersion: 3
       time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      value: 0.04
+      inSlope: -0.000294329
+      outSlope: -0.000294329
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.32693222
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

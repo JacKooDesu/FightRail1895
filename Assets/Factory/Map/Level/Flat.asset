@@ -59,8 +59,8 @@ MonoBehaviour:
     - {fileID: 4013699473120758432, guid: 76b366dfc5a9b3244a28a49acd8e119c, type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     size: 6
-    max: 4
-    min: 1
+    max: 10
+    min: 6
     res: 1
     leftSide: 1
     rightSide: 1

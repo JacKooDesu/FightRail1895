@@ -72,8 +72,8 @@ MonoBehaviour:
     - {fileID: 8833255504248510995, guid: b4118493b990e094bb33d1e329134108, type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     size: 6
-    max: 4
-    min: 1
+    max: 10
+    min: 6
     res: 1
     leftSide: 1
     rightSide: 1

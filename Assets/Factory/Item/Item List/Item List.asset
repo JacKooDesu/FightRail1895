@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974f85c583bf7114da1ff88df687925f, type: 3}
   m_Name: Item List
   m_EditorClassIdentifier: 
-  itemList:
-  - {fileID: 11400000, guid: c6d6f7d2e5936d948a27f95792d02a21, type: 2}
-  - {fileID: 11400000, guid: 5971e409110649f408971faa26dc8a88, type: 2}
+  tradeItemList:
   - {fileID: 11400000, guid: 5b21910ae537b5a458dbbf5f6a2cb453, type: 2}
   - {fileID: 11400000, guid: 8dbbb4e26d499a3498549d5b277e7ac5, type: 2}
   - {fileID: 11400000, guid: 3fe8c0afa4924c847b9b9ebf99ac54a5, type: 2}
   - {fileID: 11400000, guid: d3c706be700ebfd49b4b5e003a78d692, type: 2}
   - {fileID: 11400000, guid: eb70c1202e79ab94db686b258ffadeb0, type: 2}
   - {fileID: 11400000, guid: 086842c4daf12ca4b97a563f705978dc, type: 2}
+  - {fileID: 11400000, guid: 5971e409110649f408971faa26dc8a88, type: 2}
+  dropableItemList: []

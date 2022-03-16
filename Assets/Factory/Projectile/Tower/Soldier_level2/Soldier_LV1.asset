@@ -22,7 +22,7 @@ MonoBehaviour:
   collideLayer:
     serializedVersion: 2
     m_Bits: 256
-  damage: 30
+  damage: 2
   speed: 100.54
   maxFlyTime: 1
   radius: 0
