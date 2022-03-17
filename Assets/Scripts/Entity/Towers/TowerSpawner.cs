@@ -22,7 +22,7 @@ namespace JacDev.Entity
         {
             InputHandler.Singleton.placingTowerEvent.onBegin += () =>
             {
-                if (GameHandler.Singleton.money < (spawnSettings[SelectTower].entity as Tower).price)
+                if (GameHandler.Singleton.credit < (spawnSettings[SelectTower].entity as Tower).price)
                 {
                     InputHandler.Singleton.State = InputHandler.InputState.Normal;
                     return;
@@ -81,7 +81,7 @@ namespace JacDev.Entity
                 if (spawnPointParent != null)
                 {
                     Spawning();
-                    GameHandler.Singleton.money -= (spawnSettings[SelectTower].entity as Tower).price;
+                    GameHandler.Singleton.credit -= (spawnSettings[SelectTower].entity as Tower).price;
                 }
 
 

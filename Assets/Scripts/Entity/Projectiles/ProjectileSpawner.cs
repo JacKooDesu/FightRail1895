@@ -6,6 +6,7 @@ namespace JacDev.Entity
 {
     public class ProjectileSpawner : EntitySpawner
     {
+        public EntityObject owner;
         Vector3 direction;
         public void Launch(Vector3 targetPoint)
         {
@@ -22,7 +23,7 @@ namespace JacDev.Entity
             go.transform.SetParent(parent);
             GameHandler.Singleton.entities.Add(eo);
 
-            ((ProjectileObject)eo).Launch(direction);
+            ((ProjectileObject)eo).Launch(direction, owner);
 
             yield break;
         }

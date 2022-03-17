@@ -32,8 +32,8 @@ public class GameHandler : MonoBehaviour
     public bool debugMode;
 
     [Header("遊戲中資料")]
-    public int money;   // 後續是否整合進PlayerData?
-    public int initMoney;
+    public int credit;   // 後續是否整合進PlayerData?
+    public int initCredit;
 
     static PlayerData playerData;
     public PlayerData PlayerData { get { return playerData; } }
@@ -74,7 +74,7 @@ public class GameHandler : MonoBehaviour
 
     private void Start()
     {
-        money = initMoney;
+        credit = initCredit;
     }
 
     static bool hasAddSceneLoadAction;

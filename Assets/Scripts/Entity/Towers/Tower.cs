@@ -19,6 +19,7 @@ namespace JacDev.Entity
         public int price;   // 價格
 
         public Projectile projectile;
+        public float damage;    // 2022.3.18 現在改從這裡修改傷害
         public float attackRange = 1f;  // 攻擊距離
         public float attackTime = 1.0f; // 攻擊花費時長(秒)
 

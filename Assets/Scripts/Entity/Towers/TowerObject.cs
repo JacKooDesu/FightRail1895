@@ -16,6 +16,20 @@ namespace JacDev.Entity
         {
             if (GetComponentInChildren<Animator>() != null)
                 animator = GetComponentInChildren<Animator>();
+
+            launcher.owner = this;
+
+            CalStatus();
+        }
+
+        // 讀取玩家升級狀態重新計算數值
+        void CalStatus()
+        {
+            var setting = (entitySetting as Tower);
+            var index = SettingManager.Singleton.TowerSetting.towers.IndexOf(setting);
+            var grade = DataManager.Singleton.PlayerData.towersGrade[index];
+            // 傷害公式還須被定義!!
+            damage = setting.damage * (1 + setting.upgradeMultiply.damage * (float)grade);
         }
 
         private void Update()

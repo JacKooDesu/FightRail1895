@@ -20,9 +20,10 @@ MonoBehaviour:
   prefab: {fileID: 8179316329678327715, guid: 8b39a17cfe997884baa99ba845d5237d, type: 3}
   price: 300
   projectile: {fileID: 11400000, guid: ef6893a9349559d45b5812a93505b1a6, type: 2}
+  damage: 10
   attackRange: 25
   attackTime: 3
   upgradeMultiply:
     attackTime: 0.2
-    damage: 0.5
+    damage: 0.05
     attackRange: 5

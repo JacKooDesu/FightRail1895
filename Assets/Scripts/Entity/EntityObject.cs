@@ -11,6 +11,23 @@ namespace JacDev.Entity
         public float maxHealth = 10f;
         public float health = 10f;
 
+        // 計算後的數值
+        [SerializeField] protected float damage;
+        public float Damage
+        {
+            get => damage;
+        }
+        [SerializeField] protected float attackTime;
+        public float AttackTime
+        {
+            get => damage;
+        }
+        [SerializeField] protected float range;
+        public float Range
+        {
+            get => range;
+        }
+
         [HideInInspector] public event Action onGetDamage;
 
         public int id;  // 用於GameHandler管理物件
@@ -18,7 +35,7 @@ namespace JacDev.Entity
         // public virtual void Init(EntitySetting setting)
         public virtual void Init()
         {
-           // entitySetting = setting;
+            // entitySetting = setting;
         }
 
         public virtual void GetDamage(float damage)
