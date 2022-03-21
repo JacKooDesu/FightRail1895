@@ -26,6 +26,8 @@ namespace JacDev.UI.ShopScene
         {
             InitMap();
             BindSelectableStation(DataManager.Singleton.GetMapData(false).FindStation(DataManager.Singleton.PlayerData.currentStation));
+
+            Tutorial.TutorialManager.Singleton.Tutorial(1); // 2022.3.22 新增
         }
 
         public void InitMap()

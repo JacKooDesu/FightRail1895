@@ -115,6 +115,7 @@ public class GameHandler : MonoBehaviour
                 // }
                 AudioHandler.Singleton.PlayBgm("Moring News");
                 DataManager.Singleton.SavePlayerData();
+                JacDev.Tutorial.TutorialManager.Singleton.Tutorial(0);  // 2022.3.22 新增
                 break;
 
             case "GameScene":
@@ -135,6 +136,7 @@ public class GameHandler : MonoBehaviour
                 JacDev.Level.LevelGenerator.Singleton.BuildMap();
                 AudioHandler.Singleton.RandPlayBgm();
 
+                JacDev.Tutorial.TutorialManager.Singleton.Tutorial(21);  // 2022.3.22 新增
 
                 break;
         }

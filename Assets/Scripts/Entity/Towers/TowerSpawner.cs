@@ -36,6 +36,8 @@ namespace JacDev.Entity
                     // g.GetComponent<MeshRenderer>().enabled = true;
                     g.GetComponent<TowerSpawnpoint>().SpawnAreaRendered(true);
                 }
+
+                JacDev.Tutorial.TutorialManager.Singleton.Tutorial(22);  // 2022.3.22 新增
             };
 
             InputHandler.Singleton.placingTowerEvent.onUpdate += () =>

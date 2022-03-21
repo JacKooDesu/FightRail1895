@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c35c5f0b610704c859fce40e0f898e, type: 3}
+  m_Name: "\u904A\u6232\u6559\u5B78-1"
+  m_EditorClassIdentifier: 
+  title: "\u57FA\u672C\u64CD\u4F5C"
+  id: 21
+  tutorials:
+  - description: "\u9019\u662F\u904A\u6232\u5834\u666F\u3002\n\u4F7F\u7528\u9375\u76E4\u4E0A\u6392\u6578\u5B57\u9375\u53EF\u5207\u63DB\u8996\u89D2\u81F3\u4E0D\u540C\u8ECA\u5EC2\u3002"
+    image: {fileID: 21300000, guid: b5b0871f37a972743a948a72fa829e98, type: 3}
+  - description: "\u4F7F\u7528\u53F3\u9375\u62D6\u66F3\u4EE5\u7576\u524D\u6CE8\u8996\u8ECA\u5EC2\u70BA\u4E2D\u5FC3\u65CB\u8F49\u8996\u89D2\u3002"
+    image: {fileID: 21300000, guid: b5b0871f37a972743a948a72fa829e98, type: 3}
+  - description: "\u8ACB\u8A66\u8457\u5DE6\u9375\u62D6\u66F3\u4E0B\u65B9\u7684\u6C11\u5175UI\u3002"
+    image: {fileID: 21300000, guid: b5b0871f37a972743a948a72fa829e98, type: 3}
