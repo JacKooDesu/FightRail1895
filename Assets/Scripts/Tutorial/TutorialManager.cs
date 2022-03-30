@@ -38,6 +38,7 @@ namespace JacDev.Tutorial
         public Transform contentParent;
         ObjectSwitcher contentSwitcher;
         public Text titleText;
+        public Text pageText;
 
         [Header("設定")]
         public TutorialUI prefab;
@@ -73,8 +74,10 @@ namespace JacDev.Tutorial
                 backBtn.interactable = true;
                 if (newIndex == length - 1)
                     nextBtn.interactable = false;
-                else if (newIndex == 0)
+                if (newIndex == 0)
                     backBtn.interactable = false;
+
+                pageText.text = $"{newIndex + 1} / {tutorialUis.Count}";
             };
 
             nextBtn.onClick.AddListener(() => contentSwitcher.Next());
