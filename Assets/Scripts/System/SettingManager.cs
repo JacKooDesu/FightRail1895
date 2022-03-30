@@ -65,6 +65,12 @@ public class SettingManager : MonoBehaviour
         get => eventList;
     }
 
+    [SerializeField] JacDev.Tutorial.TutorialList tutorialList;
+    public JacDev.Tutorial.TutorialList TutorialList
+    {
+        get => tutorialList;
+    }
+
     [SerializeField] SoundList bgmSetting;
     public SoundList BgmSetting
     {

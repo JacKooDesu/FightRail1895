@@ -32,8 +32,8 @@ public class GameHandler : MonoBehaviour
     public bool debugMode;
 
     [Header("遊戲中資料")]
-    public int money;   // 後續是否整合進PlayerData?
-    public int initMoney;
+    public int credit;   // 後續是否整合進PlayerData?
+    public int initCredit;
 
     static PlayerData playerData;
     public PlayerData PlayerData { get { return playerData; } }
@@ -74,7 +74,7 @@ public class GameHandler : MonoBehaviour
 
     private void Start()
     {
-        money = initMoney;
+        credit = initCredit;
     }
 
     static bool hasAddSceneLoadAction;
@@ -115,6 +115,7 @@ public class GameHandler : MonoBehaviour
                 // }
                 AudioHandler.Singleton.PlayBgm("Moring News");
                 DataManager.Singleton.SavePlayerData();
+                JacDev.Tutorial.TutorialManager.Singleton.Tutorial(0);  // 2022.3.22 新增
                 break;
 
             case "GameScene":
@@ -135,6 +136,7 @@ public class GameHandler : MonoBehaviour
                 JacDev.Level.LevelGenerator.Singleton.BuildMap();
                 AudioHandler.Singleton.RandPlayBgm();
 
+                JacDev.Tutorial.TutorialManager.Singleton.Tutorial(21);  // 2022.3.22 新增
 
                 break;
         }

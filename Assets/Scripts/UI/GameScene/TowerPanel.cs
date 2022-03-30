@@ -64,7 +64,7 @@ namespace JacDev.UI.GameScene
         {
             foreach (DictionaryEntry h in hashtable)
             {
-                ((Transform)h.Key).gameObject.SetActive(((Entity.Tower)h.Value).price > GameHandler.Singleton.money);
+                ((Transform)h.Key).gameObject.SetActive(((Entity.Tower)h.Value).price > GameHandler.Singleton.credit);
             }
         }
 

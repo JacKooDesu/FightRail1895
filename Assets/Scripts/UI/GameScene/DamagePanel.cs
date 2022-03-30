@@ -16,7 +16,14 @@ namespace JacDev.UI.GameScene
         public void DisplayDamage(EntityObject entity, float damage)
         {
             GameObject g = Instantiate(damagePrefab, Camera.main.WorldToScreenPoint(entity.transform.position), Quaternion.identity, transform);
-            g.GetComponent<UnityEngine.UI.Text>().text = ((int)damage).ToString();
+
+            var text = g.GetComponent<UnityEngine.UI.Text>();
+            int i = (int)damage;
+            float f = damage - i;
+            string finalStr = i.ToString();
+            if (f != 0f)
+                finalStr += $".<size={text.fontSize *.8f}>{f.ToString("f1")[2]}</size>";
+            text.text = finalStr;
 
             PositionSlick.PositionSetting positionSetting = new PositionSlick.PositionSetting();
             positionSetting.name = "FadeOut";

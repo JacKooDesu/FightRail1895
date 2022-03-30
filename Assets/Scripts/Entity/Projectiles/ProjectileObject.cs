@@ -9,14 +9,17 @@ namespace JacDev.Entity
         public Transform hitObject = default;
         protected Vector3 hitPoint = Vector3.zero;
 
+        EntityObject owner;
+
         public override bool GameUpdate()
         {
             return true;
         }
 
-        public void Launch(Vector3 dir)
+        public void Launch(Vector3 dir, EntityObject owner)
         {
             direction = dir;
+            this.owner = owner;
             StartCoroutine(Flying());
         }
 
@@ -57,7 +60,7 @@ namespace JacDev.Entity
             {
                 if (hitObject.GetComponent<EntityObject>() != null)
                     if (hitObject.transform.GetComponent<EntityObject>().entitySetting.entityType == setting.targetEntityType)
-                        hitObject.transform.GetComponent<EntityObject>().GetDamage(setting.damage);
+                        hitObject.transform.GetComponent<EntityObject>().GetDamage(owner.Damage);
 
                 Destroy(gameObject);
                 yield break;
@@ -75,7 +78,7 @@ namespace JacDev.Entity
                 particle.Play();
                 if (hitObject.GetComponent<EntityObject>() != null)
                     if (hitObject.transform.GetComponent<EntityObject>().entitySetting.entityType == setting.targetEntityType)
-                        hitObject.transform.GetComponent<EntityObject>().GetDamage(setting.damage);
+                        hitObject.transform.GetComponent<EntityObject>().GetDamage(owner.Damage);
                 yield return new WaitForSeconds(particle.main.duration);
             }
             else
@@ -92,7 +95,7 @@ namespace JacDev.Entity
                             {
                                 if (hit.transform.GetComponent<EntityObject>().entitySetting.entityType == setting.targetEntityType)
                                 {
-                                    hit.transform.GetComponent<EntityObject>().GetDamage(setting.damage);
+                                    hit.transform.GetComponent<EntityObject>().GetDamage(owner.Damage);
                                     print(hit.transform.name);
                                 }
 

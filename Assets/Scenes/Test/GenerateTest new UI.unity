@@ -122,6 +122,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &21285725
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 525045468583990707, guid: 59fab0b13d3e48445b2227708709184e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 525045468583990707, guid: 59fab0b13d3e48445b2227708709184e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525045468583990707, guid: 59fab0b13d3e48445b2227708709184e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525045468583990707, guid: 59fab0b13d3e48445b2227708709184e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525045468583990707, guid: 59fab0b13d3e48445b2227708709184e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 525045468583990707, guid: 59fab0b13d3e48445b2227708709184e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525045468583990707, guid: 59fab0b13d3e48445b2227708709184e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525045468583990707, guid: 59fab0b13d3e48445b2227708709184e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525045468583990707, guid: 59fab0b13d3e48445b2227708709184e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525045468583990707, guid: 59fab0b13d3e48445b2227708709184e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525045468583990707, guid: 59fab0b13d3e48445b2227708709184e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525045468583990709, guid: 59fab0b13d3e48445b2227708709184e,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorial Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fab0b13d3e48445b2227708709184e, type: 3}
 --- !u!1 &22864710
 GameObject:
   m_ObjectHideFlags: 0
@@ -8350,7 +8419,7 @@ Transform:
   m_Children:
   - {fileID: 1079330638}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &346097719
 GameObject:
@@ -10739,6 +10808,9 @@ MonoBehaviour:
   entitySetting: {fileID: 11400000, guid: e6ee6cf770e4dc0478b301450c729908, type: 2}
   maxHealth: 10
   health: 10
+  damage: 0
+  attackTime: 0
+  range: 0
   id: 0
   front: {fileID: 811087457}
   back: {fileID: 1768414201}
@@ -15323,7 +15395,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1069696150
 GameObject:
@@ -16044,7 +16116,7 @@ Transform:
   - {fileID: 646753633}
   - {fileID: 1069696151}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1125102025
 GameObject:
@@ -16231,7 +16303,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1132906590
 MonoBehaviour:
@@ -22302,7 +22374,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1700048567
 GameObject:
@@ -22960,8 +23032,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugMode: 0
-  money: 0
-  initMoney: 2000
+  credit: 0
+  initCredit: 2000
   entities: []
   towerList: {fileID: 0}
   enemyList: {fileID: 0}
@@ -22978,7 +23050,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1750475330
 GameObject:
@@ -32487,6 +32559,9 @@ MonoBehaviour:
   entitySetting: {fileID: 11400000, guid: e6ee6cf770e4dc0478b301450c729908, type: 2}
   maxHealth: 10
   health: 10
+  damage: 0
+  attackTime: 0
+  range: 0
   id: 0
   front: {fileID: 655807831731297707}
   back: {fileID: 28362510913827785}
@@ -37280,6 +37355,9 @@ MonoBehaviour:
   entitySetting: {fileID: 11400000, guid: e6ee6cf770e4dc0478b301450c729908, type: 2}
   maxHealth: 1000
   health: 1000
+  damage: 0
+  attackTime: 0
+  range: 0
   id: 0
   front: {fileID: 389366088982870508}
   back: {fileID: 3168050947100223670}

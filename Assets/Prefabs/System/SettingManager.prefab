@@ -49,4 +49,5 @@ MonoBehaviour:
   modList: {fileID: 11400000, guid: 4016d93f64c6f5948b9ff0ed1d11c76c, type: 2}
   itemSetting: {fileID: 11400000, guid: 4c6c29a990da0a74a9abaadb767211cc, type: 2}
   eventList: {fileID: 0}
+  tutorialList: {fileID: 11400000, guid: 2240f5ed660437c4b8cd98c09c9e04ff, type: 2}
   bgmSetting: {fileID: 11400000, guid: c928945409c76a843b32039b604a9fe0, type: 2}

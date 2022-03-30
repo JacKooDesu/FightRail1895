@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using JacDev.Shop;
 
 namespace JacDev.UI.ShopScene
 {
@@ -19,11 +20,16 @@ namespace JacDev.UI.ShopScene
         public Transform towerSelectPanel;
         [SerializeField] List<Transform> towerSelections = new List<Transform>();
 
+        [Header("按鈕")]
+        public Button levelUpButton;
+
         [Header("設定")]
         public Color lockedColor;
         public Color disableColor;
 
-        [SerializeField] int currentSelect = 0;
+        public int currentSelect = 0;
+
+        TowerPreviewer previewer;
 
         // Start is called before the first frame update
         void Start()
@@ -61,7 +67,12 @@ namespace JacDev.UI.ShopScene
                 }
             }
 
+            previewer = FindObjectOfType<TowerPreviewer>();
+            previewer.Init(this);
+
             UpdateState();
+
+            levelUpButton.onClick.AddListener(() => LevelUp());
         }
 
         public void UpdateState()
@@ -81,6 +92,27 @@ namespace JacDev.UI.ShopScene
             }
 
             towerLevel.text = data.towersGrade[currentSelect].ToString();
+
+            previewer.ChangeModel(currentSelect);
+        }
+
+        private void OnEnable()
+        {
+            if (previewer != null)
+                UpdateState();
+        }
+
+        private void OnDisable()
+        {
+            previewer.ChangeModel(-1);
+        }
+
+        public void LevelUp()
+        {
+            var towerGrades = DataManager.Singleton.PlayerData.towersGrade;
+            towerGrades[currentSelect] += 1;
+            previewer.LevelUp();
+            UpdateState();
         }
     }
 }

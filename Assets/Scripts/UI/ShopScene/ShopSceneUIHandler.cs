@@ -10,6 +10,7 @@ namespace JacDev.UI.ShopScene
     public class ShopSceneUIHandler : MonoBehaviour
     {
         public EventTrigger backButton;
+        public ObjectSwitcher switcher;
 
         // Start is called before the first frame update
         void Start()
@@ -26,7 +27,7 @@ namespace JacDev.UI.ShopScene
                 (data) => AudioHandler.Singleton.PlaySound("select")
             );
 
-            FindObjectOfType<ObjectSwitcher>().OnSwitch += (newIndex, oldIndex) =>
+            switcher.OnSwitch += (newIndex, oldIndex) =>
             {
                 if (newIndex == 0 && newIndex == oldIndex)
                     AsyncSceneLoader.Singleton.LoadScene("Title_v2");

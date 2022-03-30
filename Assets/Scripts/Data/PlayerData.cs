@@ -60,6 +60,7 @@ namespace JacDev.Data
         public List<int> typeKill = new List<int>();  // 依照種族表紀錄擊殺數量
 
         [Header("遊戲進度")]
+        public List<int> tutorialData = new List<int>();    // 紀錄已使用過的教學
         public string currentStation;
         public string nextStation;
         public string currentPath;

@@ -22,7 +22,7 @@ namespace JacDev.Entity
         {
             InputHandler.Singleton.placingTowerEvent.onBegin += () =>
             {
-                if (GameHandler.Singleton.money < (spawnSettings[SelectTower].entity as Tower).price)
+                if (GameHandler.Singleton.credit < (spawnSettings[SelectTower].entity as Tower).price)
                 {
                     InputHandler.Singleton.State = InputHandler.InputState.Normal;
                     return;
@@ -36,6 +36,8 @@ namespace JacDev.Entity
                     // g.GetComponent<MeshRenderer>().enabled = true;
                     g.GetComponent<TowerSpawnpoint>().SpawnAreaRendered(true);
                 }
+
+                JacDev.Tutorial.TutorialManager.Singleton.Tutorial(22);  // 2022.3.22 新增
             };
 
             InputHandler.Singleton.placingTowerEvent.onUpdate += () =>
@@ -81,7 +83,7 @@ namespace JacDev.Entity
                 if (spawnPointParent != null)
                 {
                     Spawning();
-                    GameHandler.Singleton.money -= (spawnSettings[SelectTower].entity as Tower).price;
+                    GameHandler.Singleton.credit -= (spawnSettings[SelectTower].entity as Tower).price;
                 }
 
 

@@ -26,7 +26,7 @@ namespace JacDev.Entity
         float notAttack = 0;
         bool attacking = false; // 之後應以狀態寫成寫成Enum
         bool hasAttack = false; // 是否進行攻擊(投射器or進戰傷害觸發)
-        float attackTime = 0f;  // 攻擊時間(每次攻擊所花時間)
+        float attackTimeCounter = 0f;  // 攻擊時間(每次攻擊所花時間)
         public float changeTargetTime = 3f;
 
         [Header("UI Settings")]
@@ -37,8 +37,15 @@ namespace JacDev.Entity
         {
             if (ani == null)
                 ani = GetComponent<Animator>();
-            maxHealth = ((Enemy)entitySetting).health;
+
+            var setting = ((Enemy)entitySetting);
+            maxHealth = setting.health;
             health = maxHealth;
+
+            launcher.owner = this;
+
+            // 還需要被定義傷害公式
+            damage = setting.damage * (1);
         }
 
         private void LateUpdate()
@@ -66,10 +73,10 @@ namespace JacDev.Entity
 
             if (attacking)
             {
-                if (attackTime <= setting.attackTime)
+                if (attackTimeCounter <= setting.attackTime)
                 {
-                    attackTime += Time.deltaTime;
-                    if (attackTime >= setting.attackTimeOffset && !hasAttack)
+                    attackTimeCounter += Time.deltaTime;
+                    if (attackTimeCounter >= setting.attackTimeOffset && !hasAttack)
                     {
                         launcher.Launch(taretCol.ClosestPoint(launcher.transform.position));
                         hasAttack = true;
@@ -77,7 +84,7 @@ namespace JacDev.Entity
                     return;
                 }
                 attacking = false;
-                attackTime = 0f;
+                attackTimeCounter = 0f;
             }
 
 
@@ -174,7 +181,7 @@ namespace JacDev.Entity
 
         public void OnDead()
         {
-            GameHandler.Singleton.money += (entitySetting as Enemy).dropMoney;
+            GameHandler.Singleton.credit += (entitySetting as Enemy).dropMoney;
             Drop();
             Destroy(gameObject);
         }
