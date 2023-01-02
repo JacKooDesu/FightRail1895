@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   station:
     name: "\u5609\u7FA9"
-    GUID: 2afed05d-69c5-421e-bebb-3102d18aa55e
+    GUID: 959145d4-3dc4-4173-82df-7377e823feb2
     stationObject:
       name: "\u5609\u7FA9"
       origins: []
@@ -25,7 +25,8 @@ MonoBehaviour:
       res: 0
       leftSide: 0
       rightSide: 0
-    shopsetting: {fileID: 0}
+    sellItemIdList: 
+    buyItemIdList: 0100000006000000
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0

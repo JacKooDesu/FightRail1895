@@ -25,7 +25,8 @@ MonoBehaviour:
       res: 0
       leftSide: 0
       rightSide: 0
-    shopsetting: {fileID: 0}
+    sellItemIdList: 01000000
+    buyItemIdList: 
     canFix: 0
     canUpgradeTrain: 0
     canUpgradeTower: 0

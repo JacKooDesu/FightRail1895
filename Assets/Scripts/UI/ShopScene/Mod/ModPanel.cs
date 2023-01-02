@@ -61,7 +61,7 @@ namespace JacDev.UI.ShopScene.Mod
 
                 modUI.isInstance = true;
 
-                if (modTargetData.Find((x) => x.SetIndex[currentSet] != i) != null)
+                if (modTargetData.Find((x) => x.SetIndex[currentSet] == i) != null)
                 {
                     modUI.Init(this, modTargetData.FindIndex((x) => x.SetIndex[currentSet] == i));
                 }

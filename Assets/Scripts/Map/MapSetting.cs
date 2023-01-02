@@ -29,7 +29,11 @@ namespace JacDev.Map
             // 綁定大站
             List<Station> stations = new List<Station>();
             foreach (StationSetting ss in stationSettings)
+            {
+                ss.station.ResetItems();
                 stations.Add(ss.station);
+            }
+
 
             // 綁定所有站點販售與收購的物品
             // int totalTradeCount = tradeCount * stations.Count;
@@ -46,13 +50,17 @@ namespace JacDev.Map
                 // 盡量讓所有站點都有販售物資
                 List<int> stationIndexList = new List<int>();
                 int sellMax = 1;
+                int iter1 = 0;
                 while (stationIndexList.Count < currentItemCount)
                 {
+                    iter1++;
                     for (int s = 0; s < stations.Count; s++)
                     {
                         if (stations[s].sellItemIdList.Count <= sellMax)
                             stationIndexList.Add(s);
                     }
+
+                    if (iter1 >= 1000) { UnityEngine.Debug.Log("ERROR"); break; }
                 }
 
                 int from = stationIndexList[Random.Range(0, stationIndexList.Count)];
@@ -164,12 +172,18 @@ namespace JacDev.Map
 
             }
         }
+
+        public void ResetItems()
+        {
+            sellItemIdList = new List<int>();
+            buyItemIdList = new List<int>();
+        }
     }
 
     [System.Serializable]
     public class Path
     {
-        public string GUID;
+        [HideInInspector] public string GUID;
         public Station s1, s2;
 
         public Level.LevelSetting levelSetting;

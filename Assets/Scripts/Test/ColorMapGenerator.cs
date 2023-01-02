@@ -7,7 +7,8 @@ public class ColorMapGenerator : MonoBehaviour
     public enum InitType
     {
         Random,
-        Diagram
+        Diagram,
+        TryRect
     }
 
     public InitType initType;
@@ -34,6 +35,10 @@ public class ColorMapGenerator : MonoBehaviour
             case InitType.Diagram:
                 InitByDiagram();
                 return;
+
+            case InitType.TryRect:
+                InitByRect();
+                return;
         }
     }
 
@@ -42,7 +47,7 @@ public class ColorMapGenerator : MonoBehaviour
         cube.transform.localScale = new Vector3(size.x, 1, size.y);
     }
 
-    [ContextMenu("生成")]
+    [ContextMenu("Random生成")]
     void InitMap()
     {
         Color32[] colors = new Color32[colorCount];
@@ -74,7 +79,9 @@ public class ColorMapGenerator : MonoBehaviour
                 texture.SetPixels32(x, y, fixedGrid.x, fixedGrid.y, cArray);
             }
         }
-        cube.GetComponent<Renderer>().sharedMaterials[0].SetTexture("_BaseMap", texture);
+        Material mat = Instantiate(cube.GetComponent<Renderer>().sharedMaterials[0]);
+        mat.SetTexture("_BaseMap", texture);
+        cube.GetComponent<Renderer>().sharedMaterials = new Material[] { mat };
 
         texture.Apply();
     }
@@ -127,10 +134,10 @@ public class ColorMapGenerator : MonoBehaviour
         for (int i = 0; i < size.x * size.y; ++i)
         {
             float minDst = float.MaxValue;
+            Vector2Int current = new Vector2Int(i / size.x, i % size.y);
             int j = 0;
             foreach (var p in diagramPoints)
             {
-                Vector2Int current = new Vector2Int(i / size.x, i % size.y);
                 if (Vector2Int.Distance(current, p) < minDst)
                 {
                     minDst = Vector2Int.Distance(current, p);
@@ -140,7 +147,60 @@ public class ColorMapGenerator : MonoBehaviour
             }
         }
 
-        cube.GetComponent<Renderer>().sharedMaterials[0].SetTexture("_BaseMap", texture);
+        Material mat = Instantiate(cube.GetComponent<Renderer>().sharedMaterials[0]);
+        mat.SetTexture("_BaseMap", texture);
+        cube.GetComponent<Renderer>().sharedMaterials = new Material[] { mat };
+
+        texture.Apply();
+    }
+
+    [ContextMenu("Rect生成")]
+    void InitByRect()
+    {
+        int tryTimes = (size.x * size.y) / (gridSize * gridSize) * 10;
+        int hasTry = 0;
+
+        List<Rect> rects = new List<Rect>();
+        while (hasTry < tryTimes)
+        {
+            hasTry++;
+
+            Vector2Int pos = new Vector2Int(Random.Range(0, size.x), Random.Range(0, size.y));
+            Vector2Int rectSize = new Vector2Int(Random.Range(1, gridSize), Random.Range(1, gridSize));
+            Rect rect = new Rect(pos, rectSize);
+
+            rects.Add(rect);
+        }
+
+        rects.Reverse();
+
+        Color32[] colors = new Color32[colorCount];
+        for (int i = 0; i < colorCount; ++i)
+        {
+            float t = (float)i / (float)(colorCount - 1);
+            colors[i] = Color.Lerp(startColor, endColor, t);
+        }
+
+        Texture2D texture = new Texture2D(size.x, size.y);
+        texture.filterMode = FilterMode.Point;
+
+        for (int i = 0; i < size.x * size.y; ++i)
+        {
+            Vector2Int current = new Vector2Int(i / size.x, i % size.y);
+            int j = 0;
+            foreach (var r in rects)
+            {
+                if (r.Contains(current))
+                    break;
+
+                j++;
+            }
+            texture.SetPixel(current.x, current.y, colors[j % colorCount]);
+        }
+
+        Material mat = Instantiate(cube.GetComponent<Renderer>().sharedMaterials[0]);
+        mat.SetTexture("_BaseMap", texture);
+        cube.GetComponent<Renderer>().sharedMaterials = new Material[] { mat };
 
         texture.Apply();
     }

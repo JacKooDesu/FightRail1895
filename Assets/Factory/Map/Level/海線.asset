@@ -27,11 +27,11 @@ MonoBehaviour:
     rightSide: 0
   - name: tree
     origins:
-    - {fileID: 4525017976969926823, guid: a9a9a162406bc954b90cdce6dbaf00d9, type: 3}
-    - {fileID: 2014172542847907031, guid: f302a126a6426884881f6994150269a6, type: 3}
+    - {fileID: 919132149155446097, guid: 691e13064f07ede4db15c52bbecbe86c, type: 3}
+    - {fileID: 919132149155446097, guid: bcc82258ba2500f43bd1579d62b01498, type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     size: 5
-    max: 59
+    max: 60
     min: 5
     res: 0.501
     leftSide: 1
@@ -70,7 +70,7 @@ MonoBehaviour:
     - {fileID: 6265499804643821367, guid: 8a8047dd67d6f8346add4f58d21e6973, type: 3}
     - {fileID: 7951766247764058052, guid: 0670275b811e2e041880201fb8fcd7a8, type: 3}
     - {fileID: 8833255504248510995, guid: b4118493b990e094bb33d1e329134108, type: 3}
-    positionOffset: {x: 0, y: 0, z: 0}
+    positionOffset: {x: 0, y: 0.4, z: 0}
     size: 6
     max: 10
     min: 6
